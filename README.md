@@ -217,6 +217,8 @@ Generated files:
 | `dataset_index.csv` | Exact sorted filenames and labels used by the run |
 | `fold_assignments.csv` | Exact test-fold assignment for every image |
 | `run_metadata.json` | Dataset hash, revision, command, hardware, platform, and package versions |
+| `relieff_rankings/` | Persistent, fold-isolated top-300 Relief-F rankings |
+| `relieff_cache_status.json` | Relief-F cache hits, misses, worker count, and update time |
 | `per_sample_predictions/` | Compressed error or prediction records selected by `--prediction-mode` |
 | `sample_error_summary.csv` | Images ranked by error frequency across configurations |
 | `prediction_shard_index.csv` | Inventory and row count of prediction shards |
@@ -235,11 +237,15 @@ python scripts/generate_full_search_config.py --output configs/full_search.json
 
 Then pass `configs/full_search.json` to the corrected runner. The full search requires substantial compute and storage; depending on the hardware and cache state, it can take several days. The four selected configurations are the recommended verification target and typically require tens of minutes to several hours, dominated by the first CNN feature extraction.
 
-The corrected runner groups experiments that differ only by classifier. PCA,
-UMAP, or Relief-F is therefore fitted once per fold and its transformed data
-is reused by all eight classifiers. The complete search contains 12,656
-classifier configurations but only 1,582 distinct preprocessing groups. It
-also keeps at most two CNN feature arrays in RAM by default.
+The corrected runner groups experiments that differ only by classifier. PCA
+and UMAP transformations are fitted once per fold and reused by all eight
+classifiers. Relief-F additionally persists one training-fold ranking for the
+largest cutoff (300 features) and reuses its nested prefixes for 2, 10, 20,
+..., 300 features. This reduces the complete search from 6,240 to 520
+Relief-F fits without sharing information between folds. The search still
+contains 12,656 classifier configurations and 1,582 small, resumable
+preprocessing groups. It also keeps at most two CNN feature arrays in RAM by
+default.
 
 Run the optimized complete search with:
 
@@ -250,6 +256,7 @@ python src/run_corrected_experiments.py \
   --cache-dir cache/features \
   --output-dir corrected_results/full_search \
   --max-loaded-extractors 2 \
+  --relieff-n-jobs 2 \
   --prediction-mode errors
 ```
 
@@ -299,6 +306,36 @@ computed UMAP rows and live shards; updates the pipeline hash with an auditable
 migration record; and preserves all unaffected checkpoint rows. Resume
 afterward with the original full-search command and never use `--no-resume` for
 this migration.
+
+To continue an existing corrected-UMAP checkpoint with shared Relief-F
+rankings, stop the runner and migrate it once:
+
+```bash
+python scripts/migrate_shared_relieff_checkpoint.py \
+  --config configs/full_search.json \
+  --output-dir corrected_results/full_search \
+  --relieff-n-jobs 2
+
+python scripts/migrate_shared_relieff_checkpoint.py \
+  --config configs/full_search.json \
+  --output-dir corrected_results/full_search \
+  --relieff-n-jobs 2 \
+  --apply
+```
+
+The migration preserves Approach A, PCA, and corrected UMAP rows, removes any
+completed Relief-F rows produced by the earlier implementation, backs up every
+affected file, and updates the pipeline identity. Resume with the optimized
+full-search command above, without `--no-resume`. Rankings are written
+atomically under `relieff_rankings/`; if interrupted during a long group, the
+completed fold rankings remain reusable.
+
+During Relief-F processing, monitor the current fold, cache count, and last
+completed ranking with:
+
+```bash
+watch -n 10 cat corrected_results/full_search/relieff_rankings/status.json
+```
 
 `--prediction-mode errors` stores every misclassified image in compressed,
 atomic group shards. Use `--prediction-mode all` for a smaller selected-model

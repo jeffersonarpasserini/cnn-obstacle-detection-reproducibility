@@ -1,5 +1,6 @@
 import unittest
 import types
+from tempfile import TemporaryDirectory
 from unittest.mock import patch
 
 import numpy as np
@@ -16,6 +17,7 @@ else:
         make_splits,
         prepare_fold_features,
         reduce_train_test,
+        ReliefRankingCache,
     )
     from src.run_corrected_experiments import (
         clean_incomplete_groups,
@@ -83,6 +85,99 @@ class ProtocolTests(unittest.TestCase):
         )
         self.assertEqual(reduced_train.shape, (200, 3))
         self.assertEqual(reduced_test.shape, (20, 3))
+
+        # Fitting once for a larger cutoff must preserve the prefix selected
+        # by an independent smaller-cutoff fit.
+        feature_map = {"A": np.vstack([train, test])}
+        all_labels = np.concatenate([labels, np.zeros(len(test), dtype=int)])
+        experiment = {
+            "approach": "B", "extractors": ["A"],
+            "reduction": "relieff", "components": 3, "scale": False,
+        }
+        with TemporaryDirectory() as directory:
+            cached_train, cached_test = prepare_fold_features(
+                experiment, feature_map, all_labels, np.arange(200),
+                np.arange(200, 220), 1980, fold=1,
+                relieff_cache=ReliefRankingCache(directory),
+                relieff_max_features=5,
+            )
+        np.testing.assert_array_equal(cached_train, reduced_train)
+        np.testing.assert_array_equal(cached_test, reduced_test)
+
+    def test_relieff_ranking_is_reused_across_component_cutoffs(self):
+        calls = []
+
+        class FakeReliefF:
+            def fit(self, x, y):
+                calls.append((x.copy(), y.copy()))
+                self.top_features_ = np.asarray([4, 2, 0, 3, 1])
+                return self
+
+        matrix = np.arange(60, dtype=float).reshape(12, 5)
+        feature_map = {"A": matrix}
+        labels = np.asarray([0, 1] * 6)
+        train = np.arange(8)
+        test = np.arange(8, 12)
+        common = {
+            "approach": "B", "extractors": ["A"],
+            "reduction": "relieff", "scale": False,
+        }
+
+        with TemporaryDirectory() as directory:
+            cache = ReliefRankingCache(directory, n_jobs=2)
+            with patch("src.artifact._make_relieff", return_value=FakeReliefF()) as make:
+                train_2, test_2 = prepare_fold_features(
+                    {**common, "components": 2}, feature_map, labels,
+                    train, test, 1980, fold=1, relieff_cache=cache,
+                    relieff_max_features=5, relieff_n_jobs=2,
+                )
+                train_3, test_3 = prepare_fold_features(
+                    {**common, "components": 3}, feature_map, labels,
+                    train, test, 1980, fold=1, relieff_cache=cache,
+                    relieff_max_features=5, relieff_n_jobs=2,
+                )
+
+        self.assertEqual(len(calls), 1)
+        make.assert_called_once_with(5, 2)
+        np.testing.assert_array_equal(train_2, matrix[train][:, [4, 2]])
+        np.testing.assert_array_equal(test_2, matrix[test][:, [4, 2]])
+        np.testing.assert_array_equal(train_3, matrix[train][:, [4, 2, 0]])
+        np.testing.assert_array_equal(test_3, matrix[test][:, [4, 2, 0]])
+        self.assertEqual(cache.misses, 1)
+        self.assertEqual(cache.hits, 1)
+
+    def test_approach_d_caches_one_relieff_ranking_per_extractor(self):
+        fitted_dimensions = []
+
+        class FakeReliefF:
+            def fit(self, x, y):
+                fitted_dimensions.append(x.shape[1])
+                self.top_features_ = np.arange(x.shape[1] - 1, -1, -1)
+                return self
+
+        rng = np.random.default_rng(1980)
+        feature_map = {
+            "A": rng.normal(size=(12, 6)),
+            "B": rng.normal(size=(12, 7)),
+        }
+        labels = np.asarray([0, 1] * 6)
+        experiment = {
+            "approach": "D", "extractors": ["A", "B"],
+            "reduction": "relieff", "components": 2, "scale": False,
+        }
+        with TemporaryDirectory() as directory:
+            cache = ReliefRankingCache(directory)
+            with patch("src.artifact._make_relieff", return_value=FakeReliefF()):
+                x_train, x_test = prepare_fold_features(
+                    experiment, feature_map, labels, np.arange(8),
+                    np.arange(8, 12), 1980, fold=1, relieff_cache=cache,
+                    relieff_max_features=5,
+                )
+
+        self.assertEqual(fitted_dimensions, [6, 7])
+        self.assertEqual(x_train.shape, (8, 4))
+        self.assertEqual(x_test.shape, (4, 4))
+        self.assertEqual(cache.misses, 2)
 
     def test_approach_d_uses_requested_components_per_extractor(self):
         rng = np.random.default_rng(1980)
@@ -166,6 +261,20 @@ class ProtocolTests(unittest.TestCase):
         groups = group_experiments(experiments)
         self.assertEqual(len(groups), 1)
         self.assertEqual(len(groups[0]), 2)
+
+    def test_relieff_cutoffs_remain_separate_checkpoint_groups(self):
+        common = {
+            "approach": "B", "extractors": ["MobileNet"],
+            "reduction": "relieff", "classifier": "gaussian_nb",
+            "scale": False,
+        }
+        groups = group_experiments(
+            [
+                {**common, "name": "top_2", "components": 2},
+                {**common, "name": "top_300", "components": 300},
+            ]
+        )
+        self.assertEqual(len(groups), 2)
 
     def test_partial_group_is_removed_before_resume(self):
         common = {

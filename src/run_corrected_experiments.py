@@ -28,6 +28,7 @@ try:
         load_config,
         make_splits,
         preprocessing_key,
+        ReliefRankingCache,
         scan_dataset,
         set_global_seed,
         summarise,
@@ -43,6 +44,7 @@ except ModuleNotFoundError:
         load_config,
         make_splits,
         preprocessing_key,
+        ReliefRankingCache,
         scan_dataset,
         set_global_seed,
         summarise,
@@ -76,6 +78,17 @@ def parse_args():
         choices=("none", "errors", "all"),
         default="errors",
         help="Per-sample prediction records to retain (default: errors)",
+    )
+    parser.add_argument(
+        "--relieff-n-jobs",
+        type=int,
+        default=2,
+        help="CPU workers used inside Relief-F (default: 2; monitor RAM)",
+    )
+    parser.add_argument(
+        "--relieff-cache-dir",
+        default=None,
+        help="Persistent ranking cache (default: OUTPUT_DIR/relieff_rankings)",
     )
     return parser.parse_args()
 
@@ -363,6 +376,8 @@ def write_prediction_analysis(
 
 def main():
     args = parse_args()
+    if args.relieff_n_jobs == 0 or args.relieff_n_jobs < -1:
+        raise ValueError("--relieff-n-jobs must be -1 or a positive integer")
     config = load_config(args.config)
     seed = int(config.get("seed", 1980))
     n_splits = int(config.get("n_splits", 10))
@@ -373,6 +388,18 @@ def main():
     splits = make_splits(labels, protocol, n_splits, seed)
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
+    relieff_cache_dir = Path(
+        args.relieff_cache_dir or output_dir / "relieff_rankings"
+    )
+    relieff_cache = ReliefRankingCache(
+        relieff_cache_dir, n_jobs=args.relieff_n_jobs
+    )
+    relieff_components = [
+        int(experiment["components"])
+        for experiment in config["experiments"]
+        if experiment.get("reduction", "full").lower() == "relieff"
+    ]
+    relieff_max_features = max(relieff_components, default=0)
     checkpoint_path = output_dir / "per_fold_metrics.partial.csv"
     final_path = output_dir / "per_fold_metrics.csv"
     metadata_path = output_dir / "run_metadata.json"
@@ -396,6 +423,9 @@ def main():
         "experiments": len(config["experiments"]),
         "preprocessing_groups": len(groups),
         "prediction_mode": args.prediction_mode,
+        "relieff_n_jobs": args.relieff_n_jobs,
+        "relieff_cache_dir": str(relieff_cache_dir),
+        "relieff_max_features": relieff_max_features,
         "command": sys.argv,
         "started_utc": datetime.now(timezone.utc).isoformat(),
         "python": sys.version,
@@ -411,6 +441,7 @@ def main():
             "config_sha256", "pipeline_sha256", "dataset_filename_fingerprint",
             "dataset_content_sha256", "seed",
             "protocol", "n_splits", "prediction_mode",
+            "relieff_n_jobs",
         ]
         if any(previous.get(field) != metadata.get(field) for field in identity_fields):
             raise ValueError(
@@ -426,7 +457,12 @@ def main():
     if args.no_resume and checkpoint_path.exists():
         checkpoint_path.unlink()
     if args.no_resume:
-        for stale_path in (final_path, output_dir / "summary_metrics.csv"):
+        relieff_cache.clear()
+        for stale_path in (
+            final_path,
+            output_dir / "summary_metrics.csv",
+            output_dir / "relieff_cache_status.json",
+        ):
             if stale_path.exists():
                 stale_path.unlink()
     write_json(metadata_path, metadata)
@@ -525,6 +561,9 @@ def main():
             seed,
             sample_names=[path.name for path in image_paths],
             prediction_mode=args.prediction_mode,
+            relieff_cache=relieff_cache,
+            relieff_max_features=relieff_max_features,
+            relieff_n_jobs=args.relieff_n_jobs,
         )
         if args.prediction_mode == "none":
             group_records = evaluated
@@ -537,6 +576,17 @@ def main():
             )
         write_checkpoint_rows(checkpoint_path, group_records)
         completed_groups.add(index)
+        write_json(
+            output_dir / "relieff_cache_status.json",
+            {
+                "ranking_cache": str(relieff_cache_dir),
+                "ranking_size": relieff_max_features,
+                "n_jobs": args.relieff_n_jobs,
+                "hits": relieff_cache.hits,
+                "misses": relieff_cache.misses,
+                "updated_utc": datetime.now(timezone.utc).isoformat(),
+            },
+        )
 
         completed_now = len(completed_groups) - initially_completed
         remaining = len(groups) - len(completed_groups)

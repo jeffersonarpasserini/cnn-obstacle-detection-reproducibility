@@ -6,6 +6,8 @@ import hashlib
 import json
 import os
 import random
+from dataclasses import dataclass
+from datetime import datetime, timezone
 from pathlib import Path
 from time import perf_counter
 from typing import Iterable
@@ -213,6 +215,145 @@ def _scale_train_test(
     return scaler.fit_transform(x_train), scaler.transform(x_test)
 
 
+def _make_relieff(n_features: int, n_jobs: int = 1):
+    """Build the supported Relief-F implementation with explicit parallelism."""
+    try:
+        from skrebate import ReliefF
+
+        return ReliefF(n_features_to_select=n_features, n_jobs=n_jobs)
+    except ImportError:
+        # Compatibility fallback for the older ``ReliefF`` package.  The
+        # reproducibility environment pins scikit-rebate and uses the branch
+        # above; the fallback does not expose controlled parallelism.
+        from ReliefF import ReliefF
+
+        return ReliefF(n_features_to_keep=n_features)
+
+
+@dataclass
+class ReliefRankingCache:
+    """Persist fold-isolated Relief-F rankings for reuse across cutoffs.
+
+    Only the indices of the highest-ranked features are cached.  The training
+    and held-out matrices are scaled again for each experiment group, while
+    the expensive supervised ranking is fitted once per fold and feature
+    family.  Cache files are written atomically so an interrupted fit cannot
+    be mistaken for a complete ranking.
+    """
+
+    directory: Path
+    n_jobs: int = 1
+
+    def __post_init__(self):
+        self.directory = Path(self.directory)
+        self.directory.mkdir(parents=True, exist_ok=True)
+        self.reported_seconds = 0.0
+        self.hits = 0
+        self.misses = 0
+
+    def reset_reported_seconds(self) -> None:
+        self.reported_seconds = 0.0
+
+    def clear(self) -> None:
+        """Discard rankings when an output directory is explicitly restarted."""
+        for path in self.directory.glob("*.npz"):
+            path.unlink()
+        status = self.directory / "status.json"
+        if status.exists():
+            status.unlink()
+        self.reported_seconds = 0.0
+        self.hits = 0
+        self.misses = 0
+
+    def _write_status(self, state: str, key: tuple, **details) -> None:
+        destination = self.directory / "status.json"
+        temporary = destination.with_suffix(destination.suffix + ".tmp")
+        payload = {
+            "state": state,
+            "key": key,
+            "n_jobs": self.n_jobs,
+            "session_hits": self.hits,
+            "session_misses": self.misses,
+            "cached_rankings": len(list(self.directory.glob("*.npz"))),
+            "updated_utc": datetime.now(timezone.utc).isoformat(),
+            **details,
+        }
+        temporary.write_text(
+            json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+        )
+        temporary.replace(destination)
+
+    def _path(self, key: tuple, feature_count: int, ranking_size: int) -> Path:
+        payload = json.dumps(
+            {
+                "key": key,
+                "feature_count": int(feature_count),
+                "ranking_size": int(ranking_size),
+                "algorithm": "skrebate.ReliefF",
+            },
+            sort_keys=True,
+            separators=(",", ":"),
+        ).encode("utf-8")
+        return self.directory / f"{hashlib.sha256(payload).hexdigest()}.npz"
+
+    def get_or_fit(
+        self,
+        key: tuple,
+        x_train: np.ndarray,
+        y_train: np.ndarray,
+        ranking_size: int,
+    ) -> np.ndarray:
+        ranking_size = min(int(ranking_size), int(x_train.shape[1]))
+        path = self._path(key, x_train.shape[1], ranking_size)
+        if path.exists():
+            with np.load(path, allow_pickle=False) as cached:
+                ranking = np.asarray(cached["ranking"], dtype=np.int64)
+                fit_seconds = float(cached["fit_seconds"])
+            if (
+                len(ranking) != ranking_size
+                or np.any(ranking < 0)
+                or np.any(ranking >= x_train.shape[1])
+                or len(np.unique(ranking)) != len(ranking)
+            ):
+                raise ValueError(f"Invalid Relief-F ranking cache: {path}")
+            self.hits += 1
+            self.reported_seconds += fit_seconds
+            self._write_status(
+                "cache_hit", key, fit_seconds=fit_seconds,
+                ranking_size=ranking_size,
+            )
+            return ranking
+
+        selector = _make_relieff(ranking_size, self.n_jobs)
+        self._write_status("fitting", key, ranking_size=ranking_size)
+        started = perf_counter()
+        selector.fit(x_train, y_train)
+        fit_seconds = perf_counter() - started
+        ranking = np.asarray(selector.top_features_[:ranking_size], dtype=np.int64)
+        if len(ranking) != ranking_size:
+            raise RuntimeError(
+                f"Relief-F returned {len(ranking)} ranked features; "
+                f"expected {ranking_size}"
+            )
+
+        temporary = path.with_suffix(path.suffix + ".tmp")
+        with temporary.open("wb") as handle:
+            np.savez_compressed(
+                handle,
+                ranking=ranking,
+                fit_seconds=np.asarray(fit_seconds),
+            )
+        temporary.replace(path)
+        self.misses += 1
+        self.reported_seconds += fit_seconds
+        self._write_status(
+            "fit_complete", key, fit_seconds=fit_seconds,
+            ranking_size=ranking_size,
+        )
+        return ranking
+
+
 def reduce_train_test(
     x_train: np.ndarray,
     y_train: np.ndarray,
@@ -221,6 +362,7 @@ def reduce_train_test(
     components: int | None,
     seed: int,
     scale: bool = False,
+    relieff_n_jobs: int = 1,
 ) -> tuple[np.ndarray, np.ndarray]:
     """Fit a transformation on training data only, then transform held-out data."""
     method = method.lower()
@@ -243,12 +385,7 @@ def reduce_train_test(
             random_state=seed,
         )
     elif method == "relieff":
-        try:
-            from ReliefF import ReliefF
-            reducer = ReliefF(n_features_to_keep=components)
-        except ImportError:
-            from skrebate import ReliefF
-            reducer = ReliefF(n_features_to_select=components)
+        reducer = _make_relieff(components, relieff_n_jobs)
     else:
         raise ValueError(f"Unknown reduction: {method}")
 
@@ -271,6 +408,10 @@ def prepare_fold_features(
     train: np.ndarray,
     test: np.ndarray,
     seed: int,
+    fold: int | None = None,
+    relieff_cache: ReliefRankingCache | None = None,
+    relieff_max_features: int | None = None,
+    relieff_n_jobs: int = 1,
 ) -> tuple[np.ndarray, np.ndarray]:
     """Implement feature-processing Approaches A--D without test-fold fitting."""
     approach = experiment["approach"].upper()
@@ -280,6 +421,31 @@ def prepare_fold_features(
     scale = bool(experiment.get("scale", False))
     matrices = [feature_map[name] for name in extractors]
 
+    def reduce_arrays(x_train, x_test, part_key):
+        if method.lower() != "relieff" or relieff_cache is None:
+            return reduce_train_test(
+                x_train, labels[train], x_test, method, components, seed,
+                scale, relieff_n_jobs
+            )
+
+        scaled_train, scaled_test = _scale_train_test(x_train, x_test, scale)
+        ranking_size = max(int(components), int(relieff_max_features or components))
+        cache_key = (
+            approach,
+            tuple(extractors),
+            bool(scale),
+            int(fold) if fold is not None else -1,
+            str(part_key),
+        )
+        ranking = relieff_cache.get_or_fit(
+            cache_key, scaled_train, labels[train], ranking_size
+        )
+        selected = ranking[: int(components)]
+        return scaled_train[:, selected], scaled_test[:, selected]
+
+    def reduce_matrix(matrix, part_key):
+        return reduce_arrays(matrix[train], matrix[test], part_key)
+
     if approach == "A":
         return np.hstack([m[train] for m in matrices]), np.hstack(
             [m[test] for m in matrices]
@@ -287,15 +453,12 @@ def prepare_fold_features(
     if approach == "B":
         if len(matrices) != 1:
             raise ValueError("Approach B requires one feature extractor")
-        return reduce_train_test(
-            matrices[0][train], labels[train], matrices[0][test], method,
-            components, seed, scale
-        )
+        return reduce_matrix(matrices[0], extractors[0])
     if approach == "C":
-        x_train = np.hstack([m[train] for m in matrices])
-        x_test = np.hstack([m[test] for m in matrices])
-        return reduce_train_test(
-            x_train, labels[train], x_test, method, components, seed, scale
+        return reduce_arrays(
+            np.hstack([matrix[train] for matrix in matrices]),
+            np.hstack([matrix[test] for matrix in matrices]),
+            "combined",
         )
     if approach == "D":
         if not components:
@@ -308,11 +471,8 @@ def prepare_fold_features(
         components_per_extractor = int(components)
         train_parts = []
         test_parts = []
-        for matrix in matrices:
-            part_train, part_test = reduce_train_test(
-                matrix[train], labels[train], matrix[test], method,
-                components_per_extractor, seed, scale
-            )
+        for extractor, matrix in zip(extractors, matrices):
+            part_train, part_test = reduce_matrix(matrix, extractor)
             train_parts.append(part_train)
             test_parts.append(part_test)
         return np.hstack(train_parts), np.hstack(test_parts)
@@ -470,6 +630,9 @@ def evaluate_experiment_group(
     seed: int,
     sample_names: list[str] | None = None,
     prediction_mode: str = "none",
+    relieff_cache: ReliefRankingCache | None = None,
+    relieff_max_features: int | None = None,
+    relieff_n_jobs: int = 1,
 ):
     """Evaluate classifiers sharing one fold transformation.
 
@@ -486,11 +649,24 @@ def evaluate_experiment_group(
     records = []
     prediction_records = []
     for fold, (train, test) in enumerate(splits, start=1):
+        if relieff_cache is not None:
+            relieff_cache.reset_reported_seconds()
         reduction_started = perf_counter()
         x_train, x_test = prepare_fold_features(
-            experiments[0], feature_map, labels, train, test, seed
+            experiments[0], feature_map, labels, train, test, seed,
+            fold=fold,
+            relieff_cache=relieff_cache,
+            relieff_max_features=relieff_max_features,
+            relieff_n_jobs=relieff_n_jobs,
         )
         reduction_time = perf_counter() - reduction_started
+        if (
+            relieff_cache is not None
+            and experiments[0].get("reduction", "full").lower() == "relieff"
+        ):
+            # Report the original shared ranking cost even on a cache hit, so
+            # timing remains comparable across different component cutoffs.
+            reduction_time = relieff_cache.reported_seconds
         for experiment in experiments:
             record, fold_predictions = evaluate_prepared_fold(
                 experiment,
