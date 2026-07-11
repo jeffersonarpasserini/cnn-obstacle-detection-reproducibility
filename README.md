@@ -66,7 +66,7 @@ Approach A, which uses full pretrained feature vectors without a fitted reductio
 
 ### Lightweight result verification
 
-- Python 3.9+
+- Python 3.12+
 - approximately 1 GB RAM
 - no GPU
 - installation time: approximately 2–5 minutes
@@ -99,15 +99,25 @@ conda activate ieee-access-cnn-obstacle
 or:
 
 ```bash
-python3.9 -m venv .venv
+python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -r requirements-experiments.txt
 ```
 
-TensorFlow 2.10.1 in the supplied environment targets the Python 3.9 Linux/Windows context closest to the original experiment. Apple Silicon users should create a platform-specific TensorFlow environment while preserving the NumPy, pandas, scikit-learn, UMAP, and Relief-F versions where possible.
+The maintained environment targets Python 3.12 and TensorFlow 2.21.0. Dependency versions are pinned so that reruns use a known, internally compatible software stack. The original Python 3.9.12 and TensorFlow 2.10.1 context remains documented above for provenance; results produced with the maintained environment must record the new versions.
 
-For the current Apple Silicon workspace (`arm64`, Python 3.9), use:
+On Linux, the experiment requirements install TensorFlow's official `and-cuda` extra so a supported NVIDIA GPU can be used without a separate system CUDA toolkit. Other platforms install the standard TensorFlow package.
+
+Verify Linux GPU detection after activating the environment:
+
+```bash
+python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+```
+
+If the NVIDIA driver is visible through `nvidia-smi` but TensorFlow reports no GPU, follow the library-linking step in the official TensorFlow pip installation guide. The Python 3.12/TensorFlow 2.21.0 stack was validated on an NVIDIA GeForce RTX 4070 Ti; library discovery required that step in the validation workspace.
+
+For Apple Silicon (`arm64`, Python 3.12), use:
 
 ```bash
 python3 -m venv .venv
@@ -116,7 +126,7 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements-experiments-macos.txt
 ```
 
-This uses `tensorflow-macos==2.10.0`, which provides a CPython 3.9 ARM64 wheel. GPU acceleration through `tensorflow-metal` is optional and is not required for correctness.
+TensorFlow 2.21.0 publishes a native CPython 3.12 ARM64 wheel, so the separate `tensorflow-macos` package is no longer required. GPU acceleration through `tensorflow-metal` is optional and is not required for correctness.
 
 ## 4. Dataset deployment
 
