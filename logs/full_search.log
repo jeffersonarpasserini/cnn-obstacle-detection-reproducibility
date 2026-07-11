@@ -2760,3 +2760,24 @@ Traceback (most recent call last):
     reducer = ReliefF(n_features_to_keep=components)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 TypeError: ReliefF.__init__() got an unexpected keyword argument 'n_features_to_keep'
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783802847.474935 1162607 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Traceback (most recent call last):
+  File "/home/jeffersonpasserini/projetos_outros/cnn-obstacle-detection-reproducibility/src/run_corrected_experiments.py", line 590, in <module>
+    main()
+  File "/home/jeffersonpasserini/projetos_outros/cnn-obstacle-detection-reproducibility/src/run_corrected_experiments.py", line 416, in main
+    raise ValueError(
+ValueError: Output directory contains a checkpoint from another run; choose a new --output-dir or pass --no-resume
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783802880.997164 1162675 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Traceback (most recent call last):
+  File "/home/jeffersonpasserini/projetos_outros/cnn-obstacle-detection-reproducibility/src/run_corrected_experiments.py", line 590, in <module>
+    main()
+  File "/home/jeffersonpasserini/projetos_outros/cnn-obstacle-detection-reproducibility/src/run_corrected_experiments.py", line 416, in main
+    raise ValueError(
+ValueError: Output directory contains a checkpoint from another run; choose a new --output-dir or pass --no-resume
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1783803253.189638 1163571 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
