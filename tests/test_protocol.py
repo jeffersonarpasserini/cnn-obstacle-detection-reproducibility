@@ -41,6 +41,22 @@ class ProtocolTests(unittest.TestCase):
         train_b, _ = reduce_train_test(train, np.arange(20) % 2, test_b, "pca", 3, 1980)
         np.testing.assert_allclose(train_a, train_b)
 
+    def test_relieff_uses_skrebate_api_and_requested_components(self):
+        try:
+            import skrebate  # noqa: F401
+        except ImportError:
+            self.skipTest("skrebate is not installed")
+
+        rng = np.random.default_rng(1980)
+        train = rng.normal(size=(200, 8))
+        labels = np.asarray([0, 1] * 100)
+        test = rng.normal(size=(20, 8))
+        reduced_train, reduced_test = reduce_train_test(
+            train, labels, test, "relieff", 3, 1980
+        )
+        self.assertEqual(reduced_train.shape, (200, 3))
+        self.assertEqual(reduced_test.shape, (20, 3))
+
     def test_approach_d_uses_requested_components_per_extractor(self):
         rng = np.random.default_rng(1980)
         labels = np.asarray([0, 1] * 15)

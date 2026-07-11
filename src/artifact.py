@@ -245,9 +245,10 @@ def reduce_train_test(
     elif method == "relieff":
         try:
             from ReliefF import ReliefF
+            reducer = ReliefF(n_features_to_keep=components)
         except ImportError:
             from skrebate import ReliefF
-        reducer = ReliefF(n_features_to_keep=components)
+            reducer = ReliefF(n_features_to_select=components)
     else:
         raise ValueError(f"Unknown reduction: {method}")
 
