@@ -31,7 +31,7 @@
       "scale": false
     },
     {
-      "name": "approach_d_mobilenet_resnet50_pca100_rbf_svm",
+      "name": "approach_d_mobilenet_resnet50_pca100_each_rbf_svm",
       "approach": "D",
       "extractors": ["MobileNet", "ResNet50"],
       "reduction": "pca",
@@ -41,4 +41,3 @@
     }
   ]
 }
-

@@ -13,6 +13,7 @@ This audit compares the legacy Python programs in `legacy/` with the methods and
 - The global seed was 1980.
 - The experiment used 10 folds and one repeat.
 - The published search contains 272 Approach A, 7,200 Approach B, 2,592 Approach C, and 2,592 Approach D configurations.
+- In Approach D, the requested dimensionality is retained independently from each CNN before concatenation. For example, PCA(100) with two CNNs produces a final 200-component vector.
 - The eight reported classifiers exclude the experimental PCC classifier.
 - The selected linear SVM used `C=0.025`.
 - The MLP used `random_state=1` and `max_iter=1000`.
@@ -33,4 +34,3 @@ Approach A uses complete pretrained feature vectors and is not affected by PCA/U
 ## Manuscript status
 
 The manuscript has been updated to identify the affected results as exploratory, to describe the original fold generator and classifier parameters accurately, and to report the legacy hard-label `ROC` quantity as balanced accuracy. Numerical tables must be replaced after the corrected experiments are run.
-

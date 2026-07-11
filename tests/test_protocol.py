@@ -29,7 +29,7 @@ class ProtocolTests(unittest.TestCase):
         train_b, _ = reduce_train_test(train, np.arange(20) % 2, test_b, "pca", 3, 1980)
         np.testing.assert_allclose(train_a, train_b)
 
-    def test_approach_d_uses_requested_total_components(self):
+    def test_approach_d_uses_requested_components_per_extractor(self):
         rng = np.random.default_rng(1980)
         labels = np.asarray([0, 1] * 15)
         feature_map = {
@@ -45,8 +45,10 @@ class ProtocolTests(unittest.TestCase):
         x_train, x_test = prepare_fold_features(
             experiment, feature_map, labels, train, test, 1980
         )
-        self.assertEqual(x_train.shape, (20, 10))
-        self.assertEqual(x_test.shape, (10, 10))
+        # Approach D retains 10 components from each of the two extractors,
+        # then concatenates them into a 20-component classification vector.
+        self.assertEqual(x_train.shape, (20, 20))
+        self.assertEqual(x_test.shape, (10, 20))
 
 
 if __name__ == "__main__":

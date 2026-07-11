@@ -276,15 +276,19 @@ def prepare_fold_features(
         )
     if approach == "D":
         if not components:
-            raise ValueError("Approach D requires a final component count")
-        base, remainder = divmod(int(components), len(matrices))
+            raise ValueError("Approach D requires a per-extractor component count")
+        # In Approach D, dimensionality reduction is applied independently to
+        # every CNN output before concatenation.  Therefore, ``components`` is
+        # the number retained from EACH extractor, not the size of the final
+        # concatenated vector.  For example, two extractors with
+        # ``components=100`` produce a final vector with 200 components.
+        components_per_extractor = int(components)
         train_parts = []
         test_parts = []
-        for index, matrix in enumerate(matrices):
-            part_components = base + (1 if index < remainder else 0)
+        for matrix in matrices:
             part_train, part_test = reduce_train_test(
                 matrix[train], labels[train], matrix[test], method,
-                part_components, seed, scale
+                components_per_extractor, seed, scale
             )
             train_parts.append(part_train)
             test_parts.append(part_test)
@@ -386,4 +390,3 @@ def summarise(records: pd.DataFrame) -> pd.DataFrame:
             row[f"{metric}_q3"] = group[metric].quantile(0.75)
         rows.append(row)
     return pd.DataFrame(rows)
-

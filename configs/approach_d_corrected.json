@@ -1,0 +1,16 @@
+{
+  "seed": 1980,
+  "n_splits": 10,
+  "protocol": "stratified_kfold",
+  "experiments": [
+    {
+      "name": "approach_d_mobilenet_resnet50_pca100_each_rbf_svm",
+      "approach": "D",
+      "extractors": ["MobileNet", "ResNet50"],
+      "reduction": "pca",
+      "components": 100,
+      "classifier": "rbf_svm",
+      "scale": false
+    }
+  ]
+}

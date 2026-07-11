@@ -186,6 +186,24 @@ python src/run_corrected_experiments.py \
   --output-dir corrected_results/selected_models
 ```
 
+In Approach D, `components` is interpreted per CNN extractor. Thus,
+`components: 100` with MobileNet and ResNet50 retains 100 PCA components from
+each CNN and concatenates them into a 200-component classification vector.
+The previously generated Approach D row under
+`corrected_results/selected_models/` used 50 components per extractor and is
+obsolete; do not report that row in the manuscript. Approaches A--C in that
+directory remain valid.
+To rerun only the corrected Approach D while reusing the existing feature
+cache, run:
+
+```bash
+python src/run_corrected_experiments.py \
+  --dataset via-dataset \
+  --config configs/approach_d_corrected.json \
+  --cache-dir cache/features \
+  --output-dir corrected_results/approach_d_corrected
+```
+
 The first execution downloads ImageNet weights and extracts CNN features. Later runs reuse feature caches bound to a SHA-256 fingerprint of the ordered filenames.
 
 Generated files:
