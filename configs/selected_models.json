@@ -1,0 +1,44 @@
+{
+  "seed": 1980,
+  "n_splits": 10,
+  "protocol": "stratified_kfold",
+  "experiments": [
+    {
+      "name": "approach_a_efficientnetb0_mobilenet_linear_svm",
+      "approach": "A",
+      "extractors": ["EfficientNetB0", "MobileNet"],
+      "reduction": "full",
+      "components": null,
+      "classifier": "linear_svm",
+      "scale": false
+    },
+    {
+      "name": "approach_b_mobilenet_pca40_rbf_svm",
+      "approach": "B",
+      "extractors": ["MobileNet"],
+      "reduction": "pca",
+      "components": 40,
+      "classifier": "rbf_svm",
+      "scale": false
+    },
+    {
+      "name": "approach_c_mobilenet_resnet50_pca300_linear_svm",
+      "approach": "C",
+      "extractors": ["MobileNet", "ResNet50"],
+      "reduction": "pca",
+      "components": 300,
+      "classifier": "linear_svm",
+      "scale": false
+    },
+    {
+      "name": "approach_d_mobilenet_resnet50_pca100_rbf_svm",
+      "approach": "D",
+      "extractors": ["MobileNet", "ResNet50"],
+      "reduction": "pca",
+      "components": 100,
+      "classifier": "rbf_svm",
+      "scale": false
+    }
+  ]
+}
+

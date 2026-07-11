@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the associated article."
+title: "Reproducibility Artifact for Cross-Analysis of CNN Architectures as Feature Extractors for Obstacle Detection to Aid the Visually Impaired"
+type: software
+authors:
+  - family-names: Passerini
+    given-names: Jefferson Antonio Ribeiro
+  - family-names: Breve
+    given-names: Fabricio Aparecido
+version: 1.0.0
+date-released: 2026-07-10
+repository-code: "https://github.com/jeffersonarpasserini/Phd-Partial-Results"
+license: MIT

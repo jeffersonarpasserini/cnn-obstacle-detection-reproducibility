@@ -1,0 +1,9 @@
+name: ieee-access-cnn-obstacle
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9.12
+  - pip
+  - pip:
+      - -r requirements-experiments.txt
+
