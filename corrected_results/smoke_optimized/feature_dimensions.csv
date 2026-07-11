@@ -1,0 +1,2 @@
+extractor,samples,features_per_image,array_mebibytes
+MobileNet,342,50176,65.4609375

@@ -1,0 +1,76 @@
+{
+  "config": "configs/smoke_test_optimized.json",
+  "config_sha256": "8d627b041deef6c63ba0e412d916fd01a524269d70166d729861296c392c0910",
+  "pipeline_sha256": "d85c4bd8d8d8398914d6385e7edbf2ea1c04b79a0cb56f0541eed0ac72d667eb",
+  "dataset": "via-dataset",
+  "dataset_filename_fingerprint": "479f2b9b33ba87ca811bc053920e5b44e43b40446b4709d5d327bb4e2a3eef82",
+  "dataset_content_sha256": "bef13299b60d06e994bf85498ea0ed2e02f5f6d73851745ce05a16fa5204f2d6",
+  "images": 342,
+  "seed": 1980,
+  "protocol": "stratified_kfold",
+  "n_splits": 10,
+  "actual_folds": 10,
+  "experiments": 2,
+  "preprocessing_groups": 1,
+  "prediction_mode": "all",
+  "command": [
+    "src/run_corrected_experiments.py",
+    "--dataset",
+    "via-dataset",
+    "--config",
+    "configs/smoke_test_optimized.json",
+    "--cache-dir",
+    "cache/features",
+    "--output-dir",
+    "corrected_results/smoke_optimized",
+    "--prediction-mode",
+    "all"
+  ],
+  "started_utc": "2026-07-11T03:04:50.633318+00:00",
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+  "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "scipy": "1.18.0",
+    "scikit-learn": "1.9.0",
+    "tensorflow": "2.21.0",
+    "umap-learn": "0.5.12",
+    "skrebate": "0.62",
+    "Pillow": "12.3.0"
+  },
+  "hardware": {
+    "cpu": "x86_64",
+    "logical_cpus": 16,
+    "physical_memory_bytes": 67322093568,
+    "gpus": [
+      {
+        "logical_name": "/physical_device:GPU:0",
+        "device_name": "NVIDIA GeForce RTX 4070 Ti"
+      }
+    ],
+    "tensorflow_build": {
+      "cpu_compiler": "clang",
+      "cuda_compute_capabilities": [
+        "sm_60",
+        "sm_70",
+        "sm_80",
+        "sm_89",
+        "compute_90"
+      ],
+      "cuda_version": "12.5.1",
+      "cudnn_version": "9",
+      "is_cuda_build": true,
+      "is_rocm_build": false,
+      "is_tensorrt_build": false
+    }
+  },
+  "git": {
+    "commit": "838b0e2bb1f5875b12375b4556c6e929342ecf2d",
+    "branch": "main",
+    "dirty": true
+  },
+  "completed": true,
+  "records": 20,
+  "last_segment_seconds": 9.043347877974156
+}

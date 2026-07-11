@@ -1,0 +1,10 @@
+{
+  "exploratory_warning": "Models were selected by performance on these folds; inferential p-values are descriptive and require independent confirmation.",
+  "models": [
+    "smoke_mobilenet_pca40_rbf_svm",
+    "smoke_mobilenet_pca40_linear_svm"
+  ],
+  "folds": 10,
+  "statistic": null,
+  "p_value": null
+}

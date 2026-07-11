@@ -1,0 +1,2 @@
+model_1,model_2,median_accuracy_difference,wilcoxon_statistic,p_value,p_holm,significant_0_05
+smoke_mobilenet_pca40_rbf_svm,smoke_mobilenet_pca40_linear_svm,0.0,19.0,0.625,0.625,False
