@@ -252,7 +252,14 @@ def reduce_train_test(
     else:
         raise ValueError(f"Unknown reduction: {method}")
 
-    transformed_train = reducer.fit_transform(x_train, y_train)
+    # PCA and UMAP are unsupervised in the experimental protocol.  Passing
+    # ``y_train`` to umap-learn changes UMAP into supervised dimensionality
+    # reduction, which is a different method.  Relief-F, in contrast, is a
+    # supervised feature selector and must receive the training labels.
+    if method == "relieff":
+        transformed_train = reducer.fit_transform(x_train, y_train)
+    else:
+        transformed_train = reducer.fit_transform(x_train)
     transformed_test = reducer.transform(x_test)
     return transformed_train, transformed_test
 

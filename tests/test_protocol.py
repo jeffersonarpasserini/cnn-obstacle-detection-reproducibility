@@ -1,4 +1,6 @@
 import unittest
+import types
+from unittest.mock import patch
 
 import numpy as np
 
@@ -9,8 +11,6 @@ except ImportError:
 else:
     SKLEARN_AVAILABLE = True
     import pandas as pd
-    from unittest.mock import patch
-
     from src.artifact import (
         evaluate_experiment_group,
         make_splits,
@@ -40,6 +40,33 @@ class ProtocolTests(unittest.TestCase):
         train_a, _ = reduce_train_test(train, np.arange(20) % 2, test_a, "pca", 3, 1980)
         train_b, _ = reduce_train_test(train, np.arange(20) % 2, test_b, "pca", 3, 1980)
         np.testing.assert_allclose(train_a, train_b)
+
+    def test_umap_is_fitted_without_labels(self):
+        calls = []
+
+        class FakeUMAP:
+            def __init__(self, **kwargs):
+                self.components = kwargs["n_components"]
+
+            def fit_transform(self, x, *args, **kwargs):
+                calls.append((args, kwargs))
+                return np.zeros((len(x), self.components))
+
+            def transform(self, x):
+                return np.zeros((len(x), self.components))
+
+        fake_module = types.SimpleNamespace(UMAP=FakeUMAP)
+        train = np.zeros((20, 8))
+        labels = np.asarray([0, 1] * 10)
+        test = np.zeros((4, 8))
+        with patch.dict("sys.modules", {"umap": fake_module}):
+            reduced_train, reduced_test = reduce_train_test(
+                train, labels, test, "umap", 3, 1980
+            )
+
+        self.assertEqual(calls, [((), {})])
+        self.assertEqual(reduced_train.shape, (20, 3))
+        self.assertEqual(reduced_test.shape, (4, 3))
 
     def test_relieff_uses_skrebate_api_and_requested_components(self):
         try:

@@ -276,6 +276,30 @@ same command again; completed groups are detected and skipped. Use
 beginning. `run_metadata.json` records the configuration hash, dataset
 fingerprint, platform, Python version, and dependency versions.
 
+PCA and UMAP are fitted without labels; Relief-F alone receives `y_train`
+because it is a supervised feature selector. An early partial full-search run
+incorrectly supplied `y_train` to UMAP, which changes umap-learn to supervised
+dimension reduction. To migrate that specific checkpoint without losing valid
+Approach A, PCA, or Relief-F results, first stop the experiment process and run:
+
+```bash
+python scripts/migrate_unsupervised_umap_checkpoint.py \
+  --config configs/full_search.json \
+  --output-dir corrected_results/full_search
+
+python scripts/migrate_unsupervised_umap_checkpoint.py \
+  --config configs/full_search.json \
+  --output-dir corrected_results/full_search \
+  --apply
+```
+
+The first command is a dry run. The second creates timestamped backups of the
+checkpoint, metadata, and affected prediction shards; removes only previously
+computed UMAP rows and live shards; updates the pipeline hash with an auditable
+migration record; and preserves all unaffected checkpoint rows. Resume
+afterward with the original full-search command and never use `--no-resume` for
+this migration.
+
 `--prediction-mode errors` stores every misclassified image in compressed,
 atomic group shards. Use `--prediction-mode all` for a smaller selected-model
 run when continuous scores for every image are needed for threshold or

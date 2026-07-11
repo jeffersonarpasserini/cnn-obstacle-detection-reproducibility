@@ -417,6 +417,11 @@ def main():
                 "Output directory contains a checkpoint from another run; "
                 "choose a new --output-dir or pass --no-resume"
             )
+        # Preserve an auditable history created by an explicit checkpoint
+        # migration.  The freshly collected runtime metadata above remains
+        # authoritative for the resumed segment.
+        if previous.get("migrations"):
+            metadata["migrations"] = previous["migrations"]
 
     if args.no_resume and checkpoint_path.exists():
         checkpoint_path.unlink()
