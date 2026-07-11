@@ -21,7 +21,9 @@ from artifact import (
 
 def parse_args():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--dataset", required=True, help="Directory containing VIA images")
+    parser.add_argument(
+        "--dataset", default="via-dataset", help="Directory containing VIA images"
+    )
     parser.add_argument(
         "--config", default="configs/selected_models.json", help="Experiment JSON"
     )
@@ -78,4 +80,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

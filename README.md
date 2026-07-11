@@ -29,7 +29,8 @@ Approach A, which uses full pretrained feature vectors without a fitted reductio
 ├── configs/
 │   └── selected_models.json       # Four selected manuscript configurations
 ├── data/
-│   └── README.md                  # VIA dataset retrieval and layout
+│   ├── README.md                  # VIA dataset provenance and layout
+│   └── dataset_manifest.csv       # Filename, label, size, and SHA-256
 ├── docs/
 │   ├── METHODOLOGY_AUDIT.md       # Code-to-manuscript audit
 │   └── PROVENANCE.md              # Source commits and copy policy
@@ -47,8 +48,9 @@ Approach A, which uses full pretrained feature vectors without a fitted reductio
 ├── src/
 │   ├── artifact.py
 │   └── run_corrected_experiments.py
-└── tests/
-    └── test_protocol.py
+├── tests/
+│   └── test_protocol.py
+└── via-dataset/                   # 342 experiment images
 ```
 
 ### Approach mapping
@@ -105,23 +107,36 @@ python -m pip install -r requirements-experiments.txt
 
 TensorFlow 2.10.1 in the supplied environment targets the Python 3.9 Linux/Windows context closest to the original experiment. Apple Silicon users should create a platform-specific TensorFlow environment while preserving the NumPy, pandas, scikit-learn, UMAP, and Relief-F versions where possible.
 
-## 4. Dataset deployment
-
-The VIA images are maintained at <https://github.com/fbreve/via-dataset> and are not duplicated here.
+For the current Apple Silicon workspace (`arm64`, Python 3.9), use:
 
 ```bash
-git clone https://github.com/fbreve/via-dataset data/via-dataset
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements-experiments-macos.txt
 ```
+
+This uses `tensorflow-macos==2.10.0`, which provides a CPython 3.9 ARM64 wheel. GPU acceleration through `tensorflow-metal` is optional and is not required for correctness.
+
+## 4. Dataset deployment
+
+The artifact includes the 342 VIA images under `via-dataset/`. The canonical dataset is maintained at <https://github.com/fbreve/via-dataset>.
 
 Expected layout:
 
 ```text
-data/via-dataset/images/clear.000.jpg
-data/via-dataset/images/nonclear.000.jpg
+via-dataset/clear.000.jpg
+via-dataset/nonclear.000.jpg
 ...
 ```
 
 The artifact expects 342 images: 175 clear paths and 167 obstructed paths. The corrected runner sorts filenames and records the exact ordered index in `corrected_results/dataset_index.csv`.
+
+Verify the included copy against its SHA-256 manifest:
+
+```bash
+python scripts/verify_dataset.py
+```
 
 ## 5. Reproducing the archived article summaries
 
@@ -155,7 +170,7 @@ Run the four selected configurations with leakage-free stratified 10-fold cross-
 
 ```bash
 python src/run_corrected_experiments.py \
-  --dataset data/via-dataset/images \
+  --dataset via-dataset \
   --config configs/selected_models.json \
   --cache-dir cache/features \
   --output-dir corrected_results/selected_models
