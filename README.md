@@ -213,7 +213,19 @@ Generated files:
 | `per_fold_metrics.csv` | Accuracy, F1, balanced accuracy, score-based ROC-AUC, and timings per fold |
 | `summary_metrics.csv` | Q1, median, and Q3 in the manuscript reporting format |
 | `feature_extraction_times.csv` | Feature-extraction time for each CNN |
+| `feature_dimensions.csv` | Raw feature count and memory footprint for each CNN |
 | `dataset_index.csv` | Exact sorted filenames and labels used by the run |
+| `fold_assignments.csv` | Exact test-fold assignment for every image |
+| `run_metadata.json` | Dataset hash, revision, command, hardware, platform, and package versions |
+| `per_sample_predictions/` | Compressed error or prediction records selected by `--prediction-mode` |
+| `sample_error_summary.csv` | Images ranked by error frequency across configurations |
+| `prediction_shard_index.csv` | Inventory and row count of prediction shards |
+
+The extended per-fold file also reports confusion-matrix counts, obstacle
+recall, clear-image recall, precision and F1 for each class, macro-F1,
+balanced accuracy, MCC, score-based ROC-AUC, and the actual classification
+vector dimension. Here, `nonclear`/obstructed is label 0 and `clear` is label
+1; explicit class names avoid ambiguous uses of sensitivity and specificity.
 
 To execute LOOCV, copy the selected configuration and change `"protocol"` to `"loocv"`. To generate the complete 12,656-configuration search file:
 
@@ -222,6 +234,72 @@ python scripts/generate_full_search_config.py --output configs/full_search.json
 ```
 
 Then pass `configs/full_search.json` to the corrected runner. The full search requires substantial compute and storage; depending on the hardware and cache state, it can take several days. The four selected configurations are the recommended verification target and typically require tens of minutes to several hours, dominated by the first CNN feature extraction.
+
+The corrected runner groups experiments that differ only by classifier. PCA,
+UMAP, or Relief-F is therefore fitted once per fold and its transformed data
+is reused by all eight classifiers. The complete search contains 12,656
+classifier configurations but only 1,582 distinct preprocessing groups. It
+also keeps at most two CNN feature arrays in RAM by default.
+
+Run the optimized complete search with:
+
+```bash
+python src/run_corrected_experiments.py \
+  --dataset via-dataset \
+  --config configs/full_search.json \
+  --cache-dir cache/features \
+  --output-dir corrected_results/full_search \
+  --max-loaded-extractors 2 \
+  --prediction-mode errors
+```
+
+Before starting the multi-day run, validate the optimized path, extended
+metrics, prediction shards, and metadata with the short shared-PCA smoke test:
+
+```bash
+python src/run_corrected_experiments.py \
+  --dataset via-dataset \
+  --config configs/smoke_test_optimized.json \
+  --cache-dir cache/features \
+  --output-dir corrected_results/smoke_optimized \
+  --prediction-mode all
+
+python scripts/analyze_corrected_results.py \
+  --results corrected_results/smoke_optimized \
+  --top 2
+```
+
+Progress is appended after every preprocessing group to
+`per_fold_metrics.partial.csv`. If the process is interrupted, run the exact
+same command again; completed groups are detected and skipped. Use
+`--no-resume` only when intentionally restarting the output directory from the
+beginning. `run_metadata.json` records the configuration hash, dataset
+fingerprint, platform, Python version, and dependency versions.
+
+`--prediction-mode errors` stores every misclassified image in compressed,
+atomic group shards. Use `--prediction-mode all` for a smaller selected-model
+run when continuous scores for every image are needed for threshold or
+calibration analysis. Use `none` only when storage is severely constrained.
+
+The `reduction_seconds` value is repeated for classifiers that share the same
+transformation. It describes the preprocessing cost applicable to each model,
+but must not be summed across classifier rows to estimate the optimized run's
+wall-clock time.
+
+After a run completes, generate manuscript-oriented rankings, pooled
+class-specific metrics, an exploratory Friedman test, and pairwise Wilcoxon
+tests with Holm correction:
+
+```bash
+python scripts/analyze_corrected_results.py \
+  --results corrected_results/full_search \
+  --top 20
+```
+
+Outputs are written under `corrected_results/full_search/article_analysis/`.
+Because configurations are ranked using the same folds, these inferential
+tests are descriptive; independent or nested validation remains necessary for
+confirmatory claims.
 
 ## 7. Validation safeguards in the corrected implementation
 

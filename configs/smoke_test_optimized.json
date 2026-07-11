@@ -1,0 +1,25 @@
+{
+  "seed": 1980,
+  "n_splits": 10,
+  "protocol": "stratified_kfold",
+  "experiments": [
+    {
+      "name": "smoke_mobilenet_pca40_rbf_svm",
+      "approach": "B",
+      "extractors": ["MobileNet"],
+      "reduction": "pca",
+      "components": 40,
+      "classifier": "rbf_svm",
+      "scale": false
+    },
+    {
+      "name": "smoke_mobilenet_pca40_linear_svm",
+      "approach": "B",
+      "extractors": ["MobileNet"],
+      "reduction": "pca",
+      "components": 40,
+      "classifier": "linear_svm",
+      "scale": false
+    }
+  ]
+}

@@ -8,7 +8,19 @@ except ImportError:
     SKLEARN_AVAILABLE = False
 else:
     SKLEARN_AVAILABLE = True
-    from src.artifact import make_splits, prepare_fold_features, reduce_train_test
+    import pandas as pd
+    from unittest.mock import patch
+
+    from src.artifact import (
+        evaluate_experiment_group,
+        make_splits,
+        prepare_fold_features,
+        reduce_train_test,
+    )
+    from src.run_corrected_experiments import (
+        clean_incomplete_groups,
+        group_experiments,
+    )
 
 
 @unittest.skipUnless(SKLEARN_AVAILABLE, "scikit-learn is not installed")
@@ -49,6 +61,87 @@ class ProtocolTests(unittest.TestCase):
         # then concatenates them into a 20-component classification vector.
         self.assertEqual(x_train.shape, (20, 20))
         self.assertEqual(x_test.shape, (10, 20))
+
+    def test_group_reuses_one_preparation_per_fold(self):
+        labels = np.asarray([0, 1] * 10)
+        splits = [
+            (np.arange(4, 20), np.arange(0, 4)),
+            (np.arange(0, 16), np.arange(16, 20)),
+        ]
+        experiments = [
+            {
+                "name": "gaussian", "approach": "B", "extractors": ["A"],
+                "reduction": "pca", "components": 2,
+                "classifier": "gaussian_nb", "scale": False,
+            },
+            {
+                "name": "logistic", "approach": "B", "extractors": ["A"],
+                "reduction": "pca", "components": 2,
+                "classifier": "logistic", "scale": False,
+            },
+        ]
+        prepared_train = np.asarray([[index, index % 2] for index in range(16)])
+        prepared_test = np.asarray([[index, index % 2] for index in range(4)])
+        with patch(
+            "src.artifact.prepare_fold_features",
+            return_value=(prepared_train, prepared_test),
+        ) as prepare:
+            records, predictions = evaluate_experiment_group(
+                experiments,
+                {"A": np.zeros((20, 3))},
+                labels,
+                splits,
+                1980,
+                sample_names=[f"sample_{index}.jpg" for index in range(20)],
+                prediction_mode="all",
+            )
+        self.assertEqual(prepare.call_count, 2)
+        self.assertEqual(len(records), 4)
+        self.assertEqual(len(predictions), 16)
+        self.assertTrue(all(row["shared_preprocessing_size"] == 2 for row in records))
+        self.assertTrue(
+            all(
+                row["tn_obstructed"]
+                + row["fp_obstructed_as_clear"]
+                + row["fn_clear_as_obstructed"]
+                + row["tp_clear"]
+                == row["test_size"]
+                for row in records
+            )
+        )
+        self.assertTrue(all("score_clear" in row for row in predictions))
+
+    def test_classifier_variants_form_one_preprocessing_group(self):
+        common = {
+            "approach": "B", "extractors": ["MobileNet"],
+            "reduction": "pca", "components": 40, "scale": False,
+        }
+        experiments = [
+            {**common, "name": "rbf", "classifier": "rbf_svm"},
+            {**common, "name": "linear", "classifier": "linear_svm"},
+        ]
+        groups = group_experiments(experiments)
+        self.assertEqual(len(groups), 1)
+        self.assertEqual(len(groups[0]), 2)
+
+    def test_partial_group_is_removed_before_resume(self):
+        common = {
+            "approach": "B", "extractors": ["MobileNet"],
+            "reduction": "pca", "components": 40, "scale": False,
+        }
+        group = [
+            {**common, "name": "rbf", "classifier": "rbf_svm"},
+            {**common, "name": "linear", "classifier": "linear_svm"},
+        ]
+        partial = pd.DataFrame(
+            [
+                {"experiment": "rbf", "fold": 1},
+                {"experiment": "linear", "fold": 1},
+            ]
+        )
+        cleaned, completed = clean_incomplete_groups(partial, [group], 2)
+        self.assertTrue(cleaned.empty)
+        self.assertEqual(completed, set())
 
 
 if __name__ == "__main__":

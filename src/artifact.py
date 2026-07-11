@@ -18,7 +18,9 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import (
     accuracy_score,
     balanced_accuracy_score,
+    confusion_matrix,
     f1_score,
+    matthews_corrcoef,
     roc_auc_score,
 )
 from sklearn.model_selection import LeaveOneOut, StratifiedKFold
@@ -105,6 +107,19 @@ def dataset_fingerprint(paths: Iterable[Path]) -> str:
     digest = hashlib.sha256()
     for path in paths:
         digest.update(path.name.encode("utf-8"))
+        digest.update(b"\n")
+    return digest.hexdigest()
+
+
+def dataset_content_fingerprint(paths: Iterable[Path]) -> str:
+    """Hash ordered filenames and file contents for run-level provenance."""
+    digest = hashlib.sha256()
+    for path in paths:
+        digest.update(path.name.encode("utf-8"))
+        digest.update(b"\0")
+        with path.open("rb") as handle:
+            for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+                digest.update(chunk)
         digest.update(b"\n")
     return digest.hexdigest()
 
@@ -325,6 +340,171 @@ def continuous_scores(classifier, x_test: np.ndarray) -> np.ndarray | None:
     return None
 
 
+def preprocessing_key(experiment: dict) -> tuple:
+    """Return the classifier-independent feature-processing signature."""
+    components = experiment.get("components")
+    return (
+        experiment["approach"].upper(),
+        tuple(experiment["extractors"]),
+        experiment.get("reduction", "full").lower(),
+        None if components is None else int(components),
+        bool(experiment.get("scale", False)),
+    )
+
+
+def evaluate_prepared_fold(
+    experiment: dict,
+    labels: np.ndarray,
+    train: np.ndarray,
+    test: np.ndarray,
+    fold: int,
+    x_train: np.ndarray,
+    x_test: np.ndarray,
+    reduction_time: float,
+    seed: int,
+    shared_preprocessing_size: int = 1,
+    sample_names: list[str] | None = None,
+    prediction_mode: str = "none",
+) -> tuple[dict, list[dict]]:
+    """Train and evaluate one classifier using already prepared fold features."""
+    classifier = build_classifier(experiment["classifier"], seed)
+    train_started = perf_counter()
+    classifier.fit(x_train, labels[train])
+    training_time = perf_counter() - train_started
+
+    prediction_started = perf_counter()
+    predicted = classifier.predict(x_test)
+    scores = continuous_scores(classifier, x_test)
+    prediction_time = perf_counter() - prediction_started
+
+    truth = labels[test]
+    tn, fp, fn, tp = confusion_matrix(truth, predicted, labels=[0, 1]).ravel()
+
+    def safe_ratio(numerator, denominator):
+        return numerator / denominator if denominator else np.nan
+
+    record = {
+        "experiment": experiment["name"],
+        "approach": experiment["approach"],
+        "classifier": experiment["classifier"],
+        "fold": fold,
+        "train_size": len(train),
+        "test_size": len(test),
+        "prepared_features": x_train.shape[1],
+        "shared_preprocessing_size": shared_preprocessing_size,
+        "accuracy": accuracy_score(truth, predicted),
+        "f1": f1_score(truth, predicted, zero_division=0),
+        "f1_clear": f1_score(truth, predicted, pos_label=1, zero_division=0),
+        "f1_obstructed": f1_score(
+            truth, predicted, pos_label=0, zero_division=0
+        ),
+        "macro_f1": f1_score(truth, predicted, average="macro", zero_division=0),
+        "balanced_accuracy": balanced_accuracy_score(truth, predicted),
+        "mcc": matthews_corrcoef(truth, predicted),
+        "tn_obstructed": int(tn),
+        "fp_obstructed_as_clear": int(fp),
+        "fn_clear_as_obstructed": int(fn),
+        "tp_clear": int(tp),
+        "obstructed_recall": safe_ratio(tn, tn + fp),
+        "clear_recall": safe_ratio(tp, tp + fn),
+        "obstructed_precision": safe_ratio(tn, tn + fn),
+        "clear_precision": safe_ratio(tp, tp + fp),
+        "roc_auc": np.nan,
+        # This is the wall time of the shared transformation. It is repeated
+        # in all classifier rows that reused the transformation and therefore
+        # must not be summed across those rows to estimate total wall time.
+        "reduction_seconds": reduction_time,
+        "training_seconds": training_time,
+        "prediction_seconds": prediction_time,
+    }
+    if scores is not None and len(np.unique(truth)) == 2:
+        record["roc_auc"] = roc_auc_score(truth, scores)
+
+    prediction_records = []
+    if prediction_mode not in {"none", "errors", "all"}:
+        raise ValueError(f"Unknown prediction mode: {prediction_mode}")
+    if prediction_mode != "none":
+        score_values = (
+            np.asarray(scores).reshape(-1)
+            if scores is not None
+            else np.full(len(test), np.nan)
+        )
+        for local_index, sample_index in enumerate(test):
+            is_correct = int(truth[local_index]) == int(predicted[local_index])
+            if prediction_mode == "errors" and is_correct:
+                continue
+            prediction_records.append(
+                {
+                    "experiment": experiment["name"],
+                    "approach": experiment["approach"],
+                    "classifier": experiment["classifier"],
+                    "fold": fold,
+                    "sample_index": int(sample_index),
+                    "filename": (
+                        sample_names[sample_index]
+                        if sample_names is not None
+                        else str(sample_index)
+                    ),
+                    "true_label": int(truth[local_index]),
+                    "predicted_label": int(predicted[local_index]),
+                    "score_clear": float(score_values[local_index]),
+                    "correct": bool(is_correct),
+                }
+            )
+    return record, prediction_records
+
+
+def evaluate_experiment_group(
+    experiments: list[dict],
+    feature_map: dict[str, np.ndarray],
+    labels: np.ndarray,
+    splits,
+    seed: int,
+    sample_names: list[str] | None = None,
+    prediction_mode: str = "none",
+):
+    """Evaluate classifiers sharing one fold transformation.
+
+    The dimensionality reduction is fitted once per fold and reused by every
+    classifier in ``experiments``. This removes the eightfold duplicate PCA,
+    UMAP, or Relief-F work in the complete search.
+    """
+    if not experiments:
+        return []
+    expected_key = preprocessing_key(experiments[0])
+    if any(preprocessing_key(item) != expected_key for item in experiments[1:]):
+        raise ValueError("Experiment group contains incompatible preprocessing")
+
+    records = []
+    prediction_records = []
+    for fold, (train, test) in enumerate(splits, start=1):
+        reduction_started = perf_counter()
+        x_train, x_test = prepare_fold_features(
+            experiments[0], feature_map, labels, train, test, seed
+        )
+        reduction_time = perf_counter() - reduction_started
+        for experiment in experiments:
+            record, fold_predictions = evaluate_prepared_fold(
+                experiment,
+                labels,
+                train,
+                test,
+                fold,
+                x_train,
+                x_test,
+                reduction_time,
+                seed,
+                shared_preprocessing_size=len(experiments),
+                sample_names=sample_names,
+                prediction_mode=prediction_mode,
+            )
+            records.append(record)
+            prediction_records.extend(fold_predictions)
+    if prediction_mode == "none":
+        return records
+    return records, prediction_records
+
+
 def evaluate_experiment(
     experiment: dict,
     feature_map: dict[str, np.ndarray],
@@ -333,42 +513,9 @@ def evaluate_experiment(
     seed: int,
 ) -> list[dict]:
     """Evaluate one configuration and return one record per fold."""
-    records = []
-    for fold, (train, test) in enumerate(splits, start=1):
-        reduction_started = perf_counter()
-        x_train, x_test = prepare_fold_features(
-            experiment, feature_map, labels, train, test, seed
-        )
-        reduction_time = perf_counter() - reduction_started
-
-        classifier = build_classifier(experiment["classifier"], seed)
-        train_started = perf_counter()
-        classifier.fit(x_train, labels[train])
-        training_time = perf_counter() - train_started
-
-        prediction_started = perf_counter()
-        predicted = classifier.predict(x_test)
-        scores = continuous_scores(classifier, x_test)
-        prediction_time = perf_counter() - prediction_started
-
-        record = {
-            "experiment": experiment["name"],
-            "approach": experiment["approach"],
-            "fold": fold,
-            "train_size": len(train),
-            "test_size": len(test),
-            "accuracy": accuracy_score(labels[test], predicted),
-            "f1": f1_score(labels[test], predicted, zero_division=0),
-            "balanced_accuracy": balanced_accuracy_score(labels[test], predicted),
-            "roc_auc": np.nan,
-            "reduction_seconds": reduction_time,
-            "training_seconds": training_time,
-            "prediction_seconds": prediction_time,
-        }
-        if scores is not None and len(np.unique(labels[test])) == 2:
-            record["roc_auc"] = roc_auc_score(labels[test], scores)
-        records.append(record)
-    return records
+    return evaluate_experiment_group(
+        [experiment], feature_map, labels, splits, seed
+    )
 
 
 def load_config(path: str | Path) -> dict:
@@ -380,13 +527,21 @@ def load_config(path: str | Path) -> dict:
 
 
 def summarise(records: pd.DataFrame) -> pd.DataFrame:
-    metrics = ["accuracy", "f1", "balanced_accuracy", "roc_auc"]
+    metrics = [
+        "accuracy", "f1", "f1_clear", "f1_obstructed", "macro_f1",
+        "balanced_accuracy", "mcc", "obstructed_recall", "clear_recall",
+        "obstructed_precision", "clear_precision", "roc_auc",
+    ]
     rows = []
     for experiment, group in records.groupby("experiment", sort=False):
         row = {"experiment": experiment, "folds": len(group)}
         for metric in metrics:
+            if metric not in group:
+                continue
             row[f"{metric}_q1"] = group[metric].quantile(0.25)
             row[f"{metric}_median"] = group[metric].median()
             row[f"{metric}_q3"] = group[metric].quantile(0.75)
+            row[f"{metric}_mean"] = group[metric].mean()
+            row[f"{metric}_std"] = group[metric].std(ddof=1)
         rows.append(row)
     return pd.DataFrame(rows)
