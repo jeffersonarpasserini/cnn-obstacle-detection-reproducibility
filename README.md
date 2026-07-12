@@ -241,8 +241,10 @@ The corrected runner groups experiments that differ only by classifier. PCA
 and UMAP transformations are fitted once per fold and reused by all eight
 classifiers. Relief-F additionally persists one training-fold ranking for the
 largest cutoff (300 features) and reuses its nested prefixes for 2, 10, 20,
-..., 300 features. This reduces the complete search from 6,240 to 520
-Relief-F fits without sharing information between folds. The search still
+..., 300 features. Single-CNN rankings are also shared between Approach B and
+the matching independent branch of every Approach D pair. This reduces the
+complete search from 6,240 to 340 Relief-F fits without sharing information
+between folds. The search still
 contains 12,656 classifier configurations and 1,582 small, resumable
 preprocessing groups. It also keeps at most two CNN feature arrays in RAM by
 default.

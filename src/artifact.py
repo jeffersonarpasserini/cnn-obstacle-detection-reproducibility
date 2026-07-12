@@ -430,13 +430,29 @@ def prepare_fold_features(
 
         scaled_train, scaled_test = _scale_train_test(x_train, x_test, scale)
         ranking_size = max(int(components), int(relieff_max_features or components))
-        cache_key = (
-            approach,
-            tuple(extractors),
-            bool(scale),
-            int(fold) if fold is not None else -1,
-            str(part_key),
-        )
+        if approach in {"B", "D"}:
+            # Approach B and each independent branch of Approach D rank the
+            # exact same single-CNN matrix.  Use the B key as the canonical
+            # identity so all nine D pairs reuse rankings already computed by
+            # the 25 single-extractor B experiments.  Existing B cache files
+            # remain valid because their key is unchanged.
+            cache_key = (
+                "B",
+                (str(part_key),),
+                bool(scale),
+                int(fold) if fold is not None else -1,
+                str(part_key),
+            )
+        else:
+            # Approach C ranks a concatenated pair, which is a different
+            # feature space and must never share a single-CNN ranking.
+            cache_key = (
+                approach,
+                tuple(extractors),
+                bool(scale),
+                int(fold) if fold is not None else -1,
+                str(part_key),
+            )
         ranking = relieff_cache.get_or_fit(
             cache_key, scaled_train, labels[train], ranking_size
         )

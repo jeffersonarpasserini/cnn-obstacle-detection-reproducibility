@@ -98,11 +98,13 @@ def main():
         for index in sorted(relieff_group_indexes)
         if prediction_shard_path(prediction_dir, index).exists()
     ]
+    existing_rankings = list(ranking_dir.glob("*.npz"))
 
     print(f"Checkpoint rows: {len(records)}")
     print(f"Existing Relief-F rows to remove: {len(obsolete)}")
     print(f"Rows to preserve: {len(retained)}")
     print(f"Relief-F prediction shards to remove: {len(shard_paths)}")
+    print(f"Existing Relief-F rankings to preserve: {len(existing_rankings)}")
     print(f"Persistent ranking size: {relieff_max_features}")
     print(f"Relief-F workers: {args.relieff_n_jobs}")
     print(f"New pipeline hash: {new_pipeline_hash}")
@@ -134,13 +136,15 @@ def main():
             "type": "shared_relieff_fold_ranking",
             "reason": (
                 "Reuse one training-fold Relief-F ranking for all nested "
-                "feature-count cutoffs without changing held-out predictions."
+                "feature-count cutoffs and matching single-CNN branches in "
+                "Approaches B and D without changing held-out predictions."
             ),
             "previous_pipeline_sha256": metadata.get("pipeline_sha256"),
             "new_pipeline_sha256": new_pipeline_hash,
             "removed_checkpoint_rows": int(len(obsolete)),
             "removed_prediction_shards": int(len(shard_paths)),
             "preserved_checkpoint_rows": int(len(retained)),
+            "preserved_ranking_cache_files": int(len(existing_rankings)),
             "relieff_ranking_size": relieff_max_features,
             "relieff_n_jobs": args.relieff_n_jobs,
             "backup_directory": str(backup_dir),

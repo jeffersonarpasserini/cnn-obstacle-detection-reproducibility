@@ -165,9 +165,18 @@ class ProtocolTests(unittest.TestCase):
             "approach": "D", "extractors": ["A", "B"],
             "reduction": "relieff", "components": 2, "scale": False,
         }
+        approach_b = {
+            "approach": "B", "extractors": ["A"],
+            "reduction": "relieff", "components": 2, "scale": False,
+        }
         with TemporaryDirectory() as directory:
             cache = ReliefRankingCache(directory)
             with patch("src.artifact._make_relieff", return_value=FakeReliefF()):
+                prepare_fold_features(
+                    approach_b, feature_map, labels, np.arange(8),
+                    np.arange(8, 12), 1980, fold=1, relieff_cache=cache,
+                    relieff_max_features=5,
+                )
                 x_train, x_test = prepare_fold_features(
                     experiment, feature_map, labels, np.arange(8),
                     np.arange(8, 12), 1980, fold=1, relieff_cache=cache,
@@ -178,6 +187,7 @@ class ProtocolTests(unittest.TestCase):
         self.assertEqual(x_train.shape, (8, 4))
         self.assertEqual(x_test.shape, (4, 4))
         self.assertEqual(cache.misses, 2)
+        self.assertEqual(cache.hits, 1)
 
     def test_approach_d_uses_requested_components_per_extractor(self):
         rng = np.random.default_rng(1980)
