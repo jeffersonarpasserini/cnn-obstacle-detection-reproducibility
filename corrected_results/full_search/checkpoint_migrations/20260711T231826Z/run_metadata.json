@@ -1,0 +1,88 @@
+{
+  "config": "configs/full_search.json",
+  "config_sha256": "4c54edfb118c7601ca6a69884cc58bf10ea95fbbff29966bb383e1b6d71eeddc",
+  "pipeline_sha256": "966b2eeaad547dfde7c7bf9d1734653683c3207a2bdfcfb269c9a2b4ffe1d802",
+  "dataset": "via-dataset",
+  "dataset_filename_fingerprint": "479f2b9b33ba87ca811bc053920e5b44e43b40446b4709d5d327bb4e2a3eef82",
+  "dataset_content_sha256": "bef13299b60d06e994bf85498ea0ed2e02f5f6d73851745ce05a16fa5204f2d6",
+  "images": 342,
+  "seed": 1980,
+  "protocol": "stratified_kfold",
+  "n_splits": 10,
+  "actual_folds": 10,
+  "experiments": 12656,
+  "preprocessing_groups": 1582,
+  "prediction_mode": "errors",
+  "command": [
+    "src/run_corrected_experiments.py",
+    "--dataset",
+    "via-dataset",
+    "--config",
+    "configs/full_search.json",
+    "--cache-dir",
+    "cache/features",
+    "--output-dir",
+    "corrected_results/full_search",
+    "--max-loaded-extractors",
+    "2",
+    "--prediction-mode",
+    "errors"
+  ],
+  "started_utc": "2026-07-11T21:31:26.600013+00:00",
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+  "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "scipy": "1.18.0",
+    "scikit-learn": "1.9.0",
+    "tensorflow": "2.21.0",
+    "umap-learn": "0.5.12",
+    "skrebate": "0.62",
+    "Pillow": "12.3.0"
+  },
+  "hardware": {
+    "cpu": "x86_64",
+    "logical_cpus": 16,
+    "physical_memory_bytes": 67322093568,
+    "gpus": [
+      {
+        "logical_name": "/physical_device:GPU:0",
+        "device_name": "NVIDIA GeForce RTX 4070 Ti"
+      }
+    ],
+    "tensorflow_build": {
+      "cpu_compiler": "clang",
+      "cuda_compute_capabilities": [
+        "sm_60",
+        "sm_70",
+        "sm_80",
+        "sm_89",
+        "compute_90"
+      ],
+      "cuda_version": "12.5.1",
+      "cudnn_version": "9",
+      "is_cuda_build": true,
+      "is_rocm_build": false,
+      "is_tensorrt_build": false
+    }
+  },
+  "git": {
+    "commit": "67c7c199d1d06fc5c69942b57fbcac5772e9b5f0",
+    "branch": "main",
+    "dirty": true
+  },
+  "migrations": [
+    {
+      "applied_utc": "2026-07-11T21:30:36.508718+00:00",
+      "type": "unsupervised_umap_protocol_correction",
+      "reason": "UMAP had received y_train and therefore performed supervised dimension reduction; the protocol requires unsupervised UMAP.",
+      "previous_pipeline_sha256": "ec1cee03a315dcb09055e4ec253e08a13c07c705bb24b14128412f20671a5521",
+      "new_pipeline_sha256": "966b2eeaad547dfde7c7bf9d1734653683c3207a2bdfcfb269c9a2b4ffe1d802",
+      "removed_checkpoint_rows": 960,
+      "removed_prediction_shards": 12,
+      "preserved_checkpoint_rows": 3680,
+      "backup_directory": "corrected_results/full_search/checkpoint_migrations/20260711T213036Z"
+    }
+  ]
+}

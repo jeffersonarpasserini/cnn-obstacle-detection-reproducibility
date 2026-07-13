@@ -1,0 +1,8 @@
+{
+  "ranking_cache": "corrected_results/full_search/relieff_rankings",
+  "ranking_size": 300,
+  "n_jobs": 4,
+  "hits": 443,
+  "misses": 37,
+  "updated_utc": "2026-07-13T22:22:56.244927+00:00"
+}

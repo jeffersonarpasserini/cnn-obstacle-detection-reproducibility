@@ -1,0 +1,18 @@
+{
+  "state": "fitting",
+  "key": [
+    "B",
+    [
+      "ResNet101"
+    ],
+    false,
+    1,
+    "ResNet101"
+  ],
+  "n_jobs": 4,
+  "session_hits": 443,
+  "session_misses": 37,
+  "cached_rankings": 40,
+  "updated_utc": "2026-07-13T22:22:56.409063+00:00",
+  "ranking_size": 300
+}
