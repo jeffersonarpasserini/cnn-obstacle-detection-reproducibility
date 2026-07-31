@@ -33,9 +33,9 @@
     "--relieff-n-jobs",
     "8"
   ],
-  "started_utc": "2026-07-20T13:19:27.554950+00:00",
+  "started_utc": "2026-07-31T21:07:52.454949+00:00",
   "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
-  "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+  "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.39",
   "dependencies": {
     "numpy": "2.4.6",
     "pandas": "3.0.3",
@@ -49,7 +49,7 @@
   "hardware": {
     "cpu": "x86_64",
     "logical_cpus": 16,
-    "physical_memory_bytes": 67322093568,
+    "physical_memory_bytes": 67318743040,
     "gpus": [
       {
         "logical_name": "/physical_device:GPU:0",
@@ -73,7 +73,7 @@
     }
   },
   "git": {
-    "commit": "2fa8115f0883fbad8f1c4b94a92d2ea2f64fa582",
+    "commit": "05f58c452d8413d68c2ae3da43ac78b87ae48d22",
     "branch": "main",
     "dirty": true
   },
@@ -130,5 +130,8 @@
       "relieff_n_jobs": 8,
       "backup_directory": "corrected_results/full_search/checkpoint_migrations/20260720T131735Z"
     }
-  ]
+  ],
+  "completed": true,
+  "records": 126560,
+  "last_segment_seconds": 5522.537231224
 }

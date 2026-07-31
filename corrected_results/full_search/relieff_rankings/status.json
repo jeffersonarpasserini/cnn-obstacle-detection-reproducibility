@@ -3,17 +3,17 @@
   "key": [
     "B",
     [
-      "ResNet101"
+      "VGG19"
     ],
     false,
     10,
-    "ResNet101"
+    "VGG19"
   ],
   "n_jobs": 8,
-  "session_hits": 4422,
-  "session_misses": 138,
+  "session_hits": 1680,
+  "session_misses": 0,
   "cached_rankings": 340,
-  "updated_utc": "2026-07-31T04:56:43.063267+00:00",
-  "fit_seconds": 4006.6211272979854,
+  "updated_utc": "2026-07-31T22:38:21.835756+00:00",
+  "fit_seconds": 970.7916340589873,
   "ranking_size": 300
 }
