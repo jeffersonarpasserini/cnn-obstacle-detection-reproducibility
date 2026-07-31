@@ -1,24 +1,38 @@
 # Artifact provenance
 
-## Legacy Python programs
+## Dataset
 
-- Source repository directory: `Doutorado_Qualificacao`
-- Commit: `e3563bc6860957490a8d66bb2b498c20af81e5bc`
-- Commit date: 2022-07-25
-- Copied into: `legacy/`
-- Modification policy: preserved unchanged
+- Dataset: VIA path-obstruction image dataset
+- Canonical source: <https://github.com/fbreve/via-dataset>
+- Included sample count: 342 images
+- Class counts: 175 clear and 167 obstructed
+- Local integrity record: `data/dataset_manifest.csv`
 
-## Archived experimental results
+## Experiment definition
 
-- Source repository directory: `Phd-Partial-Results`
-- Commit: `e49652ec36b4aad25ade497bd9ec6c9f8b7a352b`
-- Commit date: 2026-06-17
-- Copied into: `results/`
-- Included subsets: `Referencia`, `Abordagem01`, `Abordagem02`, `Abordagem03`, and `Abordagem04`
+- Random seed: 1980
+- Validation: stratified 10-fold cross-validation with shuffling
+- Complete configuration: `configs/full_search.json`
+- Completed-run metadata: `results/full_search/run_metadata.json`
+- Exact sample/fold mapping: `results/full_search/fold_assignments.csv`
 
-## Corrected implementation
+Every learned preprocessing operation and classifier is fitted only on the
+training indices supplied for its fold. ImageNet-pretrained CNN weights remain
+fixed and serve only as feature extractors.
 
-The files under `src/`, `scripts/`, `configs/`, `tests/`, and the top-level documentation were created for the IEEE Access artifact after the retrospective code audit. They do not alter the archived result files.
+## Numerical sources for the manuscript
 
-When this directory is published, record the new repository commit, release tag, and persistent DOI here.
+- Per-fold metrics: `results/full_search/per_fold_metrics.csv`
+- Descriptive summaries: `results/full_search/summary_metrics.csv`
+- Analysis code: `scripts/build_manuscript_tables.py`
+- Generated article tables: `results/full_search/manuscript_tables/`
 
+`analysis_manifest.json` records SHA-256 hashes of the full-search metrics and
+configuration used to generate the article tables.
+
+When this repository is released, record the release tag, commit identifier,
+and archival DOI below:
+
+- Release tag: pending
+- Commit: pending
+- DOI: pending

@@ -1,0 +1,25 @@
+{
+  "source_results": "results/full_search",
+  "source_per_fold_sha256": "3d5e2a8caf75e48cc665dd2ed97a838b4af4c422611d2cea4813034a115880cb",
+  "source_config": "configs/full_search.json",
+  "source_config_sha256": "4c54edfb118c7601ca6a69884cc58bf10ea95fbbff29966bb383e1b6d71eeddc",
+  "records": 126560,
+  "folds": 10,
+  "selection_endpoint": "per-fold accuracy",
+  "selection_method": "hierarchical average Friedman rank",
+  "tie_breakers": [
+    "median accuracy",
+    "pooled out-of-fold accuracy",
+    "pooled obstructed-path recall",
+    "experiment identifier"
+  ],
+  "selected_models_by_approach": {
+    "A": "a_resnet101v2_logistic",
+    "B": "b_efficientnetb3_pca_300_linear_svm",
+    "C": "c_mobilenet_resnet50_pca_300_linear_svm",
+    "D": "d_mobilenet_resnet50_pca_300_linear_svm"
+  },
+  "reference_baseline_included": false,
+  "reference_baseline_notice": "The reference model requires evaluation with results/full_search/fold_assignments.csv before inclusion in a paired Friedman comparison with the four approaches.",
+  "selection_scope_notice": "The exhaustive search and model selection use the same ten folds; the resulting comparisons are exploratory."
+}

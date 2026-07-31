@@ -1,0 +1,54 @@
+{
+  "seed": 1980,
+  "n_splits": 10,
+  "protocol": "loocv",
+  "selection_notice": "Models selected hierarchically from the completed 10-fold search. LOOCV on the same dataset assesses stability but is not an independent confirmation of model selection.",
+  "experiments": [
+    {
+      "name": "a_resnet101v2_logistic",
+      "approach": "A",
+      "extractors": [
+        "ResNet101V2"
+      ],
+      "reduction": "full",
+      "components": null,
+      "classifier": "logistic",
+      "scale": false
+    },
+    {
+      "name": "b_efficientnetb3_pca_300_linear_svm",
+      "approach": "B",
+      "extractors": [
+        "EfficientNetB3"
+      ],
+      "reduction": "pca",
+      "components": 300,
+      "classifier": "linear_svm",
+      "scale": false
+    },
+    {
+      "name": "c_mobilenet_resnet50_pca_300_linear_svm",
+      "approach": "C",
+      "extractors": [
+        "MobileNet",
+        "ResNet50"
+      ],
+      "reduction": "pca",
+      "components": 300,
+      "classifier": "linear_svm",
+      "scale": false
+    },
+    {
+      "name": "d_mobilenet_resnet50_pca_300_linear_svm",
+      "approach": "D",
+      "extractors": [
+        "MobileNet",
+        "ResNet50"
+      ],
+      "reduction": "pca",
+      "components": 300,
+      "classifier": "linear_svm",
+      "scale": false
+    }
+  ]
+}

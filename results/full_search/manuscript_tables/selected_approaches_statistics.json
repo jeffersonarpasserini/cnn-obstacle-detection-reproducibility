@@ -1,0 +1,21 @@
+{
+  "scope": "four fixed-feature approach finalists only",
+  "exploratory_warning": "The finalists were selected on these same folds. P-values and the Nemenyi critical difference are descriptive, not confirmatory.",
+  "models": [
+    "a_resnet101v2_logistic",
+    "b_efficientnetb3_pca_300_linear_svm",
+    "c_mobilenet_resnet50_pca_300_linear_svm",
+    "d_mobilenet_resnet50_pca_300_linear_svm"
+  ],
+  "folds": 10,
+  "friedman_statistic": 0.9705882352941128,
+  "friedman_p_value": 0.8083682222380306,
+  "average_ranks": {
+    "a_resnet101v2_logistic": 2.55,
+    "b_efficientnetb3_pca_300_linear_svm": 2.75,
+    "c_mobilenet_resnet50_pca_300_linear_svm": 2.35,
+    "d_mobilenet_resnet50_pca_300_linear_svm": 2.35
+  },
+  "nemenyi_q_alpha_0_05": 2.569,
+  "nemenyi_critical_difference": 1.4832128415481485
+}

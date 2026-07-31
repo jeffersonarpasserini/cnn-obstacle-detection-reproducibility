@@ -1,6 +1,8 @@
 .venv/
 __pycache__/
 *.py[cod]
+.DS_Store
 cache/
-corrected_results/**/per_fold_metrics.partial.csv
-corrected_results/**/per_sample_predictions/
+logs/
+results/**/per_fold_metrics.partial.csv
+results/**/per_sample_predictions/

@@ -1,4 +1,4 @@
-"""Leakage-free utilities for the CNN feature-extraction experiments."""
+"""Fold-isolated utilities for the CNN feature-extraction experiments."""
 
 from __future__ import annotations
 
@@ -192,7 +192,7 @@ def extract_or_load_features(
 
 
 def make_splits(labels: np.ndarray, protocol: str, n_splits: int, seed: int):
-    """Create deterministic, leakage-free validation splits."""
+    """Create deterministic, fold-isolated validation splits."""
     indices = np.arange(len(labels))
     if protocol == "stratified_kfold":
         splitter = StratifiedKFold(

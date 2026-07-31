@@ -1,0 +1,7 @@
+model_1,model_2,median_accuracy_difference,wilcoxon_statistic,p_value,p_holm,significant_0_05
+a_resnet101v2_logistic,b_efficientnetb3_pca_300_linear_svm,-0.014285714285714235,26.0,0.9375,1.0,False
+a_resnet101v2_logistic,c_mobilenet_resnet50_pca_300_linear_svm,0.0,17.0,1.0,1.0,False
+a_resnet101v2_logistic,d_mobilenet_resnet50_pca_300_linear_svm,0.0,17.0,1.0,1.0,False
+b_efficientnetb3_pca_300_linear_svm,c_mobilenet_resnet50_pca_300_linear_svm,0.014285714285714235,25.0,0.953125,1.0,False
+b_efficientnetb3_pca_300_linear_svm,d_mobilenet_resnet50_pca_300_linear_svm,0.014285714285714235,25.0,0.953125,1.0,False
+c_mobilenet_resnet50_pca_300_linear_svm,d_mobilenet_resnet50_pca_300_linear_svm,0.0,0.0,1.0,1.0,False

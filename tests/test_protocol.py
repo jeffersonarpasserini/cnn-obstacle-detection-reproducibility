@@ -19,7 +19,7 @@ else:
         reduce_train_test,
         ReliefRankingCache,
     )
-    from src.run_corrected_experiments import (
+    from src.run_experiments import (
         clean_incomplete_groups,
         group_experiments,
     )

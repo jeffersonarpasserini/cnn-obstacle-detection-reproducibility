@@ -9,5 +9,5 @@ authors:
     given-names: Fabricio Aparecido
 version: 1.0.0
 date-released: 2026-07-10
-repository-code: "https://github.com/jeffersonarpasserini/Phd-Partial-Results"
+repository-code: "https://github.com/jeffersonarpasserini/cnn-obstacle-detection-reproducibility"
 license: MIT
