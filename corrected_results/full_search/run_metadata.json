@@ -13,7 +13,7 @@
   "experiments": 12656,
   "preprocessing_groups": 1582,
   "prediction_mode": "errors",
-  "relieff_n_jobs": 4,
+  "relieff_n_jobs": 8,
   "relieff_cache_dir": "corrected_results/full_search/relieff_rankings",
   "relieff_max_features": 300,
   "command": [
@@ -31,9 +31,9 @@
     "--prediction-mode",
     "errors",
     "--relieff-n-jobs",
-    "4"
+    "8"
   ],
-  "started_utc": "2026-07-12T13:50:28.197772+00:00",
+  "started_utc": "2026-07-20T13:19:27.554950+00:00",
   "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
   "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
   "dependencies": {
@@ -73,7 +73,7 @@
     }
   },
   "git": {
-    "commit": "ac37c720649842c2c1ffb4e8fdd50b47272bb841",
+    "commit": "2fa8115f0883fbad8f1c4b94a92d2ea2f64fa582",
     "branch": "main",
     "dirty": true
   },
@@ -115,6 +115,20 @@
       "relieff_ranking_size": 300,
       "relieff_n_jobs": 4,
       "backup_directory": "corrected_results/full_search/checkpoint_migrations/20260712T134857Z"
+    },
+    {
+      "applied_utc": "2026-07-20T13:17:35.964062+00:00",
+      "type": "shared_relieff_fold_ranking",
+      "reason": "Reuse one training-fold Relief-F ranking for all nested feature-count cutoffs and matching single-CNN branches in Approaches B and D without changing held-out predictions.",
+      "previous_pipeline_sha256": "af3a58138feb94cbdf88de25c2fd012a81c24007cc94bff50c4d288306874569",
+      "new_pipeline_sha256": "af3a58138feb94cbdf88de25c2fd012a81c24007cc94bff50c4d288306874569",
+      "removed_checkpoint_rows": 19200,
+      "removed_prediction_shards": 240,
+      "preserved_checkpoint_rows": 43040,
+      "preserved_ranking_cache_files": 202,
+      "relieff_ranking_size": 300,
+      "relieff_n_jobs": 8,
+      "backup_directory": "corrected_results/full_search/checkpoint_migrations/20260720T131735Z"
     }
   ]
 }
