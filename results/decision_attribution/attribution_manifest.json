@@ -14,8 +14,12 @@
     "MobileNet": 0.0,
     "ResNet50": 0.0
   },
-  "script_sha256": "cac5cad1e4ce8d2b9a1642a20a5d4e56e9e33fef803ea968fe9132486f82539c",
+  "script_sha256": "f4b93356d10068840182e15998da912746b1ab3364552bd6701e6ab3dc4e0194",
   "run_signature": "210d2b913cee348e21be980a5fccf4b8f910bc0aa8bd5aac093da14547704629",
   "stored_score_tolerance": 0.0005,
-  "reconstruction_tolerance": 1e-05
+  "reconstruction_tolerance": 1e-05,
+  "figures": {
+    "article_panel": "decision_attribution_representative.png",
+    "all_consensus_errors": "decision_attribution_all_consensus_errors.png"
+  }
 }

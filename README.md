@@ -258,7 +258,8 @@ Outputs are written to `results/decision_attribution/`:
 | `selected_samples.csv` | Deterministically selected LOOCV consensus errors |
 | `attribution_validation.csv` | Stored, regenerated, and reconstructed decision scores |
 | `representative_samples.csv` | Images used in the article panel |
-| `decision_attribution_representative.png` | Two-row panel for the four finalists |
+| `decision_attribution_representative.png` | Two-row article panel for the four finalists |
+| `decision_attribution_all_consensus_errors.png` | Complete seven-image comparison panel |
 | `overlays/` | One overlay per selected image and approach |
 | `records/` | Validated per-image checkpoints used for safe resumption |
 | `attribution_manifest.json` | Method, input hashes, selection rule, and limitations |

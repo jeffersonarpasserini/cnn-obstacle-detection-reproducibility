@@ -46,10 +46,10 @@ FINAL_CONV_SHAPES = {
 }
 
 DISPLAY_NAMES = {
-    "A": "A: ResNet101V2 + LR",
-    "B": "B: EfficientNetB3 + PCA + SVM",
-    "C": "C: MobileNet+ResNet50 + joint PCA + SVM",
-    "D": "D: separate PCA + MobileNet+ResNet50 + SVM",
+    "A": "Approach A",
+    "B": "Approach B",
+    "C": "Approach C",
+    "D": "Approach D",
 }
 
 STORED_SCORE_TOLERANCE = 5e-4
@@ -360,27 +360,30 @@ def make_panel(
     destination: Path,
 ):
     approaches = ["A", "B", "C", "D"]
-    cell_width, cell_height = 330, 420
-    header_height, label_height = 72, 52
+    cell_width, cell_height = 330, 430
+    header_height, label_height = 60, 48
     canvas = Image.new(
         "RGB",
         (cell_width * 5, header_height + (cell_height + label_height) * len(representative)),
         "white",
     )
     draw = ImageDraw.Draw(canvas)
-    title_font = _font(25, bold=True)
-    label_font = _font(23, bold=True)
-    small_font = _font(19)
-    headers = ["Original", *[DISPLAY_NAMES[item] for item in approaches]]
+    header_font = _font(30, bold=True)
+    label_font = _font(26, bold=True)
+    headers = ["Original image", *[DISPLAY_NAMES[item] for item in approaches]]
     for column, header in enumerate(headers):
         draw.multiline_text(
             (column * cell_width + cell_width / 2, 12),
             header,
             fill="black",
-            font=small_font,
+            font=header_font,
             anchor="ma",
             align="center",
+            spacing=3,
         )
+        if column:
+            x = column * cell_width
+            draw.line((x, 0, x, canvas.height), fill=(220, 220, 220), width=1)
 
     for row_index, sample in enumerate(representative.itertuples(index=False)):
         y = header_height + row_index * (cell_height + label_height)
@@ -397,9 +400,13 @@ def make_panel(
             "predicted_label"
         ].mode().iloc[0]
         predicted = "clear" if int(prediction) == 1 else "obstructed"
+        panel_letter = chr(ord("a") + row_index)
         draw.text(
             (12, y + cell_height + 8),
-            f"{sample.filename}: true={truth}; unanimous prediction={predicted}",
+            (
+                f"({panel_letter}) {sample.filename} — Ground truth: {truth}; "
+                f"all four predicted: {predicted}"
+            ),
             fill="black",
             font=label_font,
         )
