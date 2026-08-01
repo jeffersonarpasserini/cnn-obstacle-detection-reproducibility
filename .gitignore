@@ -4,5 +4,6 @@ __pycache__/
 .DS_Store
 cache/
 logs/
-results/**/per_fold_metrics.partial.csv
-results/**/per_sample_predictions/
+#results/**/per_fold_metrics.partial.csv
+#results/**/per_sample_predictions/
+
