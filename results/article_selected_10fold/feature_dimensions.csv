@@ -1,0 +1,5 @@
+extractor,samples,features_per_image,array_mebibytes
+ResNet101V2,342,100352,130.921875
+EfficientNetB3,342,153600,200.390625
+MobileNet,342,50176,65.4609375
+ResNet50,342,100352,130.921875

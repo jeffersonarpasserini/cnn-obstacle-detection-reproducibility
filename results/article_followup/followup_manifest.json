@@ -1,0 +1,13 @@
+{
+  "models": [
+    "a_resnet101v2_logistic",
+    "b_efficientnetb3_pca_300_linear_svm",
+    "c_mobilenet_resnet50_pca_300_linear_svm",
+    "d_mobilenet_resnet50_pca_300_linear_svm"
+  ],
+  "images": 342,
+  "tenfold_results": "results/article_selected_10fold",
+  "loocv_results": "results/article_selected_loocv",
+  "ground_signage_manifest": null,
+  "interpretation_notice": "LOOCV uses the same dataset used for model selection. It measures resampling stability and is not independent external validation."
+}
