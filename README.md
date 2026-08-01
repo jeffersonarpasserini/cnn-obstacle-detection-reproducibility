@@ -53,9 +53,11 @@ study images.
 │   ├── article_followup_status.py
 │   ├── analyze_article_followup.py
 │   ├── analyze_results.py
+│   ├── build_decision_attribution.py
 │   ├── build_manuscript_tables.py
 │   ├── generate_full_search_config.py
 │   ├── run_article_followup_linux.sh
+│   ├── run_decision_attribution_linux.sh
 │   └── verify_dataset.py
 ├── src/
 │   ├── artifact.py
@@ -227,6 +229,49 @@ echo $! > logs/article_followup.pid
 
 Monitor it with `watch -n 30 python scripts/article_followup_status.py`.
 
+## Spatial decision attribution
+
+The repository can generate spatial maps that explain the predictions of the
+four finalists actually evaluated in the manuscript. This is not Grad-CAM on
+a separately trained end-to-end CNN. Each finalist uses a linear downstream
+classifier, so its decision score can be decomposed exactly over the flattened
+final-convolution activations. For PCA pipelines, the classifier coefficient
+is first projected back to the original feature space with the fitted PCA
+components.
+
+On the Linux workstation that contains the dataset and selected-model LOOCV
+outputs, run:
+
+```bash
+bash scripts/run_decision_attribution_linux.sh
+```
+
+By default, the analysis includes every image misclassified by all four
+finalists under LOOCV. This deterministic rule avoids selecting visually
+favorable examples after inspecting the maps. The generated article panel
+uses the lexicographically first clear and obstructed images in that set.
+
+Outputs are written to `results/decision_attribution/`:
+
+| File | Contents |
+|---|---|
+| `selected_samples.csv` | Deterministically selected LOOCV consensus errors |
+| `attribution_validation.csv` | Stored, regenerated, and reconstructed decision scores |
+| `representative_samples.csv` | Images used in the article panel |
+| `decision_attribution_representative.png` | Two-row panel for the four finalists |
+| `overlays/` | One overlay per selected image and approach |
+| `records/` | Validated per-image checkpoints used for safe resumption |
+| `attribution_manifest.json` | Method, input hashes, selection rule, and limitations |
+
+The command is resumable: a repeated execution reuses each validated map whose
+input signature still matches the configuration, prediction shards, and
+dataset index.
+
+The maps indicate positive spatial evidence for the predicted class. Because
+the dataset contains image-level class labels but no obstacle masks or bounding
+boxes, they are qualitative explanations, not measurements of localization
+accuracy or causal attention.
+
 ## Tests
 
 ```bash
@@ -234,8 +279,9 @@ python -m unittest discover -s tests -v
 ```
 
 The tests cover deterministic folds, train-only transformation fitting,
-prediction output integrity, Relief-F cache reuse, ranking ties, and multiple
-comparison adjustment.
+prediction output integrity, Relief-F cache reuse, ranking ties, multiple
+comparison adjustment, and exact reconstruction of linear decision scores
+after PCA back-projection.
 
 ## Publication and citation
 

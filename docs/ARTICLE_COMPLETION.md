@@ -105,7 +105,35 @@ count. It produces:
 - per-image error tables and error-frequency distributions for both protocols;
 - `followup_manifest.json`.
 
-## 5. Optional focused ground-signage analysis
+## 5. Generate spatial decision-attribution maps
+
+After both selected-model runs are complete, generate explanations for every
+LOOCV image misclassified by all four finalists:
+
+```bash
+bash scripts/run_decision_attribution_linux.sh
+```
+
+The script reuses the four CNN feature caches, refits each finalist with the
+explained image held out, and verifies three values before creating a map:
+
+1. the regenerated class prediction equals the stored LOOCV prediction;
+2. the regenerated continuous score equals the stored LOOCV score;
+3. the score reconstructed from raw activations and back-projected linear
+   coefficients equals the classifier score.
+
+The process checkpoints every validated image/model pair under `records/`.
+If interrupted, repeat the same command; completed records with matching input
+signatures are reused.
+
+Review `results/decision_attribution/attribution_validation.csv` and require
+all absolute errors to remain within the implemented numerical tolerance.
+Use `decision_attribution_representative.png` in the manuscript only after
+visually checking the original images and overlays. Interpret the maps as
+qualitative spatial decision evidence because localization annotations are not
+available.
+
+## 6. Optional focused ground-signage analysis
 
 Create `data/ground_signage_manifest.csv` with one `filename` column and one
 row per image included in the predefined subset. Then rerun:
@@ -121,7 +149,7 @@ python scripts/analyze_article_followup.py \
 Do not reconstruct this subset from model errors. Its membership must be
 defined from image content independently of predictions.
 
-## 6. Integrity checks before using numbers in the article
+## 7. Integrity checks before using numbers in the article
 
 ```bash
 python -m unittest discover -s tests -v
