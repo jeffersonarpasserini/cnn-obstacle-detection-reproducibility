@@ -1,0 +1,18 @@
+{
+  "run_signature": "210d2b913cee348e21be980a5fccf4b8f910bc0aa8bd5aac093da14547704629",
+  "validation": {
+    "sample_index": 175,
+    "filename": "nonclear.000.jpg",
+    "true_label": 0,
+    "experiment": "b_efficientnetb3_pca_300_linear_svm",
+    "approach": "B",
+    "predicted_label": 1,
+    "stored_score_clear": 0.4759087661750474,
+    "regenerated_score_clear": 0.47590876617504746,
+    "reconstructed_score_clear": 0.4759087260561087,
+    "stored_score_absolute_difference": 5.551115123125783e-17,
+    "reconstruction_absolute_error": 4.011893878219652e-08,
+    "positive_map_cells": 54,
+    "map_cells": 100
+  }
+}

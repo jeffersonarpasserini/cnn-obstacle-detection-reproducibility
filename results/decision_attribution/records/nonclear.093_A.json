@@ -1,0 +1,18 @@
+{
+  "run_signature": "210d2b913cee348e21be980a5fccf4b8f910bc0aa8bd5aac093da14547704629",
+  "validation": {
+    "sample_index": 268,
+    "filename": "nonclear.093.jpg",
+    "true_label": 0,
+    "experiment": "a_resnet101v2_logistic",
+    "approach": "A",
+    "predicted_label": 1,
+    "stored_score_clear": 2.929065704345703,
+    "regenerated_score_clear": 2.929065704345703,
+    "reconstructed_score_clear": 2.929066384355313,
+    "stored_score_absolute_difference": 0.0,
+    "reconstruction_absolute_error": 6.800096099546238e-07,
+    "positive_map_cells": 28,
+    "map_cells": 49
+  }
+}

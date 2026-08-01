@@ -1,0 +1,3 @@
+sample_index,filename,true_label,selection_rule
+4,clear.004.jpg,1,misclassified_by_all_finalists_under_loocv
+175,nonclear.000.jpg,0,misclassified_by_all_finalists_under_loocv

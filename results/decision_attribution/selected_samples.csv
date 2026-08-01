@@ -1,0 +1,8 @@
+sample_index,filename,true_label,selection_rule
+4,clear.004.jpg,1,misclassified_by_all_finalists_under_loocv
+175,nonclear.000.jpg,0,misclassified_by_all_finalists_under_loocv
+189,nonclear.014.jpg,0,misclassified_by_all_finalists_under_loocv
+238,nonclear.063.jpg,0,misclassified_by_all_finalists_under_loocv
+263,nonclear.088.jpg,0,misclassified_by_all_finalists_under_loocv
+268,nonclear.093.jpg,0,misclassified_by_all_finalists_under_loocv
+332,nonclear.157.jpg,0,misclassified_by_all_finalists_under_loocv

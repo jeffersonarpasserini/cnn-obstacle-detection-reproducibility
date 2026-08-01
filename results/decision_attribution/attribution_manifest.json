@@ -1,0 +1,21 @@
+{
+  "method": "Exact decomposition of each linear class score into final-convolution activation contributions. PCA-space coefficients are projected to raw features with components_.T. Positive evidence for the predicted class is summed across channels and normalized independently for display.",
+  "selection_rule": "All LOOCV images misclassified by all four fixed finalists; the article panel uses the lexicographically first clear and obstructed examples.",
+  "interpretation_limit": "Maps are qualitative because the dataset has no obstacle segmentation or localization ground truth. They must not be interpreted as measured localization accuracy or causal attention.",
+  "dataset": "via-dataset",
+  "config": "configs/article_selected_models_loocv.json",
+  "config_sha256": "9000ae62a21f45a348255f59e4273a36e3ab58dbc9c0c06bdfb342ce64727409",
+  "prediction_directory": "results/article_selected_loocv",
+  "images_explained": 7,
+  "models": 4,
+  "feature_extraction_seconds": {
+    "ResNet101V2": 0.0,
+    "EfficientNetB3": 0.0,
+    "MobileNet": 0.0,
+    "ResNet50": 0.0
+  },
+  "script_sha256": "cac5cad1e4ce8d2b9a1642a20a5d4e56e9e33fef803ea968fe9132486f82539c",
+  "run_signature": "210d2b913cee348e21be980a5fccf4b8f910bc0aa8bd5aac093da14547704629",
+  "stored_score_tolerance": 0.0005,
+  "reconstruction_tolerance": 1e-05
+}

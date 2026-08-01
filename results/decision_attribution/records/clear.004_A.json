@@ -1,0 +1,18 @@
+{
+  "run_signature": "210d2b913cee348e21be980a5fccf4b8f910bc0aa8bd5aac093da14547704629",
+  "validation": {
+    "sample_index": 4,
+    "filename": "clear.004.jpg",
+    "true_label": 1,
+    "experiment": "a_resnet101v2_logistic",
+    "approach": "A",
+    "predicted_label": 0,
+    "stored_score_clear": -10.047670364379885,
+    "regenerated_score_clear": -10.047670364379883,
+    "reconstructed_score_clear": -10.047671363437306,
+    "stored_score_absolute_difference": 1.7763568394002505e-15,
+    "reconstruction_absolute_error": 9.990574234564065e-07,
+    "positive_map_cells": 27,
+    "map_cells": 49
+  }
+}

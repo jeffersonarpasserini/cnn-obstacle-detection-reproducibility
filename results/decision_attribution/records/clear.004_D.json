@@ -1,0 +1,18 @@
+{
+  "run_signature": "210d2b913cee348e21be980a5fccf4b8f910bc0aa8bd5aac093da14547704629",
+  "validation": {
+    "sample_index": 4,
+    "filename": "clear.004.jpg",
+    "true_label": 1,
+    "experiment": "d_mobilenet_resnet50_pca_300_linear_svm",
+    "approach": "D",
+    "predicted_label": 0,
+    "stored_score_clear": -0.5195952975099287,
+    "regenerated_score_clear": -0.5195952975099287,
+    "reconstructed_score_clear": -0.5195952724865913,
+    "stored_score_absolute_difference": 0.0,
+    "reconstruction_absolute_error": 2.502333740217466e-08,
+    "positive_map_cells": 32,
+    "map_cells": 49
+  }
+}
