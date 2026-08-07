@@ -1,5 +1,7 @@
 # CNN Feature Extractors for Obstacle Detection
 
+[![DOI](https://zenodo.org/badge/1297033488.svg)](https://doi.org/10.5281/zenodo.21830689)
+
 Reproducibility repository for the manuscript:
 
 > **Cross-Analysis of CNN Architectures as Feature Extractors for Obstacle Detection to Aid the Visually Impaired**  
