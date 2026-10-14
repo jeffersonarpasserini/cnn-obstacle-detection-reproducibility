@@ -1,0 +1,46 @@
+verification,expected,obtained,status
+Original selection functions have identical AST,6,6,passed
+Article finalist A,a_resnet101v2_logistic,a_resnet101v2_logistic,passed
+Article finalist B,b_efficientnetb3_pca_300_linear_svm,b_efficientnetb3_pca_300_linear_svm,passed
+Article finalist C,c_mobilenet_resnet50_pca_300_linear_svm,c_mobilenet_resnet50_pca_300_linear_svm,passed
+Article finalist D,d_mobilenet_resnet50_pca_300_linear_svm,d_mobilenet_resnet50_pca_300_linear_svm,passed
+Article global winner,b_efficientnetb3_pca_300_linear_svm,b_efficientnetb3_pca_300_linear_svm,passed
+Protected files changed,0,0,passed
+Training package versions unchanged,True,True,passed
+VIA content fingerprint,bef13299b60d06e994bf85498ea0ed2e02f5f6d73851745ce05a16fa5204f2d6,bef13299b60d06e994bf85498ea0ed2e02f5f6d73851745ce05a16fa5204f2d6,passed
+Raw images,"{'total': 1929, 'clear': 1026, 'nonclear': 903}","{'total': 1929, 'clear': 1026, 'nonclear': 903}",passed
+Novel exact-clean images,"{'total': 1576, 'clear': 844, 'nonclear': 732}","{'total': 1576, 'clear': 844, 'nonclear': 732}",passed
+VIA exact matches excluded,350,350,passed
+Label-swapped VIA copies,4,4,passed
+Internal exact duplicates excluded,3,3,passed
+Novel SHA intersection with VIA,0,0,passed
+Novel duplicate SHA,0,0,passed
+Principal excludes every accepted automatic scene link,0,0,passed
+Author approval remains pending,,,passed
+Audit sample size,100,100,passed
+Audit class split,"[54, 46]","[54, 46]",passed
+scene mosaic files exist,2,2,passed
+audit mosaic files exist,5,5,passed
+nested_cpu diagnostic completion,True,True,passed
+nested_cpu outer prediction rows,175,175,passed
+nested_cpu duplicate image/procedure,0,0,passed
+nested_cpu recomputed outer metric rows,10,10,passed
+nested_cpu inner attempts,40,40,passed
+nested_cpu inner failed attempts,0,0,passed
+nested_grouped_cpu diagnostic completion,True,True,passed
+nested_grouped_cpu outer prediction rows,170,170,passed
+nested_grouped_cpu duplicate image/procedure,0,0,passed
+nested_grouped_cpu recomputed outer metric rows,10,10,passed
+nested_grouped_cpu inner attempts,40,40,passed
+nested_grouped_cpu inner failed attempts,0,0,passed
+CPU model smoke never freezes production models,False,False,passed
+Fixed CPU reload panels,4,4,passed
+Neural CPU reload panels,5,5,passed
+Neural smoke epochs,[1],[1],passed
+Neural smoke seeds,[1980],[1980],passed
+Real external classifications,0,0,passed
+Production external predictions exist,False,False,passed
+Production nested ungrouped exists,False,False,passed
+Production nested grouped exists,False,False,passed
+Raw images still tracked in current index,0,0,passed
+Raw images still local,1929,1929,passed

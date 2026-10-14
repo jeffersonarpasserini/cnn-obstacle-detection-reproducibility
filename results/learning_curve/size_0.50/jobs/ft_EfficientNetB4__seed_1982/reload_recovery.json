@@ -1,0 +1,115 @@
+{
+  "utc": "2026-10-07T14:47:26.642440+00:00",
+  "stage": "learning_curve",
+  "job": "results/learning_curve/size_0.50/jobs/ft_EfficientNetB4__seed_1982",
+  "reason": "GPU OOM in eight-image native reload check after early stopping",
+  "recovery": "fresh subprocess, stopped checkpoint, no extra epochs",
+  "checkpoint_sha256": "367d58793dffa9a498298c565f49cb0f4eba9cf38d63cd4c8f1f6b61eeabb689",
+  "stopped_epoch": 26,
+  "previous_manifest": {
+    "state": "running",
+    "request": {
+      "experiment": "ft_EfficientNetB4",
+      "architecture": "EfficientNetB4",
+      "configuration": "D",
+      "seed": 1982,
+      "fold": 0,
+      "config": {
+        "global_seed": 1980,
+        "initialization_seeds": [
+          1980,
+          1981,
+          1982
+        ],
+        "substitution_margin_pp": 3.0,
+        "substitution_metrics": [
+          "accuracy",
+          "obstructed_recall"
+        ],
+        "fold_assignments": "results/full_search/fold_assignments.csv",
+        "architectures": [
+          "ResNet101V2",
+          "EfficientNetB3",
+          "MobileNet",
+          "ResNet50",
+          "EfficientNetB4"
+        ],
+        "configurations": [
+          "D"
+        ],
+        "configuration_specs": {
+          "D": {
+            "backbone_trainable": true,
+            "optimizer": "adam",
+            "learning_rate": 0.001
+          },
+          "A": {
+            "backbone_trainable": false,
+            "optimizer": "rmsprop",
+            "learning_rate": 0.001
+          }
+        },
+        "validation_fraction": 0.2,
+        "validation_seed": 1980,
+        "head": {
+          "units": 128,
+          "activation": "relu",
+          "kernel_initializer": "he_uniform"
+        },
+        "epochs": 50,
+        "batch_size": 16,
+        "reduce_lr": {
+          "monitor": "val_accuracy",
+          "factor": 0.5,
+          "patience": 2,
+          "min_lr": 1e-05
+        },
+        "early_stopping": {
+          "monitor": "val_loss",
+          "patience": 10,
+          "restore_best_weights": true
+        },
+        "benchmark": {
+          "warmup": 10,
+          "repetitions": 100
+        },
+        "fixed_features": {
+          "enabled": true,
+          "config": "configs/article_selected_models_10fold.json",
+          "results": "results/full_search"
+        },
+        "cpu_threads": 2,
+        "verbose": 2
+      },
+      "family": "fine_tuning"
+    },
+    "batch_size": 1,
+    "oom_training_seconds": 164.60474073101068,
+    "oom_peak_gpu_memory_bytes": 10058529536,
+    "oom_reductions": [
+      {
+        "from": 8,
+        "to": 4,
+        "epoch": 1
+      },
+      {
+        "from": 4,
+        "to": 2,
+        "epoch": 27
+      },
+      {
+        "from": 2,
+        "to": 1,
+        "epoch": 27
+      }
+    ],
+    "checkpoint": "checkpoint_026"
+  },
+  "previous_manifest_sha256": "8a29885d2cd4c732be152a8d5e7976f16fb8f5feb88b36652c9e2c863374c2ef",
+  "restored_training_batch_size": 4,
+  "failed_log_sha256": "66ae04b2d77360fdf5744d454d837d3bd1dd7676e9e618773cbb272e946b6967",
+  "sources_unchanged": true,
+  "final_models.json_sha256": "d83b57f6b3b853653fe27e8acf88df1e2e725b0542f237ed4d4696d1cdd42f0e",
+  "predictions.csv_sha256": "53231b8355530ce518ff86581f6cbd6a1baaec25dcaf2b2cc4e2275f83b0bfe1",
+  "first_evaluation.json_sha256": "3fbcb9cb5a92ea6181bc88af2be7c235a5140ce355f6e67bd8d8de0fb2e1944d"
+}

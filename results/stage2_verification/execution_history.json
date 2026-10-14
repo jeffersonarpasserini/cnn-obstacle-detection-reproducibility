@@ -1,0 +1,67 @@
+[
+  {
+    "stage": "final_models",
+    "state": "failed",
+    "started_utc": "2026-10-07T00:55:24.446722+00:00",
+    "ended_utc": "2026-10-07T02:07:48.346606+00:00",
+    "returncode": 1,
+    "log": "logs/stage2/final_models.log",
+    "log_sha256_at_end": "29047a1e2e965fcdcfc7da1da74a118b3a47be85039c8cd7c90c1325b1af1ca7",
+    "evidence": "Original progress.json inspected before restart; log is append-only",
+    "reason": "GPU OOM during native reload check after early stopping"
+  },
+  {
+    "stage": "final_models",
+    "state": "completed",
+    "started_utc": "2026-10-07T10:24:41.396712+00:00",
+    "ended_utc": "2026-10-07T10:46:38.972996+00:00",
+    "returncode": 0,
+    "log": "logs/stage2/final_models.log",
+    "log_sha256_at_end": "bf82bb726183ee36ae108487fde771ae6058c3d02eefc602d05aca771c2a2b63",
+    "evidence": "Completed progress.json inspected before secondary-curve restart",
+    "reason": "Fresh process resumed stopped checkpoint; finished remaining models and freeze"
+  },
+  {
+    "stage": "external_evaluation",
+    "state": "completed",
+    "started_utc": "2026-10-07T10:46:38.977300+00:00",
+    "ended_utc": "2026-10-07T10:57:02.360121+00:00",
+    "returncode": 0,
+    "log": "logs/stage2/external_evaluation.log",
+    "log_sha256_at_end": "d9078d7aaddd4b82243769d2d5c30375b510dd94c4701f66fa04fa29e195b1df",
+    "evidence": "Completed progress.json inspected before secondary-curve restart",
+    "reason": "First and only principal external inference; 19 panels and 1576 images"
+  },
+  {
+    "stage": "external_analysis",
+    "state": "completed",
+    "started_utc": "2026-10-07T10:57:02.360830+00:00",
+    "ended_utc": "2026-10-07T11:04:27.642839+00:00",
+    "returncode": 0,
+    "log": "logs/stage2/external_analysis.log",
+    "log_sha256_at_end": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence": "Completed progress.json inspected before secondary-curve restart"
+  },
+  {
+    "stage": "learning_curve",
+    "state": "failed",
+    "started_utc": "2026-10-07T11:04:27.643400+00:00",
+    "ended_utc": "2026-10-07T13:03:07.553644+00:00",
+    "returncode": 1,
+    "log": "logs/stage2/learning_curve.log",
+    "log_sha256_at_end": "66ae04b2d77360fdf5744d454d837d3bd1dd7676e9e618773cbb272e946b6967",
+    "evidence": "Failed progress.json inspected before secondary-curve restart",
+    "reason": "Reload-only GPU OOM; 19 jobs already complete"
+  },
+  {
+    "stage": "learning_curve",
+    "state": "failed",
+    "started_utc": "2026-10-07T14:51:11.882116+00:00",
+    "ended_utc": "2026-10-07T16:51:27.263683+00:00",
+    "returncode": 1,
+    "log": "logs/stage2/learning_curve.log",
+    "log_sha256_at_end": "909e78d55300cd5ee704fb634293ce4e5a01e709ba7ae95541f964abdbcc8b5c",
+    "evidence": "Start inspected in progress.json; end approximated by immediately following recovery timestamp",
+    "reason": "Reload-only OOM at first 100-percent-pool model, after 38 completed jobs"
+  }
+]

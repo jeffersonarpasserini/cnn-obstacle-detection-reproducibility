@@ -1,0 +1,56 @@
+model,analysis,endpoint,estimate,ci_low,ci_high,seed,recall_target,oracle,analysis_scope
+a_resnet101v2_logistic,single fixed,roc_auc,0.9029358635692643,0.8850296244648541,0.9197091217129851,,,,exploratory/post hoc
+a_resnet101v2_logistic,individual seed,roc_auc,0.9029358635692643,0.8850296244648541,0.9197091217129851,-1.0,,,exploratory/post hoc
+a_resnet101v2_logistic,,clear_specificity,0.7428909952606635,0.7003609035143824,0.7953494037333937,,0.9,"external threshold, not deployable",exploratory/post hoc
+a_resnet101v2_logistic,,clear_specificity,0.6516587677725119,0.6009732360097324,0.7081914748012198,,0.95,"external threshold, not deployable",exploratory/post hoc
+a_resnet101v2_logistic,,clear_specificity,0.5592417061611374,0.42086167825111137,0.6559270028494713,,0.97,"external threshold, not deployable",exploratory/post hoc
+b_efficientnetb3_pca_300_linear_svm,single fixed,roc_auc,0.9132384171134074,0.8979558177387521,0.9280554852857413,,,,exploratory/post hoc
+b_efficientnetb3_pca_300_linear_svm,individual seed,roc_auc,0.9132384171134074,0.8979558177387521,0.9280554852857413,-1.0,,,exploratory/post hoc
+b_efficientnetb3_pca_300_linear_svm,,clear_specificity,0.7511848341232228,0.6989244061317628,0.8025855758626341,,0.9,"external threshold, not deployable",exploratory/post hoc
+b_efficientnetb3_pca_300_linear_svm,,clear_specificity,0.6599526066350712,0.6070123871657152,0.719047619047619,,0.95,"external threshold, not deployable",exploratory/post hoc
+b_efficientnetb3_pca_300_linear_svm,,clear_specificity,0.5864928909952607,0.49576706231672524,0.663622061576867,,0.97,"external threshold, not deployable",exploratory/post hoc
+c_mobilenet_resnet50_pca_300_linear_svm,single fixed,roc_auc,0.9100578173154119,0.8942124523911842,0.9255929793991703,,,,exploratory/post hoc
+c_mobilenet_resnet50_pca_300_linear_svm,individual seed,roc_auc,0.9100578173154119,0.8942124523911842,0.9255929793991703,-1.0,,,exploratory/post hoc
+c_mobilenet_resnet50_pca_300_linear_svm,,clear_specificity,0.783175355450237,0.7299169926454766,0.81965413915345,,0.9,"external threshold, not deployable",exploratory/post hoc
+c_mobilenet_resnet50_pca_300_linear_svm,,clear_specificity,0.6540284360189573,0.5895233649184399,0.7189010741248771,,0.95,"external threshold, not deployable",exploratory/post hoc
+c_mobilenet_resnet50_pca_300_linear_svm,,clear_specificity,0.5781990521327014,0.5091733341528009,0.6450089510323382,,0.97,"external threshold, not deployable",exploratory/post hoc
+d_mobilenet_resnet50_pca_300_linear_svm,single fixed,roc_auc,0.9085444021443555,0.8926418568880754,0.9241751998144845,,,,exploratory/post hoc
+d_mobilenet_resnet50_pca_300_linear_svm,individual seed,roc_auc,0.9085444021443555,0.8926418568880754,0.9241751998144845,-1.0,,,exploratory/post hoc
+d_mobilenet_resnet50_pca_300_linear_svm,,clear_specificity,0.773696682464455,0.7330897354720697,0.8129373696719656,,0.9,"external threshold, not deployable",exploratory/post hoc
+d_mobilenet_resnet50_pca_300_linear_svm,,clear_specificity,0.6516587677725119,0.5841076671373182,0.7318501170960188,,0.95,"external threshold, not deployable",exploratory/post hoc
+d_mobilenet_resnet50_pca_300_linear_svm,,clear_specificity,0.5556872037914692,0.5055207982201847,0.641774894443846,,0.97,"external threshold, not deployable",exploratory/post hoc
+ft_EfficientNetB3,individual-seed metric mean,roc_auc,0.8557105659579244,0.8378713633329696,0.8733488120999727,,,,exploratory/post hoc
+ft_EfficientNetB3,individual seed,roc_auc,0.8644303731903763,0.8445218254742353,0.8833975959742079,1980.0,,,exploratory/post hoc
+ft_EfficientNetB3,individual seed,roc_auc,0.8275402714111828,0.8055259589941182,0.8496114481413508,1981.0,,,exploratory/post hoc
+ft_EfficientNetB3,individual seed,roc_auc,0.875161053272214,0.8561216236347358,0.8931473391054903,1982.0,,,exploratory/post hoc
+ft_EfficientNetB3,,clear_specificity,0.6623222748815166,0.6159070736327114,0.7029178290925795,,0.9,"external threshold, not deployable",exploratory/post hoc
+ft_EfficientNetB3,,clear_specificity,0.5351500789889415,0.4654748723498723,0.592927366883548,,0.95,"external threshold, not deployable",exploratory/post hoc
+ft_EfficientNetB3,,clear_specificity,0.41350710900473936,0.3408973660768942,0.5045983597465441,,0.97,"external threshold, not deployable",exploratory/post hoc
+ft_EfficientNetB4,individual-seed metric mean,roc_auc,0.7619762126744879,0.7382530529841524,0.7848832039901116,,,,exploratory/post hoc
+ft_EfficientNetB4,individual seed,roc_auc,0.7449450314660866,0.7172803800721999,0.7722680348792904,1980.0,,,exploratory/post hoc
+ft_EfficientNetB4,individual seed,roc_auc,0.7305036516199207,0.701361374069855,0.7583233632888294,1981.0,,,exploratory/post hoc
+ft_EfficientNetB4,individual seed,roc_auc,0.8104799549374563,0.787172671938489,0.8335721476538667,1982.0,,,exploratory/post hoc
+ft_EfficientNetB4,,clear_specificity,0.5548973143759873,0.5069310325998438,0.6019912189931658,,0.9,"external threshold, not deployable",exploratory/post hoc
+ft_EfficientNetB4,,clear_specificity,0.43364928909952605,0.3786279032455012,0.49052787909231865,,0.95,"external threshold, not deployable",exploratory/post hoc
+ft_EfficientNetB4,,clear_specificity,0.3345181674565561,0.2901289887421685,0.4054479568582323,,0.97,"external threshold, not deployable",exploratory/post hoc
+ft_MobileNet,individual-seed metric mean,roc_auc,0.8480431352998559,0.8294165415133492,0.8665121242405581,,,,exploratory/post hoc
+ft_MobileNet,individual seed,roc_auc,0.8713645663377619,0.8523457296183861,0.8899168629668696,1980.0,,,exploratory/post hoc
+ft_MobileNet,individual seed,roc_auc,0.8488341037992386,0.8279722036697246,0.8691753367116518,1981.0,,,exploratory/post hoc
+ft_MobileNet,individual seed,roc_auc,0.823930735762567,0.8014182868556841,0.8452773049852034,1982.0,,,exploratory/post hoc
+ft_MobileNet,,clear_specificity,0.6287519747235387,0.5895241195306298,0.6751218575243085,,0.9,"external threshold, not deployable",exploratory/post hoc
+ft_MobileNet,,clear_specificity,0.533175355450237,0.4705876382221586,0.5873397067091919,,0.95,"external threshold, not deployable",exploratory/post hoc
+ft_MobileNet,,clear_specificity,0.44747235387045814,0.39834490770022174,0.5042050654677133,,0.97,"external threshold, not deployable",exploratory/post hoc
+ft_ResNet101V2,individual-seed metric mean,roc_auc,0.6995741395384973,0.6746727851133918,0.7245887751045927,,,,exploratory/post hoc
+ft_ResNet101V2,individual seed,roc_auc,0.6674962124155077,0.637457315230756,0.6966733458055541,1980.0,,,exploratory/post hoc
+ft_ResNet101V2,individual seed,roc_auc,0.7470443891953488,0.7203743443791057,0.7727590997808967,1981.0,,,exploratory/post hoc
+ft_ResNet101V2,individual seed,roc_auc,0.6841818170046358,0.6535455492976283,0.7146463255738665,1982.0,,,exploratory/post hoc
+ft_ResNet101V2,,clear_specificity,0.33767772511848343,0.28824371464307436,0.37860683083717356,,0.9,"external threshold, not deployable",exploratory/post hoc
+ft_ResNet101V2,,clear_specificity,0.21919431279620852,0.17948642266824086,0.256079875180476,,0.95,"external threshold, not deployable",exploratory/post hoc
+ft_ResNet101V2,,clear_specificity,0.15639810426540282,0.12793007548669053,0.1956146397746985,,0.97,"external threshold, not deployable",exploratory/post hoc
+ft_ResNet50,individual-seed metric mean,roc_auc,0.7266529407194469,0.7012964843257697,0.7518473871259563,,,,exploratory/post hoc
+ft_ResNet50,individual seed,roc_auc,0.7176679486183409,0.6873351039590623,0.7467973473046129,1980.0,,,exploratory/post hoc
+ft_ResNet50,individual seed,roc_auc,0.7451975370989045,0.7170019713778807,0.7727615034716891,1981.0,,,exploratory/post hoc
+ft_ResNet50,individual seed,roc_auc,0.717093336441095,0.6887010106071888,0.7453975985872031,1982.0,,,exploratory/post hoc
+ft_ResNet50,,clear_specificity,0.3850710900473933,0.34095444407803394,0.4287423945794932,,0.9,"external threshold, not deployable",exploratory/post hoc
+ft_ResNet50,,clear_specificity,0.27527646129541866,0.23123293843632828,0.3188230670744719,,0.95,"external threshold, not deployable",exploratory/post hoc
+ft_ResNet50,,clear_specificity,0.18720379146919433,0.1602407877122525,0.24892055036263405,,0.97,"external threshold, not deployable",exploratory/post hoc

@@ -6,3 +6,5 @@ tensorflow==2.21.0
 umap-learn==0.5.12
 skrebate==0.62
 Pillow==12.3.0
+matplotlib==3.11.2
+pytest==9.1.1

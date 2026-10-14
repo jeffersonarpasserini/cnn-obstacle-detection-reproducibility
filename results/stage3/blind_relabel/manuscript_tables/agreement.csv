@@ -1,0 +1,2 @@
+agreement,agreement_wilson_low,agreement_wilson_high,agreement_cluster_ci_low,agreement_cluster_ci_high,cohen_kappa,kappa_ci_low,kappa_ci_high,bootstrap_iterations,synthetic,analysis_scope
+0.98,0.929988209271456,0.9944980324498376,0.9494949494949495,1.0,0.9596122778675282,0.8977483990910969,1.0,10000,False,exploratory/post hoc

@@ -1,0 +1,73 @@
+{
+  "completed": false,
+  "requested_run_completed": true,
+  "smoke": true,
+  "identity": {
+    "config_sha256": "57a6550bd983f2b0594022b3c08fec77c79a4ade24285d104d9259ca7707e455",
+    "dataset_sha256": "bef13299b60d06e994bf85498ea0ed2e02f5f6d73851745ce05a16fa5204f2d6",
+    "group_sha256": "30537852c34f3d94e9dfeac436a62991d69561f2c28a3d4a3cceb4fe56919c26",
+    "smoke": true,
+    "device": "cpu",
+    "sources": {
+      "src/artifact.py": "ed11cda07eaee53a2684988b8342b8ed096a5d74139890ffa2eaca4bdb2f8c15",
+      "src/selection.py": "71128688649fda74fed3cacacafca0834fee43a8d973e36f2671250ff0da8bc4",
+      "src/fixed_refit.py": "5a0e3f2af29ac596eea1891fea62c52ec0ffe42cbad34b300660cf6133ac2e39",
+      "src/fine_tuning.py": "b7b572376491e1b681be2c6d8d3b15bbc40882cc85cc6ca5c91141f0211597a9",
+      "src/study_io.py": "ba399373f7b5db71971960eed606b9440ba480062d202c44b9396da1c55f8206",
+      "src/study_statistics.py": "26a8ea361ed7eccbf9d65a400dbddcb3148e49f28841992531414bdb35728cf6",
+      "src/study_features.py": "d814e85f9e8d82d1d883793e9e639aa365d883bdefc0034844568236c6a43e6e",
+      "src/study_estimates.py": "03adcb5b5932957269d1fc115a4577451474fef092d8f40f3b8a30d0d6ba78eb",
+      "src/nested_cv.py": "1a4ed79b2a72c54b8b4334df2265ee00ce44758c8fd20b9fa78e16124716535b",
+      "src/external_test.py": "403060eaf5e8b6a389b71a919856a3d315ea8e05b0309047db2d3d6c0ba5afb9",
+      "scripts/clean_external_dataset.py": "56af6c00a31f3235dc26df29637cc44e39421a54a64060904e84df663f09aa23",
+      "scripts/analyze_nested_cv.py": "c5d1a3acc2d98481b0c350e75a2b9dbd811be65a787be54ad2052d260b3d0931",
+      "scripts/analyze_external_test.py": "02e087d22b9d396f346fded92947bc7f7867f0bcd06b33cb256c779fc9bddb30",
+      "scripts/build_scene_groups.py": "99ccd28d1e63ed9731a56387d4652d28bcdb5d4bfb165573a84c828f27e2e14c",
+      "scripts/scene_groups_geometry.py": "9b996883ad52924888968ff21813f38bc9c522a5c915f2b1bd7f441b04f58f68",
+      "scripts/scene_groups_graph.py": "bed9984521c0ee3cdb8c133154c5d6bfad9d8d87912e2229f8a42ba5468fa921"
+    },
+    "runtime": {
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+      "packages": {
+        "numpy": "2.4.6",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "scikit-learn": "1.9.0",
+        "tensorflow": "2.21.0",
+        "umap-learn": "0.5.12",
+        "skrebate": "0.62",
+        "torch": null,
+        "transformers": null,
+        "Pillow": "12.3.0"
+      },
+      "CUDA_VISIBLE_DEVICES": "-1",
+      "physical_gpu_inventory": [
+        "NVIDIA GeForce RTX 4070 Ti, 595.84, 12282"
+      ],
+      "sources": {
+        "src/artifact.py": "ed11cda07eaee53a2684988b8342b8ed096a5d74139890ffa2eaca4bdb2f8c15",
+        "src/selection.py": "71128688649fda74fed3cacacafca0834fee43a8d973e36f2671250ff0da8bc4",
+        "src/fixed_refit.py": "5a0e3f2af29ac596eea1891fea62c52ec0ffe42cbad34b300660cf6133ac2e39",
+        "src/fine_tuning.py": "b7b572376491e1b681be2c6d8d3b15bbc40882cc85cc6ca5c91141f0211597a9",
+        "src/study_io.py": "ba399373f7b5db71971960eed606b9440ba480062d202c44b9396da1c55f8206",
+        "src/study_statistics.py": "26a8ea361ed7eccbf9d65a400dbddcb3148e49f28841992531414bdb35728cf6",
+        "src/study_features.py": "d814e85f9e8d82d1d883793e9e639aa365d883bdefc0034844568236c6a43e6e",
+        "src/study_estimates.py": "03adcb5b5932957269d1fc115a4577451474fef092d8f40f3b8a30d0d6ba78eb",
+        "src/nested_cv.py": "1a4ed79b2a72c54b8b4334df2265ee00ce44758c8fd20b9fa78e16124716535b",
+        "src/external_test.py": "403060eaf5e8b6a389b71a919856a3d315ea8e05b0309047db2d3d6c0ba5afb9",
+        "scripts/clean_external_dataset.py": "56af6c00a31f3235dc26df29637cc44e39421a54a64060904e84df663f09aa23",
+        "scripts/analyze_nested_cv.py": "c5d1a3acc2d98481b0c350e75a2b9dbd811be65a787be54ad2052d260b3d0931",
+        "scripts/analyze_external_test.py": "02e087d22b9d396f346fded92947bc7f7867f0bcd06b33cb256c779fc9bddb30",
+        "scripts/build_scene_groups.py": "99ccd28d1e63ed9731a56387d4652d28bcdb5d4bfb165573a84c828f27e2e14c",
+        "scripts/scene_groups_geometry.py": "9b996883ad52924888968ff21813f38bc9c522a5c915f2b1bd7f441b04f58f68",
+        "scripts/scene_groups_graph.py": "bed9984521c0ee3cdb8c133154c5d6bfad9d8d87912e2229f8a42ba5468fa921"
+      }
+    }
+  },
+  "training_device_requested": "cpu",
+  "model_panels": 9,
+  "final_models_sha256": "130ca6b73987a3b5df9e9c66db97ffcded5ceaf7bbf27ece1f545199e56642c0",
+  "groups_sha256": "30537852c34f3d94e9dfeac436a62991d69561f2c28a3d4a3cceb4fe56919c26",
+  "external_classification_predictions": 0
+}

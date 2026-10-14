@@ -1,0 +1,74 @@
+{
+  "checked_utc": "2026-10-06T03:47:50.899517+00:00",
+  "all_checks_passed": true,
+  "source_checksums_match_run": true,
+  "completed_run_artifact_checksums_match": true,
+  "group_freeze_checksums_match": true,
+  "unreviewed_groups": 341,
+  "automatic_groups": 342,
+  "groups": 338,
+  "images": 342,
+  "singletons": 334,
+  "pair_groups": {
+    "scene_0278": [
+      "nonclear.102.jpg",
+      "nonclear.104.jpg"
+    ],
+    "scene_0292": [
+      "nonclear.116.jpg",
+      "nonclear.117.jpg"
+    ],
+    "scene_0133": [
+      "clear.132.jpg",
+      "nonclear.151.jpg"
+    ],
+    "scene_0229": [
+      "nonclear.053.jpg",
+      "nonclear.109.jpg"
+    ]
+  },
+  "mixed_class_groups": 1,
+  "rejection_count": 1,
+  "override_count": 4,
+  "accepted_edges_cross_groups": 0,
+  "largest_group_size": 2,
+  "size_alerts": [],
+  "pairs": 58311,
+  "candidates_evaluated": 1054,
+  "unmeasured_geometry_is_missing": true,
+  "geometric_gates_reproduced_from_csv": true,
+  "edge_gates_reproduced_from_csv": true,
+  "author_input_csvs_unchanged": true,
+  "original_unreviewed_groups_unchanged": true,
+  "four_expected_pairs_and_retained_separations_verified": true,
+  "v1_archive_artifacts_verified": 246,
+  "surface_groups_match_v1": true,
+  "grouped_folds_independently_reproduced": true,
+  "test_coverage_exactly_once": true,
+  "both_classes_and_disjoint_groups_in_all_train_test_folds": true,
+  "fold_size_range": [
+    34,
+    36
+  ],
+  "freeze_precedes_fold_diagnostics": true,
+  "protected_training_files_unchanged": true,
+  "training_package_versions_unchanged": true,
+  "group_review_current_pages_only": 4,
+  "assistant_notes_original_prefix_unchanged": true,
+  "historical_proposals_unchanged": true,
+  "review_status": "author_review_applied_frozen",
+  "author_reviewer": "Jefferson Antonio Ribeiro Passerini (author)",
+  "author_review_date": "2026-10-06",
+  "nested_cv_executed": false,
+  "tests": {
+    "command": "cache/scene-groups-venv/bin/python -m pytest tests/test_scene_groups.py tests/test_scene_groups_v2.py -q",
+    "passed": 40,
+    "subtests_passed": 7,
+    "exit_code": 0,
+    "output": "........................................                          [100%]\n40 passed, 7 subtests passed in 1.90s\n",
+    "test_source_sha256": {
+      "test_scene_groups.py": "ca5fd7d153e9a086b886048e630af159fde46f304982211228da3868106c93d9",
+      "test_scene_groups_v2.py": "d1a4c899898eb69fab7c4193554836674656d033012f79a7041fdfa8435274b7"
+    }
+  }
+}

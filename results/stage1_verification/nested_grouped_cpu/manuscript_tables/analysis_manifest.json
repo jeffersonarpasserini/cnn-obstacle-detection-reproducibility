@@ -1,0 +1,9 @@
+{
+  "source": "results/stage1_verification/nested_grouped_cpu",
+  "metadata_sha256": "3db98d18d1146f79734b01cdd479127839b1b35d89a509b96eb3049a9cc540e7",
+  "bootstrap_iterations": 100,
+  "seed": 1980,
+  "diagnostic": true,
+  "estimand": "configuration-selection procedure",
+  "ft_comparison": "not performed for grouped folds"
+}

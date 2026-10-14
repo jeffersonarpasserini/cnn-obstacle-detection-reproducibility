@@ -1,0 +1,268 @@
+{
+  "request": {
+    "dataset": "/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/via-dataset",
+    "fold_assignments": "/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/results/full_search/fold_assignments.csv",
+    "identity": "86d8b4cca988f3ec363bf94b344f01264aede7cc1c2d71ea2fca4953d5cf4a3d",
+    "config": {
+      "global_seed": 1980,
+      "initialization_seeds": [
+        1980,
+        1981,
+        1982
+      ],
+      "substitution_margin_pp": 3.0,
+      "substitution_metrics": [
+        "accuracy",
+        "obstructed_recall"
+      ],
+      "fold_assignments": "results/full_search/fold_assignments.csv",
+      "architectures": [
+        "ResNet101V2",
+        "EfficientNetB3",
+        "MobileNet",
+        "ResNet50",
+        "EfficientNetB4"
+      ],
+      "configurations": [
+        "D"
+      ],
+      "configuration_specs": {
+        "D": {
+          "backbone_trainable": true,
+          "optimizer": "adam",
+          "learning_rate": 0.001
+        },
+        "A": {
+          "backbone_trainable": false,
+          "optimizer": "rmsprop",
+          "learning_rate": 0.001
+        }
+      },
+      "validation_fraction": 0.2,
+      "validation_seed": 1980,
+      "head": {
+        "units": 128,
+        "activation": "relu",
+        "kernel_initializer": "he_uniform"
+      },
+      "epochs": 50,
+      "batch_size": 16,
+      "reduce_lr": {
+        "monitor": "val_accuracy",
+        "factor": 0.5,
+        "patience": 2,
+        "min_lr": 1e-05
+      },
+      "early_stopping": {
+        "monitor": "val_loss",
+        "patience": 10,
+        "restore_best_weights": true
+      },
+      "benchmark": {
+        "warmup": 10,
+        "repetitions": 100
+      },
+      "fixed_features": {
+        "enabled": true,
+        "config": "configs/article_selected_models_10fold.json",
+        "results": "results/full_search"
+      },
+      "cpu_threads": 2,
+      "verbose": 2
+    },
+    "device": "gpu",
+    "imagenet_weights": {
+      "ResNet101V2": {
+        "filename": "resnet101v2_weights_tf_dim_ordering_tf_kernels_notop.h5",
+        "path": "/home/jeffersonpasserini/.keras/models/resnet101v2_weights_tf_dim_ordering_tf_kernels_notop.h5",
+        "sha256": "36a978be8b2b0b870c786ee462503040b9b79b7fd613c60c03e408e5e08060b3",
+        "source_url": "https://storage.googleapis.com/tensorflow/keras-applications/resnet/resnet101v2_weights_tf_dim_ordering_tf_kernels_notop.h5",
+        "keras_file_hash": "c0ed64b8031c3730f411d2eb4eea35b5",
+        "keras_hash_algorithm": "md5"
+      },
+      "EfficientNetB3": {
+        "filename": "efficientnetb3_notop.h5",
+        "path": "/home/jeffersonpasserini/.keras/models/efficientnetb3_notop.h5",
+        "sha256": "cb923fd68d56606c597e50676240920dd7ad8d0f01f4a51d9e73ca2afdbd67f3",
+        "source_url": "https://storage.googleapis.com/keras-applications/efficientnetb3_notop.h5",
+        "keras_file_hash": "af6d107764bb5b1abb91932881670226",
+        "keras_hash_algorithm": "md5"
+      },
+      "MobileNet": {
+        "filename": "mobilenet_1_0_224_tf_no_top.h5",
+        "path": "/home/jeffersonpasserini/.keras/models/mobilenet_1_0_224_tf_no_top.h5",
+        "sha256": "9f9cfd8c925431c06ce96744e1d201575f6a681bf38ae2de38e2ae8f7d7829d3",
+        "source_url": "https://storage.googleapis.com/tensorflow/keras-applications/mobilenet/mobilenet_1_0_224_tf_no_top.h5",
+        "keras_file_hash": null,
+        "keras_hash_algorithm": null
+      },
+      "ResNet50": {
+        "filename": "resnet50_weights_tf_dim_ordering_tf_kernels_notop.h5",
+        "path": "/home/jeffersonpasserini/.keras/models/resnet50_weights_tf_dim_ordering_tf_kernels_notop.h5",
+        "sha256": "66c8b43daff3fcc15bc4f30e3d2a167e21a14d9c9598a5394e5516471f4af504",
+        "source_url": "https://storage.googleapis.com/tensorflow/keras-applications/resnet/resnet50_weights_tf_dim_ordering_tf_kernels_notop.h5",
+        "keras_file_hash": "4d473c1dd8becc155b73f8504c6f6626",
+        "keras_hash_algorithm": "md5"
+      },
+      "EfficientNetB4": {
+        "filename": "efficientnetb4_notop.h5",
+        "path": "/home/jeffersonpasserini/.keras/models/efficientnetb4_notop.h5",
+        "sha256": "12a79525a3f0ee9acb7df880dd70047b5ad767c0098c8131195dbb0bf3a8ebb9",
+        "source_url": "https://storage.googleapis.com/keras-applications/efficientnetb4_notop.h5",
+        "keras_file_hash": "ebc24e6d6c33eaebbd558eafbeedf1ba",
+        "keras_hash_algorithm": "md5"
+      }
+    },
+    "experiment": "a_resnet101v2_logistic",
+    "extractors": [
+      "ResNet101V2"
+    ],
+    "architecture": "ResNet101V2",
+    "configuration": "fixed",
+    "family": "fixed_features",
+    "approach": "A",
+    "classifier": "logistic",
+    "seed": 1980,
+    "fold": 2,
+    "fixed_experiment": {
+      "name": "a_resnet101v2_logistic",
+      "approach": "A",
+      "extractors": [
+        "ResNet101V2"
+      ],
+      "reduction": "full",
+      "components": null,
+      "classifier": "logistic",
+      "scale": false
+    },
+    "reference_metrics": {
+      "accuracy": 0.9428571428571428,
+      "f1": 0.9473684210526316,
+      "f1_clear": 0.9473684210526316,
+      "f1_obstructed": 0.9375,
+      "macro_f1": 0.9424342105263156,
+      "balanced_accuracy": 0.9411764705882352,
+      "mcc": 0.8911327886790068,
+      "tn_obstructed": 15.0,
+      "fp_obstructed_as_clear": 2.0,
+      "fn_clear_as_obstructed": 0.0,
+      "tp_clear": 18.0,
+      "obstructed_recall": 0.8823529411764706,
+      "clear_recall": 1.0,
+      "obstructed_precision": 1.0,
+      "clear_precision": 0.9,
+      "roc_auc": 0.977124183006536
+    }
+  },
+  "state": "completed",
+  "created_utc": "2026-10-06T01:55:29.488733+00:00",
+  "runtime": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+    "dependencies": {
+      "numpy": "2.4.6",
+      "pandas": "3.0.3",
+      "scipy": "1.18.0",
+      "scikit-learn": "1.9.0",
+      "tensorflow": "2.21.0",
+      "umap-learn": "0.5.12",
+      "skrebate": "0.62",
+      "Pillow": "12.3.0"
+    },
+    "hardware": {
+      "cpu": "x86_64",
+      "logical_cpus": 16,
+      "physical_memory_bytes": 67318796288,
+      "gpus": [
+        {
+          "logical_name": "/physical_device:GPU:0",
+          "device_name": "NVIDIA GeForce RTX 4070 Ti"
+        }
+      ],
+      "tensorflow_build": {
+        "cpu_compiler": "clang",
+        "cuda_compute_capabilities": [
+          "sm_60",
+          "sm_70",
+          "sm_80",
+          "sm_89",
+          "compute_90"
+        ],
+        "cuda_version": "12.5.1",
+        "cudnn_version": "9",
+        "is_cuda_build": true,
+        "is_rocm_build": false,
+        "is_tensorrt_build": false
+      }
+    },
+    "tensorflow_version": "2.21.0",
+    "cuda_version": "12.5.1",
+    "cudnn_version": "9",
+    "gpu_models": [
+      "NVIDIA GeForce RTX 4070 Ti"
+    ],
+    "training_device": "GPU:0",
+    "benchmark_devices": [
+      "cpu",
+      "gpu"
+    ],
+    "TF_DETERMINISTIC_OPS": "1",
+    "PYTHONHASHSEED": "1980"
+  },
+  "training_costs": {
+    "training_seconds": 5.9969168820098275,
+    "feature_extraction_training_seconds": 5.735222914008773,
+    "reduction_seconds": 0.014020786999026313,
+    "feature_forward_training_seconds": 4.509060001961188,
+    "adaptation_seconds": 0.2622032800136367,
+    "adaptation_reduction_seconds": 0.014020786999026313,
+    "adaptation_classifier_seconds": 0.2476731810020283,
+    "update_timing_source": "measured_cached_pca_classifier_refit",
+    "update_image_filename": "nonclear.166.jpg",
+    "update_previous_labeled_size": 306,
+    "update_labeled_size": 307,
+    "classifier_training_seconds": 0.2476731810020283,
+    "effective_epochs": 0,
+    "batch_size": 16,
+    "canonical_feature_policy": "globally_ordered_frozen_features_v1",
+    "canonical_feature_batch_size": 4,
+    "canonical_feature_setup_seconds": 0.09167631200398318,
+    "canonical_feature_setup_in_training_seconds": false,
+    "peak_gpu_memory_bytes": 3530852608,
+    "peak_gpu_memory_status": "measured",
+    "peak_host_memory_bytes": 2017607680,
+    "cnn_parameters": 42626560,
+    "downstream_parameters": 100353,
+    "total_parameters": 42726913,
+    "trainable_parameters": 100353,
+    "reload_check": {
+      "status": "passed",
+      "image_count": 8,
+      "filenames": [
+        "clear.011.jpg",
+        "clear.017.jpg",
+        "clear.029.jpg",
+        "clear.050.jpg",
+        "clear.055.jpg",
+        "clear.057.jpg",
+        "clear.063.jpg",
+        "clear.073.jpg"
+      ],
+      "max_abs_difference": 0.0,
+      "atol": 1e-05,
+      "kind": "native_classifier_scores",
+      "decisions_identical": true
+    },
+    "model_size_mb": 172.236565
+  },
+  "completed_utc": "2026-10-06T01:55:59.379140+00:00",
+  "artifacts": {
+    "metrics.json": "ca65f2feb46bc6b6232c3218b2a31c8b18b1f85a836f93f61215b066ecadfe3d",
+    "predictions.csv": "418b598251b3ceed57249588b34dd4951c664d7f1a6a8be304e287ee72fda701",
+    "costs.json": "8b37d7d6c8b1510c65fcd68a1666106e6bbe6565554fde680e3a549636d36bba",
+    "split_indices.json": "ff6f093e0a08920792981a1fd8d2ab30624c42fda9162c54fc0a3f03cac77115",
+    "ResNet101V2.keras": "62df045dff0672178cf905c6f7acd473ab80b5649bad7c82baded4d940cacad3",
+    "pipeline.joblib": "57d6e462dd2494197051e22e67e5ad236490f2169201bb3e8ee28e924f00d466",
+    "canonical_features.json": "5f2437e41256f9d18ae43aafa8f4335dcdef40afba46e94e26c7cefa5d8731e0"
+  }
+}

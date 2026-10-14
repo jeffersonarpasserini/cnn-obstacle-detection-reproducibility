@@ -1,0 +1,25 @@
+{
+  "run": "203eeaf1e4fecbd1d9a7585988643177c6bae89e4d95b74bf5dceadc636f7fb0",
+  "experiment": {
+    "name": "c_mobilenet_resnet50_pca_300_linear_svm",
+    "approach": "C",
+    "extractors": [
+      "MobileNet",
+      "ResNet50"
+    ],
+    "reduction": "pca",
+    "components": 4,
+    "classifier": "linear_svm",
+    "scale": false
+  },
+  "indices": [
+    175,
+    176,
+    177,
+    178,
+    0,
+    1,
+    2,
+    3
+  ]
+}

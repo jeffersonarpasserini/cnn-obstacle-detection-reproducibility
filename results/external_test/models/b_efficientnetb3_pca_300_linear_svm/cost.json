@@ -1,0 +1,7 @@
+{
+  "model": "b_efficientnetb3_pca_300_linear_svm",
+  "training_seconds": 0.005730264994781464,
+  "reduction_seconds": 4.3000222860137,
+  "reload_decisions_identical": true,
+  "smoke": false
+}

@@ -1,0 +1,3 @@
+filename_a,filename_b,reason
+nonclear.102.jpg,nonclear.104.jpg,Matching rubble arrangement beside a wall and 193 spatially distributed inliers suggest the same scene; the geometric gate passes but cosine 0.6332 fails 0.795.
+nonclear.116.jpg,nonclear.117.jpg,"Matching cracks beside a curb and 39 inliers suggest the same scene; one image has only two supported quadrants, excluding the automatic edge."

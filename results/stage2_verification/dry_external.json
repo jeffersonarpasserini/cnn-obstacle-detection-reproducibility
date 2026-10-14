@@ -1,0 +1,17 @@
+{
+  "stage": "evaluate",
+  "jobs": 19,
+  "external_images_upper_bound": 1576,
+  "serial_compute_hours": 0.2706800775217133,
+  "time_hours_range": [
+    0.17594205038911365,
+    0.48722413953908394
+  ],
+  "additional_disk_gib_range": [
+    0.02,
+    0.15
+  ],
+  "basis": "Recorded end-to-end GPU latency extrapolated to19 model/seed panels; CSV+10k scene-bootstrap/analysis overhead. CPU will take longer.",
+  "source_sha256": "2aac0cfe894e75c5d3beaf80a4fb9d4d0859a962e82febacaf66af96171d522a",
+  "does_not_fit_or_predict": true
+}

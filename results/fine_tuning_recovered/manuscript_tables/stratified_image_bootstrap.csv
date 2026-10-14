@@ -1,0 +1,28 @@
+experiment,endpoint,estimate,ci_low,ci_high,aggregation
+a_resnet101v2_logistic,accuracy,0.9415204678362573,0.9152046783625731,0.9649122807017544,canonical full_search per-fold metrics and matched archived predictions
+a_resnet101v2_logistic,mcc,0.8838195559623587,0.8317905242738973,0.9303028515446489,canonical full_search per-fold metrics and matched archived predictions
+a_resnet101v2_logistic,obstructed_recall,0.9161676646706587,0.874251497005988,0.9580838323353293,canonical full_search per-fold metrics and matched archived predictions
+b_efficientnetb3_pca_300_linear_svm,accuracy,0.9385964912280702,0.9122807017543859,0.9619883040935673,canonical full_search per-fold metrics and matched archived predictions
+b_efficientnetb3_pca_300_linear_svm,mcc,0.8772105410481054,0.8251171875096464,0.9240462299152432,canonical full_search per-fold metrics and matched archived predictions
+b_efficientnetb3_pca_300_linear_svm,obstructed_recall,0.9281437125748503,0.8862275449101796,0.9640718562874252,canonical full_search per-fold metrics and matched archived predictions
+c_mobilenet_resnet50_pca_300_linear_svm,accuracy,0.9385964912280702,0.9122807017543859,0.9619883040935673,canonical full_search per-fold metrics and matched archived predictions
+c_mobilenet_resnet50_pca_300_linear_svm,mcc,0.8787680421174565,0.8269181418095051,0.9251279781398244,canonical full_search per-fold metrics and matched archived predictions
+c_mobilenet_resnet50_pca_300_linear_svm,obstructed_recall,0.9041916167664671,0.8562874251497006,0.9461077844311377,canonical full_search per-fold metrics and matched archived predictions
+d_mobilenet_resnet50_pca_300_linear_svm,accuracy,0.9385964912280702,0.9122807017543859,0.9619883040935673,canonical full_search per-fold metrics and matched archived predictions
+d_mobilenet_resnet50_pca_300_linear_svm,mcc,0.8787680421174565,0.8269181418095051,0.9251279781398244,canonical full_search per-fold metrics and matched archived predictions
+d_mobilenet_resnet50_pca_300_linear_svm,obstructed_recall,0.9041916167664671,0.8562874251497006,0.9461077844311377,canonical full_search per-fold metrics and matched archived predictions
+ft_d_resnet101v2,accuracy,0.7173489278752436,0.6851851851851852,0.7495126705653021,arithmetic mean pooled single-seed OOF metrics
+ft_d_resnet101v2,mcc,0.4383296041503783,0.374580376050455,0.5036734891725626,arithmetic mean pooled single-seed OOF metrics
+ft_d_resnet101v2,obstructed_recall,0.6287425149700598,0.5788423153692615,0.6786427145708583,arithmetic mean pooled single-seed OOF metrics
+ft_d_efficientnetb3,accuracy,0.9278752436647174,0.9064327485380117,0.9473684210526315,arithmetic mean pooled single-seed OOF metrics
+ft_d_efficientnetb3,mcc,0.8558849997198901,0.8132212578848776,0.8955055270750377,arithmetic mean pooled single-seed OOF metrics
+ft_d_efficientnetb3,obstructed_recall,0.9181636726546906,0.8842315369261478,0.9481037924151696,arithmetic mean pooled single-seed OOF metrics
+ft_d_mobilenet,accuracy,0.905458089668616,0.8801169590643275,0.9288499025341131,arithmetic mean pooled single-seed OOF metrics
+ft_d_mobilenet,mcc,0.8110887265025624,0.7602374151974296,0.8580505881869029,arithmetic mean pooled single-seed OOF metrics
+ft_d_mobilenet,obstructed_recall,0.8882235528942116,0.846307385229541,0.9261477045908183,arithmetic mean pooled single-seed OOF metrics
+ft_d_resnet50,accuracy,0.8362573099415204,0.8070175438596491,0.8654970760233919,arithmetic mean pooled single-seed OOF metrics
+ft_d_resnet50,mcc,0.6730716131750435,0.6145536738937951,0.7310457290412438,arithmetic mean pooled single-seed OOF metrics
+ft_d_resnet50,obstructed_recall,0.8083832335329341,0.7624750499001997,0.8523453093812369,arithmetic mean pooled single-seed OOF metrics
+ft_d_efficientnetb4,accuracy,0.9249512670565302,0.9015594541910331,0.9463937621832358,arithmetic mean pooled single-seed OOF metrics
+ft_d_efficientnetb4,mcc,0.8503429665365648,0.804423397187784,0.8929209574497922,arithmetic mean pooled single-seed OOF metrics
+ft_d_efficientnetb4,obstructed_recall,0.9101796407185629,0.874251497005988,0.9421157684630739,arithmetic mean pooled single-seed OOF metrics

@@ -1,0 +1,12 @@
+# CPU graph/review environment; frozen embedding caches do not require PyTorch.
+numpy==2.4.6
+pandas==3.0.3
+scipy==1.18.0
+scikit-learn==1.9.0
+matplotlib==3.11.2
+Pillow==12.3.0
+ImageHash==4.3.2
+PyWavelets==1.8.0
+opencv-python-headless==4.11.0.86
+scikit-image==0.25.2
+pytest==9.1.1

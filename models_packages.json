@@ -1,0 +1,58 @@
+[
+  {
+    "package": "models_encoders_v2.0.0.tar.gz",
+    "bytes": 298260171,
+    "sha256": "ae7c60a3cb6849c32dbaf7f7c696035e177f2594e2f4b5cdedc525dede2f78aa",
+    "files": 4,
+    "deterministic_second_build_identical": true,
+    "url": "https://github.com/jeffersonarpasserini/cnn-obstacle-detection-reproducibility/releases/download/v2.0.0/models_encoders_v2.0.0.tar.gz"
+  },
+  {
+    "package": "models_fixed_pipelines_v2.0.0.tar.gz",
+    "bytes": 510730052,
+    "sha256": "ab75f6b23fa5123eeeb37caa35b5889e3966050284793ebc29a2de42c9172135",
+    "files": 9,
+    "deterministic_second_build_identical": true,
+    "url": "https://github.com/jeffersonarpasserini/cnn-obstacle-detection-reproducibility/releases/download/v2.0.0/models_fixed_pipelines_v2.0.0.tar.gz"
+  },
+  {
+    "package": "models_ft_EfficientNetB3_v2.0.0.tar.gz",
+    "bytes": 122546136,
+    "sha256": "c8e928a8ca1a4ce66973eb7e355b2f2bbb409e6ccd02087fa7db5d968d45d9e0",
+    "files": 3,
+    "deterministic_second_build_identical": true,
+    "url": "https://github.com/jeffersonarpasserini/cnn-obstacle-detection-reproducibility/releases/download/v2.0.0/models_ft_EfficientNetB3_v2.0.0.tar.gz"
+  },
+  {
+    "package": "models_ft_EfficientNetB4_v2.0.0.tar.gz",
+    "bytes": 199766566,
+    "sha256": "d91a3f97e12ff4d968ebe554817a52575236dfd451405cf5cbde18ec89b7de44",
+    "files": 3,
+    "deterministic_second_build_identical": true,
+    "url": "https://github.com/jeffersonarpasserini/cnn-obstacle-detection-reproducibility/releases/download/v2.0.0/models_ft_EfficientNetB4_v2.0.0.tar.gz"
+  },
+  {
+    "package": "models_ft_MobileNet_v2.0.0.tar.gz",
+    "bytes": 37539438,
+    "sha256": "87401e0b0b5b62fa5d0dadbc459999a7868d4a2293f5ec0474d15fd6449fe9b6",
+    "files": 3,
+    "deterministic_second_build_identical": true,
+    "url": "https://github.com/jeffersonarpasserini/cnn-obstacle-detection-reproducibility/releases/download/v2.0.0/models_ft_MobileNet_v2.0.0.tar.gz"
+  },
+  {
+    "package": "models_ft_ResNet101V2_v2.0.0.tar.gz",
+    "bytes": 478156367,
+    "sha256": "00db33de4f3211e39a08910dc978ca0cda2db527d1c086c1f47cd2f2bae3770a",
+    "files": 3,
+    "deterministic_second_build_identical": true,
+    "url": "https://github.com/jeffersonarpasserini/cnn-obstacle-detection-reproducibility/releases/download/v2.0.0/models_ft_ResNet101V2_v2.0.0.tar.gz"
+  },
+  {
+    "package": "models_ft_ResNet50_v2.0.0.tar.gz",
+    "bytes": 265443709,
+    "sha256": "7f1b97873589af09ac14a92f0522e4044e81cd782f1a54817a861354f5404179",
+    "files": 3,
+    "deterministic_second_build_identical": true,
+    "url": "https://github.com/jeffersonarpasserini/cnn-obstacle-detection-reproducibility/releases/download/v2.0.0/models_ft_ResNet50_v2.0.0.tar.gz"
+  }
+]

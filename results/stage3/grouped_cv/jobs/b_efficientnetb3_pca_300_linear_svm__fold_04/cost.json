@@ -1,0 +1,10 @@
+{
+  "model": "b_efficientnetb3_pca_300_linear_svm",
+  "fold": 4,
+  "reduction_seconds": 3.9569549069856293,
+  "training_seconds": 0.005343561002518982,
+  "elapsed_seconds": 4.138871208007913,
+  "analysis_scope": "exploratory/post hoc",
+  "native_reload_identical": true,
+  "new_backbone_forwards": 0
+}

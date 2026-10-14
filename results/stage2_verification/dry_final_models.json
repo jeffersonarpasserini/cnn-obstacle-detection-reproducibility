@@ -1,0 +1,17 @@
+{
+  "stage": "final-models",
+  "jobs": 19,
+  "external_images_upper_bound": 1576,
+  "serial_compute_hours": 1.2885662200961168,
+  "time_hours_range": [
+    0.8375680430624759,
+    2.31941919617301
+  ],
+  "additional_disk_gib_range": [
+    3.0,
+    12.0
+  ],
+  "basis": "Measured matched training costs scaled from outer train308 to VIA342; 15 FT jobs +4 fixed, checkpoint/optimizer disk included.",
+  "source_sha256": "2aac0cfe894e75c5d3beaf80a4fb9d4d0859a962e82febacaf66af96171d522a",
+  "does_not_fit_or_predict": true
+}

@@ -1,0 +1,23 @@
+{
+  "images": 1918,
+  "confirmed_links": 257,
+  "candidates": 8129,
+  "thresholds": {
+    "phash_threshold": 10,
+    "semantic_threshold": 0.795,
+    "ransac_threshold": 30
+  },
+  "component_alerts": [
+    {
+      "phash_threshold": 10,
+      "semantic_threshold": 0.795,
+      "ransac_threshold": 30,
+      "groups": 1710,
+      "largest_component": 16,
+      "giant": false,
+      "action": "report_only"
+    }
+  ],
+  "config_sha256": "77016456b68963bf649c303c385631ff9327fa8d357141a7125f1dfe8149a68b",
+  "groups_sha256": "7645d0d433389cf22c3215ccd8cc2ada98f36c622992440edf4b3ec4cf2516b6"
+}

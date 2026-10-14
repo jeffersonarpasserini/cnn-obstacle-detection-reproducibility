@@ -7,3 +7,9 @@ logs/
 #results/**/per_fold_metrics.partial.csv
 #results/**/per_sample_predictions/
 
+
+# Final model binaries are installed from verified GitHub release assets.
+results/external_test/models/**/*.keras
+results/external_test/models/**/*.joblib
+results/external_test/encoders/*.keras
+results/external_test/adapter_*.joblib

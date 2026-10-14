@@ -1,0 +1,29 @@
+{
+  "model": "ft_ResNet50",
+  "seed": 1980,
+  "training_seconds": 18.78632073799963,
+  "effective_epochs": 1,
+  "best_epoch": 1,
+  "batch_size": 2,
+  "peak_gpu_memory_bytes": null,
+  "peak_gpu_memory_status": "unavailable",
+  "peak_host_memory_bytes": 4303286272,
+  "total_parameters": 23850242,
+  "trainable_parameters": 23797122,
+  "model_size_mb": 96.057143,
+  "reload_check": {
+    "status": "passed",
+    "image_count": 4,
+    "filenames": [
+      "nonclear.011.jpg",
+      "nonclear.023.jpg",
+      "clear.001.jpg",
+      "clear.003.jpg"
+    ],
+    "max_abs_difference": 0.0,
+    "atol": 1e-05,
+    "kind": "probabilities",
+    "decisions_identical": true
+  },
+  "smoke": true
+}

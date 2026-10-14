@@ -1,0 +1,21 @@
+{
+  "identity": {
+    "run": "fd0e3b76872c187ac65c6326524be21e8e9e946f00e27db6b94486e1a216d1a5",
+    "split": "96734958a5c1bee17f43c9ae51daa1bfa9acedd36a13867e15435f36e2b21371",
+    "experiment": {
+      "name": "a_resnet50_None_linear_svm",
+      "approach": "A",
+      "extractors": [
+        "ResNet50"
+      ],
+      "reduction": "full",
+      "components": null,
+      "classifier": "linear_svm",
+      "scale": false
+    }
+  },
+  "artifacts": {
+    "metrics.csv": "8c3a69970dc2c2885e754e21a05f011e12202ece0ff1d63bc6ce6a289b762900",
+    "predictions.csv.gz": "ff22eeb74f6f5aa79b3e748bab3273df4ad1e6b10fb41a9e95be3b7420c32295"
+  }
+}

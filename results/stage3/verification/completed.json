@@ -1,0 +1,26 @@
+{
+  "analysis_scope": "exploratory/post hoc",
+  "completed": true,
+  "scientific_analyses_completed": true,
+  "pytest_completed": true,
+  "pytest_summary": "206 passed, 1 skipped, 46 warnings, 7 subtests passed in 167.69s (0:02:47)",
+  "cpu_smoke_completed": true,
+  "section_order": [
+    0,
+    4,
+    3,
+    2,
+    1,
+    5
+  ],
+  "protected_files_unchanged": 5364,
+  "cluster_name_fields_filled": 12,
+  "error_categories_filled": 148,
+  "report_mode": "final",
+  "real_blind_responses_analysed": true,
+  "grouped_ft_executed": false,
+  "primary_predictions_sha256": "53231b8355530ce518ff86581f6cbd6a1baaec25dcaf2b2cc4e2275f83b0bfe1",
+  "grouped_jobs": 40,
+  "cluster_mosaics": 12,
+  "error_annotation_rows": 148
+}

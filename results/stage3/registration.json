@@ -1,0 +1,12 @@
+{
+  "analysis_scope": "exploratory/post hoc",
+  "registered_utc": "2026-10-08T17:52:30.196963+00:00",
+  "baseline_commit": "b64221f",
+  "config_sha256": "21b2566d25aa23c6d28abb1597fac870e07e981a869c6e97a8f9686eb436380f",
+  "low_light_threshold": 93.746906,
+  "illumination_source": "342 VIA images, no scores/errors/labels used",
+  "opencv_version": "4.11.0",
+  "primary_predictions_sha256": "53231b8355530ce518ff86581f6cbd6a1baaec25dcaf2b2cc4e2275f83b0bfe1",
+  "primary_freeze_sha256": "d83b57f6b3b853653fe27e8acf88df1e2e725b0542f237ed4d4696d1cdd42f0e",
+  "protocol_sha256": "423f4add0854b86b0038a7658ebf2a634694e9a117597038f9aff936f5bc5b55"
+}

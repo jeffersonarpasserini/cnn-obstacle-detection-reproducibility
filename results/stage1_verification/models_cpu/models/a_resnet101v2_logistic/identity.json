@@ -1,0 +1,24 @@
+{
+  "run": "203eeaf1e4fecbd1d9a7585988643177c6bae89e4d95b74bf5dceadc636f7fb0",
+  "experiment": {
+    "name": "a_resnet101v2_logistic",
+    "approach": "A",
+    "extractors": [
+      "ResNet101V2"
+    ],
+    "reduction": "full",
+    "components": null,
+    "classifier": "logistic",
+    "scale": false
+  },
+  "indices": [
+    175,
+    176,
+    177,
+    178,
+    0,
+    1,
+    2,
+    3
+  ]
+}

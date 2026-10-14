@@ -1,0 +1,10 @@
+{
+  "model": "c_mobilenet_resnet50_pca_300_linear_svm",
+  "seed": -1,
+  "pool_fraction": 0.25,
+  "training_images": 540,
+  "elapsed_seconds": 7.016111229022499,
+  "training_seconds": 6.396750652027549,
+  "update_reduction_seconds": 6.389118832012173,
+  "update_classifier_seconds": 0.007631820015376434
+}

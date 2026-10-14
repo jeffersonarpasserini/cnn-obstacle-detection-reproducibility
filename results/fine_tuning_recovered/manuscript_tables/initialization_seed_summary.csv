@@ -1,0 +1,16 @@
+experiment,seed,accuracy,mcc,obstructed_recall,aggregation
+ft_d_efficientnetb3,1980,0.9415126050420166,0.8849091848530792,0.9224264705882351,arithmetic mean across ten folds for one initialization seed
+ft_d_efficientnetb3,1981,0.9473949579831933,0.8960687916219202,0.9518382352941176,arithmetic mean across ten folds for one initialization seed
+ft_d_efficientnetb3,1982,0.8946218487394958,0.7945948870893634,0.8801470588235294,arithmetic mean across ten folds for one initialization seed
+ft_d_efficientnetb4,1980,0.9183193277310924,0.8409667087320652,0.9224264705882351,arithmetic mean across ten folds for one initialization seed
+ft_d_efficientnetb4,1981,0.9121848739495798,0.8323400802794513,0.8926470588235293,arithmetic mean across ten folds for one initialization seed
+ft_d_efficientnetb4,1982,0.9442857142857143,0.8924622089649814,0.9161764705882351,arithmetic mean across ten folds for one initialization seed
+ft_d_mobilenet,1980,0.927142857142857,0.8574744532920864,0.9102941176470587,arithmetic mean across ten folds for one initialization seed
+ft_d_mobilenet,1981,0.8684873949579831,0.7432633891164349,0.8558823529411764,arithmetic mean across ten folds for one initialization seed
+ft_d_mobilenet,1982,0.9210084033613445,0.8457459652115468,0.8985294117647058,arithmetic mean across ten folds for one initialization seed
+ft_d_resnet101v2,1980,0.7311764705882353,0.48629825137509003,0.6610294117647059,arithmetic mean across ten folds for one initialization seed
+ft_d_resnet101v2,1981,0.7252941176470589,0.465839383915141,0.6113970588235295,arithmetic mean across ten folds for one initialization seed
+ft_d_resnet101v2,1982,0.6958823529411765,0.4015053640438202,0.6150735294117646,arithmetic mean across ten folds for one initialization seed
+ft_d_resnet50,1980,0.8278151260504201,0.6627010451957198,0.8099264705882353,arithmetic mean across ten folds for one initialization seed
+ft_d_resnet50,1981,0.8510924369747899,0.7053841873853035,0.838970588235294,arithmetic mean across ten folds for one initialization seed
+ft_d_resnet50,1982,0.8304201680672267,0.6687654672851967,0.7801470588235294,arithmetic mean across ten folds for one initialization seed

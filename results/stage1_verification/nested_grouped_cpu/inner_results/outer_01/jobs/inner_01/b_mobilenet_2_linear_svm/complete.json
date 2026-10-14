@@ -1,0 +1,21 @@
+{
+  "identity": {
+    "run": "fd0e3b76872c187ac65c6326524be21e8e9e946f00e27db6b94486e1a216d1a5",
+    "split": "96734958a5c1bee17f43c9ae51daa1bfa9acedd36a13867e15435f36e2b21371",
+    "experiment": {
+      "name": "b_mobilenet_2_linear_svm",
+      "approach": "B",
+      "extractors": [
+        "MobileNet"
+      ],
+      "reduction": "pca",
+      "components": 2,
+      "classifier": "linear_svm",
+      "scale": false
+    }
+  },
+  "artifacts": {
+    "metrics.csv": "a87d8601331260fe714087e78d908fabb79fdf3f7fd8c8e56b0135adb6961999",
+    "predictions.csv.gz": "379a0f914c3aeb4e47daef25020af6db024b35a01a140ae5b3e5edfb1cf6f652"
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "recorded_utc": "2026-10-05T12:55:31.559382+00:00",
+  "reviewer_role": "assistant_visual_inspection",
+  "author_validation": "pending",
+  "proposals_applied": false,
+  "groups_sha256": "6927f9254b2f21b411c26fc8da7dc96fdcf8d9332a0bd543545cf6224f05fb99",
+  "pairs_sha256": "1608e55b12bf6b5b06eb5fcc1ce1eed1a3137bd2d629b55514f1c9ee815bdf2e",
+  "all_geometric_review_mosaics_inspected": true,
+  "all_multi_image_group_mosaics_inspected": true,
+  "capture_location_or_sequence_proven": false,
+  "merger_proposal_format": "filename pairs, not override group IDs; regenerate after approved rejections and select current groups_auto.csv target IDs",
+  "recommendations": [
+    {
+      "filename_a": "clear.020.jpg",
+      "filename_b": "nonclear.141.jpg",
+      "current_group_a": "scene_0021",
+      "current_group_b": "scene_0021",
+      "proposed_action": "propose_reject_confirmed_edge",
+      "reason": "A mosaic shows an outdoor concrete path and indoor ceramic tiles with a threshold; visual near-duplicate evidence is absent and this pair has zero RANSAC inliers.",
+      "author_decision": "pending",
+      "applied": false,
+      "mosaic": "group_review/group_0021_page_001.png",
+      "mosaic_sha256": "5058ee5fccc3eb2ed89c7260a61e7ec569cd78e19e2622b26b974fcd4ef4de4a",
+      "measurements": {
+        "phash_distance": 8,
+        "semantic_cosine": 0.507996064240814,
+        "valid_match_count": 0,
+        "ransac_inliers": 0,
+        "inlier_ratio": 0.0,
+        "quadrant_inliers_a": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "quadrant_inliers_b": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "geometry_qualified": false,
+        "accepted_edge": true
+      }
+    },
+    {
+      "filename_a": "nonclear.102.jpg",
+      "filename_b": "nonclear.104.jpg",
+      "current_group_a": "scene_0278",
+      "current_group_b": "scene_0280",
+      "proposed_action": "propose_merge_components",
+      "reason": "Matching rubble arrangement beside a wall and 193 spatially distributed inliers suggest the same scene; the geometric gate passes but cosine 0.6332 fails 0.795.",
+      "author_decision": "pending",
+      "applied": false,
+      "mosaic": "geometry_review/geometry_0277_0279.png",
+      "mosaic_sha256": "ce5c3dc86ee89f48272e118e94505537dee193fcf8ef050ed658f6387db3c725",
+      "measurements": {
+        "phash_distance": 24,
+        "semantic_cosine": 0.6331744986568095,
+        "valid_match_count": 215,
+        "ransac_inliers": 193,
+        "inlier_ratio": 0.8976744186046511,
+        "quadrant_inliers_a": [
+          8,
+          0,
+          181,
+          4
+        ],
+        "quadrant_inliers_b": [
+          0,
+          8,
+          13,
+          172
+        ],
+        "geometry_qualified": true,
+        "accepted_edge": false
+      }
+    },
+    {
+      "filename_a": "nonclear.116.jpg",
+      "filename_b": "nonclear.117.jpg",
+      "current_group_a": "scene_0292",
+      "current_group_b": "scene_0293",
+      "proposed_action": "propose_merge_components",
+      "reason": "Matching cracks beside a curb and 39 inliers suggest the same scene; one image has only two supported quadrants, excluding the automatic edge.",
+      "author_decision": "pending",
+      "applied": false,
+      "mosaic": "geometry_review/geometry_0291_0292.png",
+      "mosaic_sha256": "77680de7ba028792ec9b5881522ad3a9cdc6d2653ef19a096f9c7faece51541b",
+      "measurements": {
+        "phash_distance": 20,
+        "semantic_cosine": 0.8539549619584983,
+        "valid_match_count": 42,
+        "ransac_inliers": 39,
+        "inlier_ratio": 0.9285714285714286,
+        "quadrant_inliers_a": [
+          17,
+          2,
+          3,
+          17
+        ],
+        "quadrant_inliers_b": [
+          34,
+          0,
+          5,
+          0
+        ],
+        "geometry_qualified": false,
+        "accepted_edge": false
+      }
+    },
+    {
+      "filename_a": "clear.132.jpg",
+      "filename_b": "nonclear.151.jpg",
+      "current_group_a": "scene_0133",
+      "current_group_b": "scene_0326",
+      "proposed_action": "needs_author_review",
+      "reason": "Apparent overlap in pavement and vegetation requires author confirmation; cosine and quadrant coverage fail the fixed gates.",
+      "author_decision": "pending",
+      "applied": false,
+      "mosaic": "geometry_review/geometry_0132_0326.png",
+      "mosaic_sha256": "82f35a883aa647f35071f7292df58dfcb8e8984ce607ab08cb4a8dbb1a4bcc6d",
+      "measurements": {
+        "phash_distance": 26,
+        "semantic_cosine": 0.7762460931376228,
+        "valid_match_count": 46,
+        "ransac_inliers": 37,
+        "inlier_ratio": 0.8043478260869565,
+        "quadrant_inliers_a": [
+          4,
+          0,
+          33,
+          0
+        ],
+        "quadrant_inliers_b": [
+          0,
+          5,
+          0,
+          32
+        ],
+        "geometry_qualified": false,
+        "accepted_edge": false
+      }
+    },
+    {
+      "filename_a": "clear.174.jpg",
+      "filename_b": "nonclear.166.jpg",
+      "current_group_a": "scene_0175",
+      "current_group_b": "scene_0341",
+      "proposed_action": "retain_separation_pending_author_review",
+      "reason": "Repeated stone texture has all inliers concentrated in one quadrant of each image; the inspected evidence does not support an automatic merge.",
+      "author_decision": "pending",
+      "applied": false,
+      "mosaic": "geometry_review/geometry_0174_0341.png",
+      "mosaic_sha256": "31680a1c342821db51816d6c317593242eca077cf208d5b9998ef10c63f47db5",
+      "measurements": {
+        "phash_distance": 28,
+        "semantic_cosine": 0.7932878542653647,
+        "valid_match_count": 37,
+        "ransac_inliers": 33,
+        "inlier_ratio": 0.8918918918918919,
+        "quadrant_inliers_a": [
+          0,
+          0,
+          0,
+          33
+        ],
+        "quadrant_inliers_b": [
+          0,
+          0,
+          33,
+          0
+        ],
+        "geometry_qualified": false,
+        "accepted_edge": false
+      }
+    },
+    {
+      "filename_a": "nonclear.053.jpg",
+      "filename_b": "nonclear.109.jpg",
+      "current_group_a": "scene_0229",
+      "current_group_b": "scene_0285",
+      "proposed_action": "needs_author_review",
+      "reason": "Correspondences in cracked pavement require author confirmation; only two quadrants are supported in one image.",
+      "author_decision": "pending",
+      "applied": false,
+      "mosaic": "geometry_review/geometry_0228_0284.png",
+      "mosaic_sha256": "abe2ed5ac2f0731d81ba79918f87664a440c3593b4ae8e4725935efe8fdf2b09",
+      "measurements": {
+        "phash_distance": 30,
+        "semantic_cosine": 0.8739734585764108,
+        "valid_match_count": 34,
+        "ransac_inliers": 31,
+        "inlier_ratio": 0.9117647058823528,
+        "quadrant_inliers_a": [
+          0,
+          0,
+          22,
+          9
+        ],
+        "quadrant_inliers_b": [
+          5,
+          3,
+          14,
+          9
+        ],
+        "geometry_qualified": false,
+        "accepted_edge": false
+      }
+    }
+  ],
+  "proposal_artifacts": {
+    "proposed_edge_rejections.csv": "617eb74959bc50c84727a190a8a9353d430667dde65f1416500fd0e1cfddf26c",
+    "proposed_group_merges.csv": "44088351bc4568f952796cadf9682dae3802318ba67301a9ace9ba61104cdeb6"
+  }
+}

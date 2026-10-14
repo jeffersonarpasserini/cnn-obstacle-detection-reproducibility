@@ -1,0 +1,11 @@
+{
+  "selected": {
+    "A": "a_mobilenet_None_linear_svm",
+    "B": "b_mobilenet_4_logistic",
+    "C": "c_mobilenet+resnet50_4_logistic",
+    "D": "d_mobilenet+resnet50_4_linear_svm"
+  },
+  "winner": "a_mobilenet_None_linear_svm",
+  "attempts": 40,
+  "infeasible_attempts": 0
+}

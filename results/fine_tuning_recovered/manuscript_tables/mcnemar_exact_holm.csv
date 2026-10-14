@@ -1,0 +1,21 @@
+fine_experiment,fixed_experiment,fine_correct_fixed_wrong,fine_wrong_fixed_correct,discordant_images,p_value,fine_aggregation,p_holm,significant_0_05
+ft_d_resnet101v2,a_resnet101v2_logistic,11,61,72,1.5488945360571046e-09,mean-probability seed ensemble,3.097789072114209e-08,True
+ft_d_resnet101v2,b_efficientnetb3_pca_300_linear_svm,12,61,73,4.802196531399105e-09,mean-probability seed ensemble,8.163734103378478e-08,True
+ft_d_resnet101v2,c_mobilenet_resnet50_pca_300_linear_svm,11,60,71,2.633328534504438e-09,mean-probability seed ensemble,5.003324215558432e-08,True
+ft_d_resnet101v2,d_mobilenet_resnet50_pca_300_linear_svm,11,60,71,2.633328534504438e-09,mean-probability seed ensemble,5.003324215558432e-08,True
+ft_d_efficientnetb3,a_resnet101v2_logistic,16,10,26,0.32693958282470703,mean-probability seed ensemble,1.0,False
+ft_d_efficientnetb3,b_efficientnetb3_pca_300_linear_svm,16,9,25,0.2295229434967041,mean-probability seed ensemble,1.0,False
+ft_d_efficientnetb3,c_mobilenet_resnet50_pca_300_linear_svm,14,7,21,0.18924713134765625,mean-probability seed ensemble,1.0,False
+ft_d_efficientnetb3,d_mobilenet_resnet50_pca_300_linear_svm,14,7,21,0.18924713134765625,mean-probability seed ensemble,1.0,False
+ft_d_mobilenet,a_resnet101v2_logistic,13,19,32,0.37708558747544885,mean-probability seed ensemble,1.0,False
+ft_d_mobilenet,b_efficientnetb3_pca_300_linear_svm,13,18,31,0.47312965989112854,mean-probability seed ensemble,1.0,False
+ft_d_mobilenet,c_mobilenet_resnet50_pca_300_linear_svm,12,17,29,0.45825831964612007,mean-probability seed ensemble,1.0,False
+ft_d_mobilenet,d_mobilenet_resnet50_pca_300_linear_svm,12,17,29,0.45825831964612007,mean-probability seed ensemble,1.0,False
+ft_d_resnet50,a_resnet101v2_logistic,15,33,48,0.01328328156224501,mean-probability seed ensemble,0.18596594187143015,False
+ft_d_resnet50,b_efficientnetb3_pca_300_linear_svm,14,31,45,0.016094360031274842,mean-probability seed ensemble,0.20922668040657294,False
+ft_d_resnet50,c_mobilenet_resnet50_pca_300_linear_svm,11,28,39,0.009475304279476404,mean-probability seed ensemble,0.15160486847162247,False
+ft_d_resnet50,d_mobilenet_resnet50_pca_300_linear_svm,11,28,39,0.009475304279476404,mean-probability seed ensemble,0.15160486847162247,False
+ft_d_efficientnetb4,a_resnet101v2_logistic,15,12,27,0.7011080384254456,mean-probability seed ensemble,1.0,False
+ft_d_efficientnetb4,b_efficientnetb3_pca_300_linear_svm,15,11,26,0.557197093963623,mean-probability seed ensemble,1.0,False
+ft_d_efficientnetb4,c_mobilenet_resnet50_pca_300_linear_svm,15,11,26,0.557197093963623,mean-probability seed ensemble,1.0,False
+ft_d_efficientnetb4,d_mobilenet_resnet50_pca_300_linear_svm,15,11,26,0.557197093963623,mean-probability seed ensemble,1.0,False

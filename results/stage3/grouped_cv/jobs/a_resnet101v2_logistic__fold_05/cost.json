@@ -1,0 +1,10 @@
+{
+  "model": "a_resnet101v2_logistic",
+  "fold": 5,
+  "reduction_seconds": 0.015390441054478288,
+  "training_seconds": 0.2479933419963345,
+  "elapsed_seconds": 0.2880146129755303,
+  "analysis_scope": "exploratory/post hoc",
+  "native_reload_identical": true,
+  "new_backbone_forwards": 0
+}

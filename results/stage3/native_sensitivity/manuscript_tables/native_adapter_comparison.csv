@@ -1,0 +1,5 @@
+model,native_accuracy,adapter_accuracy,disagreements,native_only_correct,adapter_only_correct,mcnemar_p,expected_native_accuracy,expected_disagreements,analysis_scope
+a_resnet101v2_logistic,0.809010152284264,0.7893401015228426,61,46,15,8.837556327558756e-05,0.80901,61,exploratory/post hoc
+b_efficientnetb3_pca_300_linear_svm,0.8128172588832487,0.809010152284264,12,9,3,0.14599609375,0.8128173,12,exploratory/post hoc
+c_mobilenet_resnet50_pca_300_linear_svm,0.807741116751269,0.7963197969543148,34,26,8,0.0029350556433200836,0.8077411,34,exploratory/post hoc
+d_mobilenet_resnet50_pca_300_linear_svm,0.8153553299492385,0.800761421319797,39,31,8,0.0002940768754342571,0.8153553,39,exploratory/post hoc

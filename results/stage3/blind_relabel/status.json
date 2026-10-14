@@ -1,0 +1,15 @@
+{
+  "analysis_scope": "exploratory/post hoc",
+  "prepared": true,
+  "responses_received": true,
+  "analysis_executed": true,
+  "zip": "external-data/blind_relabel/blind_relabel_package.zip",
+  "responses": "external-data/blind_relabel/responses_breve.csv",
+  "rater": "Fabricio Breve",
+  "responses_received_date": "2026-10-13",
+  "bootstrap_iterations": 10000,
+  "bootstrap_seed": 1980,
+  "analysis_script": "scripts/analyze_blind_relabel.py::analyze (sem alterações)",
+  "responses_sha256": "b46b69264fcbbaf56f13a52653b8c541bfb3f26c2b5a0168274b28123ba09b38",
+  "agreement_sha256": "961267a6436c383ca9806edb88668523f28b936edbeb86c7c5631d154725f2e8"
+}

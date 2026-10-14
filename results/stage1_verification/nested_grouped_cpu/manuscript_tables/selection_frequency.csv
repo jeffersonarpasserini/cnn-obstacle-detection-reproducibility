@@ -1,0 +1,6 @@
+procedure,selected_configuration,outer_fold_count
+A,a_mobilenet_None_linear_svm,1
+B,b_resnet50_4_logistic,1
+C,c_mobilenet+resnet50_4_logistic,1
+D,d_mobilenet+resnet50_4_logistic,1
+winner,a_mobilenet_None_linear_svm,1

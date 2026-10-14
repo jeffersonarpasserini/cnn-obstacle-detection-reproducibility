@@ -1,0 +1,417 @@
+{
+  "checked_utc": "2026-10-06T03:47:50.899517+00:00",
+  "baseline_captured_utc": "2026-10-06T03:38:53.008423+00:00",
+  "baseline_repository_commit": "b0954eab6de7ae91a8f379aeaaf08d19ee55827c",
+  "all_protected_files_unchanged": true,
+  "files": {
+    "configs/scene_groups.json": {
+      "before_sha256": "03684a62289ecd03582ba26e21c7e4615c94d0916b49a12d387453fa27407491",
+      "after_sha256": "03684a62289ecd03582ba26e21c7e4615c94d0916b49a12d387453fa27407491",
+      "unchanged": true
+    },
+    "configs/fine_tuning.json": {
+      "before_sha256": "f160cba45ff3f3ab8f206a71721e3aa6ff16f75103ab157558f0ccfb694d1822",
+      "after_sha256": "f160cba45ff3f3ab8f206a71721e3aa6ff16f75103ab157558f0ccfb694d1822",
+      "unchanged": true
+    },
+    "src/fine_tuning.py": {
+      "before_sha256": "b7b572376491e1b681be2c6d8d3b15bbc40882cc85cc6ca5c91141f0211597a9",
+      "after_sha256": "b7b572376491e1b681be2c6d8d3b15bbc40882cc85cc6ca5c91141f0211597a9",
+      "unchanged": true
+    },
+    "src/fixed_refit.py": {
+      "before_sha256": "5a0e3f2af29ac596eea1891fea62c52ec0ffe42cbad34b300660cf6133ac2e39",
+      "after_sha256": "5a0e3f2af29ac596eea1891fea62c52ec0ffe42cbad34b300660cf6133ac2e39",
+      "unchanged": true
+    },
+    "src/artifact.py": {
+      "before_sha256": "ed11cda07eaee53a2684988b8342b8ed096a5d74139890ffa2eaca4bdb2f8c15",
+      "after_sha256": "ed11cda07eaee53a2684988b8342b8ed096a5d74139890ffa2eaca4bdb2f8c15",
+      "unchanged": true
+    },
+    "src/run_experiments.py": {
+      "before_sha256": "3c4f0266f430c8bbbc8f9525c2b883a249edd214f5c969ecfed5b5dfcf2341bb",
+      "after_sha256": "3c4f0266f430c8bbbc8f9525c2b883a249edd214f5c969ecfed5b5dfcf2341bb",
+      "unchanged": true
+    },
+    "scripts/resume_fine_tuning.py": {
+      "before_sha256": "91c5ca80e6a74f1ed2b312aee0a8dd933e8d2b2488c5385149e73898f46ba0da",
+      "after_sha256": "91c5ca80e6a74f1ed2b312aee0a8dd933e8d2b2488c5385149e73898f46ba0da",
+      "unchanged": true
+    },
+    "scripts/analyze_fine_tuning.py": {
+      "before_sha256": "7ebfe98799892209e5623a75e4077fc094cefde8a753ed72ce9658038d0d849e",
+      "after_sha256": "7ebfe98799892209e5623a75e4077fc094cefde8a753ed72ce9658038d0d849e",
+      "unchanged": true
+    },
+    "configs/article_selected_models_10fold.json": {
+      "before_sha256": "601abccb19d1eaec1408ef9ece8a7195c170e1ff3d55a74d62544ca2da2c3467",
+      "after_sha256": "601abccb19d1eaec1408ef9ece8a7195c170e1ff3d55a74d62544ca2da2c3467",
+      "unchanged": true
+    },
+    "data/surface_groups.csv": {
+      "before_sha256": "35658506bef151a8240ef5472c16242f1b30f14cb7b58e6c05daffe99c511365",
+      "after_sha256": "35658506bef151a8240ef5472c16242f1b30f14cb7b58e6c05daffe99c511365",
+      "unchanged": true
+    },
+    ".venv/bin/activate-tensorflow-gpu": {
+      "before_sha256": "80504f01a9804aff3792b372e797396e4597c6eaedbd89796c25542a2ea08e5d",
+      "after_sha256": "80504f01a9804aff3792b372e797396e4597c6eaedbd89796c25542a2ea08e5d",
+      "unchanged": true
+    },
+    "data/edge_rejections.csv": {
+      "before_sha256": "a90c7288a4ffbc8c6106d53b66e73d7a3e416354defbc1c26cf4558f61fe77aa",
+      "after_sha256": "a90c7288a4ffbc8c6106d53b66e73d7a3e416354defbc1c26cf4558f61fe77aa",
+      "unchanged": true
+    },
+    "data/groups_overrides.csv": {
+      "before_sha256": "9f6ab172ca947bae96bb607dbe64f780c9b9f769efcdb355d15216a2c111fbf7",
+      "after_sha256": "9f6ab172ca947bae96bb607dbe64f780c9b9f769efcdb355d15216a2c111fbf7",
+      "unchanged": true
+    },
+    "tests/test_scene_groups.py": {
+      "before_sha256": "ca5fd7d153e9a086b886048e630af159fde46f304982211228da3868106c93d9",
+      "after_sha256": "ca5fd7d153e9a086b886048e630af159fde46f304982211228da3868106c93d9",
+      "unchanged": true
+    },
+    "tests/test_scene_groups_v2.py": {
+      "before_sha256": "d1a4c899898eb69fab7c4193554836674656d033012f79a7041fdfa8435274b7",
+      "after_sha256": "d1a4c899898eb69fab7c4193554836674656d033012f79a7041fdfa8435274b7",
+      "unchanged": true
+    },
+    "requirements-scene-groups-core.txt": {
+      "before_sha256": "9e4a6eec5ac87b74603b59d3e9de6f60615add737064639c3a589248858bb542",
+      "after_sha256": "9e4a6eec5ac87b74603b59d3e9de6f60615add737064639c3a589248858bb542",
+      "unchanged": true
+    },
+    "requirements-scene-groups.txt": {
+      "before_sha256": "469151171472aa6397618dff70fd077e71b19fe0a4f0a00f6cba26db5127ca7b",
+      "after_sha256": "469151171472aa6397618dff70fd077e71b19fe0a4f0a00f6cba26db5127ca7b",
+      "unchanged": true
+    },
+    "scripts/build_scene_groups.py": {
+      "before_sha256": "99ccd28d1e63ed9731a56387d4652d28bcdb5d4bfb165573a84c828f27e2e14c",
+      "after_sha256": "99ccd28d1e63ed9731a56387d4652d28bcdb5d4bfb165573a84c828f27e2e14c",
+      "unchanged": true
+    },
+    "scripts/scene_groups_graph.py": {
+      "before_sha256": "bed9984521c0ee3cdb8c133154c5d6bfad9d8d87912e2229f8a42ba5468fa921",
+      "after_sha256": "bed9984521c0ee3cdb8c133154c5d6bfad9d8d87912e2229f8a42ba5468fa921",
+      "unchanged": true
+    },
+    "scripts/scene_groups_geometry.py": {
+      "before_sha256": "9b996883ad52924888968ff21813f38bc9c522a5c915f2b1bd7f441b04f58f68",
+      "after_sha256": "9b996883ad52924888968ff21813f38bc9c522a5c915f2b1bd7f441b04f58f68",
+      "unchanged": true
+    },
+    "scripts/scene_groups_review.py": {
+      "before_sha256": "2f662be6ccab18b2e4b5a27a21b15ad880428760cfe3d0a1beda0615965b2363",
+      "after_sha256": "2f662be6ccab18b2e4b5a27a21b15ad880428760cfe3d0a1beda0615965b2363",
+      "unchanged": true
+    },
+    "results/full_search/fold_assignments.csv": {
+      "before_sha256": "cd2b875bfc1a4499b175ab4a4bfdf4a43b25a060d522418f53cce6b97ac25104",
+      "after_sha256": "cd2b875bfc1a4499b175ab4a4bfdf4a43b25a060d522418f53cce6b97ac25104",
+      "unchanged": true
+    },
+    "results/full_search/per_fold_metrics.csv": {
+      "before_sha256": "3d5e2a8caf75e48cc665dd2ed97a838b4af4c422611d2cea4813034a115880cb",
+      "after_sha256": "3d5e2a8caf75e48cc665dd2ed97a838b4af4c422611d2cea4813034a115880cb",
+      "unchanged": true
+    }
+  },
+  "training_environment": ".venv",
+  "training_package_versions_unchanged": true,
+  "training_package_count": 69,
+  "training_packages": [
+    [
+      "Pygments",
+      "2.21.0"
+    ],
+    [
+      "absl-py",
+      "2.5.0"
+    ],
+    [
+      "astunparse",
+      "1.6.3"
+    ],
+    [
+      "certifi",
+      "2026.7.22"
+    ],
+    [
+      "charset-normalizer",
+      "3.5.2"
+    ],
+    [
+      "cloudpickle",
+      "3.1.2"
+    ],
+    [
+      "contourpy",
+      "1.4.0"
+    ],
+    [
+      "cycler",
+      "0.12.1"
+    ],
+    [
+      "flatbuffers",
+      "25.12.19"
+    ],
+    [
+      "fonttools",
+      "4.66.1"
+    ],
+    [
+      "gast",
+      "0.7.0"
+    ],
+    [
+      "google-pasta",
+      "0.2.0"
+    ],
+    [
+      "grpcio",
+      "1.84.0"
+    ],
+    [
+      "h5py",
+      "3.14.0"
+    ],
+    [
+      "idna",
+      "3.20"
+    ],
+    [
+      "iniconfig",
+      "2.3.0"
+    ],
+    [
+      "joblib",
+      "1.6.0"
+    ],
+    [
+      "keras",
+      "3.15.1"
+    ],
+    [
+      "kiwisolver",
+      "1.5.1"
+    ],
+    [
+      "libclang",
+      "18.1.1"
+    ],
+    [
+      "llvmlite",
+      "0.50.0"
+    ],
+    [
+      "markdown-it-py",
+      "4.2.0"
+    ],
+    [
+      "matplotlib",
+      "3.11.2"
+    ],
+    [
+      "mdurl",
+      "0.1.2"
+    ],
+    [
+      "ml_dtypes",
+      "0.6.0"
+    ],
+    [
+      "namex",
+      "0.1.0"
+    ],
+    [
+      "narwhals",
+      "2.26.0"
+    ],
+    [
+      "numba",
+      "0.68.0"
+    ],
+    [
+      "numpy",
+      "2.4.6"
+    ],
+    [
+      "nvidia-cublas-cu12",
+      "12.9.2.10"
+    ],
+    [
+      "nvidia-cuda-cupti-cu12",
+      "12.9.79"
+    ],
+    [
+      "nvidia-cuda-nvcc-cu12",
+      "12.9.86"
+    ],
+    [
+      "nvidia-cuda-nvrtc-cu12",
+      "12.9.86"
+    ],
+    [
+      "nvidia-cuda-runtime-cu12",
+      "12.9.79"
+    ],
+    [
+      "nvidia-cudnn-cu12",
+      "9.27.0.42"
+    ],
+    [
+      "nvidia-cufft-cu12",
+      "11.4.1.4"
+    ],
+    [
+      "nvidia-curand-cu12",
+      "10.3.10.19"
+    ],
+    [
+      "nvidia-cusolver-cu12",
+      "11.7.5.82"
+    ],
+    [
+      "nvidia-cusparse-cu12",
+      "12.5.10.65"
+    ],
+    [
+      "nvidia-nccl-cu12",
+      "2.32.3"
+    ],
+    [
+      "nvidia-nvjitlink-cu12",
+      "12.9.86"
+    ],
+    [
+      "opt_einsum",
+      "3.4.0"
+    ],
+    [
+      "optree",
+      "0.20.0"
+    ],
+    [
+      "packaging",
+      "26.3"
+    ],
+    [
+      "pandas",
+      "3.0.3"
+    ],
+    [
+      "pillow",
+      "12.3.0"
+    ],
+    [
+      "pip",
+      "24.0"
+    ],
+    [
+      "pluggy",
+      "1.6.0"
+    ],
+    [
+      "protobuf",
+      "7.36.2"
+    ],
+    [
+      "pynndescent",
+      "0.6.0"
+    ],
+    [
+      "pyparsing",
+      "3.3.3"
+    ],
+    [
+      "pytest",
+      "9.1.1"
+    ],
+    [
+      "python-dateutil",
+      "2.9.0.post0"
+    ],
+    [
+      "requests",
+      "2.34.2"
+    ],
+    [
+      "rich",
+      "15.0.0"
+    ],
+    [
+      "scikit-learn",
+      "1.9.0"
+    ],
+    [
+      "scipy",
+      "1.18.0"
+    ],
+    [
+      "setuptools",
+      "84.0.0"
+    ],
+    [
+      "six",
+      "1.17.0"
+    ],
+    [
+      "skrebate",
+      "0.62"
+    ],
+    [
+      "tensorflow",
+      "2.21.0"
+    ],
+    [
+      "termcolor",
+      "3.3.0"
+    ],
+    [
+      "threadpoolctl",
+      "3.7.0"
+    ],
+    [
+      "tqdm",
+      "4.70.1"
+    ],
+    [
+      "typing_extensions",
+      "4.16.0"
+    ],
+    [
+      "umap-learn",
+      "0.5.12"
+    ],
+    [
+      "urllib3",
+      "2.8.0"
+    ],
+    [
+      "wheel",
+      "0.48.0"
+    ],
+    [
+      "wrapt",
+      "2.5.0"
+    ]
+  ],
+  "protected_output_directories": [
+    "results/full_search",
+    "results/scene_groups_v1",
+    "results/fine_tuning",
+    "results/fine_tuning_gpu_check_20261004",
+    "results/fine_tuning_prefetch",
+    "results/fine_tuning_recovered",
+    "results/fine_tuning_smoke_all_cpu_check_1",
+    "results/fine_tuning_smoke_all_cpu_check_2"
+  ],
+  "protected_output_files_unchanged": 4262,
+  "protected_output_content_hash_count": 3238,
+  "scope": "current pre-task file digests and package versions; all protected output paths/sizes/mtimes/inodes unchanged, content digests additionally checked for files up to 8 MiB"
+}

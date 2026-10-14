@@ -1,0 +1,561 @@
+{
+  "checks": [
+    {
+      "verification": "Original selection functions have identical AST",
+      "expected": 6,
+      "obtained": 6,
+      "status": "passed"
+    },
+    {
+      "verification": "Article finalist A",
+      "expected": "a_resnet101v2_logistic",
+      "obtained": "a_resnet101v2_logistic",
+      "status": "passed"
+    },
+    {
+      "verification": "Article finalist B",
+      "expected": "b_efficientnetb3_pca_300_linear_svm",
+      "obtained": "b_efficientnetb3_pca_300_linear_svm",
+      "status": "passed"
+    },
+    {
+      "verification": "Article finalist C",
+      "expected": "c_mobilenet_resnet50_pca_300_linear_svm",
+      "obtained": "c_mobilenet_resnet50_pca_300_linear_svm",
+      "status": "passed"
+    },
+    {
+      "verification": "Article finalist D",
+      "expected": "d_mobilenet_resnet50_pca_300_linear_svm",
+      "obtained": "d_mobilenet_resnet50_pca_300_linear_svm",
+      "status": "passed"
+    },
+    {
+      "verification": "Article global winner",
+      "expected": "b_efficientnetb3_pca_300_linear_svm",
+      "obtained": "b_efficientnetb3_pca_300_linear_svm",
+      "status": "passed"
+    },
+    {
+      "verification": "Protected files changed",
+      "expected": 0,
+      "obtained": 0,
+      "status": "passed"
+    },
+    {
+      "verification": "Training package versions unchanged",
+      "expected": true,
+      "obtained": true,
+      "status": "passed"
+    },
+    {
+      "verification": "VIA content fingerprint",
+      "expected": "bef13299b60d06e994bf85498ea0ed2e02f5f6d73851745ce05a16fa5204f2d6",
+      "obtained": "bef13299b60d06e994bf85498ea0ed2e02f5f6d73851745ce05a16fa5204f2d6",
+      "status": "passed"
+    },
+    {
+      "verification": "Raw images",
+      "expected": {
+        "total": 1929,
+        "clear": 1026,
+        "nonclear": 903
+      },
+      "obtained": {
+        "total": 1929,
+        "clear": 1026,
+        "nonclear": 903
+      },
+      "status": "passed"
+    },
+    {
+      "verification": "Novel exact-clean images",
+      "expected": {
+        "total": 1576,
+        "clear": 844,
+        "nonclear": 732
+      },
+      "obtained": {
+        "total": 1576,
+        "clear": 844,
+        "nonclear": 732
+      },
+      "status": "passed"
+    },
+    {
+      "verification": "VIA exact matches excluded",
+      "expected": 350,
+      "obtained": 350,
+      "status": "passed"
+    },
+    {
+      "verification": "Label-swapped VIA copies",
+      "expected": 4,
+      "obtained": 4,
+      "status": "passed"
+    },
+    {
+      "verification": "Internal exact duplicates excluded",
+      "expected": 3,
+      "obtained": 3,
+      "status": "passed"
+    },
+    {
+      "verification": "Novel SHA intersection with VIA",
+      "expected": 0,
+      "obtained": 0,
+      "status": "passed"
+    },
+    {
+      "verification": "Novel duplicate SHA",
+      "expected": 0,
+      "obtained": 0,
+      "status": "passed"
+    },
+    {
+      "verification": "Principal excludes every accepted automatic scene link",
+      "expected": 0,
+      "obtained": 0,
+      "status": "passed"
+    },
+    {
+      "verification": "Author approval remains pending",
+      "expected": null,
+      "obtained": null,
+      "status": "passed"
+    },
+    {
+      "verification": "Audit sample size",
+      "expected": 100,
+      "obtained": 100,
+      "status": "passed"
+    },
+    {
+      "verification": "Audit class split",
+      "expected": [
+        54,
+        46
+      ],
+      "obtained": [
+        54,
+        46
+      ],
+      "status": "passed"
+    },
+    {
+      "verification": "scene mosaic files exist",
+      "expected": 2,
+      "obtained": 2,
+      "status": "passed"
+    },
+    {
+      "verification": "audit mosaic files exist",
+      "expected": 5,
+      "obtained": 5,
+      "status": "passed"
+    },
+    {
+      "verification": "nested_cpu diagnostic completion",
+      "expected": true,
+      "obtained": true,
+      "status": "passed"
+    },
+    {
+      "verification": "nested_cpu outer prediction rows",
+      "expected": 175,
+      "obtained": 175,
+      "status": "passed"
+    },
+    {
+      "verification": "nested_cpu duplicate image/procedure",
+      "expected": 0,
+      "obtained": 0,
+      "status": "passed"
+    },
+    {
+      "verification": "nested_cpu recomputed outer metric rows",
+      "expected": 10,
+      "obtained": 10,
+      "status": "passed"
+    },
+    {
+      "verification": "nested_cpu inner attempts",
+      "expected": 40,
+      "obtained": 40,
+      "status": "passed"
+    },
+    {
+      "verification": "nested_cpu inner failed attempts",
+      "expected": 0,
+      "obtained": 0,
+      "status": "passed"
+    },
+    {
+      "verification": "nested_grouped_cpu diagnostic completion",
+      "expected": true,
+      "obtained": true,
+      "status": "passed"
+    },
+    {
+      "verification": "nested_grouped_cpu outer prediction rows",
+      "expected": 170,
+      "obtained": 170,
+      "status": "passed"
+    },
+    {
+      "verification": "nested_grouped_cpu duplicate image/procedure",
+      "expected": 0,
+      "obtained": 0,
+      "status": "passed"
+    },
+    {
+      "verification": "nested_grouped_cpu recomputed outer metric rows",
+      "expected": 10,
+      "obtained": 10,
+      "status": "passed"
+    },
+    {
+      "verification": "nested_grouped_cpu inner attempts",
+      "expected": 40,
+      "obtained": 40,
+      "status": "passed"
+    },
+    {
+      "verification": "nested_grouped_cpu inner failed attempts",
+      "expected": 0,
+      "obtained": 0,
+      "status": "passed"
+    },
+    {
+      "verification": "CPU model smoke never freezes production models",
+      "expected": false,
+      "obtained": false,
+      "status": "passed"
+    },
+    {
+      "verification": "Fixed CPU reload panels",
+      "expected": 4,
+      "obtained": 4,
+      "status": "passed"
+    },
+    {
+      "verification": "Neural CPU reload panels",
+      "expected": 5,
+      "obtained": 5,
+      "status": "passed"
+    },
+    {
+      "verification": "Neural smoke epochs",
+      "expected": [
+        1
+      ],
+      "obtained": [
+        1
+      ],
+      "status": "passed"
+    },
+    {
+      "verification": "Neural smoke seeds",
+      "expected": [
+        1980
+      ],
+      "obtained": [
+        1980
+      ],
+      "status": "passed"
+    },
+    {
+      "verification": "Real external classifications",
+      "expected": 0,
+      "obtained": 0,
+      "status": "passed"
+    },
+    {
+      "verification": "Production external predictions exist",
+      "expected": false,
+      "obtained": false,
+      "status": "passed"
+    },
+    {
+      "verification": "Production nested ungrouped exists",
+      "expected": false,
+      "obtained": false,
+      "status": "passed"
+    },
+    {
+      "verification": "Production nested grouped exists",
+      "expected": false,
+      "obtained": false,
+      "status": "passed"
+    },
+    {
+      "verification": "Raw images still tracked in current index",
+      "expected": 0,
+      "obtained": 0,
+      "status": "passed"
+    },
+    {
+      "verification": "Raw images still local",
+      "expected": 1929,
+      "obtained": 1929,
+      "status": "passed"
+    }
+  ],
+  "cleaning": {
+    "status": "paused_for_author_review",
+    "approved_by": null,
+    "approved_date": null,
+    "raw_counts": {
+      "total": 1929,
+      "clear": 1026,
+      "nonclear": 903
+    },
+    "exact_clean_counts": {
+      "total": 1576,
+      "clear": 844,
+      "nonclear": 732
+    },
+    "excluded_exact": 353,
+    "via_exact_matches": 350,
+    "via_label_conflicts": 4,
+    "internal_duplicates": 3,
+    "scene_overlap_images": 8,
+    "scene_overlap_links": 9,
+    "main_external_images_pending_approval": 1568,
+    "groups": 1378,
+    "audit_images": 100,
+    "audit_completed": false,
+    "discordance_rate": null,
+    "discordance_wilson": null,
+    "audit_reject_above": 0.05,
+    "scene_mosaics": [
+      "external-data/review/scene_overlap/scene_overlap_001.png",
+      "external-data/review/scene_overlap/scene_overlap_002.png"
+    ],
+    "audit_mosaics": [
+      "external-data/review/label_audit/label_audit_001.png",
+      "external-data/review/label_audit/label_audit_002.png",
+      "external-data/review/label_audit/label_audit_003.png",
+      "external-data/review/label_audit/label_audit_004.png",
+      "external-data/review/label_audit/label_audit_005.png"
+    ],
+    "external_config_sha256": "57a6550bd983f2b0594022b3c08fec77c79a4ade24285d104d9259ca7707e455",
+    "manifest_sha256": "70ffee374f076b72e70f22ace70e757e03b63cf2c3e69899c65e3e71cbd37260",
+    "groups_sha256": "ab5f85c6f3a77e637408f2bf4ceb7aac2a5ee65dc459334ea368540e0b1c3ead",
+    "raw_manifest_sha256": "111f8910bfdba7c33355186015c76484ccbb47952cf751baac97f17f2a8253c1",
+    "overlap_sha256": "44a9188fd477b4b1cd533c7893de57d37d219982eb226e1a86f8246057fc5f7d",
+    "audit_sample_sha256": "5be6e5ee0efd76b4d529ccb3cb7f83729489a014545f9a1aae993571b595f45d",
+    "encoder": {
+      "id": "facebook/dinov2-small",
+      "revision": "ed25f3a31f01632728cabb09d1542f84ab7b0056",
+      "weights_file": "model.safetensors",
+      "weights_sha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+      "pooling": "CLS",
+      "actual_weights_sha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+      "weights_path": "/home/jeffersonpasserini/.cache/huggingface/hub/models--facebook--dinov2-small/snapshots/ed25f3a31f01632728cabb09d1542f84ab7b0056/model.safetensors",
+      "preprocessing": {
+        "_processor_class": null,
+        "image_processor_type": "BitImageProcessor",
+        "do_resize": true,
+        "size": {
+          "shortest_edge": 256
+        },
+        "resample": 3,
+        "do_center_crop": true,
+        "crop_size": {
+          "height": 224,
+          "width": 224
+        },
+        "do_rescale": true,
+        "rescale_factor": 0.00392156862745098,
+        "do_normalize": true,
+        "image_mean": [
+          0.485,
+          0.456,
+          0.406
+        ],
+        "image_std": [
+          0.229,
+          0.224,
+          0.225
+        ],
+        "do_convert_rgb": true
+      },
+      "embedding_dimension": 384,
+      "device": "cpu",
+      "torch_version": "2.7.1+cpu",
+      "cuda_version": null,
+      "cudnn_version": null,
+      "fallback_reason": null,
+      "loading_seconds": 0.19621757199638523,
+      "embedding_seconds": 201.44941205799114
+    },
+    "seconds": 327.8406772490125,
+    "smoke": false,
+    "runtime": {
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+      "packages": {
+        "numpy": "2.4.6",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "scikit-learn": "1.9.0",
+        "tensorflow": null,
+        "umap-learn": null,
+        "skrebate": null,
+        "torch": "2.7.1+cpu",
+        "transformers": "4.51.3",
+        "Pillow": "12.3.0"
+      },
+      "CUDA_VISIBLE_DEVICES": null,
+      "sources": {
+        "src/artifact.py": "ed11cda07eaee53a2684988b8342b8ed096a5d74139890ffa2eaca4bdb2f8c15",
+        "src/selection.py": "71128688649fda74fed3cacacafca0834fee43a8d973e36f2671250ff0da8bc4",
+        "src/fixed_refit.py": "5a0e3f2af29ac596eea1891fea62c52ec0ffe42cbad34b300660cf6133ac2e39",
+        "src/fine_tuning.py": "b7b572376491e1b681be2c6d8d3b15bbc40882cc85cc6ca5c91141f0211597a9",
+        "src/study_io.py": "7c37bbfbe900fc1c2249d4398e981de8c090af2e5599318b5b8ff0c01844f938",
+        "src/study_statistics.py": "26a8ea361ed7eccbf9d65a400dbddcb3148e49f28841992531414bdb35728cf6",
+        "src/study_features.py": "d814e85f9e8d82d1d883793e9e639aa365d883bdefc0034844568236c6a43e6e",
+        "src/study_estimates.py": "03adcb5b5932957269d1fc115a4577451474fef092d8f40f3b8a30d0d6ba78eb",
+        "src/nested_cv.py": "1a4ed79b2a72c54b8b4334df2265ee00ce44758c8fd20b9fa78e16124716535b",
+        "src/external_test.py": "634448ccb3099df8c7cb2bb735843645bb0688fd41052e990a654def5eb3ed94",
+        "scripts/clean_external_dataset.py": "56af6c00a31f3235dc26df29637cc44e39421a54a64060904e84df663f09aa23",
+        "scripts/analyze_nested_cv.py": "c5d1a3acc2d98481b0c350e75a2b9dbd811be65a787be54ad2052d260b3d0931",
+        "scripts/analyze_external_test.py": "02e087d22b9d396f346fded92947bc7f7867f0bcd06b33cb256c779fc9bddb30",
+        "scripts/build_scene_groups.py": "99ccd28d1e63ed9731a56387d4652d28bcdb5d4bfb165573a84c828f27e2e14c",
+        "scripts/scene_groups_geometry.py": "9b996883ad52924888968ff21813f38bc9c522a5c915f2b1bd7f441b04f58f68",
+        "scripts/scene_groups_graph.py": "bed9984521c0ee3cdb8c133154c5d6bfad9d8d87912e2229f8a42ba5468fa921"
+      }
+    },
+    "external_classification_predictions": 0
+  },
+  "protected": {
+    "protected_files": 4103,
+    "changed": [],
+    "training_packages": 69,
+    "packages_unchanged": true,
+    "groups_sha256": "30537852c34f3d94e9dfeac436a62991d69561f2c28a3d4a3cceb4fe56919c26",
+    "raw_images_local": 1929
+  },
+  "pytest_log_sha256": "4eef45a65b0eafdd0f6189fc1b7d60ee7e0a10c8c6a267856f18a6047e92fb2f",
+  "estimated_stages": {
+    "nested": {
+      "stage": "nested_cv",
+      "configurations_per_outer_fold": 12656,
+      "inner_configuration_attempts": 632800,
+      "outer_fits_upper_bound": 40,
+      "serial_compute_hours": 1536.2250201339898,
+      "preprocessing_hours": 1466.082158808809,
+      "classifier_hours": 70.14286132518073,
+      "relief_cache_policy": "B single-CNN/C paired ranking once per fold; D shares B rankings; exclude infeasible PCA/UMAP250/300 from timing",
+      "relieff_reference_jobs": 8,
+      "relieff_requested_jobs": 8,
+      "time_hours_range": [
+        900.6921536828397,
+        2702.0764610485194
+      ],
+      "feature_extraction_hours_if_missing": 0.06098058539308517,
+      "additional_disk_gib_range": [
+        12.590341329574585,
+        22.506422638893127
+      ],
+      "small_file_count_upper_bound": 1898400,
+      "memory_budget_gib": 16,
+      "basis": "Recorded full_search timing; shared Relief rankings once per fold, 0.64 quadratic Relief and0.8 other inner sample scale. Preprocessing serial, classifier jobs parallel. Disk includes4–8KiB allocation per atomic job file; caches/UMAP/group folds add uncertainty.",
+      "input_hashes": {
+        "per_fold_metrics": "3d5e2a8caf75e48cc665dd2ed97a838b4af4c422611d2cea4813034a115880cb",
+        "feature_dimensions": "466b0256be265567864679f8bd986c76ecac7652bdf3f5bed7a862fbc0f5916f"
+      }
+    },
+    "nested_grouped": {
+      "stage": "nested_cv_grouped",
+      "configurations_per_outer_fold": 12656,
+      "inner_configuration_attempts": 632800,
+      "outer_fits_upper_bound": 40,
+      "serial_compute_hours": 1536.2250201339898,
+      "preprocessing_hours": 1466.082158808809,
+      "classifier_hours": 70.14286132518073,
+      "relief_cache_policy": "B single-CNN/C paired ranking once per fold; D shares B rankings; exclude infeasible PCA/UMAP250/300 from timing",
+      "relieff_reference_jobs": 8,
+      "relieff_requested_jobs": 8,
+      "time_hours_range": [
+        900.6921536828397,
+        2702.0764610485194
+      ],
+      "feature_extraction_hours_if_missing": 0.06098058539308517,
+      "additional_disk_gib_range": [
+        12.590341329574585,
+        22.506422638893127
+      ],
+      "small_file_count_upper_bound": 1898400,
+      "memory_budget_gib": 16,
+      "basis": "Recorded full_search timing; shared Relief rankings once per fold, 0.64 quadratic Relief and0.8 other inner sample scale. Preprocessing serial, classifier jobs parallel. Disk includes4–8KiB allocation per atomic job file; caches/UMAP/group folds add uncertainty.",
+      "input_hashes": {
+        "per_fold_metrics": "3d5e2a8caf75e48cc665dd2ed97a838b4af4c422611d2cea4813034a115880cb",
+        "feature_dimensions": "466b0256be265567864679f8bd986c76ecac7652bdf3f5bed7a862fbc0f5916f"
+      }
+    },
+    "models": {
+      "stage": "final-models",
+      "jobs": 19,
+      "external_images_upper_bound": 1568,
+      "serial_compute_hours": 1.2885662200961168,
+      "time_hours_range": [
+        0.8375680430624759,
+        2.31941919617301
+      ],
+      "additional_disk_gib_range": [
+        3.0,
+        12.0
+      ],
+      "basis": "Measured matched training costs scaled from outer train308 to VIA342; 15 FT jobs +4 fixed, checkpoint/optimizer disk included.",
+      "source_sha256": "2aac0cfe894e75c5d3beaf80a4fb9d4d0859a962e82febacaf66af96171d522a",
+      "does_not_fit_or_predict": true
+    },
+    "external": {
+      "stage": "evaluate",
+      "jobs": 19,
+      "external_images_upper_bound": 1568,
+      "serial_compute_hours": 0.2701520906645811,
+      "time_hours_range": [
+        0.17559885893197774,
+        0.48627376319624604
+      ],
+      "additional_disk_gib_range": [
+        0.02,
+        0.15
+      ],
+      "basis": "Recorded end-to-end GPU latency extrapolated to19 model/seed panels; CSV+10k scene-bootstrap/analysis overhead. CPU will take longer.",
+      "source_sha256": "2aac0cfe894e75c5d3beaf80a4fb9d4d0859a962e82febacaf66af96171d522a",
+      "does_not_fit_or_predict": true
+    },
+    "learning": {
+      "stage": "learning-curve",
+      "jobs": 57,
+      "external_images_upper_bound": 1568,
+      "serial_compute_hours": 9.035034490615462,
+      "time_hours_range": [
+        5.872772418900051,
+        16.263062083107833
+      ],
+      "additional_disk_gib_range": [
+        8.0,
+        35.0
+      ],
+      "basis": "Measured epochs/train cost, linear sample scale, three new sizes; 0% reuses final models. Early stopping uncertainty is material.",
+      "source_sha256": "2aac0cfe894e75c5d3beaf80a4fb9d4d0859a962e82febacaf66af96171d522a",
+      "does_not_fit_or_predict": true,
+      "ft_architectures": [
+        "ResNet101V2",
+        "EfficientNetB3",
+        "MobileNet",
+        "ResNet50",
+        "EfficientNetB4"
+      ],
+      "ft_reduced_by_48h_rule": false,
+      "unrestricted_ft_estimate_hours": 8.96804109909143
+    }
+  },
+  "source_reference_commit": "4a5a1a5",
+  "author_review_required": true
+}

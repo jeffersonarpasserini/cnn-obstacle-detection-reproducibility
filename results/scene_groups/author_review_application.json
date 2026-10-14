@@ -1,0 +1,99 @@
+{
+  "applied_utc": "2026-10-06T03:47:50.899517+00:00",
+  "reviewer": "Jefferson Antonio Ribeiro Passerini (author)",
+  "review_date": "2026-10-06",
+  "reviewer_date_source": "shared author review recorded in PROMPT_GROUPS_APPLY_REVIEW.md and edge_rejections.csv",
+  "author_prompt_sha256": "82ec521cd2191ef1cb3088c1b0cabb35a78889606533e7397c235c8c1f22c769",
+  "source_repository_commit": "b0954eab6de7ae91a8f379aeaaf08d19ee55827c",
+  "review_status": "author_review_applied_frozen",
+  "group_count": 338,
+  "rejection_audit": [
+    {
+      "filename_a": "clear.020.jpg",
+      "filename_b": "nonclear.141.jpg",
+      "reason": "Author visual review: outdoor concrete path versus indoor ceramic tiles with a threshold; different scenes, not a near-duplicate (zero RANSAC inliers). pHash link rejected.",
+      "reviewer": "Jefferson Antonio Ribeiro Passerini (author)",
+      "date": "2026-10-06"
+    }
+  ],
+  "override_audit": [
+    {
+      "filename": "nonclear.104.jpg",
+      "previous_group_id": "scene_0280",
+      "group_id": "scene_0278",
+      "reason": "Author visual review: same rubble arrangement beside the same wall as nonclear.102.jpg (193 spatially distributed inliers, ratio 0.898); same scene, merged.",
+      "affected_filenames": [
+        "nonclear.104.jpg"
+      ],
+      "operation": "merge_entire_component",
+      "reviewer": "Jefferson Antonio Ribeiro Passerini (author)",
+      "date": "2026-10-06",
+      "resulting_group_members": [
+        "nonclear.102.jpg",
+        "nonclear.104.jpg"
+      ]
+    },
+    {
+      "filename": "nonclear.117.jpg",
+      "previous_group_id": "scene_0293",
+      "group_id": "scene_0292",
+      "reason": "Author visual review: same crack pattern beside the same curb as nonclear.116.jpg (39 inliers, ratio 0.929); same scene from a different framing, merged.",
+      "affected_filenames": [
+        "nonclear.117.jpg"
+      ],
+      "operation": "merge_entire_component",
+      "reviewer": "Jefferson Antonio Ribeiro Passerini (author)",
+      "date": "2026-10-06",
+      "resulting_group_members": [
+        "nonclear.116.jpg",
+        "nonclear.117.jpg"
+      ]
+    },
+    {
+      "filename": "nonclear.151.jpg",
+      "previous_group_id": "scene_0327",
+      "group_id": "scene_0133",
+      "reason": "Author visual review: same Portuguese-pavement wave pattern and planter as clear.132.jpg (37 coherent inliers, ratio 0.804); probable same sidewalk, merged conservatively.",
+      "affected_filenames": [
+        "nonclear.151.jpg"
+      ],
+      "operation": "merge_entire_component",
+      "reviewer": "Jefferson Antonio Ribeiro Passerini (author)",
+      "date": "2026-10-06",
+      "resulting_group_members": [
+        "clear.132.jpg",
+        "nonclear.151.jpg"
+      ]
+    },
+    {
+      "filename": "nonclear.109.jpg",
+      "previous_group_id": "scene_0285",
+      "group_id": "scene_0229",
+      "reason": "Author visual review: cracked paving with similar structure to nonclear.053.jpg (31 inliers, ratio 0.912); possible same location, merged conservatively to avoid cross-fold leakage.",
+      "affected_filenames": [
+        "nonclear.109.jpg"
+      ],
+      "operation": "merge_entire_component",
+      "reviewer": "Jefferson Antonio Ribeiro Passerini (author)",
+      "date": "2026-10-06",
+      "resulting_group_members": [
+        "nonclear.053.jpg",
+        "nonclear.109.jpg"
+      ]
+    }
+  ],
+  "retained_separation": {
+    "filename_a": "clear.174.jpg",
+    "filename_b": "nonclear.166.jpg"
+  },
+  "groups_sha256": "30537852c34f3d94e9dfeac436a62991d69561f2c28a3d4a3cceb4fe56919c26",
+  "pairs_sha256": "0debeb865b63b0d9b093bc7be9117596c7930fec662125cd7ceccf63c5b61947",
+  "edge_rejections_sha256": "a90c7288a4ffbc8c6106d53b66e73d7a3e416354defbc1c26cf4558f61fe77aa",
+  "overrides_sha256": "9f6ab172ca947bae96bb607dbe64f780c9b9f769efcdb355d15216a2c111fbf7",
+  "scope": "author decisions for the six reviewed pairs; grouping frozen for planned grouped nested CV; capture independence of all other images is not proven",
+  "generator_initial_review_status": "pending_author_validation",
+  "approval_annotation_changes_grouping": false,
+  "freeze_precedes_fold_diagnostics": true,
+  "fold_diagnostics_written_utc": "2026-10-06T03:40:27.258667+00:00",
+  "nested_cv_executed": false
+}

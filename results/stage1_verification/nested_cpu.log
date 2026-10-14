@@ -1,0 +1,65 @@
+/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py:239: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+inner 1/2: a_mobilenet_None_logistic (2 attempts)
+/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py:239: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+inner 1/2: a_resnet50_None_logistic (4 attempts)
+/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py:239: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+inner 1/2: b_mobilenet_2_logistic (6 attempts)
+/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py:239: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+inner 1/2: b_mobilenet_4_logistic (8 attempts)
+/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py:239: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+inner 1/2: b_resnet50_2_logistic (10 attempts)
+/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py:239: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+inner 1/2: b_resnet50_4_logistic (12 attempts)
+/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py:239: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+inner 1/2: c_mobilenet+resnet50_2_logistic (14 attempts)
+/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py:239: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+inner 1/2: c_mobilenet+resnet50_4_logistic (16 attempts)
+/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py:239: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+inner 1/2: d_mobilenet+resnet50_2_logistic (18 attempts)
+/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py:239: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+inner 1/2: d_mobilenet+resnet50_4_logistic (20 attempts)
+/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py:239: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+inner 2/2: a_mobilenet_None_logistic (22 attempts)
+/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py:239: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+inner 2/2: a_resnet50_None_logistic (24 attempts)
+/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py:239: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+inner 2/2: b_mobilenet_2_logistic (26 attempts)
+/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py:239: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+inner 2/2: b_mobilenet_4_logistic (28 attempts)
+/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py:239: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+inner 2/2: b_resnet50_2_logistic (30 attempts)
+/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py:239: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+inner 2/2: b_resnet50_4_logistic (32 attempts)
+/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py:239: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+inner 2/2: c_mobilenet+resnet50_2_logistic (34 attempts)
+/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py:239: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+inner 2/2: c_mobilenet+resnet50_4_logistic (36 attempts)
+/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py:239: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+inner 2/2: d_mobilenet+resnet50_2_logistic (38 attempts)
+/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py:239: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+inner 2/2: d_mobilenet+resnet50_4_logistic (40 attempts)
+/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py:239: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/.venv/lib/python3.12/site-packages/sklearn/svm/_base.py:239: FutureWarning: The `probability` parameter was deprecated in 1.9 and will be removed in version 1.11. Use `CalibratedClassifierCV(SVC(), ensemble=False)` instead of `SVC(probability=True)`
+  warnings.warn(
+Completed diagnostic/partial=True: /home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/results/stage1_verification/nested_cpu

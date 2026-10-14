@@ -1,0 +1,12 @@
+{
+  "groups_sha256": "30537852c34f3d94e9dfeac436a62991d69561f2c28a3d4a3cceb4fe56919c26",
+  "pairs_sha256": "0debeb865b63b0d9b093bc7be9117596c7930fec662125cd7ceccf63c5b61947",
+  "frozen_utc": "2026-10-06T03:40:21.486347+00:00",
+  "scope": "image-only grouping snapshot frozen before diagnostic labels/folds",
+  "author_validation": "approved",
+  "accepted_edges_cross_groups": 0,
+  "author_reviewer": "Jefferson Antonio Ribeiro Passerini (author)",
+  "author_review_date": "2026-10-06",
+  "author_review_scope": "six reviewed pairs; unchanged CSV grouping frozen before diagnostics",
+  "approval_annotation_utc": "2026-10-06T03:47:50.899517+00:00"
+}

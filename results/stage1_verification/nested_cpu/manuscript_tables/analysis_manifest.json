@@ -1,0 +1,9 @@
+{
+  "source": "results/stage1_verification/nested_cpu",
+  "metadata_sha256": "68ee360d8a9b6d2934a2c1cdbf41665aee23bad78243f2a35cc1e4a1eb396667",
+  "bootstrap_iterations": 100,
+  "seed": 1980,
+  "diagnostic": true,
+  "estimand": "configuration-selection procedure",
+  "ft_comparison": "mean individual seed metrics; ensemble sensitivity"
+}

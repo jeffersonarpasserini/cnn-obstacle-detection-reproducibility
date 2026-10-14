@@ -1,0 +1,40 @@
+{
+  "seed": 1980,
+  "cpu_threads": 2,
+  "batch_size": 8,
+  "semantic_model": {
+    "id": "facebook/dinov2-small",
+    "revision": "ed25f3a31f01632728cabb09d1542f84ab7b0056",
+    "weights_file": "model.safetensors",
+    "weights_sha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+    "pooling": "CLS"
+  },
+  "fallback_model": {
+    "id": "openai/clip-vit-base-patch32",
+    "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+    "weights_file": "pytorch_model.bin",
+    "weights_sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f",
+    "pooling": "projected CLS"
+  },
+  "phash_threshold": 10,
+  "semantic_threshold": 0.795,
+  "ransac_threshold": 30,
+  "max_component_fraction": 0.05,
+  "structural": {
+    "enabled": true,
+    "candidate_max_phash": 16,
+    "top_neighbors": 10,
+    "image_size": [
+      256,
+      341
+    ],
+    "orb_features": 1500,
+    "match_ratio": 0.75,
+    "ransac_reprojection_px": 4.0,
+    "min_inlier_ratio": 0.25,
+    "min_quadrants": 3,
+    "min_inliers_per_quadrant": 3
+  },
+  "review_samples_per_bin": 6,
+  "protocol_version": 2
+}

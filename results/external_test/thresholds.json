@@ -1,0 +1,112 @@
+{
+  "frozen": true,
+  "source": "via_oof_only",
+  "thresholds": {
+    "A": {
+      "threshold": 0.7603711755527531,
+      "obstructed_recall": 0.9520958083832335,
+      "specificity": 0.88,
+      "target": 0.95,
+      "source": "via_oof",
+      "rule": "clear iff score > threshold",
+      "default": 0.5,
+      "adapter": "adapter_A.joblib",
+      "adapter_sha256": "19b792ecf93ce6583a42a6c18e164f7599449e3e1729eb708f89b860247d9e31"
+    },
+    "B": {
+      "threshold": 0.6920808351209682,
+      "obstructed_recall": 0.9520958083832335,
+      "specificity": 0.8914285714285715,
+      "target": 0.95,
+      "source": "via_oof",
+      "rule": "clear iff score > threshold",
+      "default": 0.5,
+      "adapter": "adapter_B.joblib",
+      "adapter_sha256": "340db8b14516bc249cbb42780bd0b19ac68b6266c7ead238675997dd04cb3136"
+    },
+    "C": {
+      "threshold": 0.6441776640907405,
+      "obstructed_recall": 0.9520958083832335,
+      "specificity": 0.9085714285714286,
+      "target": 0.95,
+      "source": "via_oof",
+      "rule": "clear iff score > threshold",
+      "default": 0.5,
+      "adapter": "adapter_C.joblib",
+      "adapter_sha256": "786e2dfd9617b5ac58dc0c7e3749ec3debfe9eeeb962a0171dd0fe87f78374c5"
+    },
+    "D": {
+      "threshold": 0.6476268749537155,
+      "obstructed_recall": 0.9520958083832335,
+      "specificity": 0.9085714285714286,
+      "target": 0.95,
+      "source": "via_oof",
+      "rule": "clear iff score > threshold",
+      "default": 0.5,
+      "adapter": "adapter_D.joblib",
+      "adapter_sha256": "4a7b9a2e3a414553ba948051ce0c040c35478dd53c203b4e5fa010a3ddff11b3"
+    },
+    "winner": {
+      "threshold": 0.6920808351209682,
+      "obstructed_recall": 0.9520958083832335,
+      "specificity": 0.8914285714285715,
+      "target": 0.95,
+      "source": "via_oof",
+      "rule": "clear iff score > threshold",
+      "default": 0.5,
+      "adapter": "adapter_winner.joblib",
+      "adapter_sha256": "340db8b14516bc249cbb42780bd0b19ac68b6266c7ead238675997dd04cb3136"
+    },
+    "ft_ResNet101V2": {
+      "threshold": 0.7060184081395467,
+      "obstructed_recall": 0.9520958083832335,
+      "specificity": 0.37714285714285717,
+      "target": 0.95,
+      "source": "via_oof",
+      "rule": "clear iff score > threshold",
+      "default": 0.5
+    },
+    "ft_EfficientNetB3": {
+      "threshold": 0.49603286385536194,
+      "obstructed_recall": 0.9520958083832335,
+      "specificity": 0.9657142857142857,
+      "target": 0.95,
+      "source": "via_oof",
+      "rule": "clear iff score > threshold",
+      "default": 0.5
+    },
+    "ft_MobileNet": {
+      "threshold": 0.8003195027510325,
+      "obstructed_recall": 0.9520958083832335,
+      "specificity": 0.84,
+      "target": 0.95,
+      "source": "via_oof",
+      "rule": "clear iff score > threshold",
+      "default": 0.5
+    },
+    "ft_ResNet50": {
+      "threshold": 0.8051174879074097,
+      "obstructed_recall": 0.9520958083832335,
+      "specificity": 0.6628571428571428,
+      "target": 0.95,
+      "source": "via_oof",
+      "rule": "clear iff score > threshold",
+      "default": 0.5
+    },
+    "ft_EfficientNetB4": {
+      "threshold": 0.6260126829147338,
+      "obstructed_recall": 0.9520958083832335,
+      "specificity": 0.9371428571428572,
+      "target": 0.95,
+      "source": "via_oof",
+      "rule": "clear iff score > threshold",
+      "default": 0.5
+    }
+  },
+  "fixed_oof_design": "article_original_10fold",
+  "fixed_oof_sha256": "4229697b57f5831ed95c5a091fed6fabb92808675a7156eb0b91aceb773d7597",
+  "fine_tuning_oof_sha256": "88ef7383a9825d0dc4f4e59c11ce57f17bce6ec879d5e95e8f2f45dfc7dbd2f5",
+  "dataset_sha256": "bef13299b60d06e994bf85498ea0ed2e02f5f6d73851745ce05a16fa5204f2d6",
+  "original_oof_source_sha256": "a1bd147e4f2d8ac66e8a504c314771e36533def76de20fdaafa593fd18e64162",
+  "selection_optimism_notice": "Verified canonical fixed_refit jobs on the original article folds. Finalist selection and thresholds inherit selection optimism; geographic external evaluation is primary."
+}

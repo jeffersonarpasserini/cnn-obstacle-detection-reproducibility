@@ -1,0 +1,50 @@
+{
+  "source_hashes": {
+    "fine_tuning": "b7b572376491e1b681be2c6d8d3b15bbc40882cc85cc6ca5c91141f0211597a9",
+    "fixed_refit": "5a0e3f2af29ac596eea1891fea62c52ec0ffe42cbad34b300660cf6133ac2e39",
+    "resume_script": "91c5ca80e6a74f1ed2b312aee0a8dd933e8d2b2488c5385149e73898f46ba0da"
+  },
+  "automated_tests": 68,
+  "gpu_checks": [
+    {
+      "experiment": "a_resnet101v2_logistic",
+      "fold": 3,
+      "state": "completed",
+      "all_canonical_metrics_match": true,
+      "roc_auc": 0.9826388888888888,
+      "reload_max_abs_difference": 0.0,
+      "manifest_sha256": "6fa04a02d2f7915c664477d3a80aef4354f103f34269cc07b3ea550f45cfefb6",
+      "diagnostic_only": true
+    },
+    {
+      "experiment": "b_efficientnetb3_pca_300_linear_svm",
+      "fold": 3,
+      "state": "completed",
+      "all_canonical_metrics_match": true,
+      "roc_auc": 0.9965277777777778,
+      "reload_max_abs_difference": 0.0,
+      "manifest_sha256": "5b9588b9d132b1ec2c5fc6a7f63cb4ebda5a021de65cb2e15ac9e589d6f05641",
+      "diagnostic_only": true
+    },
+    {
+      "experiment": "c_mobilenet_resnet50_pca_300_linear_svm",
+      "fold": 3,
+      "state": "completed",
+      "all_canonical_metrics_match": true,
+      "roc_auc": 0.9930555555555556,
+      "reload_max_abs_difference": 0.0,
+      "manifest_sha256": "f890dd9e1acc063fc00c631679f330538cf462454cfa4fc4b1bbceb3f6ab62e3",
+      "diagnostic_only": true
+    },
+    {
+      "experiment": "d_mobilenet_resnet50_pca_300_linear_svm",
+      "fold": 3,
+      "state": "completed",
+      "all_canonical_metrics_match": true,
+      "roc_auc": 0.9930555555555556,
+      "reload_max_abs_difference": 0.0,
+      "manifest_sha256": "380e9d03482e55576291b1b9be3fccb2373a086b04c7bb6e9ab798e64e5106b9",
+      "diagnostic_only": true
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "policy": "globally_ordered_frozen_features_v1",
+  "batch_size": 4,
+  "setup_seconds": 0.10593237201101147,
+  "cache": [
+    {
+      "architecture": "ResNet101V2",
+      "cache_key": "3dbf5d0b452cf3031666daa0cc41d87c3f9aae1c140672e8e2308f47724850cd",
+      "features_sha256": "8651b67ee2e1906fe3de7ab58f96cba08b3d5976057be85297329bc8bda424dd",
+      "reused": true,
+      "original_extraction_seconds": 9.899546936998377
+    }
+  ],
+  "scope": "fixed ImageNet forwards only; no labels, PCA or classifier fitting"
+}

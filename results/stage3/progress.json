@@ -1,0 +1,35 @@
+{
+  "analysis_scope": "exploratory/post hoc",
+  "stages": {
+    "0": {
+      "completed": true,
+      "smoke": false,
+      "elapsed_seconds": 0.01577681500930339
+    },
+    "4": {
+      "completed": true,
+      "smoke": false,
+      "elapsed_seconds": 8.072547955962364
+    },
+    "3": {
+      "completed": true,
+      "smoke": false,
+      "elapsed_seconds": 7.326104133971967
+    },
+    "2": {
+      "completed": true,
+      "smoke": false,
+      "elapsed_seconds": 15.585994180990383
+    },
+    "1": {
+      "completed": true,
+      "smoke": false,
+      "elapsed_seconds": 55.38774519000435
+    },
+    "5": {
+      "completed": true,
+      "smoke": false,
+      "elapsed_seconds": 0.23430421197554097
+    }
+  }
+}

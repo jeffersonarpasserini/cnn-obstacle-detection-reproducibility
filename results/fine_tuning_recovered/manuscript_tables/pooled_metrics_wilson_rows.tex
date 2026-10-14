@@ -1,0 +1,12 @@
+% Generated automatically from validated matched fine-tuning results.
+% Exploratory: fixed finalists were selected on the same folds. Neither these paired tests nor an image bootstrap provide independent confirmation; overlapping training sets and model selection limit inferential interpretation.
+% Columns: experiment, images, aggregation, accuracy, mcc, obstructed_recall, obstructed_false_negative_rate, tn_obstructed, fp_obstructed_as_clear, fn_clear_as_obstructed, tp_clear, obstructed_recall_wilson_low, obstructed_recall_wilson_high, obstructed_fnr_wilson_low, obstructed_fnr_wilson_high.
+ft\_d\_efficientnetb3 & 342 & mean-probability seed ensemble & 0.9591 & 0.9181 & 0.9521 & 0.0479 & 159 & 8 & 6 & 169 & 0.9083 & 0.9755 & 0.0245 & 0.0917 \\
+ft\_d\_efficientnetb4 & 342 & mean-probability seed ensemble & 0.9503 & 0.9006 & 0.9401 & 0.0599 & 157 & 10 & 7 & 168 & 0.8933 & 0.9672 & 0.0328 & 0.1067 \\
+ft\_d\_mobilenet & 342 & mean-probability seed ensemble & 0.9240 & 0.8483 & 0.9042 & 0.0958 & 151 & 16 & 10 & 165 & 0.8500 & 0.9402 & 0.0598 & 0.1500 \\
+ft\_d\_resnet101v2 & 342 & mean-probability seed ensemble & 0.7953 & 0.5904 & 0.7904 & 0.2096 & 132 & 35 & 35 & 140 & 0.7225 & 0.8453 & 0.1547 & 0.2775 \\
+ft\_d\_resnet50 & 342 & mean-probability seed ensemble & 0.8889 & 0.7799 & 0.8443 & 0.1557 & 141 & 26 & 12 & 163 & 0.7817 & 0.8915 & 0.1085 & 0.2183 \\
+a\_resnet101v2\_logistic & 342 & canonical full\_search per-fold metrics and matched archived predictions & 0.9415 & 0.8838 & 0.9162 & 0.0838 & 153 & 14 & 6 & 169 & 0.8642 & 0.9494 & 0.0506 & 0.1358 \\
+b\_efficientnetb3\_pca\_300\_linear\_svm & 342 & canonical full\_search per-fold metrics and matched archived predictions & 0.9386 & 0.8772 & 0.9281 & 0.0719 & 155 & 12 & 9 & 166 & 0.8786 & 0.9584 & 0.0416 & 0.1214 \\
+c\_mobilenet\_resnet50\_pca\_300\_linear\_svm & 342 & canonical full\_search per-fold metrics and matched archived predictions & 0.9386 & 0.8788 & 0.9042 & 0.0958 & 151 & 16 & 5 & 170 & 0.8500 & 0.9402 & 0.0598 & 0.1500 \\
+d\_mobilenet\_resnet50\_pca\_300\_linear\_svm & 342 & canonical full\_search per-fold metrics and matched archived predictions & 0.9386 & 0.8788 & 0.9042 & 0.0958 & 151 & 16 & 5 & 170 & 0.8500 & 0.9402 & 0.0598 & 0.1500 \\

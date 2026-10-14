@@ -1,0 +1,489 @@
+model,panel,operating_point,method,analysis,endpoint,estimate,ci_low,ci_high,seed
+a_resnet101v2_logistic,principal,default,whole-scene bootstrap,single fixed model,accuracy,0.78934010152284262,0.76952500151261682,0.8097622027534418,
+a_resnet101v2_logistic,principal,default,whole-scene bootstrap,single fixed model,balanced_accuracy,0.80014502887628525,0.78057486146844401,0.81964130892589304,
+a_resnet101v2_logistic,principal,default,whole-scene bootstrap,single fixed model,mcc,0.62034491946911541,0.58524391141216447,0.65563704633427233,
+a_resnet101v2_logistic,principal,default,whole-scene bootstrap,single fixed model,roc_auc,0.90293586356926425,0.88502962446485411,0.91970912171298513,
+a_resnet101v2_logistic,principal,default,whole-scene bootstrap,single fixed model,obstructed_recall,0.95218579234972678,0.93655172413793109,0.96707886614684868,
+a_resnet101v2_logistic,principal,default,whole-scene bootstrap,single fixed model,obstructed_false_negative_rate,0.047814207650273222,0.032921133853151402,0.06344827586206897,
+a_resnet101v2_logistic,principal,default,Wilson,individual seed,obstructed_recall,0.95218579234972678,0.93422863607731588,0.96542167862629291,-1
+a_resnet101v2_logistic,principal,default,Wilson,individual seed,obstructed_false_negative_rate,0.047814207650273222,0.034578321373707123,0.065771363922684165,-1
+a_resnet101v2_logistic,principal,safety,whole-scene bootstrap,single fixed model,accuracy,0.72461928934010156,0.7041073411476968,0.7455133240911892,
+a_resnet101v2_logistic,principal,safety,whole-scene bootstrap,single fixed model,balanced_accuracy,0.74135006345013332,0.72147312860029922,0.76177003431240764,
+a_resnet101v2_logistic,principal,safety,whole-scene bootstrap,single fixed model,mcc,0.53516718812404795,0.50135070236748802,0.56885244015107128,
+a_resnet101v2_logistic,principal,safety,whole-scene bootstrap,single fixed model,roc_auc,0.90293586356926425,0.88502962446485411,0.91970912171298513,
+a_resnet101v2_logistic,principal,safety,whole-scene bootstrap,single fixed model,obstructed_recall,0.97677595628415304,0.96527777777777779,0.98682606620812718,
+a_resnet101v2_logistic,principal,safety,whole-scene bootstrap,single fixed model,obstructed_false_negative_rate,0.023224043715846996,0.013173933791872854,0.034722222222222224,
+a_resnet101v2_logistic,principal,safety,Wilson,individual seed,obstructed_recall,0.97677595628415304,0.96312359204701348,0.98545030472506945,-1
+a_resnet101v2_logistic,principal,safety,Wilson,individual seed,obstructed_false_negative_rate,0.023224043715846996,0.014549695274930507,0.036876407952986592,-1
+b_efficientnetb3_pca_300_linear_svm,principal,default,whole-scene bootstrap,single fixed model,accuracy,0.80901015228426398,0.787974587415599,0.82977386934673369,
+b_efficientnetb3_pca_300_linear_svm,principal,default,whole-scene bootstrap,single fixed model,balanced_accuracy,0.81633452464195999,0.79584521239066419,0.83656250011904565,
+b_efficientnetb3_pca_300_linear_svm,principal,default,whole-scene bootstrap,single fixed model,mcc,0.63942862758616026,0.60003385577613488,0.6783490442277883,
+b_efficientnetb3_pca_300_linear_svm,principal,default,whole-scene bootstrap,single fixed model,roc_auc,0.91323841711340736,0.8979558177387521,0.92805548528574133,
+b_efficientnetb3_pca_300_linear_svm,principal,default,whole-scene bootstrap,single fixed model,obstructed_recall,0.9193989071038251,0.89732624428678809,0.94036108010178576,
+b_efficientnetb3_pca_300_linear_svm,principal,default,whole-scene bootstrap,single fixed model,obstructed_false_negative_rate,0.08060109289617487,0.059638919898214238,0.10267375571321183,
+b_efficientnetb3_pca_300_linear_svm,principal,default,Wilson,individual seed,obstructed_recall,0.9193989071038251,0.89741912345352504,0.93699974849211809,-1
+b_efficientnetb3_pca_300_linear_svm,principal,default,Wilson,individual seed,obstructed_false_negative_rate,0.08060109289617487,0.06300025150788191,0.10258087654647499,-1
+b_efficientnetb3_pca_300_linear_svm,principal,safety,whole-scene bootstrap,single fixed model,accuracy,0.78362944162436543,0.76249169104652104,0.80434782608695654,
+b_efficientnetb3_pca_300_linear_svm,principal,safety,whole-scene bootstrap,single fixed model,balanced_accuracy,0.79562906275088696,0.77540471393764621,0.81554961274502125,
+b_efficientnetb3_pca_300_linear_svm,principal,safety,whole-scene bootstrap,single fixed model,mcc,0.6173685806264988,0.58241474691642925,0.65239459980485726,
+b_efficientnetb3_pca_300_linear_svm,principal,safety,whole-scene bootstrap,single fixed model,roc_auc,0.91323841711340736,0.8979558177387521,0.92805548528574133,
+b_efficientnetb3_pca_300_linear_svm,principal,safety,whole-scene bootstrap,single fixed model,obstructed_recall,0.96448087431693985,0.9508867667121419,0.97715130439489073,
+b_efficientnetb3_pca_300_linear_svm,principal,safety,whole-scene bootstrap,single fixed model,obstructed_false_negative_rate,0.035519125683060107,0.022848695605109333,0.049113233287858118,
+b_efficientnetb3_pca_300_linear_svm,principal,safety,Wilson,individual seed,obstructed_recall,0.96448087431693985,0.9484648403375272,0.97564726540031865,-1
+b_efficientnetb3_pca_300_linear_svm,principal,safety,Wilson,individual seed,obstructed_false_negative_rate,0.035519125683060107,0.02435273459968143,0.051535159662472768,-1
+c_mobilenet_resnet50_pca_300_linear_svm,principal,default,whole-scene bootstrap,single fixed model,accuracy,0.79631979695431476,0.77603438108285783,0.81651493017004617,
+c_mobilenet_resnet50_pca_300_linear_svm,principal,default,whole-scene bootstrap,single fixed model,balanced_accuracy,0.80629904436329736,0.78663253941309719,0.82558948351951289,
+c_mobilenet_resnet50_pca_300_linear_svm,principal,default,whole-scene bootstrap,single fixed model,mcc,0.62901768726854657,0.59310601961800569,0.6646699534449193,
+c_mobilenet_resnet50_pca_300_linear_svm,principal,default,whole-scene bootstrap,single fixed model,roc_auc,0.91005781731541202,0.89421245239118419,0.92559297939917029,
+c_mobilenet_resnet50_pca_300_linear_svm,principal,default,whole-scene bootstrap,single fixed model,obstructed_recall,0.94672131147540983,0.93004115226337447,0.96236634019229039,
+c_mobilenet_resnet50_pca_300_linear_svm,principal,default,whole-scene bootstrap,single fixed model,obstructed_false_negative_rate,0.053278688524590161,0.037633659807709587,0.069958847736625515,
+c_mobilenet_resnet50_pca_300_linear_svm,principal,default,Wilson,individual seed,obstructed_recall,0.94672131147540983,0.92799527176537555,0.96078313581190555,-1
+c_mobilenet_resnet50_pca_300_linear_svm,principal,default,Wilson,individual seed,obstructed_false_negative_rate,0.053278688524590161,0.039216864188094433,0.072004728234624449,-1
+c_mobilenet_resnet50_pca_300_linear_svm,principal,safety,whole-scene bootstrap,single fixed model,accuracy,0.7633248730964467,0.7426746914936021,0.78376749496757325,
+c_mobilenet_resnet50_pca_300_linear_svm,principal,safety,whole-scene bootstrap,single fixed model,balanced_accuracy,0.77685300287467951,0.75702213410271613,0.79623613782709213,
+c_mobilenet_resnet50_pca_300_linear_svm,principal,safety,whole-scene bootstrap,single fixed model,mcc,0.58760411075078267,0.55273315548813928,0.62114910930557587,
+c_mobilenet_resnet50_pca_300_linear_svm,principal,safety,whole-scene bootstrap,single fixed model,roc_auc,0.91005781731541202,0.89421245239118419,0.92559297939917029,
+c_mobilenet_resnet50_pca_300_linear_svm,principal,safety,whole-scene bootstrap,single fixed model,obstructed_recall,0.96721311475409832,0.95390952487435854,0.97936726272352137,
+c_mobilenet_resnet50_pca_300_linear_svm,principal,safety,whole-scene bootstrap,single fixed model,obstructed_false_negative_rate,0.032786885245901641,0.020632737276478678,0.046090475125641454,
+c_mobilenet_resnet50_pca_300_linear_svm,principal,safety,Wilson,individual seed,obstructed_recall,0.96721311475409832,0.9516781878295868,0.9778698714714229,-1
+c_mobilenet_resnet50_pca_300_linear_svm,principal,safety,Wilson,individual seed,obstructed_false_negative_rate,0.032786885245901641,0.022130128528577188,0.04832181217041321,-1
+d_mobilenet_resnet50_pca_300_linear_svm,principal,default,whole-scene bootstrap,single fixed model,accuracy,0.800761421319797,0.78096927289650842,0.82027385137853737,
+d_mobilenet_resnet50_pca_300_linear_svm,principal,default,whole-scene bootstrap,single fixed model,balanced_accuracy,0.81053660684225526,0.79134828756487707,0.82929724534981908,
+d_mobilenet_resnet50_pca_300_linear_svm,principal,default,whole-scene bootstrap,single fixed model,mcc,0.63671837535642162,0.6011735615210142,0.67147576517630669,
+d_mobilenet_resnet50_pca_300_linear_svm,principal,default,whole-scene bootstrap,single fixed model,roc_auc,0.9085444021443555,0.8926418568880754,0.92417519981448448,
+d_mobilenet_resnet50_pca_300_linear_svm,principal,default,whole-scene bootstrap,single fixed model,obstructed_recall,0.94808743169398912,0.93103448275862066,0.96385625836680056,
+d_mobilenet_resnet50_pca_300_linear_svm,principal,default,whole-scene bootstrap,single fixed model,obstructed_false_negative_rate,0.051912568306010931,0.036143741633199465,0.068965517241379309,
+d_mobilenet_resnet50_pca_300_linear_svm,principal,default,Wilson,individual seed,obstructed_recall,0.94808743169398912,0.92954903477642215,0.9619473495824411,-1
+d_mobilenet_resnet50_pca_300_linear_svm,principal,default,Wilson,individual seed,obstructed_false_negative_rate,0.051912568306010931,0.038052650417559022,0.07045096522357798,-1
+d_mobilenet_resnet50_pca_300_linear_svm,principal,safety,whole-scene bootstrap,single fixed model,accuracy,0.76395939086294418,0.74280061683721277,0.78433889602053919,
+d_mobilenet_resnet50_pca_300_linear_svm,principal,safety,whole-scene bootstrap,single fixed model,balanced_accuracy,0.7772641338409344,0.75696983645198856,0.796970993404575,
+d_mobilenet_resnet50_pca_300_linear_svm,principal,safety,whole-scene bootstrap,single fixed model,mcc,0.58705249765121081,0.55161462772596515,0.62123269710623541,
+d_mobilenet_resnet50_pca_300_linear_svm,principal,safety,whole-scene bootstrap,single fixed model,roc_auc,0.9085444021443555,0.8926418568880754,0.92417519981448448,
+d_mobilenet_resnet50_pca_300_linear_svm,principal,safety,whole-scene bootstrap,single fixed model,obstructed_recall,0.96448087431693985,0.95070422535211263,0.97718197275851515,
+d_mobilenet_resnet50_pca_300_linear_svm,principal,safety,whole-scene bootstrap,single fixed model,obstructed_false_negative_rate,0.035519125683060107,0.022818027241484788,0.049295774647887321,
+d_mobilenet_resnet50_pca_300_linear_svm,principal,safety,Wilson,individual seed,obstructed_recall,0.96448087431693985,0.9484648403375272,0.97564726540031865,-1
+d_mobilenet_resnet50_pca_300_linear_svm,principal,safety,Wilson,individual seed,obstructed_false_negative_rate,0.035519125683060107,0.02435273459968143,0.051535159662472768,-1
+ft_EfficientNetB3,principal,default,whole-scene bootstrap,individual-seed metric mean,accuracy,0.77791878172588824,0.75882105430485591,0.79696974543903532,
+ft_EfficientNetB3,principal,default,whole-scene bootstrap,individual-seed metric mean,balanced_accuracy,0.78271350754063829,0.76396882664504229,0.80146911338246285,
+ft_EfficientNetB3,principal,default,whole-scene bootstrap,individual-seed metric mean,mcc,0.566933549234372,0.53055346708940299,0.60362458961236265,
+ft_EfficientNetB3,principal,default,whole-scene bootstrap,individual-seed metric mean,roc_auc,0.85571056595792439,0.83787136333296963,0.87334881209997273,
+ft_EfficientNetB3,principal,default,whole-scene bootstrap,individual-seed metric mean,obstructed_recall,0.85018214936247727,0.82829635642135646,0.87193298580636014,
+ft_EfficientNetB3,principal,default,whole-scene bootstrap,individual-seed metric mean,obstructed_false_negative_rate,0.14981785063752276,0.12806701419363989,0.17170364357864359,
+ft_EfficientNetB3,principal,default,Wilson,individual seed,obstructed_recall,0.87568306010928965,0.84980190773799047,0.89764170719703207,1980
+ft_EfficientNetB3,principal,default,Wilson,individual seed,obstructed_false_negative_rate,0.12431693989071038,0.10235829280296799,0.15019809226200964,1980
+ft_EfficientNetB3,principal,default,Wilson,individual seed,obstructed_recall,0.80874316939890711,0.77866925661188935,0.83559349602561994,1981
+ft_EfficientNetB3,principal,default,Wilson,individual seed,obstructed_false_negative_rate,0.19125683060109289,0.16440650397438006,0.22133074338811065,1981
+ft_EfficientNetB3,principal,default,Wilson,individual seed,obstructed_recall,0.86612021857923494,0.83953093975753135,0.88888683770641774,1982
+ft_EfficientNetB3,principal,default,Wilson,individual seed,obstructed_false_negative_rate,0.13387978142076504,0.11111316229358234,0.16046906024246863,1982
+ft_EfficientNetB3,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,accuracy,0.7925126903553299,0.77054334816846259,0.81408729690713866,
+ft_EfficientNetB3,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,balanced_accuracy,0.79839367570507336,0.7768785672250571,0.81940312904017243,
+ft_EfficientNetB3,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,mcc,0.59984040282288942,0.558246630299159,0.64110797645284767,
+ft_EfficientNetB3,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,roc_auc,0.86964558568357808,0.85071461047517183,0.88806118180201399,
+ft_EfficientNetB3,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_recall,0.88114754098360659,0.85595567867036015,0.90568654646324553,
+ft_EfficientNetB3,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_false_negative_rate,0.11885245901639344,0.094313453536754507,0.1440443213296399,
+ft_EfficientNetB3,principal,safety,whole-scene bootstrap,individual-seed metric mean,accuracy,0.77834179357021993,0.75930568523535247,0.79735275475285383,
+ft_EfficientNetB3,principal,safety,whole-scene bootstrap,individual-seed metric mean,balanced_accuracy,0.78310845224837922,0.76454443532286542,0.8017559063016233,
+ft_EfficientNetB3,principal,safety,whole-scene bootstrap,individual-seed metric mean,mcc,0.56768333142713157,0.53155496636745159,0.60425442840116328,
+ft_EfficientNetB3,principal,safety,whole-scene bootstrap,individual-seed metric mean,roc_auc,0.85571056595792439,0.83787136333296963,0.87334881209997273,
+ft_EfficientNetB3,principal,safety,whole-scene bootstrap,individual-seed metric mean,obstructed_recall,0.85018214936247727,0.82829635642135646,0.87193298580636014,
+ft_EfficientNetB3,principal,safety,whole-scene bootstrap,individual-seed metric mean,obstructed_false_negative_rate,0.14981785063752276,0.12806701419363989,0.17170364357864359,
+ft_EfficientNetB3,principal,safety,Wilson,individual seed,obstructed_recall,0.87568306010928965,0.84980190773799047,0.89764170719703207,1980
+ft_EfficientNetB3,principal,safety,Wilson,individual seed,obstructed_false_negative_rate,0.12431693989071038,0.10235829280296799,0.15019809226200964,1980
+ft_EfficientNetB3,principal,safety,Wilson,individual seed,obstructed_recall,0.80874316939890711,0.77866925661188935,0.83559349602561994,1981
+ft_EfficientNetB3,principal,safety,Wilson,individual seed,obstructed_false_negative_rate,0.19125683060109289,0.16440650397438006,0.22133074338811065,1981
+ft_EfficientNetB3,principal,safety,Wilson,individual seed,obstructed_recall,0.86612021857923494,0.83953093975753135,0.88888683770641774,1982
+ft_EfficientNetB3,principal,safety,Wilson,individual seed,obstructed_false_negative_rate,0.13387978142076504,0.11111316229358234,0.16046906024246863,1982
+ft_EfficientNetB3,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,accuracy,0.7925126903553299,0.77097721304830547,0.81391011075183084,
+ft_EfficientNetB3,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,balanced_accuracy,0.79830303265739522,0.77712299220069037,0.8190933580510974,
+ft_EfficientNetB3,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,mcc,0.59947000681274787,0.55818500652823011,0.64040713692230344,
+ft_EfficientNetB3,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,roc_auc,0.86964558568357808,0.85071461047517183,0.88806118180201399,
+ft_EfficientNetB3,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_recall,0.8797814207650273,0.85461956521739135,0.90400000000000003,
+ft_EfficientNetB3,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_false_negative_rate,0.12021857923497267,0.096000000000000002,0.1453804347826087,
+ft_EfficientNetB4,principal,default,whole-scene bootstrap,individual-seed metric mean,accuracy,0.71192893401015223,0.69250124248959422,0.73149339919468415,
+ft_EfficientNetB4,principal,default,whole-scene bootstrap,individual-seed metric mean,balanced_accuracy,0.72481849808786336,0.70605675024324621,0.74369795311725428,
+ft_EfficientNetB4,principal,default,whole-scene bootstrap,individual-seed metric mean,mcc,0.47515710685941603,0.43900510304554929,0.51125699239111544,
+ft_EfficientNetB4,principal,default,whole-scene bootstrap,individual-seed metric mean,roc_auc,0.7619762126744879,0.73825305298415245,0.78488320399011158,
+ft_EfficientNetB4,principal,default,whole-scene bootstrap,individual-seed metric mean,obstructed_recall,0.90619307832422591,0.888143101358563,0.92364746945898768,
+ft_EfficientNetB4,principal,default,whole-scene bootstrap,individual-seed metric mean,obstructed_false_negative_rate,0.093806921675774133,0.076352530541012223,0.11185689864143708,
+ft_EfficientNetB4,principal,default,Wilson,individual seed,obstructed_recall,0.90846994535519121,0.88539370802409678,0.9272813496688912,1980
+ft_EfficientNetB4,principal,default,Wilson,individual seed,obstructed_false_negative_rate,0.091530054644808748,0.0727186503311089,0.1146062919759032,1980
+ft_EfficientNetB4,principal,default,Wilson,individual seed,obstructed_recall,0.89617486338797814,0.87197020859750729,0.91624305806124362,1981
+ft_EfficientNetB4,principal,default,Wilson,individual seed,obstructed_false_negative_rate,0.10382513661202186,0.083756941938756407,0.12802979140249279,1981
+ft_EfficientNetB4,principal,default,Wilson,individual seed,obstructed_recall,0.91393442622950816,0.89139444604223439,0.93215251877708105,1982
+ft_EfficientNetB4,principal,default,Wilson,individual seed,obstructed_false_negative_rate,0.086065573770491802,0.067847481222918948,0.10860555395776555,1982
+ft_EfficientNetB4,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,accuracy,0.73223350253807107,0.70992366412213737,0.75380783686239883,
+ft_EfficientNetB4,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,balanced_accuracy,0.74510527542537486,0.72380003739645338,0.76590588104339397,
+ft_EfficientNetB4,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,mcc,0.51749438410976845,0.47733159236138084,0.55639064154279116,
+ft_EfficientNetB4,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,roc_auc,0.79042841789034779,0.76510672768805599,0.81538779218448354,
+ft_EfficientNetB4,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_recall,0.92622950819672134,0.90642339660256355,0.94474412145761044,
+ft_EfficientNetB4,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_false_negative_rate,0.073770491803278687,0.055255878542389537,0.09357660339743637,
+ft_EfficientNetB4,principal,safety,whole-scene bootstrap,individual-seed metric mean,accuracy,0.70262267343485618,0.68334362465695586,0.72173186629870667,
+ft_EfficientNetB4,principal,safety,whole-scene bootstrap,individual-seed metric mean,balanced_accuracy,0.71697571629589341,0.69841119903305637,0.73525098232760333,
+ft_EfficientNetB4,principal,safety,whole-scene bootstrap,individual-seed metric mean,mcc,0.4663545316424218,0.43081226541589462,0.50101113491431004,
+ft_EfficientNetB4,principal,safety,whole-scene bootstrap,individual-seed metric mean,roc_auc,0.7619762126744879,0.73825305298415245,0.78488320399011158,
+ft_EfficientNetB4,principal,safety,whole-scene bootstrap,individual-seed metric mean,obstructed_recall,0.91894353369763204,0.90243902439024393,0.93474450292026867,
+ft_EfficientNetB4,principal,safety,whole-scene bootstrap,individual-seed metric mean,obstructed_false_negative_rate,0.081056466302367944,0.065255497079731425,0.097560975609756087,
+ft_EfficientNetB4,principal,safety,Wilson,individual seed,obstructed_recall,0.92213114754098358,0.90044111403117943,0.93941371147762753,1980
+ft_EfficientNetB4,principal,safety,Wilson,individual seed,obstructed_false_negative_rate,0.077868852459016397,0.060586288522372474,0.099558885968820648,1980
+ft_EfficientNetB4,principal,safety,Wilson,individual seed,obstructed_recall,0.9098360655737705,0.88689175624345939,0.92850127823111051,1981
+ft_EfficientNetB4,principal,safety,Wilson,individual seed,obstructed_false_negative_rate,0.090163934426229511,0.071498721768889537,0.11310824375654067,1981
+ft_EfficientNetB4,principal,safety,Wilson,individual seed,obstructed_recall,0.92486338797814205,0.90346994509053202,0.94182083398143879,1982
+ft_EfficientNetB4,principal,safety,Wilson,individual seed,obstructed_false_negative_rate,0.075136612021857924,0.058179166018561275,0.096530054909468033,1982
+ft_EfficientNetB4,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,accuracy,0.71637055837563457,0.69464159231660605,0.73794012948464249,
+ft_EfficientNetB4,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,balanced_accuracy,0.7316544946002641,0.71081905461763062,0.75236501919410714,
+ft_EfficientNetB4,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,mcc,0.50356672649082634,0.46503372423687372,0.54162396729295403,
+ft_EfficientNetB4,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,roc_auc,0.79042841789034779,0.76510672768805599,0.81538779218448354,
+ft_EfficientNetB4,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_recall,0.94672131147540983,0.93023255813953487,0.96275862068965512,
+ft_EfficientNetB4,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_false_negative_rate,0.053278688524590161,0.037241379310344824,0.069767441860465115,
+ft_MobileNet,principal,default,whole-scene bootstrap,individual-seed metric mean,accuracy,0.75719120135363793,0.73727210208686167,0.77693761814744799,
+ft_MobileNet,principal,default,whole-scene bootstrap,individual-seed metric mean,balanced_accuracy,0.76215264289229001,0.74248221757903943,0.78159408821846998,
+ft_MobileNet,principal,default,whole-scene bootstrap,individual-seed metric mean,mcc,0.53172284569095896,0.49297236044481518,0.56950012475052803,
+ft_MobileNet,principal,default,whole-scene bootstrap,individual-seed metric mean,roc_auc,0.84804313529985575,0.8294165415133492,0.86651212424055812,
+ft_MobileNet,principal,default,whole-scene bootstrap,individual-seed metric mean,obstructed_recall,0.83196721311475408,0.80887044066740399,0.85495127973161456,
+ft_MobileNet,principal,default,whole-scene bootstrap,individual-seed metric mean,obstructed_false_negative_rate,0.16803278688524589,0.14504872026838556,0.19112955933259618,
+ft_MobileNet,principal,default,Wilson,individual seed,obstructed_recall,0.81693989071038253,0.78729497892989897,0.84327563439710185,1980
+ft_MobileNet,principal,default,Wilson,individual seed,obstructed_false_negative_rate,0.1830601092896175,0.15672436560289821,0.21270502107010114,1980
+ft_MobileNet,principal,default,Wilson,individual seed,obstructed_recall,0.93715846994535523,0.91719419248718725,0.95255837761902062,1981
+ft_MobileNet,principal,default,Wilson,individual seed,obstructed_false_negative_rate,0.062841530054644809,0.047441622380979417,0.082805807512812787,1981
+ft_MobileNet,principal,default,Wilson,individual seed,obstructed_recall,0.74180327868852458,0.70889475128210588,0.77218713905789038,1982
+ft_MobileNet,principal,default,Wilson,individual seed,obstructed_false_negative_rate,0.25819672131147542,0.22781286094210965,0.29110524871789423,1982
+ft_MobileNet,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,accuracy,0.77982233502538068,0.75697925367859664,0.80219157783568873,
+ft_MobileNet,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,balanced_accuracy,0.78464183047160274,0.76202700476774665,0.80670807427353619,
+ft_MobileNet,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,mcc,0.57043389116139032,0.52589984093422892,0.61386813286514441,
+ft_MobileNet,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,roc_auc,0.8638897521560096,0.84493213309194548,0.88249162452299501,
+ft_MobileNet,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_recall,0.85245901639344257,0.82448979591836735,0.87963059013370215,
+ft_MobileNet,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_false_negative_rate,0.14754098360655737,0.12036940986629782,0.17551020408163265,
+ft_MobileNet,principal,safety,whole-scene bootstrap,individual-seed metric mean,accuracy,0.74957698815566831,0.72993038717106917,0.76866925659849028,
+ft_MobileNet,principal,safety,whole-scene bootstrap,individual-seed metric mean,balanced_accuracy,0.75863914571085722,0.73938140076493153,0.77705687553176939,
+ft_MobileNet,principal,safety,whole-scene bootstrap,individual-seed metric mean,mcc,0.53279031750060601,0.49601595110784352,0.56791362745691709,
+ft_MobileNet,principal,safety,whole-scene bootstrap,individual-seed metric mean,roc_auc,0.84804313529985575,0.8294165415133492,0.86651212424055812,
+ft_MobileNet,principal,safety,whole-scene bootstrap,individual-seed metric mean,obstructed_recall,0.88615664845173037,0.86741337418945486,0.90418471212899754,
+ft_MobileNet,principal,safety,whole-scene bootstrap,individual-seed metric mean,obstructed_false_negative_rate,0.11384335154826959,0.095815287871002477,0.1325866258105452,
+ft_MobileNet,principal,safety,Wilson,individual seed,obstructed_recall,0.88661202185792354,0.86159597128345888,0.9075914579042188,1980
+ft_MobileNet,principal,safety,Wilson,individual seed,obstructed_false_negative_rate,0.1133879781420765,0.092408542095781226,0.13840402871654126,1980
+ft_MobileNet,principal,safety,Wilson,individual seed,obstructed_recall,0.95491803278688525,0.93736484683367394,0.96772142143309869,1981
+ft_MobileNet,principal,safety,Wilson,individual seed,obstructed_false_negative_rate,0.045081967213114756,0.032278578566901375,0.062635153166326119,1981
+ft_MobileNet,principal,safety,Wilson,individual seed,obstructed_recall,0.81693989071038253,0.78729497892989897,0.84327563439710185,1982
+ft_MobileNet,principal,safety,Wilson,individual seed,obstructed_false_negative_rate,0.1830601092896175,0.15672436560289821,0.21270502107010114,1982
+ft_MobileNet,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,accuracy,0.74111675126903553,0.71924204662810853,0.7629394266740277,
+ft_MobileNet,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,balanced_accuracy,0.75539326133685547,0.73415496825817228,0.77642585504593054,
+ft_MobileNet,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,mcc,0.54736251925511992,0.50889901756253253,0.58436580839981522,
+ft_MobileNet,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,roc_auc,0.8638897521560096,0.84493213309194548,0.88249162452299501,
+ft_MobileNet,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_recall,0.95628415300546443,0.94044321329639891,0.9711934156378601,
+ft_MobileNet,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_false_negative_rate,0.043715846994535519,0.028806584362139918,0.059556786703601108,
+ft_ResNet101V2,principal,default,whole-scene bootstrap,individual-seed metric mean,accuracy,0.65799492385786806,0.63634387709486351,0.67922521864796803,
+ft_ResNet101V2,principal,default,whole-scene bootstrap,individual-seed metric mean,balanced_accuracy,0.65718044009357812,0.63583350123469085,0.67813149663950467,
+ft_ResNet101V2,principal,default,whole-scene bootstrap,individual-seed metric mean,mcc,0.31407304317885959,0.27138336748265512,0.35613763192315301,
+ft_ResNet101V2,principal,default,whole-scene bootstrap,individual-seed metric mean,roc_auc,0.69957413953849734,0.67467278511339179,0.72458877510459274,
+ft_ResNet101V2,principal,default,whole-scene bootstrap,individual-seed metric mean,obstructed_recall,0.64571948998178508,0.61634241220460062,0.67402298850574704,
+ft_ResNet101V2,principal,default,whole-scene bootstrap,individual-seed metric mean,obstructed_false_negative_rate,0.35428051001821492,0.32597701149425284,0.38365758779539944,
+ft_ResNet101V2,principal,default,Wilson,individual seed,obstructed_recall,0.61202185792349728,0.57622405330267279,0.64665004278704297,1980
+ft_ResNet101V2,principal,default,Wilson,individual seed,obstructed_false_negative_rate,0.38797814207650272,0.35334995721295703,0.42377594669732732,1980
+ft_ResNet101V2,principal,default,Wilson,individual seed,obstructed_recall,0.70491803278688525,0.67087777357603662,0.73681874366124844,1981
+ft_ResNet101V2,principal,default,Wilson,individual seed,obstructed_false_negative_rate,0.29508196721311475,0.26318125633875161,0.32912222642396355,1981
+ft_ResNet101V2,principal,default,Wilson,individual seed,obstructed_recall,0.6202185792349727,0.58451863763338419,0.6546633191458231,1982
+ft_ResNet101V2,principal,default,Wilson,individual seed,obstructed_false_negative_rate,0.3797814207650273,0.34533668085417707,0.41548136236661587,1982
+ft_ResNet101V2,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,accuracy,0.68654822335025378,0.6609076755669846,0.71232020012507813,
+ft_ResNet101V2,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,balanced_accuracy,0.68776707326548059,0.6623362244751253,0.71341424002758203,
+ft_ResNet101V2,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,mcc,0.3745955110489434,0.3240023937186029,0.42599463214330391,
+ft_ResNet101V2,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,roc_auc,0.72838648900629321,0.70020410948907574,0.75601608254881214,
+ft_ResNet101V2,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_recall,0.70491803278688525,0.66801619433198378,0.74059152859712984,
+ft_ResNet101V2,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_false_negative_rate,0.29508196721311475,0.25940847140287016,0.33198380566801622,
+ft_ResNet101V2,principal,safety,whole-scene bootstrap,individual-seed metric mean,accuracy,0.63007614213197971,0.61082288137333407,0.64966441527842289,
+ft_ResNet101V2,principal,safety,whole-scene bootstrap,individual-seed metric mean,balanced_accuracy,0.64045032329353668,0.62094119044735951,0.66014374958207322,
+ft_ResNet101V2,principal,safety,whole-scene bootstrap,individual-seed metric mean,mcc,0.29139158680751925,0.25172508562776086,0.33131960934319665,
+ft_ResNet101V2,principal,safety,whole-scene bootstrap,individual-seed metric mean,roc_auc,0.69957413953849734,0.67467278511339179,0.72458877510459274,
+ft_ResNet101V2,principal,safety,whole-scene bootstrap,individual-seed metric mean,obstructed_recall,0.78642987249544627,0.76177536231884069,0.81035271717500634,
+ft_ResNet101V2,principal,safety,whole-scene bootstrap,individual-seed metric mean,obstructed_false_negative_rate,0.21357012750455373,0.18964728282499366,0.23822463768115942,
+ft_ResNet101V2,principal,safety,Wilson,individual seed,obstructed_recall,0.74590163934426235,0.71313614769528211,0.77609967298945992,1980
+ft_ResNet101V2,principal,safety,Wilson,individual seed,obstructed_false_negative_rate,0.25409836065573771,0.22390032701054019,0.286863852304718,1980
+ft_ResNet101V2,principal,safety,Wilson,individual seed,obstructed_recall,0.79098360655737709,0.76004676205530974,0.81888229242163502,1981
+ft_ResNet101V2,principal,safety,Wilson,individual seed,obstructed_false_negative_rate,0.20901639344262296,0.18111770757836509,0.23995323794469037,1981
+ft_ResNet101V2,principal,safety,Wilson,individual seed,obstructed_recall,0.82240437158469948,0.79305693501520635,0.84838558543812193,1982
+ft_ResNet101V2,principal,safety,Wilson,individual seed,obstructed_false_negative_rate,0.17759562841530055,0.15161441456187802,0.2069430649847937,1982
+ft_ResNet101V2,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,accuracy,0.66560913705583757,0.64236727237938063,0.68874182832563191,
+ft_ResNet101V2,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,balanced_accuracy,0.67927576204905082,0.65656161773286992,0.70193161599075682,
+ft_ResNet101V2,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,mcc,0.38321095176983327,0.33736145906725246,0.42832296897749628,
+ft_ResNet101V2,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,roc_auc,0.72838648900629321,0.70020410948907574,0.75601608254881214,
+ft_ResNet101V2,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_recall,0.87158469945355188,0.84625588697017273,0.89552290774539556,
+ft_ResNet101V2,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_false_negative_rate,0.12841530054644809,0.10447709225460441,0.15374411302982727,
+ft_ResNet50,principal,default,whole-scene bootstrap,individual-seed metric mean,accuracy,0.66053299492385786,0.63924269577210235,0.68204175280467194,
+ft_ResNet50,principal,default,whole-scene bootstrap,individual-seed metric mean,balanced_accuracy,0.6677684113295177,0.64646036760519099,0.68918325521810764,
+ft_ResNet50,principal,default,whole-scene bootstrap,individual-seed metric mean,mcc,0.34076050738845959,0.29836165138523646,0.38328253385701277,
+ft_ResNet50,principal,default,whole-scene bootstrap,individual-seed metric mean,roc_auc,0.72665294071944686,0.70129648432576974,0.75184738712595633,
+ft_ResNet50,principal,default,whole-scene bootstrap,individual-seed metric mean,obstructed_recall,0.76958105646630237,0.74319945259384801,0.79542420275693382,
+ft_ResNet50,principal,default,whole-scene bootstrap,individual-seed metric mean,obstructed_false_negative_rate,0.23041894353369763,0.20457579724306618,0.25680054740615194,
+ft_ResNet50,principal,default,Wilson,individual seed,obstructed_recall,0.79781420765027322,0.76719886880286803,0.82532006958198612,1980
+ft_ResNet50,principal,default,Wilson,individual seed,obstructed_false_negative_rate,0.20218579234972678,0.17467993041801391,0.232801131197132,1980
+ft_ResNet50,principal,default,Wilson,individual seed,obstructed_recall,0.77185792349726778,0.74008562114367016,0.80079175839112793,1981
+ft_ResNet50,principal,default,Wilson,individual seed,obstructed_false_negative_rate,0.22814207650273224,0.19920824160887213,0.2599143788563299,1981
+ft_ResNet50,principal,default,Wilson,individual seed,obstructed_recall,0.73907103825136611,0.70606915277999949,0.76957678399683294,1982
+ft_ResNet50,principal,default,Wilson,individual seed,obstructed_false_negative_rate,0.26092896174863389,0.23042321600316715,0.29393084722000057,1982
+ft_ResNet50,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,accuracy,0.67322335025380708,0.64765525982256023,0.69868995633187769,
+ft_ResNet50,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,balanced_accuracy,0.68158068526144056,0.65612902621428626,0.70692794934116399,
+ft_ResNet50,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,mcc,0.37045540585821551,0.32001004059971183,0.42080798531369984,
+ft_ResNet50,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,roc_auc,0.74556820241887445,0.71772808625965145,0.77269159804323662,
+ft_ResNet50,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_recall,0.79918032786885251,0.76728699959487434,0.83064569892473117,
+ft_ResNet50,principal,default,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_false_negative_rate,0.20081967213114754,0.1693543010752688,0.23271300040512558,
+ft_ResNet50,principal,safety,whole-scene bootstrap,individual-seed metric mean,accuracy,0.64551607445008463,0.62445293926499168,0.66624343972164568,
+ft_ResNet50,principal,safety,whole-scene bootstrap,individual-seed metric mean,balanced_accuracy,0.65900517097005329,0.6384937931983482,0.6797518587046868,
+ft_ResNet50,principal,safety,whole-scene bootstrap,individual-seed metric mean,mcc,0.34035088658434987,0.29912006020810755,0.38160947387333388,
+ft_ResNet50,principal,safety,whole-scene bootstrap,individual-seed metric mean,roc_auc,0.72665294071944686,0.70129648432576974,0.75184738712595633,
+ft_ResNet50,principal,safety,whole-scene bootstrap,individual-seed metric mean,obstructed_recall,0.84881602914389787,0.826629680998613,0.87006446429100381,
+ft_ResNet50,principal,safety,whole-scene bootstrap,individual-seed metric mean,obstructed_false_negative_rate,0.151183970856102,0.12993553570899613,0.17337031900138697,
+ft_ResNet50,principal,safety,Wilson,individual seed,obstructed_recall,0.88387978142076506,0.85864152050998455,0.9051099551145293,1980
+ft_ResNet50,principal,safety,Wilson,individual seed,obstructed_false_negative_rate,0.11612021857923498,0.094890044885470787,0.14135847949001551,1980
+ft_ResNet50,principal,safety,Wilson,individual seed,obstructed_recall,0.85245901639344257,0.82492890050476997,0.87630910914336013,1981
+ft_ResNet50,principal,safety,Wilson,individual seed,obstructed_false_negative_rate,0.14754098360655737,0.12369089085663991,0.17507109949523006,1981
+ft_ResNet50,principal,safety,Wilson,individual seed,obstructed_recall,0.81010928961748629,0.78010547876705516,0.83687525065203605,1982
+ft_ResNet50,principal,safety,Wilson,individual seed,obstructed_false_negative_rate,0.18989071038251365,0.16312474934796395,0.21989452123294484,1982
+ft_ResNet50,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,accuracy,0.6383248730964467,0.61607702687184207,0.66093080267005289,
+ft_ResNet50,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,balanced_accuracy,0.65724626421153498,0.63539842123308332,0.67978337147931311,
+ft_ResNet50,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,mcc,0.36472872035709192,0.31981997400694495,0.40911023966964255,
+ft_ResNet50,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,roc_auc,0.74556820241887445,0.71772808625965145,0.77269159804323662,
+ft_ResNet50,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_recall,0.92349726775956287,0.90237017490345484,0.94332109624890959,
+ft_ResNet50,principal,safety,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_false_negative_rate,0.07650273224043716,0.056678903751090436,0.097629825096545095,
+a_resnet101v2_logistic,include_scene_overlap,default,whole-scene bootstrap,single fixed model,accuracy,0.78934010152284262,0.76952500151261682,0.8097622027534418,
+a_resnet101v2_logistic,include_scene_overlap,default,whole-scene bootstrap,single fixed model,balanced_accuracy,0.80014502887628525,0.78057486146844401,0.81964130892589304,
+a_resnet101v2_logistic,include_scene_overlap,default,whole-scene bootstrap,single fixed model,mcc,0.62034491946911541,0.58524391141216447,0.65563704633427233,
+a_resnet101v2_logistic,include_scene_overlap,default,whole-scene bootstrap,single fixed model,roc_auc,0.90293586356926425,0.88502962446485411,0.91970912171298513,
+a_resnet101v2_logistic,include_scene_overlap,default,whole-scene bootstrap,single fixed model,obstructed_recall,0.95218579234972678,0.93655172413793109,0.96707886614684868,
+a_resnet101v2_logistic,include_scene_overlap,default,whole-scene bootstrap,single fixed model,obstructed_false_negative_rate,0.047814207650273222,0.032921133853151402,0.06344827586206897,
+a_resnet101v2_logistic,include_scene_overlap,default,Wilson,individual seed,obstructed_recall,0.95218579234972678,0.93422863607731588,0.96542167862629291,-1
+a_resnet101v2_logistic,include_scene_overlap,default,Wilson,individual seed,obstructed_false_negative_rate,0.047814207650273222,0.034578321373707123,0.065771363922684165,-1
+a_resnet101v2_logistic,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,accuracy,0.72461928934010156,0.7041073411476968,0.7455133240911892,
+a_resnet101v2_logistic,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,balanced_accuracy,0.74135006345013332,0.72147312860029922,0.76177003431240764,
+a_resnet101v2_logistic,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,mcc,0.53516718812404795,0.50135070236748802,0.56885244015107128,
+a_resnet101v2_logistic,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,roc_auc,0.90293586356926425,0.88502962446485411,0.91970912171298513,
+a_resnet101v2_logistic,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,obstructed_recall,0.97677595628415304,0.96527777777777779,0.98682606620812718,
+a_resnet101v2_logistic,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,obstructed_false_negative_rate,0.023224043715846996,0.013173933791872854,0.034722222222222224,
+a_resnet101v2_logistic,include_scene_overlap,safety,Wilson,individual seed,obstructed_recall,0.97677595628415304,0.96312359204701348,0.98545030472506945,-1
+a_resnet101v2_logistic,include_scene_overlap,safety,Wilson,individual seed,obstructed_false_negative_rate,0.023224043715846996,0.014549695274930507,0.036876407952986592,-1
+b_efficientnetb3_pca_300_linear_svm,include_scene_overlap,default,whole-scene bootstrap,single fixed model,accuracy,0.80901015228426398,0.787974587415599,0.82977386934673369,
+b_efficientnetb3_pca_300_linear_svm,include_scene_overlap,default,whole-scene bootstrap,single fixed model,balanced_accuracy,0.81633452464195999,0.79584521239066419,0.83656250011904565,
+b_efficientnetb3_pca_300_linear_svm,include_scene_overlap,default,whole-scene bootstrap,single fixed model,mcc,0.63942862758616026,0.60003385577613488,0.6783490442277883,
+b_efficientnetb3_pca_300_linear_svm,include_scene_overlap,default,whole-scene bootstrap,single fixed model,roc_auc,0.91323841711340736,0.8979558177387521,0.92805548528574133,
+b_efficientnetb3_pca_300_linear_svm,include_scene_overlap,default,whole-scene bootstrap,single fixed model,obstructed_recall,0.9193989071038251,0.89732624428678809,0.94036108010178576,
+b_efficientnetb3_pca_300_linear_svm,include_scene_overlap,default,whole-scene bootstrap,single fixed model,obstructed_false_negative_rate,0.08060109289617487,0.059638919898214238,0.10267375571321183,
+b_efficientnetb3_pca_300_linear_svm,include_scene_overlap,default,Wilson,individual seed,obstructed_recall,0.9193989071038251,0.89741912345352504,0.93699974849211809,-1
+b_efficientnetb3_pca_300_linear_svm,include_scene_overlap,default,Wilson,individual seed,obstructed_false_negative_rate,0.08060109289617487,0.06300025150788191,0.10258087654647499,-1
+b_efficientnetb3_pca_300_linear_svm,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,accuracy,0.78362944162436543,0.76249169104652104,0.80434782608695654,
+b_efficientnetb3_pca_300_linear_svm,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,balanced_accuracy,0.79562906275088696,0.77540471393764621,0.81554961274502125,
+b_efficientnetb3_pca_300_linear_svm,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,mcc,0.6173685806264988,0.58241474691642925,0.65239459980485726,
+b_efficientnetb3_pca_300_linear_svm,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,roc_auc,0.91323841711340736,0.8979558177387521,0.92805548528574133,
+b_efficientnetb3_pca_300_linear_svm,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,obstructed_recall,0.96448087431693985,0.9508867667121419,0.97715130439489073,
+b_efficientnetb3_pca_300_linear_svm,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,obstructed_false_negative_rate,0.035519125683060107,0.022848695605109333,0.049113233287858118,
+b_efficientnetb3_pca_300_linear_svm,include_scene_overlap,safety,Wilson,individual seed,obstructed_recall,0.96448087431693985,0.9484648403375272,0.97564726540031865,-1
+b_efficientnetb3_pca_300_linear_svm,include_scene_overlap,safety,Wilson,individual seed,obstructed_false_negative_rate,0.035519125683060107,0.02435273459968143,0.051535159662472768,-1
+c_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,default,whole-scene bootstrap,single fixed model,accuracy,0.79631979695431476,0.77603438108285783,0.81651493017004617,
+c_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,default,whole-scene bootstrap,single fixed model,balanced_accuracy,0.80629904436329736,0.78663253941309719,0.82558948351951289,
+c_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,default,whole-scene bootstrap,single fixed model,mcc,0.62901768726854657,0.59310601961800569,0.6646699534449193,
+c_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,default,whole-scene bootstrap,single fixed model,roc_auc,0.91005781731541202,0.89421245239118419,0.92559297939917029,
+c_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,default,whole-scene bootstrap,single fixed model,obstructed_recall,0.94672131147540983,0.93004115226337447,0.96236634019229039,
+c_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,default,whole-scene bootstrap,single fixed model,obstructed_false_negative_rate,0.053278688524590161,0.037633659807709587,0.069958847736625515,
+c_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,default,Wilson,individual seed,obstructed_recall,0.94672131147540983,0.92799527176537555,0.96078313581190555,-1
+c_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,default,Wilson,individual seed,obstructed_false_negative_rate,0.053278688524590161,0.039216864188094433,0.072004728234624449,-1
+c_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,accuracy,0.7633248730964467,0.7426746914936021,0.78376749496757325,
+c_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,balanced_accuracy,0.77685300287467951,0.75702213410271613,0.79623613782709213,
+c_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,mcc,0.58760411075078267,0.55273315548813928,0.62114910930557587,
+c_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,roc_auc,0.91005781731541202,0.89421245239118419,0.92559297939917029,
+c_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,obstructed_recall,0.96721311475409832,0.95390952487435854,0.97936726272352137,
+c_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,obstructed_false_negative_rate,0.032786885245901641,0.020632737276478678,0.046090475125641454,
+c_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,safety,Wilson,individual seed,obstructed_recall,0.96721311475409832,0.9516781878295868,0.9778698714714229,-1
+c_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,safety,Wilson,individual seed,obstructed_false_negative_rate,0.032786885245901641,0.022130128528577188,0.04832181217041321,-1
+d_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,default,whole-scene bootstrap,single fixed model,accuracy,0.800761421319797,0.78096927289650842,0.82027385137853737,
+d_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,default,whole-scene bootstrap,single fixed model,balanced_accuracy,0.81053660684225526,0.79134828756487707,0.82929724534981908,
+d_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,default,whole-scene bootstrap,single fixed model,mcc,0.63671837535642162,0.6011735615210142,0.67147576517630669,
+d_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,default,whole-scene bootstrap,single fixed model,roc_auc,0.9085444021443555,0.8926418568880754,0.92417519981448448,
+d_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,default,whole-scene bootstrap,single fixed model,obstructed_recall,0.94808743169398912,0.93103448275862066,0.96385625836680056,
+d_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,default,whole-scene bootstrap,single fixed model,obstructed_false_negative_rate,0.051912568306010931,0.036143741633199465,0.068965517241379309,
+d_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,default,Wilson,individual seed,obstructed_recall,0.94808743169398912,0.92954903477642215,0.9619473495824411,-1
+d_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,default,Wilson,individual seed,obstructed_false_negative_rate,0.051912568306010931,0.038052650417559022,0.07045096522357798,-1
+d_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,accuracy,0.76395939086294418,0.74280061683721277,0.78433889602053919,
+d_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,balanced_accuracy,0.7772641338409344,0.75696983645198856,0.796970993404575,
+d_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,mcc,0.58705249765121081,0.55161462772596515,0.62123269710623541,
+d_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,roc_auc,0.9085444021443555,0.8926418568880754,0.92417519981448448,
+d_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,obstructed_recall,0.96448087431693985,0.95070422535211263,0.97718197275851515,
+d_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,safety,whole-scene bootstrap,single fixed model,obstructed_false_negative_rate,0.035519125683060107,0.022818027241484788,0.049295774647887321,
+d_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,safety,Wilson,individual seed,obstructed_recall,0.96448087431693985,0.9484648403375272,0.97564726540031865,-1
+d_mobilenet_resnet50_pca_300_linear_svm,include_scene_overlap,safety,Wilson,individual seed,obstructed_false_negative_rate,0.035519125683060107,0.02435273459968143,0.051535159662472768,-1
+ft_EfficientNetB3,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,accuracy,0.77791878172588824,0.75882105430485591,0.79696974543903532,
+ft_EfficientNetB3,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,balanced_accuracy,0.78271350754063829,0.76396882664504229,0.80146911338246285,
+ft_EfficientNetB3,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,mcc,0.566933549234372,0.53055346708940299,0.60362458961236265,
+ft_EfficientNetB3,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,roc_auc,0.85571056595792439,0.83787136333296963,0.87334881209997273,
+ft_EfficientNetB3,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,obstructed_recall,0.85018214936247727,0.82829635642135646,0.87193298580636014,
+ft_EfficientNetB3,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,obstructed_false_negative_rate,0.14981785063752276,0.12806701419363989,0.17170364357864359,
+ft_EfficientNetB3,include_scene_overlap,default,Wilson,individual seed,obstructed_recall,0.87568306010928965,0.84980190773799047,0.89764170719703207,1980
+ft_EfficientNetB3,include_scene_overlap,default,Wilson,individual seed,obstructed_false_negative_rate,0.12431693989071038,0.10235829280296799,0.15019809226200964,1980
+ft_EfficientNetB3,include_scene_overlap,default,Wilson,individual seed,obstructed_recall,0.80874316939890711,0.77866925661188935,0.83559349602561994,1981
+ft_EfficientNetB3,include_scene_overlap,default,Wilson,individual seed,obstructed_false_negative_rate,0.19125683060109289,0.16440650397438006,0.22133074338811065,1981
+ft_EfficientNetB3,include_scene_overlap,default,Wilson,individual seed,obstructed_recall,0.86612021857923494,0.83953093975753135,0.88888683770641774,1982
+ft_EfficientNetB3,include_scene_overlap,default,Wilson,individual seed,obstructed_false_negative_rate,0.13387978142076504,0.11111316229358234,0.16046906024246863,1982
+ft_EfficientNetB3,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,accuracy,0.7925126903553299,0.77054334816846259,0.81408729690713866,
+ft_EfficientNetB3,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,balanced_accuracy,0.79839367570507336,0.7768785672250571,0.81940312904017243,
+ft_EfficientNetB3,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,mcc,0.59984040282288942,0.558246630299159,0.64110797645284767,
+ft_EfficientNetB3,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,roc_auc,0.86964558568357808,0.85071461047517183,0.88806118180201399,
+ft_EfficientNetB3,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_recall,0.88114754098360659,0.85595567867036015,0.90568654646324553,
+ft_EfficientNetB3,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_false_negative_rate,0.11885245901639344,0.094313453536754507,0.1440443213296399,
+ft_EfficientNetB3,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,accuracy,0.77834179357021993,0.75930568523535247,0.79735275475285383,
+ft_EfficientNetB3,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,balanced_accuracy,0.78310845224837922,0.76454443532286542,0.8017559063016233,
+ft_EfficientNetB3,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,mcc,0.56768333142713157,0.53155496636745159,0.60425442840116328,
+ft_EfficientNetB3,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,roc_auc,0.85571056595792439,0.83787136333296963,0.87334881209997273,
+ft_EfficientNetB3,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,obstructed_recall,0.85018214936247727,0.82829635642135646,0.87193298580636014,
+ft_EfficientNetB3,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,obstructed_false_negative_rate,0.14981785063752276,0.12806701419363989,0.17170364357864359,
+ft_EfficientNetB3,include_scene_overlap,safety,Wilson,individual seed,obstructed_recall,0.87568306010928965,0.84980190773799047,0.89764170719703207,1980
+ft_EfficientNetB3,include_scene_overlap,safety,Wilson,individual seed,obstructed_false_negative_rate,0.12431693989071038,0.10235829280296799,0.15019809226200964,1980
+ft_EfficientNetB3,include_scene_overlap,safety,Wilson,individual seed,obstructed_recall,0.80874316939890711,0.77866925661188935,0.83559349602561994,1981
+ft_EfficientNetB3,include_scene_overlap,safety,Wilson,individual seed,obstructed_false_negative_rate,0.19125683060109289,0.16440650397438006,0.22133074338811065,1981
+ft_EfficientNetB3,include_scene_overlap,safety,Wilson,individual seed,obstructed_recall,0.86612021857923494,0.83953093975753135,0.88888683770641774,1982
+ft_EfficientNetB3,include_scene_overlap,safety,Wilson,individual seed,obstructed_false_negative_rate,0.13387978142076504,0.11111316229358234,0.16046906024246863,1982
+ft_EfficientNetB3,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,accuracy,0.7925126903553299,0.77097721304830547,0.81391011075183084,
+ft_EfficientNetB3,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,balanced_accuracy,0.79830303265739522,0.77712299220069037,0.8190933580510974,
+ft_EfficientNetB3,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,mcc,0.59947000681274787,0.55818500652823011,0.64040713692230344,
+ft_EfficientNetB3,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,roc_auc,0.86964558568357808,0.85071461047517183,0.88806118180201399,
+ft_EfficientNetB3,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_recall,0.8797814207650273,0.85461956521739135,0.90400000000000003,
+ft_EfficientNetB3,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_false_negative_rate,0.12021857923497267,0.096000000000000002,0.1453804347826087,
+ft_EfficientNetB4,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,accuracy,0.71192893401015223,0.69250124248959422,0.73149339919468415,
+ft_EfficientNetB4,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,balanced_accuracy,0.72481849808786336,0.70605675024324621,0.74369795311725428,
+ft_EfficientNetB4,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,mcc,0.47515710685941603,0.43900510304554929,0.51125699239111544,
+ft_EfficientNetB4,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,roc_auc,0.7619762126744879,0.73825305298415245,0.78488320399011158,
+ft_EfficientNetB4,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,obstructed_recall,0.90619307832422591,0.888143101358563,0.92364746945898768,
+ft_EfficientNetB4,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,obstructed_false_negative_rate,0.093806921675774133,0.076352530541012223,0.11185689864143708,
+ft_EfficientNetB4,include_scene_overlap,default,Wilson,individual seed,obstructed_recall,0.90846994535519121,0.88539370802409678,0.9272813496688912,1980
+ft_EfficientNetB4,include_scene_overlap,default,Wilson,individual seed,obstructed_false_negative_rate,0.091530054644808748,0.0727186503311089,0.1146062919759032,1980
+ft_EfficientNetB4,include_scene_overlap,default,Wilson,individual seed,obstructed_recall,0.89617486338797814,0.87197020859750729,0.91624305806124362,1981
+ft_EfficientNetB4,include_scene_overlap,default,Wilson,individual seed,obstructed_false_negative_rate,0.10382513661202186,0.083756941938756407,0.12802979140249279,1981
+ft_EfficientNetB4,include_scene_overlap,default,Wilson,individual seed,obstructed_recall,0.91393442622950816,0.89139444604223439,0.93215251877708105,1982
+ft_EfficientNetB4,include_scene_overlap,default,Wilson,individual seed,obstructed_false_negative_rate,0.086065573770491802,0.067847481222918948,0.10860555395776555,1982
+ft_EfficientNetB4,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,accuracy,0.73223350253807107,0.70992366412213737,0.75380783686239883,
+ft_EfficientNetB4,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,balanced_accuracy,0.74510527542537486,0.72380003739645338,0.76590588104339397,
+ft_EfficientNetB4,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,mcc,0.51749438410976845,0.47733159236138084,0.55639064154279116,
+ft_EfficientNetB4,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,roc_auc,0.79042841789034779,0.76510672768805599,0.81538779218448354,
+ft_EfficientNetB4,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_recall,0.92622950819672134,0.90642339660256355,0.94474412145761044,
+ft_EfficientNetB4,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_false_negative_rate,0.073770491803278687,0.055255878542389537,0.09357660339743637,
+ft_EfficientNetB4,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,accuracy,0.70262267343485618,0.68334362465695586,0.72173186629870667,
+ft_EfficientNetB4,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,balanced_accuracy,0.71697571629589341,0.69841119903305637,0.73525098232760333,
+ft_EfficientNetB4,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,mcc,0.4663545316424218,0.43081226541589462,0.50101113491431004,
+ft_EfficientNetB4,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,roc_auc,0.7619762126744879,0.73825305298415245,0.78488320399011158,
+ft_EfficientNetB4,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,obstructed_recall,0.91894353369763204,0.90243902439024393,0.93474450292026867,
+ft_EfficientNetB4,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,obstructed_false_negative_rate,0.081056466302367944,0.065255497079731425,0.097560975609756087,
+ft_EfficientNetB4,include_scene_overlap,safety,Wilson,individual seed,obstructed_recall,0.92213114754098358,0.90044111403117943,0.93941371147762753,1980
+ft_EfficientNetB4,include_scene_overlap,safety,Wilson,individual seed,obstructed_false_negative_rate,0.077868852459016397,0.060586288522372474,0.099558885968820648,1980
+ft_EfficientNetB4,include_scene_overlap,safety,Wilson,individual seed,obstructed_recall,0.9098360655737705,0.88689175624345939,0.92850127823111051,1981
+ft_EfficientNetB4,include_scene_overlap,safety,Wilson,individual seed,obstructed_false_negative_rate,0.090163934426229511,0.071498721768889537,0.11310824375654067,1981
+ft_EfficientNetB4,include_scene_overlap,safety,Wilson,individual seed,obstructed_recall,0.92486338797814205,0.90346994509053202,0.94182083398143879,1982
+ft_EfficientNetB4,include_scene_overlap,safety,Wilson,individual seed,obstructed_false_negative_rate,0.075136612021857924,0.058179166018561275,0.096530054909468033,1982
+ft_EfficientNetB4,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,accuracy,0.71637055837563457,0.69464159231660605,0.73794012948464249,
+ft_EfficientNetB4,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,balanced_accuracy,0.7316544946002641,0.71081905461763062,0.75236501919410714,
+ft_EfficientNetB4,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,mcc,0.50356672649082634,0.46503372423687372,0.54162396729295403,
+ft_EfficientNetB4,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,roc_auc,0.79042841789034779,0.76510672768805599,0.81538779218448354,
+ft_EfficientNetB4,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_recall,0.94672131147540983,0.93023255813953487,0.96275862068965512,
+ft_EfficientNetB4,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_false_negative_rate,0.053278688524590161,0.037241379310344824,0.069767441860465115,
+ft_MobileNet,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,accuracy,0.75719120135363793,0.73727210208686167,0.77693761814744799,
+ft_MobileNet,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,balanced_accuracy,0.76215264289229001,0.74248221757903943,0.78159408821846998,
+ft_MobileNet,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,mcc,0.53172284569095896,0.49297236044481518,0.56950012475052803,
+ft_MobileNet,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,roc_auc,0.84804313529985575,0.8294165415133492,0.86651212424055812,
+ft_MobileNet,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,obstructed_recall,0.83196721311475408,0.80887044066740399,0.85495127973161456,
+ft_MobileNet,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,obstructed_false_negative_rate,0.16803278688524589,0.14504872026838556,0.19112955933259618,
+ft_MobileNet,include_scene_overlap,default,Wilson,individual seed,obstructed_recall,0.81693989071038253,0.78729497892989897,0.84327563439710185,1980
+ft_MobileNet,include_scene_overlap,default,Wilson,individual seed,obstructed_false_negative_rate,0.1830601092896175,0.15672436560289821,0.21270502107010114,1980
+ft_MobileNet,include_scene_overlap,default,Wilson,individual seed,obstructed_recall,0.93715846994535523,0.91719419248718725,0.95255837761902062,1981
+ft_MobileNet,include_scene_overlap,default,Wilson,individual seed,obstructed_false_negative_rate,0.062841530054644809,0.047441622380979417,0.082805807512812787,1981
+ft_MobileNet,include_scene_overlap,default,Wilson,individual seed,obstructed_recall,0.74180327868852458,0.70889475128210588,0.77218713905789038,1982
+ft_MobileNet,include_scene_overlap,default,Wilson,individual seed,obstructed_false_negative_rate,0.25819672131147542,0.22781286094210965,0.29110524871789423,1982
+ft_MobileNet,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,accuracy,0.77982233502538068,0.75697925367859664,0.80219157783568873,
+ft_MobileNet,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,balanced_accuracy,0.78464183047160274,0.76202700476774665,0.80670807427353619,
+ft_MobileNet,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,mcc,0.57043389116139032,0.52589984093422892,0.61386813286514441,
+ft_MobileNet,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,roc_auc,0.8638897521560096,0.84493213309194548,0.88249162452299501,
+ft_MobileNet,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_recall,0.85245901639344257,0.82448979591836735,0.87963059013370215,
+ft_MobileNet,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_false_negative_rate,0.14754098360655737,0.12036940986629782,0.17551020408163265,
+ft_MobileNet,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,accuracy,0.74957698815566831,0.72993038717106917,0.76866925659849028,
+ft_MobileNet,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,balanced_accuracy,0.75863914571085722,0.73938140076493153,0.77705687553176939,
+ft_MobileNet,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,mcc,0.53279031750060601,0.49601595110784352,0.56791362745691709,
+ft_MobileNet,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,roc_auc,0.84804313529985575,0.8294165415133492,0.86651212424055812,
+ft_MobileNet,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,obstructed_recall,0.88615664845173037,0.86741337418945486,0.90418471212899754,
+ft_MobileNet,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,obstructed_false_negative_rate,0.11384335154826959,0.095815287871002477,0.1325866258105452,
+ft_MobileNet,include_scene_overlap,safety,Wilson,individual seed,obstructed_recall,0.88661202185792354,0.86159597128345888,0.9075914579042188,1980
+ft_MobileNet,include_scene_overlap,safety,Wilson,individual seed,obstructed_false_negative_rate,0.1133879781420765,0.092408542095781226,0.13840402871654126,1980
+ft_MobileNet,include_scene_overlap,safety,Wilson,individual seed,obstructed_recall,0.95491803278688525,0.93736484683367394,0.96772142143309869,1981
+ft_MobileNet,include_scene_overlap,safety,Wilson,individual seed,obstructed_false_negative_rate,0.045081967213114756,0.032278578566901375,0.062635153166326119,1981
+ft_MobileNet,include_scene_overlap,safety,Wilson,individual seed,obstructed_recall,0.81693989071038253,0.78729497892989897,0.84327563439710185,1982
+ft_MobileNet,include_scene_overlap,safety,Wilson,individual seed,obstructed_false_negative_rate,0.1830601092896175,0.15672436560289821,0.21270502107010114,1982
+ft_MobileNet,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,accuracy,0.74111675126903553,0.71924204662810853,0.7629394266740277,
+ft_MobileNet,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,balanced_accuracy,0.75539326133685547,0.73415496825817228,0.77642585504593054,
+ft_MobileNet,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,mcc,0.54736251925511992,0.50889901756253253,0.58436580839981522,
+ft_MobileNet,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,roc_auc,0.8638897521560096,0.84493213309194548,0.88249162452299501,
+ft_MobileNet,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_recall,0.95628415300546443,0.94044321329639891,0.9711934156378601,
+ft_MobileNet,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_false_negative_rate,0.043715846994535519,0.028806584362139918,0.059556786703601108,
+ft_ResNet101V2,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,accuracy,0.65799492385786806,0.63634387709486351,0.67922521864796803,
+ft_ResNet101V2,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,balanced_accuracy,0.65718044009357812,0.63583350123469085,0.67813149663950467,
+ft_ResNet101V2,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,mcc,0.31407304317885959,0.27138336748265512,0.35613763192315301,
+ft_ResNet101V2,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,roc_auc,0.69957413953849734,0.67467278511339179,0.72458877510459274,
+ft_ResNet101V2,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,obstructed_recall,0.64571948998178508,0.61634241220460062,0.67402298850574704,
+ft_ResNet101V2,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,obstructed_false_negative_rate,0.35428051001821492,0.32597701149425284,0.38365758779539944,
+ft_ResNet101V2,include_scene_overlap,default,Wilson,individual seed,obstructed_recall,0.61202185792349728,0.57622405330267279,0.64665004278704297,1980
+ft_ResNet101V2,include_scene_overlap,default,Wilson,individual seed,obstructed_false_negative_rate,0.38797814207650272,0.35334995721295703,0.42377594669732732,1980
+ft_ResNet101V2,include_scene_overlap,default,Wilson,individual seed,obstructed_recall,0.70491803278688525,0.67087777357603662,0.73681874366124844,1981
+ft_ResNet101V2,include_scene_overlap,default,Wilson,individual seed,obstructed_false_negative_rate,0.29508196721311475,0.26318125633875161,0.32912222642396355,1981
+ft_ResNet101V2,include_scene_overlap,default,Wilson,individual seed,obstructed_recall,0.6202185792349727,0.58451863763338419,0.6546633191458231,1982
+ft_ResNet101V2,include_scene_overlap,default,Wilson,individual seed,obstructed_false_negative_rate,0.3797814207650273,0.34533668085417707,0.41548136236661587,1982
+ft_ResNet101V2,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,accuracy,0.68654822335025378,0.6609076755669846,0.71232020012507813,
+ft_ResNet101V2,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,balanced_accuracy,0.68776707326548059,0.6623362244751253,0.71341424002758203,
+ft_ResNet101V2,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,mcc,0.3745955110489434,0.3240023937186029,0.42599463214330391,
+ft_ResNet101V2,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,roc_auc,0.72838648900629321,0.70020410948907574,0.75601608254881214,
+ft_ResNet101V2,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_recall,0.70491803278688525,0.66801619433198378,0.74059152859712984,
+ft_ResNet101V2,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_false_negative_rate,0.29508196721311475,0.25940847140287016,0.33198380566801622,
+ft_ResNet101V2,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,accuracy,0.63007614213197971,0.61082288137333407,0.64966441527842289,
+ft_ResNet101V2,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,balanced_accuracy,0.64045032329353668,0.62094119044735951,0.66014374958207322,
+ft_ResNet101V2,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,mcc,0.29139158680751925,0.25172508562776086,0.33131960934319665,
+ft_ResNet101V2,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,roc_auc,0.69957413953849734,0.67467278511339179,0.72458877510459274,
+ft_ResNet101V2,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,obstructed_recall,0.78642987249544627,0.76177536231884069,0.81035271717500634,
+ft_ResNet101V2,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,obstructed_false_negative_rate,0.21357012750455373,0.18964728282499366,0.23822463768115942,
+ft_ResNet101V2,include_scene_overlap,safety,Wilson,individual seed,obstructed_recall,0.74590163934426235,0.71313614769528211,0.77609967298945992,1980
+ft_ResNet101V2,include_scene_overlap,safety,Wilson,individual seed,obstructed_false_negative_rate,0.25409836065573771,0.22390032701054019,0.286863852304718,1980
+ft_ResNet101V2,include_scene_overlap,safety,Wilson,individual seed,obstructed_recall,0.79098360655737709,0.76004676205530974,0.81888229242163502,1981
+ft_ResNet101V2,include_scene_overlap,safety,Wilson,individual seed,obstructed_false_negative_rate,0.20901639344262296,0.18111770757836509,0.23995323794469037,1981
+ft_ResNet101V2,include_scene_overlap,safety,Wilson,individual seed,obstructed_recall,0.82240437158469948,0.79305693501520635,0.84838558543812193,1982
+ft_ResNet101V2,include_scene_overlap,safety,Wilson,individual seed,obstructed_false_negative_rate,0.17759562841530055,0.15161441456187802,0.2069430649847937,1982
+ft_ResNet101V2,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,accuracy,0.66560913705583757,0.64236727237938063,0.68874182832563191,
+ft_ResNet101V2,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,balanced_accuracy,0.67927576204905082,0.65656161773286992,0.70193161599075682,
+ft_ResNet101V2,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,mcc,0.38321095176983327,0.33736145906725246,0.42832296897749628,
+ft_ResNet101V2,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,roc_auc,0.72838648900629321,0.70020410948907574,0.75601608254881214,
+ft_ResNet101V2,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_recall,0.87158469945355188,0.84625588697017273,0.89552290774539556,
+ft_ResNet101V2,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_false_negative_rate,0.12841530054644809,0.10447709225460441,0.15374411302982727,
+ft_ResNet50,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,accuracy,0.66053299492385786,0.63924269577210235,0.68204175280467194,
+ft_ResNet50,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,balanced_accuracy,0.6677684113295177,0.64646036760519099,0.68918325521810764,
+ft_ResNet50,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,mcc,0.34076050738845959,0.29836165138523646,0.38328253385701277,
+ft_ResNet50,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,roc_auc,0.72665294071944686,0.70129648432576974,0.75184738712595633,
+ft_ResNet50,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,obstructed_recall,0.76958105646630237,0.74319945259384801,0.79542420275693382,
+ft_ResNet50,include_scene_overlap,default,whole-scene bootstrap,individual-seed metric mean,obstructed_false_negative_rate,0.23041894353369763,0.20457579724306618,0.25680054740615194,
+ft_ResNet50,include_scene_overlap,default,Wilson,individual seed,obstructed_recall,0.79781420765027322,0.76719886880286803,0.82532006958198612,1980
+ft_ResNet50,include_scene_overlap,default,Wilson,individual seed,obstructed_false_negative_rate,0.20218579234972678,0.17467993041801391,0.232801131197132,1980
+ft_ResNet50,include_scene_overlap,default,Wilson,individual seed,obstructed_recall,0.77185792349726778,0.74008562114367016,0.80079175839112793,1981
+ft_ResNet50,include_scene_overlap,default,Wilson,individual seed,obstructed_false_negative_rate,0.22814207650273224,0.19920824160887213,0.2599143788563299,1981
+ft_ResNet50,include_scene_overlap,default,Wilson,individual seed,obstructed_recall,0.73907103825136611,0.70606915277999949,0.76957678399683294,1982
+ft_ResNet50,include_scene_overlap,default,Wilson,individual seed,obstructed_false_negative_rate,0.26092896174863389,0.23042321600316715,0.29393084722000057,1982
+ft_ResNet50,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,accuracy,0.67322335025380708,0.64765525982256023,0.69868995633187769,
+ft_ResNet50,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,balanced_accuracy,0.68158068526144056,0.65612902621428626,0.70692794934116399,
+ft_ResNet50,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,mcc,0.37045540585821551,0.32001004059971183,0.42080798531369984,
+ft_ResNet50,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,roc_auc,0.74556820241887445,0.71772808625965145,0.77269159804323662,
+ft_ResNet50,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_recall,0.79918032786885251,0.76728699959487434,0.83064569892473117,
+ft_ResNet50,include_scene_overlap,default,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_false_negative_rate,0.20081967213114754,0.1693543010752688,0.23271300040512558,
+ft_ResNet50,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,accuracy,0.64551607445008463,0.62445293926499168,0.66624343972164568,
+ft_ResNet50,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,balanced_accuracy,0.65900517097005329,0.6384937931983482,0.6797518587046868,
+ft_ResNet50,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,mcc,0.34035088658434987,0.29912006020810755,0.38160947387333388,
+ft_ResNet50,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,roc_auc,0.72665294071944686,0.70129648432576974,0.75184738712595633,
+ft_ResNet50,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,obstructed_recall,0.84881602914389787,0.826629680998613,0.87006446429100381,
+ft_ResNet50,include_scene_overlap,safety,whole-scene bootstrap,individual-seed metric mean,obstructed_false_negative_rate,0.151183970856102,0.12993553570899613,0.17337031900138697,
+ft_ResNet50,include_scene_overlap,safety,Wilson,individual seed,obstructed_recall,0.88387978142076506,0.85864152050998455,0.9051099551145293,1980
+ft_ResNet50,include_scene_overlap,safety,Wilson,individual seed,obstructed_false_negative_rate,0.11612021857923498,0.094890044885470787,0.14135847949001551,1980
+ft_ResNet50,include_scene_overlap,safety,Wilson,individual seed,obstructed_recall,0.85245901639344257,0.82492890050476997,0.87630910914336013,1981
+ft_ResNet50,include_scene_overlap,safety,Wilson,individual seed,obstructed_false_negative_rate,0.14754098360655737,0.12369089085663991,0.17507109949523006,1981
+ft_ResNet50,include_scene_overlap,safety,Wilson,individual seed,obstructed_recall,0.81010928961748629,0.78010547876705516,0.83687525065203605,1982
+ft_ResNet50,include_scene_overlap,safety,Wilson,individual seed,obstructed_false_negative_rate,0.18989071038251365,0.16312474934796395,0.21989452123294484,1982
+ft_ResNet50,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,accuracy,0.6383248730964467,0.61607702687184207,0.66093080267005289,
+ft_ResNet50,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,balanced_accuracy,0.65724626421153498,0.63539842123308332,0.67978337147931311,
+ft_ResNet50,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,mcc,0.36472872035709192,0.31981997400694495,0.40911023966964255,
+ft_ResNet50,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,roc_auc,0.74556820241887445,0.71772808625965145,0.77269159804323662,
+ft_ResNet50,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_recall,0.92349726775956287,0.90237017490345484,0.94332109624890959,
+ft_ResNet50,include_scene_overlap,safety,whole-scene bootstrap,3-seed ensemble sensitivity,obstructed_false_negative_rate,0.07650273224043716,0.056678903751090436,0.097629825096545095,

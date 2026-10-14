@@ -1,0 +1,186 @@
+{
+  "inputs": {
+    "results/fine_tuning_recovered/run_metadata.json": "31b89fc23f34002fb2c7ecf9c416b86fd19ef4b4249cf8bc7099d2772b049086",
+    "configs/fine_tuning.json": "f160cba45ff3f3ab8f206a71721e3aa6ff16f75103ab157558f0ccfb694d1822",
+    "results/full_search/fold_assignments.csv": "cd2b875bfc1a4499b175ab4a4bfdf4a43b25a060d522418f53cce6b97ac25104",
+    "configs/article_selected_models_10fold.json": "601abccb19d1eaec1408ef9ece8a7195c170e1ff3d55a74d62544ca2da2c3467",
+    "results/full_search/per_fold_metrics.csv": "3d5e2a8caf75e48cc665dd2ed97a838b4af4c422611d2cea4813034a115880cb",
+    "results/article_selected_10fold/run_metadata.json": "a62e4d116f6f4688bd5ab95e1cfe1ff0faa1a11ed7eea21fe1f8d9ac7257ff3d",
+    "results/article_selected_10fold/prediction_shard_index.csv": "791c8595c9df3ac18c21cbf81047d6706321cd111fc3ce47cce353e2e00b8f24",
+    "results/article_selected_10fold/per_sample_predictions/group_0000.csv.gz": "a53255845c890295ff46639aa6a2a8a92a0dfad5724c3dbdbc9091c3009f95b2",
+    "results/article_selected_10fold/per_sample_predictions/group_0001.csv.gz": "78340deceb32ab34c8f2c58bd0b9e34d23caf58f2569054297cb26028ffd7944",
+    "results/article_selected_10fold/per_sample_predictions/group_0002.csv.gz": "a91b9156084b03596845976e1633ca76c0618c13440c1d15d473fd784b6ec995",
+    "results/article_selected_10fold/per_sample_predictions/group_0003.csv.gz": "fb0d0cb014d3026c1585079ff06bfc6b579f1beb30a9ba4fc140ec04ca252595",
+    "results/fine_tuning_recovered/per_fold_metrics.csv": "17c3f8dc0ac3e79a317b5d8a7c0ed08063c8c1ea1e9436fc97911bdc5f9493a1",
+    "results/fine_tuning_recovered/per_image_predictions.csv": "88ef7383a9825d0dc4f4e59c11ce57f17bce6ec879d5e95e8f2f45dfc7dbd2f5",
+    "results/fine_tuning_recovered/computational_costs.csv": "2aac0cfe894e75c5d3beaf80a4fb9d4d0859a962e82febacaf66af96171d522a"
+  },
+  "analysis_script_sha256": "7ebfe98799892209e5623a75e4077fc094cefde8a753ed72ce9658038d0d849e",
+  "results": "results/fine_tuning_recovered",
+  "fixed_results": "results/full_search",
+  "fixed_predictions": "results/article_selected_10fold",
+  "experiments": [
+    "ft_d_resnet101v2",
+    "ft_d_efficientnetb3",
+    "ft_d_mobilenet",
+    "ft_d_resnet50",
+    "ft_d_efficientnetb4"
+  ],
+  "fixed_experiments": [
+    "a_resnet101v2_logistic",
+    "b_efficientnetb3_pca_300_linear_svm",
+    "c_mobilenet_resnet50_pca_300_linear_svm",
+    "d_mobilenet_resnet50_pca_300_linear_svm"
+  ],
+  "folds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "seeds": {
+    "ft_d_resnet101v2": [
+      1980,
+      1981,
+      1982
+    ],
+    "ft_d_efficientnetb3": [
+      1980,
+      1981,
+      1982
+    ],
+    "ft_d_mobilenet": [
+      1980,
+      1981,
+      1982
+    ],
+    "ft_d_resnet50": [
+      1980,
+      1981,
+      1982
+    ],
+    "ft_d_efficientnetb4": [
+      1980,
+      1981,
+      1982
+    ]
+  },
+  "fine_fixed_pairs": 20,
+  "performance_source": "canonical full_search per-fold metrics and matched archived predictions",
+  "nested_predictions": null,
+  "measured_fixed_cost_experiments": [
+    "a_resnet101v2_logistic",
+    "b_efficientnetb3_pca_300_linear_svm",
+    "c_mobilenet_resnet50_pca_300_linear_svm",
+    "d_mobilenet_resnet50_pca_300_linear_svm"
+  ],
+  "substitution": {
+    "margin_pp": 3.0,
+    "metrics": [
+      "accuracy",
+      "obstructed_recall"
+    ],
+    "prespecified_utc": "2026-10-05T03:52:51.878971+00:00",
+    "difference": "fixed minus fine; FNR is negative recall difference",
+    "boundary_equality": "inconclusive",
+    "fold_sensitivity": "paired t 95%, df=9"
+  },
+  "bootstrap": {
+    "repetitions": 10000,
+    "seed": 1980,
+    "unit": "image, never initialization seed",
+    "strata": {
+      "obstructed": 167,
+      "clear": 175
+    },
+    "same_sampled_indices_all_models": true,
+    "interval": "percentile 95%, conditional on fitted OOF predictions",
+    "fine_estimand": "arithmetic mean of per-seed pooled OOF statistics within every image resample",
+    "paired_endpoints": [
+      "accuracy",
+      "mcc",
+      "obstructed_recall"
+    ]
+  },
+  "multiplicity": {
+    "wilcoxon": {
+      "family": "all requested fine/control vs fixed pairs, both endpoints together",
+      "tests": 40,
+      "method": "Holm"
+    },
+    "mcnemar": {
+      "family": "all requested fine/control ensemble vs fixed image-correctness pairs",
+      "tests": 20,
+      "method": "Holm"
+    },
+    "bootstrap": "descriptive marginal intervals, not multiplicity-adjusted"
+  },
+  "aggregation": {
+    "fold": "arithmetic mean of single-initialization metrics within each fold; not an ensemble",
+    "training": "neural fit train reserves the configured stratified inner-validation fraction of outer train; fixed finalists fit the entire outer train",
+    "pooled": "mean P(clear) across seeds for each OOF image; clear iff mean>0.5; descriptive ensemble",
+    "image_bootstrap": "average per-seed pooled OOF metrics; images resampled jointly across seeds/models, never seed/image pseudoreplication",
+    "fixed": "canonical full_search per-fold metrics and matched archived predictions",
+    "costs": "arithmetic mean of measured per-job costs across folds/seeds, plus total training time; latency quantiles are means of per-job quantiles, not pooled timing quantiles; size is decimal MB; unavailable GPU stays NaN",
+    "training_cost": "seed means within folds, then median/Q1/Q3/IQR over ten folds; actually benchmarked current finalists only; no nested cost reuse; unavailable components/GPU stay NaN",
+    "scores": "fine mean-probability ensemble only; fixed SVM margins never converted to probabilities"
+  },
+  "wilcoxon": {
+    "alternative": "two-sided",
+    "zero_method": "pratt",
+    "all_zero_p": 1,
+    "difference_rounding_decimals": 12
+  },
+  "wilson": {
+    "confidence": 0.95,
+    "population": "167 truly obstructed images",
+    "obstacle_false_negative": "true label 0 predicted label 1"
+  },
+  "hardware": {
+    "cpu": "x86_64",
+    "logical_cpus": 16,
+    "physical_memory_bytes": 67318796288,
+    "gpus": [
+      {
+        "logical_name": "/physical_device:GPU:0",
+        "device_name": "NVIDIA GeForce RTX 4070 Ti"
+      }
+    ],
+    "tensorflow_build": {
+      "cpu_compiler": "clang",
+      "cuda_compute_capabilities": [
+        "sm_60",
+        "sm_70",
+        "sm_80",
+        "sm_89",
+        "compute_90"
+      ],
+      "cuda_version": "12.5.1",
+      "cudnn_version": "9",
+      "is_cuda_build": true,
+      "is_rocm_build": false,
+      "is_tensorrt_build": false
+    }
+  },
+  "dependencies": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "scipy": "1.18.0",
+    "scikit-learn": "1.9.0",
+    "tensorflow": "2.21.0",
+    "umap-learn": "0.5.12",
+    "skrebate": "0.62",
+    "Pillow": "12.3.0"
+  },
+  "benchmark_devices": [
+    "cpu",
+    "gpu"
+  ],
+  "exploratory_warning": "Exploratory: fixed finalists were selected on the same folds. Neither these paired tests nor an image bootstrap provide independent confirmation; overlapping training sets and model selection limit inferential interpretation."
+}

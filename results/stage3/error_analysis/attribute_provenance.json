@@ -1,0 +1,38 @@
+{
+  "analysis_scope": "exploratory/post hoc",
+  "low_light_threshold": 93.746906,
+  "DINOv2_sha256": "ef446fe0640952975932a6ec25d94c21661728e2abcf53edb4ce9c9cfa1713b8",
+  "features": [
+    {
+      "architecture": "EfficientNetB3",
+      "via_features_sha256": "7a40c79f3fa7da5b3fa805a260bd03fa6e604bd1200d46c6acf0069b068de2f2",
+      "external_features_sha256": "4d608b2cca4baeb44e420101236cfe27f669aaab0222058cab6d0517a5ac6ee1",
+      "encoder_sha256": "a95e591c5c360ca8bf45bcfe4c8e9d63f87c932adcf354636f06ad45939e303e",
+      "new_inference_jobs": 0
+    },
+    {
+      "architecture": "MobileNet",
+      "via_features_sha256": "4d6e82faac813b291e8f2cb5a8f5ff1f349f76c86201d2d116f700502005429a",
+      "external_features_sha256": "eaaeee3e5d042b22f324763d339594ab2868d5b5450450e1b01a0cb5887b78cd",
+      "encoder_sha256": "9949827c04583416302dc0a6970e0e35c587e1f00ade0d2e877547ea73280fcc",
+      "new_inference_jobs": 0
+    },
+    {
+      "architecture": "ResNet50",
+      "via_features_sha256": "a19054d615354a370fe43c87295c0b94aa043f7e3459a5ddb60df283ecc7d757",
+      "external_features_sha256": "5c8a03f20c77ef4e25785c675880ebef7dfc575a983ba1e54ee7f4e66e75c377",
+      "encoder_sha256": "eeab2df82fb50bdfa48ed203cf8cf2c2d9c72c33a9c87cb4fe8313128556266a",
+      "new_inference_jobs": 0
+    },
+    {
+      "architecture": "ResNet101V2",
+      "via_features_sha256": "8651b67ee2e1906fe3de7ab58f96cba08b3d5976057be85297329bc8bda424dd",
+      "external_features_sha256": "22391fe3d93dcc895d91a017ab9fcc9ef7446d0ebd58cc05bf7636383f8536cf",
+      "encoder_sha256": "b3998260ba7af56eaf8f5f6f9e2867204caef14c282d68a1bf8f60c27863bf07",
+      "new_inference_jobs": 0
+    }
+  ],
+  "computed_without_labels": true,
+  "via_nearest_neighbor": "leave self out",
+  "no_new_deep_forwards": true
+}

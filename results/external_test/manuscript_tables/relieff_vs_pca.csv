@@ -1,0 +1,4 @@
+approach,pca_finalist,best_relieff,pca_accuracy_mean,relieff_accuracy_mean,pca_minus_relieff,definition
+B,b_efficientnetb3_pca_300_linear_svm,b_densenet201_relieff_150_random_forest,0.93873949579831939,0.92991596638655449,0.0088235294117648966,Highest mean-fold accuracy among all Relief-F configurations; name breaks ties
+C,c_mobilenet_resnet50_pca_300_linear_svm,c_mobilenet_resnet50_relieff_200_mlp,0.93865546218487395,0.91537815126050415,0.023277310924369798,Highest mean-fold accuracy among all Relief-F configurations; name breaks ties
+D,d_mobilenet_resnet50_pca_300_linear_svm,d_efficientnetb0_mobilenet_relieff_300_logistic,0.93865546218487395,0.90941176470588236,0.029243697478991582,Highest mean-fold accuracy among all Relief-F configurations; name breaks ties

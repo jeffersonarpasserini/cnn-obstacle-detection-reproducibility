@@ -1,0 +1,381 @@
+bin,images,mean_probability,observed_clear_fraction,model,domain,seed_index,brier,calibration_notice
+0,130,0.012820112046946558,0.015384615384615385,a_resnet101v2_logistic,via_oof,0,0.051350317696641376,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+1,10,0.1610143066289082,0.20000000000000001,a_resnet101v2_logistic,via_oof,0,0.051350317696641376,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+2,13,0.2457543221288592,0.15384615384615385,a_resnet101v2_logistic,via_oof,0,0.051350317696641376,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+3,6,0.33769294144239548,0,a_resnet101v2_logistic,via_oof,0,0.051350317696641376,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+4,4,0.46661588455080949,0.5,a_resnet101v2_logistic,via_oof,0,0.051350317696641376,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+5,6,0.55393132775667875,0.66666666666666663,a_resnet101v2_logistic,via_oof,0,0.051350317696641376,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+6,5,0.63404355515282573,0.80000000000000004,a_resnet101v2_logistic,via_oof,0,0.051350317696641376,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+7,10,0.75771449472097108,0.80000000000000004,a_resnet101v2_logistic,via_oof,0,0.051350317696641376,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+8,30,0.85496141615646637,0.83333333333333337,a_resnet101v2_logistic,via_oof,0,0.051350317696641376,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+9,128,0.97590868574334277,0.984375,a_resnet101v2_logistic,via_oof,0,0.051350317696641376,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+0,727,0.019545898307642567,0.18844566712517194,a_resnet101v2_logistic,external,0,0.16495839525375483,Frozen probability model
+1,98,0.14599672343453524,0.51020408163265307,a_resnet101v2_logistic,external,0,0.16495839525375483,Frozen probability model
+2,57,0.24795621417523184,0.59649122807017541,a_resnet101v2_logistic,external,0,0.16495839525375483,Frozen probability model
+3,52,0.34878278940677043,0.59615384615384615,a_resnet101v2_logistic,external,0,0.16495839525375483,Frozen probability model
+4,60,0.44940930945981133,0.75,a_resnet101v2_logistic,external,0,0.16495839525375483,Frozen probability model
+5,55,0.55190843355352304,0.80000000000000004,a_resnet101v2_logistic,external,0,0.16495839525375483,Frozen probability model
+6,41,0.65507730922297513,0.92682926829268297,a_resnet101v2_logistic,external,0,0.16495839525375483,Frozen probability model
+7,68,0.74685686678376184,0.94117647058823528,a_resnet101v2_logistic,external,0,0.16495839525375483,Frozen probability model
+8,132,0.85249134251700298,0.93939393939393945,a_resnet101v2_logistic,external,0,0.16495839525375483,Frozen probability model
+9,286,0.96435928126300041,0.96853146853146854,a_resnet101v2_logistic,external,0,0.16495839525375483,Frozen probability model
+0,113,0.025086010770078913,0.017699115044247787,b_efficientnetb3_pca_300_linear_svm,via_oof,0,0.055857410449095569,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+1,29,0.14500931417393423,0.068965517241379309,b_efficientnetb3_pca_300_linear_svm,via_oof,0,0.055857410449095569,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+2,7,0.26680668274287161,0.14285714285714285,b_efficientnetb3_pca_300_linear_svm,via_oof,0,0.055857410449095569,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+3,9,0.34372360367032839,0.33333333333333331,b_efficientnetb3_pca_300_linear_svm,via_oof,0,0.055857410449095569,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+4,8,0.46356415368746551,0.375,b_efficientnetb3_pca_300_linear_svm,via_oof,0,0.055857410449095569,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+5,7,0.53914833128629625,0.7142857142857143,b_efficientnetb3_pca_300_linear_svm,via_oof,0,0.055857410449095569,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+6,7,0.67788786327692108,0.7142857142857143,b_efficientnetb3_pca_300_linear_svm,via_oof,0,0.055857410449095569,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+7,18,0.74799897586686315,0.77777777777777779,b_efficientnetb3_pca_300_linear_svm,via_oof,0,0.055857410449095569,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+8,25,0.85827052709936946,0.92000000000000004,b_efficientnetb3_pca_300_linear_svm,via_oof,0,0.055857410449095569,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+9,119,0.97351700265175156,0.98319327731092432,b_efficientnetb3_pca_300_linear_svm,via_oof,0,0.055857410449095569,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+0,578,0.027029279109079752,0.1245674740484429,b_efficientnetb3_pca_300_linear_svm,external,0,0.13658865871424797,Frozen probability model
+1,125,0.14142031694820159,0.40000000000000002,b_efficientnetb3_pca_300_linear_svm,external,0,0.13658865871424797,Frozen probability model
+2,80,0.24750731233797599,0.45000000000000001,b_efficientnetb3_pca_300_linear_svm,external,0,0.13658865871424797,Frozen probability model
+3,73,0.34324589571659025,0.57534246575342463,b_efficientnetb3_pca_300_linear_svm,external,0,0.13658865871424797,Frozen probability model
+4,59,0.45365928425850538,0.71186440677966101,b_efficientnetb3_pca_300_linear_svm,external,0,0.13658865871424797,Frozen probability model
+5,61,0.55034684999278061,0.65573770491803274,b_efficientnetb3_pca_300_linear_svm,external,0,0.13658865871424797,Frozen probability model
+6,49,0.65127008483457338,0.75510204081632648,b_efficientnetb3_pca_300_linear_svm,external,0,0.13658865871424797,Frozen probability model
+7,80,0.7471546592466588,0.90000000000000002,b_efficientnetb3_pca_300_linear_svm,external,0,0.13658865871424797,Frozen probability model
+8,95,0.85407697614896849,0.89473684210526316,b_efficientnetb3_pca_300_linear_svm,external,0,0.13658865871424797,Frozen probability model
+9,376,0.97093983727082089,0.97872340425531912,b_efficientnetb3_pca_300_linear_svm,external,0,0.13658865871424797,Frozen probability model
+0,124,0.02535111628106769,0.016129032258064516,c_mobilenet_resnet50_pca_300_linear_svm,via_oof,0,0.050799110016235341,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+1,11,0.11920504738648113,0,c_mobilenet_resnet50_pca_300_linear_svm,via_oof,0,0.050799110016235341,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+2,15,0.25647842496574974,0.20000000000000001,c_mobilenet_resnet50_pca_300_linear_svm,via_oof,0,0.050799110016235341,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+3,4,0.35793363264251143,0,c_mobilenet_resnet50_pca_300_linear_svm,via_oof,0,0.050799110016235341,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+4,6,0.44257737441562717,0.5,c_mobilenet_resnet50_pca_300_linear_svm,via_oof,0,0.050799110016235341,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+5,9,0.56127161854476593,0.55555555555555558,c_mobilenet_resnet50_pca_300_linear_svm,via_oof,0,0.050799110016235341,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+6,11,0.64708581574358925,0.63636363636363635,c_mobilenet_resnet50_pca_300_linear_svm,via_oof,0,0.050799110016235341,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+7,9,0.75048117149094751,0.66666666666666663,c_mobilenet_resnet50_pca_300_linear_svm,via_oof,0,0.050799110016235341,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+8,40,0.85560553536017014,0.92500000000000004,c_mobilenet_resnet50_pca_300_linear_svm,via_oof,0,0.050799110016235341,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+9,113,0.96861881084136259,0.99115044247787609,c_mobilenet_resnet50_pca_300_linear_svm,via_oof,0,0.050799110016235341,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+0,675,0.022888531027731977,0.16296296296296298,c_mobilenet_resnet50_pca_300_linear_svm,external,0,0.15295021194249422,Frozen probability model
+1,108,0.14013992136717565,0.37962962962962965,c_mobilenet_resnet50_pca_300_linear_svm,external,0,0.15295021194249422,Frozen probability model
+2,86,0.24740336782852682,0.55813953488372092,c_mobilenet_resnet50_pca_300_linear_svm,external,0,0.15295021194249422,Frozen probability model
+3,57,0.35574882467334074,0.78947368421052633,c_mobilenet_resnet50_pca_300_linear_svm,external,0,0.15295021194249422,Frozen probability model
+4,49,0.43811163604385828,0.77551020408163263,c_mobilenet_resnet50_pca_300_linear_svm,external,0,0.15295021194249422,Frozen probability model
+5,56,0.55036218446740626,0.8035714285714286,c_mobilenet_resnet50_pca_300_linear_svm,external,0,0.15295021194249422,Frozen probability model
+6,57,0.65282049943495324,0.82456140350877194,c_mobilenet_resnet50_pca_300_linear_svm,external,0,0.15295021194249422,Frozen probability model
+7,84,0.75578354722920782,0.9285714285714286,c_mobilenet_resnet50_pca_300_linear_svm,external,0,0.15295021194249422,Frozen probability model
+8,84,0.85619571215584056,0.9285714285714286,c_mobilenet_resnet50_pca_300_linear_svm,external,0,0.15295021194249422,Frozen probability model
+9,320,0.96327074884274722,0.98124999999999996,c_mobilenet_resnet50_pca_300_linear_svm,external,0,0.15295021194249422,Frozen probability model
+0,124,0.02536665517760376,0.016129032258064516,d_mobilenet_resnet50_pca_300_linear_svm,via_oof,0,0.050517244106562775,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+1,11,0.1180071668861389,0,d_mobilenet_resnet50_pca_300_linear_svm,via_oof,0,0.050517244106562775,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+2,15,0.25299886119977422,0.20000000000000001,d_mobilenet_resnet50_pca_300_linear_svm,via_oof,0,0.050517244106562775,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+3,2,0.32906882923101555,0,d_mobilenet_resnet50_pca_300_linear_svm,via_oof,0,0.050517244106562775,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+4,8,0.43700715956668579,0.375,d_mobilenet_resnet50_pca_300_linear_svm,via_oof,0,0.050517244106562775,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+5,8,0.55064045295945196,0.625,d_mobilenet_resnet50_pca_300_linear_svm,via_oof,0,0.050517244106562775,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+6,12,0.64204074971610037,0.5,d_mobilenet_resnet50_pca_300_linear_svm,via_oof,0,0.050517244106562775,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+7,10,0.75500562246932668,0.80000000000000004,d_mobilenet_resnet50_pca_300_linear_svm,via_oof,0,0.050517244106562775,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+8,39,0.85791594449895914,0.92307692307692313,d_mobilenet_resnet50_pca_300_linear_svm,via_oof,0,0.050517244106562775,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+9,113,0.96892973414651551,0.99115044247787609,d_mobilenet_resnet50_pca_300_linear_svm,via_oof,0,0.050517244106562775,Fixed VIA probabilities fitted on the same selected-finalist OOF; optimistic calibration reference
+0,639,0.025197446247970226,0.1564945226917058,d_mobilenet_resnet50_pca_300_linear_svm,external,0,0.14951009855682487,Frozen probability model
+1,129,0.14363778517142506,0.37984496124031009,d_mobilenet_resnet50_pca_300_linear_svm,external,0,0.14951009855682487,Frozen probability model
+2,80,0.24914816468002163,0.52500000000000002,d_mobilenet_resnet50_pca_300_linear_svm,external,0,0.14951009855682487,Frozen probability model
+3,55,0.35141697833251334,0.61818181818181817,d_mobilenet_resnet50_pca_300_linear_svm,external,0,0.14951009855682487,Frozen probability model
+4,67,0.44502752344503749,0.76119402985074625,d_mobilenet_resnet50_pca_300_linear_svm,external,0,0.14951009855682487,Frozen probability model
+5,59,0.55018361414948924,0.88135593220338981,d_mobilenet_resnet50_pca_300_linear_svm,external,0,0.14951009855682487,Frozen probability model
+6,55,0.65840649928124262,0.83636363636363631,d_mobilenet_resnet50_pca_300_linear_svm,external,0,0.14951009855682487,Frozen probability model
+7,90,0.75042163994494915,0.8666666666666667,d_mobilenet_resnet50_pca_300_linear_svm,external,0,0.14951009855682487,Frozen probability model
+8,97,0.85257469295237509,0.93814432989690721,d_mobilenet_resnet50_pca_300_linear_svm,external,0,0.14951009855682487,Frozen probability model
+9,305,0.96124422810489141,0.9868852459016394,d_mobilenet_resnet50_pca_300_linear_svm,external,0,0.14951009855682487,Frozen probability model
+0,145,0.0079069014577812149,0.020689655172413793,ft_EfficientNetB3,via_oof,0,0.047414727156222414,Frozen probability model
+1,6,0.16160785903533298,0,ft_EfficientNetB3,via_oof,0,0.047414727156222414,Frozen probability model
+2,4,0.24851064011454582,0,ft_EfficientNetB3,via_oof,0,0.047414727156222414,Frozen probability model
+3,3,0.34514688452084857,0.66666666666666663,ft_EfficientNetB3,via_oof,0,0.047414727156222414,Frozen probability model
+4,3,0.43138967951138812,0.66666666666666663,ft_EfficientNetB3,via_oof,0,0.047414727156222414,Frozen probability model
+5,3,0.54368096590042114,0.66666666666666663,ft_EfficientNetB3,via_oof,0,0.047414727156222414,Frozen probability model
+6,4,0.64521411061286926,0.5,ft_EfficientNetB3,via_oof,0,0.047414727156222414,Frozen probability model
+7,3,0.76724400122960412,0.66666666666666663,ft_EfficientNetB3,via_oof,0,0.047414727156222414,Frozen probability model
+8,11,0.85614099285819312,0.72727272727272729,ft_EfficientNetB3,via_oof,0,0.047414727156222414,Frozen probability model
+9,160,0.9949963733553886,0.96250000000000002,ft_EfficientNetB3,via_oof,0,0.047414727156222414,Frozen probability model
+0,154,0.006440729649803985,0.025974025974025976,ft_EfficientNetB3,via_oof,1,0.043444633961534397,Frozen probability model
+1,4,0.12916685827076432,0.25,ft_EfficientNetB3,via_oof,1,0.043444633961534397,Frozen probability model
+2,7,0.24098680487700871,0.2857142857142857,ft_EfficientNetB3,via_oof,1,0.043444633961534397,Frozen probability model
+3,1,0.30207830667495728,0,ft_EfficientNetB3,via_oof,1,0.043444633961534397,Frozen probability model
+4,3,0.43982526659965515,1,ft_EfficientNetB3,via_oof,1,0.043444633961534397,Frozen probability model
+5,1,0.56393665075302124,1,ft_EfficientNetB3,via_oof,1,0.043444633961534397,Frozen probability model
+6,0,,,ft_EfficientNetB3,via_oof,1,0.043444633961534397,Frozen probability model
+7,1,0.7574307918548584,1,ft_EfficientNetB3,via_oof,1,0.043444633961534397,Frozen probability model
+8,6,0.87070264418919885,0.66666666666666663,ft_EfficientNetB3,via_oof,1,0.043444633961534397,Frozen probability model
+9,165,0.99651594089739248,0.96363636363636362,ft_EfficientNetB3,via_oof,1,0.043444633961534397,Frozen probability model
+0,149,0.0057018751303858205,0.073825503355704702,ft_EfficientNetB3,via_oof,2,0.082647152902424179,Frozen probability model
+1,6,0.15215632071097687,0.33333333333333331,ft_EfficientNetB3,via_oof,2,0.082647152902424179,Frozen probability model
+2,3,0.26399537920951838,0.33333333333333331,ft_EfficientNetB3,via_oof,2,0.082647152902424179,Frozen probability model
+3,2,0.32752723991870875,0,ft_EfficientNetB3,via_oof,2,0.082647152902424179,Frozen probability model
+4,3,0.43445178866386414,0.66666666666666663,ft_EfficientNetB3,via_oof,2,0.082647152902424179,Frozen probability model
+5,7,0.5437406471797398,0.42857142857142855,ft_EfficientNetB3,via_oof,2,0.082647152902424179,Frozen probability model
+6,4,0.63362410664558411,0,ft_EfficientNetB3,via_oof,2,0.082647152902424179,Frozen probability model
+7,2,0.79673823714256287,1,ft_EfficientNetB3,via_oof,2,0.082647152902424179,Frozen probability model
+8,5,0.86139725446701054,0.80000000000000004,ft_EfficientNetB3,via_oof,2,0.082647152902424179,Frozen probability model
+9,161,0.99375232443306016,0.93167701863354035,ft_EfficientNetB3,via_oof,2,0.082647152902424179,Frozen probability model
+0,759,0.011831792377655009,0.24769433465085638,ft_EfficientNetB3,external,0,0.18647073640651671,Frozen probability model
+1,63,0.14384568967516459,0.34920634920634919,ft_EfficientNetB3,external,0,0.18647073640651671,Frozen probability model
+2,25,0.24520204663276673,0.32000000000000001,ft_EfficientNetB3,external,0,0.18647073640651671,Frozen probability model
+3,20,0.35868124216794967,0.55000000000000004,ft_EfficientNetB3,external,0,0.18647073640651671,Frozen probability model
+4,17,0.44430569515508767,0.82352941176470584,ft_EfficientNetB3,external,0,0.18647073640651671,Frozen probability model
+5,22,0.53955743800510059,0.63636363636363635,ft_EfficientNetB3,external,0,0.18647073640651671,Frozen probability model
+6,23,0.65400393631147302,0.73913043478260865,ft_EfficientNetB3,external,0,0.18647073640651671,Frozen probability model
+7,29,0.7500206869224022,0.62068965517241381,ft_EfficientNetB3,external,0,0.18647073640651671,Frozen probability model
+8,38,0.85837231027452565,0.78947368421052633,ft_EfficientNetB3,external,0,0.18647073640651671,Frozen probability model
+9,580,0.98843658823391489,0.90000000000000002,ft_EfficientNetB3,external,0,0.18647073640651671,Frozen probability model
+0,697,0.016926977765177272,0.26111908177905307,ft_EfficientNetB3,external,1,0.21151026722723068,Frozen probability model
+1,63,0.1453418294115672,0.41269841269841268,ft_EfficientNetB3,external,1,0.21151026722723068,Frozen probability model
+2,25,0.24229542315006256,0.47999999999999998,ft_EfficientNetB3,external,1,0.21151026722723068,Frozen probability model
+3,15,0.34448769092559817,0.40000000000000002,ft_EfficientNetB3,external,1,0.21151026722723068,Frozen probability model
+4,26,0.44687637342856479,0.30769230769230771,ft_EfficientNetB3,external,1,0.21151026722723068,Frozen probability model
+5,9,0.54923229747348357,0.22222222222222221,ft_EfficientNetB3,external,1,0.21151026722723068,Frozen probability model
+6,15,0.65376658042271929,0.40000000000000002,ft_EfficientNetB3,external,1,0.21151026722723068,Frozen probability model
+7,26,0.75492496903126061,0.65384615384615385,ft_EfficientNetB3,external,1,0.21151026722723068,Frozen probability model
+8,42,0.85934752651623314,0.54761904761904767,ft_EfficientNetB3,external,1,0.21151026722723068,Frozen probability model
+9,658,0.99067315287140723,0.85410334346504557,ft_EfficientNetB3,external,1,0.21151026722723068,Frozen probability model
+0,741,0.0075180819330068508,0.22941970310391363,ft_EfficientNetB3,external,2,0.18098390911640225,Frozen probability model
+1,45,0.1485723548465305,0.64444444444444449,ft_EfficientNetB3,external,2,0.18098390911640225,Frozen probability model
+2,35,0.24886897078582218,0.54285714285714282,ft_EfficientNetB3,external,2,0.18098390911640225,Frozen probability model
+3,31,0.35134181764818007,0.45161290322580644,ft_EfficientNetB3,external,2,0.18098390911640225,Frozen probability model
+4,26,0.44887842581822324,0.46153846153846156,ft_EfficientNetB3,external,2,0.18098390911640225,Frozen probability model
+5,31,0.56116436181529872,0.41935483870967744,ft_EfficientNetB3,external,2,0.18098390911640225,Frozen probability model
+6,43,0.6505783033925433,0.60465116279069764,ft_EfficientNetB3,external,2,0.18098390911640225,Frozen probability model
+7,60,0.75358597934246063,0.65000000000000002,ft_EfficientNetB3,external,2,0.18098390911640225,Frozen probability model
+8,81,0.86137587199976418,0.85185185185185186,ft_EfficientNetB3,external,2,0.18098390911640225,Frozen probability model
+9,483,0.96533655663701567,0.93788819875776397,ft_EfficientNetB3,external,2,0.18098390911640225,Frozen probability model
+0,143,0.0060797540262755839,0.034965034965034968,ft_EfficientNetB4,via_oof,0,0.064220270977972671,Frozen probability model
+1,10,0.14744666740298268,0.20000000000000001,ft_EfficientNetB4,via_oof,0,0.064220270977972671,Frozen probability model
+2,8,0.2404305599629879,0.5,ft_EfficientNetB4,via_oof,0,0.064220270977972671,Frozen probability model
+3,6,0.3512912392616272,0.66666666666666663,ft_EfficientNetB4,via_oof,0,0.064220270977972671,Frozen probability model
+4,2,0.44619420170783997,0,ft_EfficientNetB4,via_oof,0,0.064220270977972671,Frozen probability model
+5,1,0.55043685436248779,0,ft_EfficientNetB4,via_oof,0,0.064220270977972671,Frozen probability model
+6,2,0.66340979933738708,0.5,ft_EfficientNetB4,via_oof,0,0.064220270977972671,Frozen probability model
+7,3,0.79297288258870446,0.66666666666666663,ft_EfficientNetB4,via_oof,0,0.064220270977972671,Frozen probability model
+8,8,0.85342271625995636,0.75,ft_EfficientNetB4,via_oof,0,0.064220270977972671,Frozen probability model
+9,159,0.99213280242943913,0.94968553459119498,ft_EfficientNetB4,via_oof,0,0.064220270977972671,Frozen probability model
+0,145,0.0085695104288073445,0.048275862068965517,ft_EfficientNetB4,via_oof,1,0.078122188231364464,Frozen probability model
+1,6,0.15961011623342825,0.5,ft_EfficientNetB4,via_oof,1,0.078122188231364464,Frozen probability model
+2,2,0.26519452780485153,0.5,ft_EfficientNetB4,via_oof,1,0.078122188231364464,Frozen probability model
+3,6,0.38039077321688336,0,ft_EfficientNetB4,via_oof,1,0.078122188231364464,Frozen probability model
+4,2,0.42548675835132599,0.5,ft_EfficientNetB4,via_oof,1,0.078122188231364464,Frozen probability model
+5,2,0.5407993495464325,0.5,ft_EfficientNetB4,via_oof,1,0.078122188231364464,Frozen probability model
+6,1,0.62722820043563843,1,ft_EfficientNetB4,via_oof,1,0.078122188231364464,Frozen probability model
+7,4,0.74415640532970428,0.75,ft_EfficientNetB4,via_oof,1,0.078122188231364464,Frozen probability model
+8,10,0.85813275575637815,0.59999999999999998,ft_EfficientNetB4,via_oof,1,0.078122188231364464,Frozen probability model
+9,164,0.99192420593122155,0.92682926829268297,ft_EfficientNetB4,via_oof,1,0.078122188231364464,Frozen probability model
+0,144,0.0069007516070952379,0.020833333333333332,ft_EfficientNetB4,via_oof,2,0.047908421321643503,Frozen probability model
+1,9,0.13302872578303016,0.1111111111111111,ft_EfficientNetB4,via_oof,2,0.047908421321643503,Frozen probability model
+2,3,0.22481602430343625,0,ft_EfficientNetB4,via_oof,2,0.047908421321643503,Frozen probability model
+3,0,,,ft_EfficientNetB4,via_oof,2,0.047908421321643503,Frozen probability model
+4,2,0.43216527998447418,0.5,ft_EfficientNetB4,via_oof,2,0.047908421321643503,Frozen probability model
+5,4,0.52985836565494537,0.75,ft_EfficientNetB4,via_oof,2,0.047908421321643503,Frozen probability model
+6,4,0.64619456231594086,0.5,ft_EfficientNetB4,via_oof,2,0.047908421321643503,Frozen probability model
+7,1,0.78062278032302856,0,ft_EfficientNetB4,via_oof,2,0.047908421321643503,Frozen probability model
+8,4,0.86233481764793396,0.75,ft_EfficientNetB4,via_oof,2,0.047908421321643503,Frozen probability model
+9,171,0.99470192891115339,0.94736842105263153,ft_EfficientNetB4,via_oof,2,0.047908421321643503,Frozen probability model
+0,844,0.0089858918703958207,0.3246445497630332,ft_EfficientNetB4,external,0,0.24325591861624402,Frozen probability model
+1,63,0.14880496736556764,0.3968253968253968,ft_EfficientNetB4,external,0,0.24325591861624402,Frozen probability model
+2,60,0.25041945328315102,0.45000000000000001,ft_EfficientNetB4,external,0,0.24325591861624402,Frozen probability model
+3,32,0.34988976456224918,0.625,ft_EfficientNetB4,external,0,0.24325591861624402,Frozen probability model
+4,32,0.4509364040568471,0.625,ft_EfficientNetB4,external,0,0.24325591861624402,Frozen probability model
+5,32,0.54811997711658478,0.71875,ft_EfficientNetB4,external,0,0.24325591861624402,Frozen probability model
+6,21,0.64784827686491464,0.66666666666666663,ft_EfficientNetB4,external,0,0.24325591861624402,Frozen probability model
+7,28,0.74057279952934807,0.8571428571428571,ft_EfficientNetB4,external,0,0.24325591861624402,Frozen probability model
+8,58,0.8576784771064232,0.77586206896551724,ft_EfficientNetB4,external,0,0.24325591861624402,Frozen probability model
+9,406,0.98549400101154305,0.91625615763546797,ft_EfficientNetB4,external,0,0.24325591861624402,Frozen probability model
+0,836,0.014943091596766106,0.36124401913875598,ft_EfficientNetB4,external,1,0.26830267155507148,Frozen probability model
+1,87,0.14946880328586731,0.34482758620689657,ft_EfficientNetB4,external,1,0.26830267155507148,Frozen probability model
+2,48,0.25093806659181911,0.5625,ft_EfficientNetB4,external,1,0.26830267155507148,Frozen probability model
+3,44,0.35126207023859024,0.52272727272727271,ft_EfficientNetB4,external,1,0.26830267155507148,Frozen probability model
+4,56,0.44981283800942556,0.5892857142857143,ft_EfficientNetB4,external,1,0.26830267155507148,Frozen probability model
+5,31,0.55178569209191108,0.74193548387096775,ft_EfficientNetB4,external,1,0.26830267155507148,Frozen probability model
+6,31,0.64613041954655803,0.67741935483870963,ft_EfficientNetB4,external,1,0.26830267155507148,Frozen probability model
+7,60,0.76091996232668557,0.69999999999999996,ft_EfficientNetB4,external,1,0.26830267155507148,Frozen probability model
+8,82,0.8586138348753859,0.84146341463414631,ft_EfficientNetB4,external,1,0.26830267155507148,Frozen probability model
+9,301,0.95628991416126385,0.9102990033222591,ft_EfficientNetB4,external,1,0.26830267155507148,Frozen probability model
+0,873,0.010089694150255199,0.30813287514318444,ft_EfficientNetB4,external,2,0.23961876972712079,Frozen probability model
+1,69,0.13967151777899783,0.50724637681159424,ft_EfficientNetB4,external,2,0.23961876972712079,Frozen probability model
+2,41,0.24642032566593913,0.65853658536585369,ft_EfficientNetB4,external,2,0.23961876972712079,Frozen probability model
+3,37,0.34748936263290614,0.67567567567567566,ft_EfficientNetB4,external,2,0.23961876972712079,Frozen probability model
+4,24,0.4482988913853963,0.79166666666666663,ft_EfficientNetB4,external,2,0.23961876972712079,Frozen probability model
+5,18,0.54524262083901298,0.66666666666666663,ft_EfficientNetB4,external,2,0.23961876972712079,Frozen probability model
+6,27,0.65333998865551424,0.66666666666666663,ft_EfficientNetB4,external,2,0.23961876972712079,Frozen probability model
+7,32,0.75777553766965866,0.78125,ft_EfficientNetB4,external,2,0.23961876972712079,Frozen probability model
+8,53,0.85696569141351953,0.83018867924528306,ft_EfficientNetB4,external,2,0.23961876972712079,Frozen probability model
+9,402,0.98123537218985868,0.92039800995024879,ft_EfficientNetB4,external,2,0.23961876972712079,Frozen probability model
+0,145,0.0058502568336145149,0.027586206896551724,ft_MobileNet,via_oof,0,0.057225543886464225,Frozen probability model
+1,4,0.16109811142086977,0.5,ft_MobileNet,via_oof,0,0.057225543886464225,Frozen probability model
+2,5,0.26068147718906404,0.20000000000000001,ft_MobileNet,via_oof,0,0.057225543886464225,Frozen probability model
+3,5,0.3267070055007934,0.40000000000000002,ft_MobileNet,via_oof,0,0.057225543886464225,Frozen probability model
+4,3,0.44999725619951886,0.33333333333333331,ft_MobileNet,via_oof,0,0.057225543886464225,Frozen probability model
+5,2,0.54372760653495789,0.5,ft_MobileNet,via_oof,0,0.057225543886464225,Frozen probability model
+6,1,0.68426144123077393,1,ft_MobileNet,via_oof,0,0.057225543886464225,Frozen probability model
+7,4,0.75516007840633392,0,ft_MobileNet,via_oof,0,0.057225543886464225,Frozen probability model
+8,5,0.86811454296112056,0.20000000000000001,ft_MobileNet,via_oof,0,0.057225543886464225,Frozen probability model
+9,168,0.99432858647335143,0.9642857142857143,ft_MobileNet,via_oof,0,0.057225543886464225,Frozen probability model
+0,147,0.0070904153303400592,0.074829931972789115,ft_MobileNet,via_oof,1,0.10216493071134079,Frozen probability model
+1,4,0.15221166051924223,0.5,ft_MobileNet,via_oof,1,0.10216493071134079,Frozen probability model
+2,7,0.25221671164035797,0.5714285714285714,ft_MobileNet,via_oof,1,0.10216493071134079,Frozen probability model
+3,3,0.34569611152013141,0.66666666666666663,ft_MobileNet,via_oof,1,0.10216493071134079,Frozen probability model
+4,3,0.44240011771519977,0.66666666666666663,ft_MobileNet,via_oof,1,0.10216493071134079,Frozen probability model
+5,3,0.55953552325566613,0.33333333333333331,ft_MobileNet,via_oof,1,0.10216493071134079,Frozen probability model
+6,5,0.6326089143753052,0.59999999999999998,ft_MobileNet,via_oof,1,0.10216493071134079,Frozen probability model
+7,4,0.74364890158176422,0.25,ft_MobileNet,via_oof,1,0.10216493071134079,Frozen probability model
+8,7,0.8453184877123151,0.2857142857142857,ft_MobileNet,via_oof,1,0.10216493071134079,Frozen probability model
+9,159,0.99589808182146566,0.92452830188679247,ft_MobileNet,via_oof,1,0.10216493071134079,Frozen probability model
+0,150,0.0070565223365216239,0.046666666666666669,ft_MobileNet,via_oof,2,0.065687674962458267,Frozen probability model
+1,3,0.11758182446161901,0.33333333333333331,ft_MobileNet,via_oof,2,0.065687674962458267,Frozen probability model
+2,2,0.23451522737741465,0,ft_MobileNet,via_oof,2,0.065687674962458267,Frozen probability model
+3,3,0.33976523081461579,0.66666666666666663,ft_MobileNet,via_oof,2,0.065687674962458267,Frozen probability model
+4,2,0.43601195514202118,0,ft_MobileNet,via_oof,2,0.065687674962458267,Frozen probability model
+5,2,0.57601577043533325,0,ft_MobileNet,via_oof,2,0.065687674962458267,Frozen probability model
+6,2,0.65401932597160339,0.5,ft_MobileNet,via_oof,2,0.065687674962458267,Frozen probability model
+7,7,0.75238324063164852,0.5714285714285714,ft_MobileNet,via_oof,2,0.065687674962458267,Frozen probability model
+8,6,0.8599074284235636,0.5,ft_MobileNet,via_oof,2,0.065687674962458267,Frozen probability model
+9,165,0.99610354105631516,0.95151515151515154,ft_MobileNet,via_oof,2,0.065687674962458267,Frozen probability model
+0,599,0.019740210998504391,0.19699499165275458,ft_MobileNet,external,0,0.17257109205016574,Frozen probability model
+1,76,0.14339647363675267,0.34210526315789475,ft_MobileNet,external,0,0.17257109205016574,Frozen probability model
+2,53,0.24370691883114148,0.45283018867924529,ft_MobileNet,external,0,0.17257109205016574,Frozen probability model
+3,39,0.34317158047969526,0.53846153846153844,ft_MobileNet,external,0,0.17257109205016574,Frozen probability model
+4,42,0.44735488579386756,0.52380952380952384,ft_MobileNet,external,0,0.17257109205016574,Frozen probability model
+5,26,0.54697681848819435,0.46153846153846156,ft_MobileNet,external,0,0.17257109205016574,Frozen probability model
+6,37,0.64736412344752137,0.56756756756756754,ft_MobileNet,external,0,0.17257109205016574,Frozen probability model
+7,53,0.74864609398931825,0.60377358490566035,ft_MobileNet,external,0,0.17257109205016574,Frozen probability model
+8,81,0.8514133875752673,0.70370370370370372,ft_MobileNet,external,0,0.17257109205016574,Frozen probability model
+9,570,0.98737940234050414,0.89649122807017545,ft_MobileNet,external,0,0.17257109205016574,Frozen probability model
+0,930,0.0060125135899894676,0.3032258064516129,ft_MobileNet,external,1,0.22312746050533069,Frozen probability model
+1,34,0.1352107860147953,0.5,ft_MobileNet,external,1,0.22312746050533069,Frozen probability model
+2,27,0.24252848713486283,0.62962962962962965,ft_MobileNet,external,1,0.22312746050533069,Frozen probability model
+3,17,0.36003523714402141,0.58823529411764708,ft_MobileNet,external,1,0.22312746050533069,Frozen probability model
+4,17,0.45086855748120475,0.76470588235294112,ft_MobileNet,external,1,0.22312746050533069,Frozen probability model
+5,14,0.53829317859240944,0.7857142857142857,ft_MobileNet,external,1,0.22312746050533069,Frozen probability model
+6,17,0.65156502583447629,0.70588235294117652,ft_MobileNet,external,1,0.22312746050533069,Frozen probability model
+7,26,0.74886874281443083,0.80769230769230771,ft_MobileNet,external,1,0.22312746050533069,Frozen probability model
+8,27,0.8500661982430352,0.77777777777777779,ft_MobileNet,external,1,0.22312746050533069,Frozen probability model
+9,467,0.99259728269862924,0.94218415417558887,ft_MobileNet,external,1,0.22312746050533069,Frozen probability model
+0,606,0.014739390411088314,0.24422442244224424,ft_MobileNet,external,2,0.21943128745047988,Frozen probability model
+1,68,0.14772764735800378,0.4264705882352941,ft_MobileNet,external,2,0.21943128745047988,Frozen probability model
+2,43,0.24990603812905246,0.53488372093023251,ft_MobileNet,external,2,0.21943128745047988,Frozen probability model
+3,29,0.34433026354888391,0.51724137931034486,ft_MobileNet,external,2,0.21943128745047988,Frozen probability model
+4,26,0.46213154265513789,0.53846153846153844,ft_MobileNet,external,2,0.21943128745047988,Frozen probability model
+5,31,0.55316215753555298,0.32258064516129031,ft_MobileNet,external,2,0.21943128745047988,Frozen probability model
+6,29,0.64838604680423084,0.44827586206896552,ft_MobileNet,external,2,0.21943128745047988,Frozen probability model
+7,40,0.74283741265535352,0.55000000000000004,ft_MobileNet,external,2,0.21943128745047988,Frozen probability model
+8,43,0.8476061557614526,0.51162790697674421,ft_MobileNet,external,2,0.21943128745047988,Frozen probability model
+9,661,0.99095046898961603,0.82904689863842662,ft_MobileNet,external,2,0.21943128745047988,Frozen probability model
+0,57,0.021282379503836969,0.08771929824561403,ft_ResNet101V2,via_oof,0,0.18525848488968533,Frozen probability model
+1,25,0.14518212586641308,0.16,ft_ResNet101V2,via_oof,0,0.18525848488968533,Frozen probability model
+2,4,0.27230327948927879,0.25,ft_ResNet101V2,via_oof,0,0.18525848488968533,Frozen probability model
+3,5,0.36690742969512941,0.40000000000000002,ft_ResNet101V2,via_oof,0,0.18525848488968533,Frozen probability model
+4,54,0.48463675158995168,0.42592592592592593,ft_ResNet101V2,via_oof,0,0.18525848488968533,Frozen probability model
+5,80,0.53161474391818042,0.61250000000000004,ft_ResNet101V2,via_oof,0,0.18525848488968533,Frozen probability model
+6,25,0.64864261627197262,0.68000000000000005,ft_ResNet101V2,via_oof,0,0.18525848488968533,Frozen probability model
+7,18,0.74446392059326172,0.77777777777777779,ft_ResNet101V2,via_oof,0,0.18525848488968533,Frozen probability model
+8,22,0.85241551019928674,0.81818181818181823,ft_ResNet101V2,via_oof,0,0.18525848488968533,Frozen probability model
+9,52,0.9743269051496799,0.80769230769230771,ft_ResNet101V2,via_oof,0,0.18525848488968533,Frozen probability model
+0,79,0.024803680728506722,0.088607594936708861,ft_ResNet101V2,via_oof,1,0.19339471407986392,Frozen probability model
+1,9,0.14234153346882922,0.55555555555555558,ft_ResNet101V2,via_oof,1,0.19339471407986392,Frozen probability model
+2,10,0.26189749389886857,0.40000000000000002,ft_ResNet101V2,via_oof,1,0.19339471407986392,Frozen probability model
+3,12,0.34958880643049878,0.33333333333333331,ft_ResNet101V2,via_oof,1,0.19339471407986392,Frozen probability model
+4,21,0.45794527587436495,0.42857142857142855,ft_ResNet101V2,via_oof,1,0.19339471407986392,Frozen probability model
+5,82,0.52546362469835983,0.56097560975609762,ft_ResNet101V2,via_oof,1,0.19339471407986392,Frozen probability model
+6,18,0.65041779147254097,0.77777777777777779,ft_ResNet101V2,via_oof,1,0.19339471407986392,Frozen probability model
+7,31,0.75148926050432263,0.74193548387096775,ft_ResNet101V2,via_oof,1,0.19339471407986392,Frozen probability model
+8,24,0.85270276914040244,0.83333333333333337,ft_ResNet101V2,via_oof,1,0.19339471407986392,Frozen probability model
+9,56,0.96583546591656544,0.7678571428571429,ft_ResNet101V2,via_oof,1,0.19339471407986392,Frozen probability model
+0,43,0.030620285209347346,0.093023255813953487,ft_ResNet101V2,via_oof,2,0.20288386769269856,Frozen probability model
+1,13,0.15244847020277608,0.23076923076923078,ft_ResNet101V2,via_oof,2,0.20288386769269856,Frozen probability model
+2,6,0.24096326529979706,0.16666666666666666,ft_ResNet101V2,via_oof,2,0.20288386769269856,Frozen probability model
+3,12,0.35444760570923489,0.16666666666666666,ft_ResNet101V2,via_oof,2,0.20288386769269856,Frozen probability model
+4,69,0.48887708221656689,0.43478260869565216,ft_ResNet101V2,via_oof,2,0.20288386769269856,Frozen probability model
+5,119,0.53258344606191166,0.60504201680672265,ft_ResNet101V2,via_oof,2,0.20288386769269856,Frozen probability model
+6,30,0.61770704388618469,0.76666666666666672,ft_ResNet101V2,via_oof,2,0.20288386769269856,Frozen probability model
+7,8,0.74385885894298553,0.75,ft_ResNet101V2,via_oof,2,0.20288386769269856,Frozen probability model
+8,21,0.83726976315180457,0.76190476190476186,ft_ResNet101V2,via_oof,2,0.20288386769269856,Frozen probability model
+9,21,0.96058997937611168,0.8571428571428571,ft_ResNet101V2,via_oof,2,0.20288386769269856,Frozen probability model
+0,535,0.016375729849444885,0.40373831775700936,ft_ResNet101V2,external,0,0.29606876634706547,Frozen probability model
+1,61,0.15319018530063941,0.27868852459016391,ft_ResNet101V2,external,0,0.29606876634706547,Frozen probability model
+2,54,0.24576634223814364,0.37037037037037035,ft_ResNet101V2,external,0,0.29606876634706547,Frozen probability model
+3,40,0.34685317501425744,0.32500000000000001,ft_ResNet101V2,external,0,0.29606876634706547,Frozen probability model
+4,35,0.44063879081181118,0.31428571428571428,ft_ResNet101V2,external,0,0.29606876634706547,Frozen probability model
+5,147,0.56042225425746162,0.65986394557823125,ft_ResNet101V2,external,0,0.29606876634706547,Frozen probability model
+6,96,0.65043562650680542,0.54166666666666663,ft_ResNet101V2,external,0,0.29606876634706547,Frozen probability model
+7,87,0.75029114882151282,0.5977011494252874,ft_ResNet101V2,external,0,0.29606876634706547,Frozen probability model
+8,146,0.85764636732127564,0.6095890410958904,ft_ResNet101V2,external,0,0.29606876634706547,Frozen probability model
+9,375,0.96309143288930255,0.73866666666666669,ft_ResNet101V2,external,0,0.29606876634706547,Frozen probability model
+0,577,0.021283921087813802,0.32235701906412478,ft_ResNet101V2,external,1,0.25231170124007229,Frozen probability model
+1,89,0.14806159167142396,0.4157303370786517,ft_ResNet101V2,external,1,0.25231170124007229,Frozen probability model
+2,51,0.2541375654000862,0.41176470588235292,ft_ResNet101V2,external,1,0.25231170124007229,Frozen probability model
+3,41,0.34773330717551998,0.46341463414634149,ft_ResNet101V2,external,1,0.25231170124007229,Frozen probability model
+4,37,0.44532492515203115,0.43243243243243246,ft_ResNet101V2,external,1,0.25231170124007229,Frozen probability model
+5,55,0.5563069235194813,0.43636363636363634,ft_ResNet101V2,external,1,0.25231170124007229,Frozen probability model
+6,66,0.65964610107017285,0.53030303030303028,ft_ResNet101V2,external,1,0.25231170124007229,Frozen probability model
+7,72,0.75220530976851785,0.51388888888888884,ft_ResNet101V2,external,1,0.25231170124007229,Frozen probability model
+8,123,0.85675377913606843,0.69918699186991873,ft_ResNet101V2,external,1,0.25231170124007229,Frozen probability model
+9,465,0.96881875363729331,0.82365591397849458,ft_ResNet101V2,external,1,0.25231170124007229,Frozen probability model
+0,334,0.040429675878230535,0.31437125748502992,ft_ResNet101V2,external,2,0.25504128446869523,Frozen probability model
+1,150,0.14856263895829519,0.36666666666666664,ft_ResNet101V2,external,2,0.25504128446869523,Frozen probability model
+2,92,0.24517124567342841,0.46739130434782611,ft_ResNet101V2,external,2,0.25504128446869523,Frozen probability model
+3,65,0.34989470793650701,0.46153846153846156,ft_ResNet101V2,external,2,0.25504128446869523,Frozen probability model
+4,96,0.44723861043651897,0.52083333333333337,ft_ResNet101V2,external,2,0.25504128446869523,Frozen probability model
+5,269,0.53485178171923609,0.60966542750929364,ft_ResNet101V2,external,2,0.25504128446869523,Frozen probability model
+6,98,0.64741508510647983,0.59183673469387754,ft_ResNet101V2,external,2,0.25504128446869523,Frozen probability model
+7,132,0.74906860156492749,0.58333333333333337,ft_ResNet101V2,external,2,0.25504128446869523,Frozen probability model
+8,148,0.85282866576233429,0.7432432432432432,ft_ResNet101V2,external,2,0.25504128446869523,Frozen probability model
+9,192,0.94757349230349064,0.79166666666666663,ft_ResNet101V2,external,2,0.25504128446869523,Frozen probability model
+0,110,0.015985459465190383,0.06363636363636363,ft_ResNet50,via_oof,0,0.13344127957146021,Frozen probability model
+1,21,0.15036214036600926,0.2857142857142857,ft_ResNet50,via_oof,0,0.13344127957146021,Frozen probability model
+2,18,0.24826134906874764,0.27777777777777779,ft_ResNet50,via_oof,0,0.13344127957146021,Frozen probability model
+3,7,0.33493201221738544,0.5714285714285714,ft_ResNet50,via_oof,0,0.13344127957146021,Frozen probability model
+4,6,0.44577889144420624,0.83333333333333337,ft_ResNet50,via_oof,0,0.13344127957146021,Frozen probability model
+5,8,0.55775376409292221,0.5,ft_ResNet50,via_oof,0,0.13344127957146021,Frozen probability model
+6,9,0.66835113366444909,0.66666666666666663,ft_ResNet50,via_oof,0,0.13344127957146021,Frozen probability model
+7,18,0.75691213872697616,0.83333333333333337,ft_ResNet50,via_oof,0,0.13344127957146021,Frozen probability model
+8,21,0.85359615939004085,0.8571428571428571,ft_ResNet50,via_oof,0,0.13344127957146021,Frozen probability model
+9,124,0.98039214601439817,0.84677419354838712,ft_ResNet50,via_oof,0,0.13344127957146021,Frozen probability model
+0,119,0.014014334256157789,0.067226890756302518,ft_ResNet50,via_oof,1,0.11729090007365732,Frozen probability model
+1,11,0.15926463969729163,0.18181818181818182,ft_ResNet50,via_oof,1,0.11729090007365732,Frozen probability model
+2,11,0.23487937450408933,0.27272727272727271,ft_ResNet50,via_oof,1,0.11729090007365732,Frozen probability model
+3,10,0.34864872097969057,0.40000000000000002,ft_ResNet50,via_oof,1,0.11729090007365732,Frozen probability model
+4,13,0.45864828962546128,0.53846153846153844,ft_ResNet50,via_oof,1,0.11729090007365732,Frozen probability model
+5,8,0.54887237399816513,0.75,ft_ResNet50,via_oof,1,0.11729090007365732,Frozen probability model
+6,12,0.6497500787178675,0.66666666666666663,ft_ResNet50,via_oof,1,0.11729090007365732,Frozen probability model
+7,10,0.75212559700012205,0.59999999999999998,ft_ResNet50,via_oof,1,0.11729090007365732,Frozen probability model
+8,24,0.85696091751257575,0.75,ft_ResNet50,via_oof,1,0.11729090007365732,Frozen probability model
+9,124,0.9840236709963891,0.91129032258064513,ft_ResNet50,via_oof,1,0.11729090007365732,Frozen probability model
+0,105,0.013979019222267294,0.085714285714285715,ft_ResNet50,via_oof,2,0.13110344571379767,Frozen probability model
+1,15,0.14495213925838471,0.20000000000000001,ft_ResNet50,via_oof,2,0.13110344571379767,Frozen probability model
+2,10,0.25314676612615583,0.29999999999999999,ft_ResNet50,via_oof,2,0.13110344571379767,Frozen probability model
+3,7,0.36074978538921904,0.42857142857142855,ft_ResNet50,via_oof,2,0.13110344571379767,Frozen probability model
+4,14,0.44992542053971973,0.21428571428571427,ft_ResNet50,via_oof,2,0.13110344571379767,Frozen probability model
+5,24,0.54409968604644143,0.54166666666666663,ft_ResNet50,via_oof,2,0.13110344571379767,Frozen probability model
+6,10,0.658746349811554,0.5,ft_ResNet50,via_oof,2,0.13110344571379767,Frozen probability model
+7,19,0.75736919516011292,0.73684210526315785,ft_ResNet50,via_oof,2,0.13110344571379767,Frozen probability model
+8,15,0.84884043931961062,0.73333333333333328,ft_ResNet50,via_oof,2,0.13110344571379767,Frozen probability model
+9,123,0.98465958794927211,0.90243902439024393,ft_ResNet50,via_oof,2,0.13110344571379767,Frozen probability model
+0,819,0.010847672170439514,0.39560439560439559,ft_ResNet50,external,0,0.30580071865913966,Frozen probability model
+1,51,0.15140782077522838,0.47058823529411764,ft_ResNet50,external,0,0.30580071865913966,Frozen probability model
+2,43,0.24540597061778224,0.53488372093023251,ft_ResNet50,external,0,0.30580071865913966,Frozen probability model
+3,38,0.34952080092932047,0.39473684210526316,ft_ResNet50,external,0,0.30580071865913966,Frozen probability model
+4,50,0.44871067404747011,0.62,ft_ResNet50,external,0,0.30580071865913966,Frozen probability model
+5,41,0.54943572166489396,0.56097560975609762,ft_ResNet50,external,0,0.30580071865913966,Frozen probability model
+6,43,0.64828866858815037,0.58139534883720934,ft_ResNet50,external,0,0.30580071865913966,Frozen probability model
+7,57,0.75346482741205312,0.56140350877192979,ft_ResNet50,external,0,0.30580071865913966,Frozen probability model
+8,105,0.8519102749370393,0.68571428571428572,ft_ResNet50,external,0,0.30580071865913966,Frozen probability model
+9,329,0.96280028917869176,0.83586626139817632,ft_ResNet50,external,0,0.30580071865913966,Frozen probability model
+0,655,0.020135843950749445,0.33282442748091601,ft_ResNet50,external,1,0.26301065158309767,Frozen probability model
+1,91,0.14565897577411527,0.4175824175824176,ft_ResNet50,external,1,0.26301065158309767,Frozen probability model
+2,67,0.24642577011193803,0.46268656716417911,ft_ResNet50,external,1,0.26301065158309767,Frozen probability model
+3,47,0.34447918039687137,0.48936170212765956,ft_ResNet50,external,1,0.26301065158309767,Frozen probability model
+4,40,0.43847791254520418,0.625,ft_ResNet50,external,1,0.26301065158309767,Frozen probability model
+5,38,0.55063950388055094,0.52631578947368418,ft_ResNet50,external,1,0.26301065158309767,Frozen probability model
+6,34,0.64777986267033749,0.58823529411764708,ft_ResNet50,external,1,0.26301065158309767,Frozen probability model
+7,56,0.7550693186266082,0.5178571428571429,ft_ResNet50,external,1,0.26301065158309767,Frozen probability model
+8,46,0.85289564080860303,0.60869565217391308,ft_ResNet50,external,1,0.26301065158309767,Frozen probability model
+9,502,0.9848012979999482,0.82071713147410363,ft_ResNet50,external,1,0.26301065158309767,Frozen probability model
+0,633,0.020848909832422904,0.34913112164297,ft_ResNet50,external,2,0.28547314066682367,Frozen probability model
+1,106,0.14765955353120588,0.44339622641509435,ft_ResNet50,external,2,0.28547314066682367,Frozen probability model
+2,66,0.24829400737177243,0.51515151515151514,ft_ResNet50,external,2,0.28547314066682367,Frozen probability model
+3,39,0.34478755868398225,0.5641025641025641,ft_ResNet50,external,2,0.28547314066682367,Frozen probability model
+4,44,0.44726501743901859,0.52272727272727271,ft_ResNet50,external,2,0.28547314066682367,Frozen probability model
+5,38,0.56215489067529378,0.63157894736842102,ft_ResNet50,external,2,0.28547314066682367,Frozen probability model
+6,50,0.64342871665954593,0.62,ft_ResNet50,external,2,0.28547314066682367,Frozen probability model
+7,58,0.75870709994743613,0.67241379310344829,ft_ResNet50,external,2,0.28547314066682367,Frozen probability model
+8,98,0.85666808972553332,0.70408163265306123,ft_ResNet50,external,2,0.28547314066682367,Frozen probability model
+9,444,0.97584841715859938,0.75225225225225223,ft_ResNet50,external,2,0.28547314066682367,Frozen probability model

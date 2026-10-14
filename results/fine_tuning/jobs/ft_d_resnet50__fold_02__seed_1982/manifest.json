@@ -1,0 +1,241 @@
+{
+  "request": {
+    "dataset": "/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/via-dataset",
+    "fold_assignments": "/home/jeffersonpasserini/dados/doutorado/ieee_access_correcao/cnn-obstacle-detection-reproducibility/results/full_search/fold_assignments.csv",
+    "identity": "7f68cd988b2a332807b916b189a946ff2b560e25f2de3b65624805174f6f48a2",
+    "config": {
+      "global_seed": 1980,
+      "initialization_seeds": [
+        1980,
+        1981,
+        1982
+      ],
+      "substitution_margin_pp": 3.0,
+      "substitution_metrics": [
+        "accuracy",
+        "obstructed_recall"
+      ],
+      "fold_assignments": "results/full_search/fold_assignments.csv",
+      "architectures": [
+        "ResNet101V2",
+        "EfficientNetB3",
+        "MobileNet",
+        "ResNet50",
+        "EfficientNetB4"
+      ],
+      "configurations": [
+        "D"
+      ],
+      "configuration_specs": {
+        "D": {
+          "backbone_trainable": true,
+          "optimizer": "adam",
+          "learning_rate": 0.001
+        },
+        "A": {
+          "backbone_trainable": false,
+          "optimizer": "rmsprop",
+          "learning_rate": 0.001
+        }
+      },
+      "validation_fraction": 0.2,
+      "validation_seed": 1980,
+      "head": {
+        "units": 128,
+        "activation": "relu",
+        "kernel_initializer": "he_uniform"
+      },
+      "epochs": 50,
+      "batch_size": 16,
+      "reduce_lr": {
+        "monitor": "val_accuracy",
+        "factor": 0.5,
+        "patience": 2,
+        "min_lr": 1e-05
+      },
+      "early_stopping": {
+        "monitor": "val_loss",
+        "patience": 10,
+        "restore_best_weights": true
+      },
+      "benchmark": {
+        "warmup": 10,
+        "repetitions": 100
+      },
+      "fixed_features": {
+        "enabled": true,
+        "config": "configs/article_selected_models_10fold.json",
+        "results": "results/full_search"
+      },
+      "cpu_threads": 2,
+      "verbose": 2
+    },
+    "device": "gpu",
+    "imagenet_weights": {
+      "ResNet101V2": {
+        "filename": "resnet101v2_weights_tf_dim_ordering_tf_kernels_notop.h5",
+        "path": "/home/jeffersonpasserini/.keras/models/resnet101v2_weights_tf_dim_ordering_tf_kernels_notop.h5",
+        "sha256": "36a978be8b2b0b870c786ee462503040b9b79b7fd613c60c03e408e5e08060b3",
+        "source_url": "https://storage.googleapis.com/tensorflow/keras-applications/resnet/resnet101v2_weights_tf_dim_ordering_tf_kernels_notop.h5",
+        "keras_file_hash": "c0ed64b8031c3730f411d2eb4eea35b5",
+        "keras_hash_algorithm": "md5"
+      },
+      "EfficientNetB3": {
+        "filename": "efficientnetb3_notop.h5",
+        "path": "/home/jeffersonpasserini/.keras/models/efficientnetb3_notop.h5",
+        "sha256": "cb923fd68d56606c597e50676240920dd7ad8d0f01f4a51d9e73ca2afdbd67f3",
+        "source_url": "https://storage.googleapis.com/keras-applications/efficientnetb3_notop.h5",
+        "keras_file_hash": "af6d107764bb5b1abb91932881670226",
+        "keras_hash_algorithm": "md5"
+      },
+      "MobileNet": {
+        "filename": "mobilenet_1_0_224_tf_no_top.h5",
+        "path": "/home/jeffersonpasserini/.keras/models/mobilenet_1_0_224_tf_no_top.h5",
+        "sha256": "9f9cfd8c925431c06ce96744e1d201575f6a681bf38ae2de38e2ae8f7d7829d3",
+        "source_url": "https://storage.googleapis.com/tensorflow/keras-applications/mobilenet/mobilenet_1_0_224_tf_no_top.h5",
+        "keras_file_hash": null,
+        "keras_hash_algorithm": null
+      },
+      "ResNet50": {
+        "filename": "resnet50_weights_tf_dim_ordering_tf_kernels_notop.h5",
+        "path": "/home/jeffersonpasserini/.keras/models/resnet50_weights_tf_dim_ordering_tf_kernels_notop.h5",
+        "sha256": "66c8b43daff3fcc15bc4f30e3d2a167e21a14d9c9598a5394e5516471f4af504",
+        "source_url": "https://storage.googleapis.com/tensorflow/keras-applications/resnet/resnet50_weights_tf_dim_ordering_tf_kernels_notop.h5",
+        "keras_file_hash": "4d473c1dd8becc155b73f8504c6f6626",
+        "keras_hash_algorithm": "md5"
+      },
+      "EfficientNetB4": {
+        "filename": "efficientnetb4_notop.h5",
+        "path": "/home/jeffersonpasserini/.keras/models/efficientnetb4_notop.h5",
+        "sha256": "12a79525a3f0ee9acb7df880dd70047b5ad767c0098c8131195dbb0bf3a8ebb9",
+        "source_url": "https://storage.googleapis.com/keras-applications/efficientnetb4_notop.h5",
+        "keras_file_hash": "ebc24e6d6c33eaebbd558eafbeedf1ba",
+        "keras_hash_algorithm": "md5"
+      }
+    },
+    "experiment": "ft_d_resnet50",
+    "architecture": "ResNet50",
+    "configuration": "D",
+    "approach": "D",
+    "classifier": "adam_dense",
+    "family": "fine_tuning",
+    "fold": 2,
+    "seed": 1982
+  },
+  "state": "completed",
+  "created_utc": "2026-10-05T12:04:58.422998+00:00",
+  "runtime": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+    "dependencies": {
+      "numpy": "2.4.6",
+      "pandas": "3.0.3",
+      "scipy": "1.18.0",
+      "scikit-learn": "1.9.0",
+      "tensorflow": "2.21.0",
+      "umap-learn": "0.5.12",
+      "skrebate": "0.62",
+      "Pillow": "12.3.0"
+    },
+    "hardware": {
+      "cpu": "x86_64",
+      "logical_cpus": 16,
+      "physical_memory_bytes": 67318796288,
+      "gpus": [
+        {
+          "logical_name": "/physical_device:GPU:0",
+          "device_name": "NVIDIA GeForce RTX 4070 Ti"
+        }
+      ],
+      "tensorflow_build": {
+        "cpu_compiler": "clang",
+        "cuda_compute_capabilities": [
+          "sm_60",
+          "sm_70",
+          "sm_80",
+          "sm_89",
+          "compute_90"
+        ],
+        "cuda_version": "12.5.1",
+        "cudnn_version": "9",
+        "is_cuda_build": true,
+        "is_rocm_build": false,
+        "is_tensorrt_build": false
+      }
+    },
+    "tensorflow_version": "2.21.0",
+    "cuda_version": "12.5.1",
+    "cudnn_version": "9",
+    "gpu_models": [
+      "NVIDIA GeForce RTX 4070 Ti"
+    ],
+    "training_device": "GPU:0",
+    "benchmark_devices": [
+      "cpu",
+      "gpu"
+    ],
+    "TF_DETERMINISTIC_OPS": "1",
+    "PYTHONHASHSEED": "1982"
+  },
+  "checkpoint": "checkpoint_030",
+  "batch_size": 16,
+  "training_costs": {
+    "training_seconds": 211.16349615297804,
+    "effective_epochs": 30,
+    "best_epoch": 20,
+    "batch_size": 16,
+    "peak_gpu_memory_bytes": 1840699648,
+    "peak_gpu_memory_status": "measured",
+    "peak_host_memory_bytes": 2771144704,
+    "total_parameters": 23850242,
+    "trainable_parameters": 23797122,
+    "model_size_mb": 96.057143,
+    "reload_check": {
+      "status": "passed",
+      "image_count": 8,
+      "filenames": [
+        "clear.011.jpg",
+        "clear.017.jpg",
+        "clear.029.jpg",
+        "clear.050.jpg",
+        "clear.055.jpg",
+        "clear.057.jpg",
+        "clear.063.jpg",
+        "clear.073.jpg"
+      ],
+      "max_abs_difference": 0.0,
+      "atol": 1e-05,
+      "kind": "probabilities",
+      "decisions_identical": true
+    },
+    "adaptation_seconds": 211.16349615297804,
+    "update_timing_source": "prescribed_full_retraining",
+    "update_image_filename": "nonclear.166.jpg",
+    "update_previous_labeled_size": 244,
+    "update_labeled_size": 245,
+    "feature_forward_training_seconds": null,
+    "feature_extraction_training_seconds": null,
+    "reduction_seconds": null,
+    "classifier_training_seconds": null,
+    "adaptation_reduction_seconds": null,
+    "adaptation_classifier_seconds": null,
+    "latency_filename": "clear.000.jpg",
+    "latency_batch_size": 1,
+    "latency_repetitions": 100,
+    "latency_warmup": 10,
+    "cpu_latency_median_ms": 74.14284099650104,
+    "cpu_latency_p95_ms": 77.41762375080725,
+    "cpu_latency_status": "measured",
+    "gpu_latency_median_ms": 8.97305701073492,
+    "gpu_latency_p95_ms": 9.421653496974614,
+    "gpu_latency_status": "measured"
+  },
+  "completed_utc": "2026-10-05T12:09:27.360728+00:00",
+  "artifacts": {
+    "metrics.json": "ab15c81748b1413fdf3881093fd0d35ce665eb93fe9746d08efdda650d5a7452",
+    "predictions.csv": "10536f29425d6c06aeaf6fbd0a30087adf1a84ad43ebd8939e33d3668627acec",
+    "costs.json": "963d2137e2b1248e7d96cf32beefa1e991c74116fe850a301cf7a898ddab7084",
+    "split_indices.json": "881dc8115cb1e25e9091cf28f72761c466deca3142e458e17d0867a2f68912dc",
+    "model.keras": "e694196815bc6f0cd6206a31c6011319cfa70d5d4eed87777878d40c51764a34"
+  }
+}

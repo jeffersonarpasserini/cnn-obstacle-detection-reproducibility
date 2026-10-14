@@ -1,0 +1,35 @@
+{
+  "model": "ft_MobileNet",
+  "seed": 1982,
+  "pool_fraction": 0.5,
+  "training_images": 740,
+  "elapsed_seconds": 291.8532833570498,
+  "training_seconds": 256.99959195335396,
+  "effective_epochs": 45,
+  "best_epoch": 35,
+  "batch_size": 16,
+  "peak_gpu_memory_bytes": 2588637952,
+  "peak_gpu_memory_status": "measured",
+  "peak_host_memory_bytes": 7975698432,
+  "total_parameters": 3360322,
+  "trainable_parameters": 3338434,
+  "model_size_mb": 13.763727,
+  "reload_check": {
+    "status": "passed",
+    "image_count": 8,
+    "filenames": [
+      "clear.000.jpg",
+      "clear.006.jpg",
+      "clear.009.jpg",
+      "clear.020.jpg",
+      "clear.023.jpg",
+      "clear.032.jpg",
+      "clear.033.jpg",
+      "clear.037.jpg"
+    ],
+    "max_abs_difference": 0.0,
+    "atol": 1e-05,
+    "kind": "probabilities",
+    "decisions_identical": true
+  }
+}

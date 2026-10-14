@@ -1,0 +1,6 @@
+model,roc_auc,ci_low,ci_high,analysis,analysis_scope
+ft_EfficientNetB3,0.869645585683578,0.8507146104751718,0.8880611818020139,Frozen three-seed ensemble sensitivity; reused scene bootstrap,exploratory/post hoc
+ft_EfficientNetB4,0.7904284178903477,0.7651067276880559,0.8153877921844835,Frozen three-seed ensemble sensitivity; reused scene bootstrap,exploratory/post hoc
+ft_MobileNet,0.8638897521560096,0.8449321330919454,0.882491624522995,Frozen three-seed ensemble sensitivity; reused scene bootstrap,exploratory/post hoc
+ft_ResNet101V2,0.7283864890062932,0.7002041094890757,0.7560160825488121,Frozen three-seed ensemble sensitivity; reused scene bootstrap,exploratory/post hoc
+ft_ResNet50,0.7455682024188744,0.7177280862596515,0.7726915980432366,Frozen three-seed ensemble sensitivity; reused scene bootstrap,exploratory/post hoc

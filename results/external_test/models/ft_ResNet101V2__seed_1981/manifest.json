@@ -1,0 +1,110 @@
+{
+  "state": "trained",
+  "request": {
+    "experiment": "ft_ResNet101V2",
+    "architecture": "ResNet101V2",
+    "configuration": "D",
+    "seed": 1981,
+    "fold": 0,
+    "config": {
+      "global_seed": 1980,
+      "initialization_seeds": [
+        1980,
+        1981,
+        1982
+      ],
+      "substitution_margin_pp": 3.0,
+      "substitution_metrics": [
+        "accuracy",
+        "obstructed_recall"
+      ],
+      "fold_assignments": "results/full_search/fold_assignments.csv",
+      "architectures": [
+        "ResNet101V2",
+        "EfficientNetB3",
+        "MobileNet",
+        "ResNet50",
+        "EfficientNetB4"
+      ],
+      "configurations": [
+        "D"
+      ],
+      "configuration_specs": {
+        "D": {
+          "backbone_trainable": true,
+          "optimizer": "adam",
+          "learning_rate": 0.001
+        },
+        "A": {
+          "backbone_trainable": false,
+          "optimizer": "rmsprop",
+          "learning_rate": 0.001
+        }
+      },
+      "validation_fraction": 0.2,
+      "validation_seed": 1980,
+      "head": {
+        "units": 128,
+        "activation": "relu",
+        "kernel_initializer": "he_uniform"
+      },
+      "epochs": 50,
+      "batch_size": 16,
+      "reduce_lr": {
+        "monitor": "val_accuracy",
+        "factor": 0.5,
+        "patience": 2,
+        "min_lr": 1e-05
+      },
+      "early_stopping": {
+        "monitor": "val_loss",
+        "patience": 10,
+        "restore_best_weights": true
+      },
+      "benchmark": {
+        "warmup": 10,
+        "repetitions": 100
+      },
+      "fixed_features": {
+        "enabled": true,
+        "config": "configs/article_selected_models_10fold.json",
+        "results": "results/full_search"
+      },
+      "cpu_threads": 2,
+      "verbose": 2
+    },
+    "family": "fine_tuning"
+  },
+  "batch_size": 16,
+  "checkpoint": "checkpoint_033",
+  "training_costs": {
+    "training_seconds": 385.0604161049705,
+    "effective_epochs": 33,
+    "best_epoch": 23,
+    "batch_size": 16,
+    "peak_gpu_memory_bytes": 3200150272,
+    "peak_gpu_memory_status": "measured",
+    "peak_host_memory_bytes": 4802473984,
+    "total_parameters": 42889090,
+    "trainable_parameters": 42791426,
+    "model_size_mb": 172.894126,
+    "reload_check": {
+      "status": "passed",
+      "image_count": 8,
+      "filenames": [
+        "clear.001.jpg",
+        "clear.003.jpg",
+        "clear.004.jpg",
+        "clear.013.jpg",
+        "clear.018.jpg",
+        "clear.024.jpg",
+        "clear.028.jpg",
+        "clear.033.jpg"
+      ],
+      "max_abs_difference": 0.0,
+      "atol": 1e-05,
+      "kind": "probabilities",
+      "decisions_identical": true
+    }
+  }
+}

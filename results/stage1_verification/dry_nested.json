@@ -1,0 +1,28 @@
+{
+  "stage": "nested_cv",
+  "configurations_per_outer_fold": 12656,
+  "inner_configuration_attempts": 632800,
+  "outer_fits_upper_bound": 40,
+  "serial_compute_hours": 1536.2250201339898,
+  "preprocessing_hours": 1466.082158808809,
+  "classifier_hours": 70.14286132518073,
+  "relief_cache_policy": "B single-CNN/C paired ranking once per fold; D shares B rankings; exclude infeasible PCA/UMAP250/300 from timing",
+  "relieff_reference_jobs": 8,
+  "relieff_requested_jobs": 8,
+  "time_hours_range": [
+    900.6921536828397,
+    2702.0764610485194
+  ],
+  "feature_extraction_hours_if_missing": 0.06098058539308517,
+  "additional_disk_gib_range": [
+    12.590341329574585,
+    22.506422638893127
+  ],
+  "small_file_count_upper_bound": 1898400,
+  "memory_budget_gib": 16,
+  "basis": "Recorded full_search timing; shared Relief rankings once per fold, 0.64 quadratic Relief and0.8 other inner sample scale. Preprocessing serial, classifier jobs parallel. Disk includes4–8KiB allocation per atomic job file; caches/UMAP/group folds add uncertainty.",
+  "input_hashes": {
+    "per_fold_metrics": "3d5e2a8caf75e48cc665dd2ed97a838b4af4c422611d2cea4813034a115880cb",
+    "feature_dimensions": "466b0256be265567864679f8bd986c76ecac7652bdf3f5bed7a862fbc0f5916f"
+  }
+}

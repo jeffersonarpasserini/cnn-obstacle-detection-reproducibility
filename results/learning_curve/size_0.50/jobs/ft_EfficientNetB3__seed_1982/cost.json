@@ -1,0 +1,35 @@
+{
+  "model": "ft_EfficientNetB3",
+  "seed": 1982,
+  "pool_fraction": 0.5,
+  "training_images": 740,
+  "elapsed_seconds": 571.1543821759988,
+  "training_seconds": 507.8145079209353,
+  "effective_epochs": 28,
+  "best_epoch": 18,
+  "batch_size": 16,
+  "peak_gpu_memory_bytes": 7595998464,
+  "peak_gpu_memory_status": "measured",
+  "peak_host_memory_bytes": 8659591168,
+  "total_parameters": 10980529,
+  "trainable_parameters": 10893226,
+  "model_size_mb": 45.272971,
+  "reload_check": {
+    "status": "passed",
+    "image_count": 8,
+    "filenames": [
+      "clear.000.jpg",
+      "clear.006.jpg",
+      "clear.009.jpg",
+      "clear.020.jpg",
+      "clear.023.jpg",
+      "clear.032.jpg",
+      "clear.033.jpg",
+      "clear.037.jpg"
+    ],
+    "max_abs_difference": 0.0,
+    "atol": 1e-05,
+    "kind": "probabilities",
+    "decisions_identical": true
+  }
+}

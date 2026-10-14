@@ -1,0 +1,329 @@
+{
+  "frozen": true,
+  "smoke": false,
+  "identity": {
+    "config_sha256": "8b64190aef090eca20ae16139bbc6493e51bc3c486e6eaf6f2e9694a6257ca4b",
+    "dataset_sha256": "bef13299b60d06e994bf85498ea0ed2e02f5f6d73851745ce05a16fa5204f2d6",
+    "group_sha256": "30537852c34f3d94e9dfeac436a62991d69561f2c28a3d4a3cceb4fe56919c26",
+    "smoke": false,
+    "device": "gpu",
+    "sources": {
+      "src/artifact.py": "ed11cda07eaee53a2684988b8342b8ed096a5d74139890ffa2eaca4bdb2f8c15",
+      "src/selection.py": "71128688649fda74fed3cacacafca0834fee43a8d973e36f2671250ff0da8bc4",
+      "src/fixed_refit.py": "5a0e3f2af29ac596eea1891fea62c52ec0ffe42cbad34b300660cf6133ac2e39",
+      "src/fine_tuning.py": "b7b572376491e1b681be2c6d8d3b15bbc40882cc85cc6ca5c91141f0211597a9",
+      "src/study_io.py": "a873d99539911c19a37c90afda2a5e7868d68a728eea3e071e7ccec397c0977a",
+      "src/study_statistics.py": "00540daabe33018601e007d60d9fe37af8adc44d05c7bfd51131bbbb3fdbc634",
+      "src/study_features.py": "d814e85f9e8d82d1d883793e9e639aa365d883bdefc0034844568236c6a43e6e",
+      "src/study_estimates.py": "4617ff881511872c3bb47e1f6489d483bdb5cafe42d35f62c82de70771e0384f",
+      "src/nested_cv.py": "1a4ed79b2a72c54b8b4334df2265ee00ce44758c8fd20b9fa78e16124716535b",
+      "src/external_test.py": "d5b639462547aae668d80111d6cb1895809937333211090b4e8adb4ced7dbd53",
+      "src/external_oof.py": "49f4c8ed4991822b70e5ec86a646a7f2e2e8e5f9a4fef8b8eca958739d8b9187",
+      "scripts/clean_external_dataset.py": "56af6c00a31f3235dc26df29637cc44e39421a54a64060904e84df663f09aa23",
+      "scripts/compute_tibshirani_bias.py": "fc8f996d74efb449efd4c9a783b58258652692bbbe5600c76971d0f63a74917f",
+      "scripts/analyze_nested_cv.py": "c5d1a3acc2d98481b0c350e75a2b9dbd811be65a787be54ad2052d260b3d0931",
+      "scripts/analyze_external_test.py": "2a6903df2a12b461ad18e4df8759cfbc462750f0b9cf16db84ac68bb4fdb52cb",
+      "scripts/build_scene_groups.py": "99ccd28d1e63ed9731a56387d4652d28bcdb5d4bfb165573a84c828f27e2e14c",
+      "scripts/scene_groups_geometry.py": "9b996883ad52924888968ff21813f38bc9c522a5c915f2b1bd7f441b04f58f68",
+      "scripts/scene_groups_graph.py": "bed9984521c0ee3cdb8c133154c5d6bfad9d8d87912e2229f8a42ba5468fa921"
+    },
+    "runtime": {
+      "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+      "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+      "packages": {
+        "numpy": "2.4.6",
+        "pandas": "3.0.3",
+        "scipy": "1.18.0",
+        "scikit-learn": "1.9.0",
+        "tensorflow": "2.21.0",
+        "umap-learn": "0.5.12",
+        "skrebate": "0.62",
+        "torch": null,
+        "transformers": null,
+        "Pillow": "12.3.0"
+      },
+      "CUDA_VISIBLE_DEVICES": null,
+      "physical_gpu_inventory": [
+        "NVIDIA GeForce RTX 4070 Ti, 595.84, 12282"
+      ],
+      "sources": {
+        "src/artifact.py": "ed11cda07eaee53a2684988b8342b8ed096a5d74139890ffa2eaca4bdb2f8c15",
+        "src/selection.py": "71128688649fda74fed3cacacafca0834fee43a8d973e36f2671250ff0da8bc4",
+        "src/fixed_refit.py": "5a0e3f2af29ac596eea1891fea62c52ec0ffe42cbad34b300660cf6133ac2e39",
+        "src/fine_tuning.py": "b7b572376491e1b681be2c6d8d3b15bbc40882cc85cc6ca5c91141f0211597a9",
+        "src/study_io.py": "a873d99539911c19a37c90afda2a5e7868d68a728eea3e071e7ccec397c0977a",
+        "src/study_statistics.py": "00540daabe33018601e007d60d9fe37af8adc44d05c7bfd51131bbbb3fdbc634",
+        "src/study_features.py": "d814e85f9e8d82d1d883793e9e639aa365d883bdefc0034844568236c6a43e6e",
+        "src/study_estimates.py": "4617ff881511872c3bb47e1f6489d483bdb5cafe42d35f62c82de70771e0384f",
+        "src/nested_cv.py": "1a4ed79b2a72c54b8b4334df2265ee00ce44758c8fd20b9fa78e16124716535b",
+        "src/external_test.py": "d5b639462547aae668d80111d6cb1895809937333211090b4e8adb4ced7dbd53",
+        "src/external_oof.py": "49f4c8ed4991822b70e5ec86a646a7f2e2e8e5f9a4fef8b8eca958739d8b9187",
+        "scripts/clean_external_dataset.py": "56af6c00a31f3235dc26df29637cc44e39421a54a64060904e84df663f09aa23",
+        "scripts/compute_tibshirani_bias.py": "fc8f996d74efb449efd4c9a783b58258652692bbbe5600c76971d0f63a74917f",
+        "scripts/analyze_nested_cv.py": "c5d1a3acc2d98481b0c350e75a2b9dbd811be65a787be54ad2052d260b3d0931",
+        "scripts/analyze_external_test.py": "2a6903df2a12b461ad18e4df8759cfbc462750f0b9cf16db84ac68bb4fdb52cb",
+        "scripts/build_scene_groups.py": "99ccd28d1e63ed9731a56387d4652d28bcdb5d4bfb165573a84c828f27e2e14c",
+        "scripts/scene_groups_geometry.py": "9b996883ad52924888968ff21813f38bc9c522a5c915f2b1bd7f441b04f58f68",
+        "scripts/scene_groups_graph.py": "bed9984521c0ee3cdb8c133154c5d6bfad9d8d87912e2229f8a42ba5468fa921"
+      }
+    }
+  },
+  "preregistration": {
+    "config": {
+      "path": "cnn-obstacle-detection-reproducibility/configs/external_test.json",
+      "sha256": "8b64190aef090eca20ae16139bbc6493e51bc3c486e6eaf6f2e9694a6257ca4b",
+      "commit": "cb7c510e2f649ead6284bb6b033fe8356f3f22b1"
+    },
+    "protocol": {
+      "path": "cnn-obstacle-detection-reproducibility/docs/EXTERNAL_TEST_PROTOCOL.md",
+      "sha256": "9b4e6eabd06cf0329afdb3f8c51da614bbbc8e42d9ae17e6ad6e549ea316e3db",
+      "commit": "cb7c510e2f649ead6284bb6b033fe8356f3f22b1"
+    }
+  },
+  "dataset_sha256": "bef13299b60d06e994bf85498ea0ed2e02f5f6d73851745ce05a16fa5204f2d6",
+  "models": [
+    {
+      "model": "ft_EfficientNetB4",
+      "seed": 1982,
+      "family": "fine_tuning",
+      "architecture": "EfficientNetB4",
+      "model_path": "models/ft_EfficientNetB4__seed_1982/model.keras",
+      "procedure": "ft_EfficientNetB4"
+    },
+    {
+      "model": "ft_EfficientNetB4",
+      "seed": 1981,
+      "family": "fine_tuning",
+      "architecture": "EfficientNetB4",
+      "model_path": "models/ft_EfficientNetB4__seed_1981/model.keras",
+      "procedure": "ft_EfficientNetB4"
+    },
+    {
+      "model": "ft_EfficientNetB4",
+      "seed": 1980,
+      "family": "fine_tuning",
+      "architecture": "EfficientNetB4",
+      "model_path": "models/ft_EfficientNetB4__seed_1980/model.keras",
+      "procedure": "ft_EfficientNetB4"
+    },
+    {
+      "model": "ft_ResNet50",
+      "seed": 1982,
+      "family": "fine_tuning",
+      "architecture": "ResNet50",
+      "model_path": "models/ft_ResNet50__seed_1982/model.keras",
+      "procedure": "ft_ResNet50"
+    },
+    {
+      "model": "ft_ResNet50",
+      "seed": 1981,
+      "family": "fine_tuning",
+      "architecture": "ResNet50",
+      "model_path": "models/ft_ResNet50__seed_1981/model.keras",
+      "procedure": "ft_ResNet50"
+    },
+    {
+      "model": "ft_ResNet50",
+      "seed": 1980,
+      "family": "fine_tuning",
+      "architecture": "ResNet50",
+      "model_path": "models/ft_ResNet50__seed_1980/model.keras",
+      "procedure": "ft_ResNet50"
+    },
+    {
+      "model": "ft_MobileNet",
+      "seed": 1982,
+      "family": "fine_tuning",
+      "architecture": "MobileNet",
+      "model_path": "models/ft_MobileNet__seed_1982/model.keras",
+      "procedure": "ft_MobileNet"
+    },
+    {
+      "model": "ft_MobileNet",
+      "seed": 1981,
+      "family": "fine_tuning",
+      "architecture": "MobileNet",
+      "model_path": "models/ft_MobileNet__seed_1981/model.keras",
+      "procedure": "ft_MobileNet"
+    },
+    {
+      "model": "ft_MobileNet",
+      "seed": 1980,
+      "family": "fine_tuning",
+      "architecture": "MobileNet",
+      "model_path": "models/ft_MobileNet__seed_1980/model.keras",
+      "procedure": "ft_MobileNet"
+    },
+    {
+      "model": "ft_EfficientNetB3",
+      "seed": 1982,
+      "family": "fine_tuning",
+      "architecture": "EfficientNetB3",
+      "model_path": "models/ft_EfficientNetB3__seed_1982/model.keras",
+      "procedure": "ft_EfficientNetB3"
+    },
+    {
+      "model": "ft_EfficientNetB3",
+      "seed": 1981,
+      "family": "fine_tuning",
+      "architecture": "EfficientNetB3",
+      "model_path": "models/ft_EfficientNetB3__seed_1981/model.keras",
+      "procedure": "ft_EfficientNetB3"
+    },
+    {
+      "model": "ft_EfficientNetB3",
+      "seed": 1980,
+      "family": "fine_tuning",
+      "architecture": "EfficientNetB3",
+      "model_path": "models/ft_EfficientNetB3__seed_1980/model.keras",
+      "procedure": "ft_EfficientNetB3"
+    },
+    {
+      "model": "ft_ResNet101V2",
+      "seed": 1982,
+      "family": "fine_tuning",
+      "architecture": "ResNet101V2",
+      "model_path": "models/ft_ResNet101V2__seed_1982/model.keras",
+      "procedure": "ft_ResNet101V2"
+    },
+    {
+      "model": "ft_ResNet101V2",
+      "seed": 1981,
+      "family": "fine_tuning",
+      "architecture": "ResNet101V2",
+      "model_path": "models/ft_ResNet101V2__seed_1981/model.keras",
+      "procedure": "ft_ResNet101V2"
+    },
+    {
+      "model": "ft_ResNet101V2",
+      "seed": 1980,
+      "family": "fine_tuning",
+      "architecture": "ResNet101V2",
+      "model_path": "models/ft_ResNet101V2__seed_1980/model.keras",
+      "procedure": "ft_ResNet101V2"
+    },
+    {
+      "model": "b_efficientnetb3_pca_300_linear_svm",
+      "seed": -1,
+      "family": "fixed",
+      "procedure": "B",
+      "experiment": {
+        "name": "b_efficientnetb3_pca_300_linear_svm",
+        "approach": "B",
+        "extractors": [
+          "EfficientNetB3"
+        ],
+        "reduction": "pca",
+        "components": 300,
+        "classifier": "linear_svm",
+        "scale": false
+      },
+      "pipeline": "models/b_efficientnetb3_pca_300_linear_svm/pipeline.joblib"
+    },
+    {
+      "model": "d_mobilenet_resnet50_pca_300_linear_svm",
+      "seed": -1,
+      "family": "fixed",
+      "procedure": "D",
+      "experiment": {
+        "name": "d_mobilenet_resnet50_pca_300_linear_svm",
+        "approach": "D",
+        "extractors": [
+          "MobileNet",
+          "ResNet50"
+        ],
+        "reduction": "pca",
+        "components": 300,
+        "classifier": "linear_svm",
+        "scale": false
+      },
+      "pipeline": "models/d_mobilenet_resnet50_pca_300_linear_svm/pipeline.joblib"
+    },
+    {
+      "model": "c_mobilenet_resnet50_pca_300_linear_svm",
+      "seed": -1,
+      "family": "fixed",
+      "procedure": "C",
+      "experiment": {
+        "name": "c_mobilenet_resnet50_pca_300_linear_svm",
+        "approach": "C",
+        "extractors": [
+          "MobileNet",
+          "ResNet50"
+        ],
+        "reduction": "pca",
+        "components": 300,
+        "classifier": "linear_svm",
+        "scale": false
+      },
+      "pipeline": "models/c_mobilenet_resnet50_pca_300_linear_svm/pipeline.joblib"
+    },
+    {
+      "model": "a_resnet101v2_logistic",
+      "seed": -1,
+      "family": "fixed",
+      "procedure": "A",
+      "experiment": {
+        "name": "a_resnet101v2_logistic",
+        "approach": "A",
+        "extractors": [
+          "ResNet101V2"
+        ],
+        "reduction": "full",
+        "components": null,
+        "classifier": "logistic",
+        "scale": false
+      },
+      "pipeline": "models/a_resnet101v2_logistic/pipeline.joblib"
+    }
+  ],
+  "encoders": {
+    "EfficientNetB3": "encoders/EfficientNetB3.keras",
+    "MobileNet": "encoders/MobileNet.keras",
+    "ResNet101V2": "encoders/ResNet101V2.keras",
+    "ResNet50": "encoders/ResNet50.keras"
+  },
+  "artifacts": {
+    "latency.csv": "a515e884d35ff88344d4cac812236ca55a89a34c3bc2cc8ab364826f8bb968fc",
+    "models/ft_EfficientNetB4__seed_1982/model.keras": "cf71aa6e904d2586006a795020bf4cb57d91a8adcaaf7a47bcf3c7e3d1b6b7b5",
+    "models/ft_EfficientNetB4__seed_1981/model.keras": "657dba2fe8a06b07942e648661068d5c5eb518b3f892d1911a5758012b67cd10",
+    "models/ft_EfficientNetB4__seed_1980/model.keras": "28ac2524ad8edd8e8010ada30b9b517ae29f4a6f9b0316a9ff751a7d0fdf5fc9",
+    "models/ft_ResNet50__seed_1982/model.keras": "9ec47a71077ee424fbfb8c4b41571033d437eee867cd933be59d8ffcaacab0e4",
+    "models/ft_ResNet50__seed_1981/model.keras": "cddf27a1b613aa8e31c4a04925a863e4ebee53a1ac79a134a8cb1c495433b28f",
+    "models/ft_ResNet50__seed_1980/model.keras": "6b88721bd63812a36ba01c4f2f2e75c47c35796122d033c2ba09e8f82ed6ccc9",
+    "models/ft_MobileNet__seed_1982/model.keras": "652fb8de96955179929ba010923aec1ed50438a6d06a3774ca7c4bc4be781448",
+    "models/ft_MobileNet__seed_1981/model.keras": "85d3d434179b1ed371e2189e85c333a0428dd44df920a6dc984154716a42efe8",
+    "models/ft_MobileNet__seed_1980/model.keras": "55bcf03fbb7014a5c4b74f0b4049261a256d5d7c9f7f8017c5f97e06cfd2d763",
+    "models/ft_EfficientNetB3__seed_1982/model.keras": "b1b887d0ab70387f38e4d640e4e63aa183e12f6e3169e8b4bfcb0704b07b04d1",
+    "models/ft_EfficientNetB3__seed_1981/model.keras": "fdb92bca07e5ab96bf6a2d3cc8f8a8c6cde4b0807737a047549edf1cf74aff79",
+    "models/ft_EfficientNetB3__seed_1980/model.keras": "8fbe80c53a302dbb69d57842e26c6ebcc0b6ecc3f32242c4b12d636c4575c847",
+    "models/ft_ResNet101V2__seed_1982/model.keras": "6dee4aafb1ce700691cf626896919f14c136b9b8eeb08fd45ad3cb7f3f13e1bc",
+    "models/ft_ResNet101V2__seed_1981/model.keras": "3d1ea4ef6c90b782191fddbd6900c661861fa44bc8a9b867f39aeafee79b5999",
+    "models/ft_ResNet101V2__seed_1980/model.keras": "5ec940878b1218c32c4b0299c0d681464f8fd1316d697fc3e5da206116445f82",
+    "models/b_efficientnetb3_pca_300_linear_svm/pipeline.joblib": "2aa793d50a2461805621a99d2248125649362783419bc9b12bea697f6163798f",
+    "models/d_mobilenet_resnet50_pca_300_linear_svm/pipeline.joblib": "8c1b8ea0dad457d7d5c0a7039efd3dba35c88ad3e4101c7cc88033373b5118d8",
+    "models/c_mobilenet_resnet50_pca_300_linear_svm/pipeline.joblib": "55d2346543f92cfd21f28cf72d5c9118353ea7e9f537f83804289af23f551358",
+    "models/a_resnet101v2_logistic/pipeline.joblib": "edbc1a5035cc7f3fba8a09b143a1bf183709a59c0ae94f303a364d1549694534",
+    "encoders/EfficientNetB3.keras": "a95e591c5c360ca8bf45bcfe4c8e9d63f87c932adcf354636f06ad45939e303e",
+    "encoders/MobileNet.keras": "9949827c04583416302dc0a6970e0e35c587e1f00ade0d2e877547ea73280fcc",
+    "encoders/ResNet101V2.keras": "b3998260ba7af56eaf8f5f6f9e2867204caef14c282d68a1bf8f60c27863bf07",
+    "encoders/ResNet50.keras": "eeab2df82fb50bdfa48ed203cf8cf2c2d9c72c33a9c87cb4fe8313128556266a",
+    "thresholds.json": "4b77c86ca8eae15e03fc3332f2d8210c47471638b35170b5eb9fa06354b1e002",
+    "calibrated_via_oof.csv": "f39eeb9349a76dc493dc58afdbb6d536fa64dc94c09ad08dbe76926d5b8a09f7",
+    "fixed_oof_predictions.csv": "4229697b57f5831ed95c5a091fed6fabb92808675a7156eb0b91aceb773d7597",
+    "fixed_oof_provenance.json": "ee565e3068f249dfbdbd72dddf1d2428b03848490840c2e735c76352321647e0",
+    "adapter_D.joblib": "4a7b9a2e3a414553ba948051ce0c040c35478dd53c203b4e5fa010a3ddff11b3",
+    "adapter_B.joblib": "340db8b14516bc249cbb42780bd0b19ac68b6266c7ead238675997dd04cb3136",
+    "adapter_A.joblib": "19b792ecf93ce6583a42a6c18e164f7599449e3e1729eb708f89b860247d9e31",
+    "adapter_winner.joblib": "340db8b14516bc249cbb42780bd0b19ac68b6266c7ead238675997dd04cb3136",
+    "adapter_C.joblib": "786e2dfd9617b5ac58dc0c7e3749ec3debfe9eeeb962a0171dd0fe87f78374c5"
+  },
+  "article_finalists": {
+    "A": "a_resnet101v2_logistic",
+    "B": "b_efficientnetb3_pca_300_linear_svm",
+    "C": "c_mobilenet_resnet50_pca_300_linear_svm",
+    "D": "d_mobilenet_resnet50_pca_300_linear_svm"
+  },
+  "global_winner": "b_efficientnetb3_pca_300_linear_svm",
+  "external_classification_predictions": 0
+}

@@ -1,0 +1,139 @@
+{
+  "status": "approved",
+  "approved_by": "Jefferson Antonio Ribeiro Passerini (author)",
+  "approved_date": "2026-10-06",
+  "raw_counts": {
+    "total": 1929,
+    "clear": 1026,
+    "nonclear": 903
+  },
+  "exact_clean_counts": {
+    "total": 1576,
+    "clear": 844,
+    "nonclear": 732
+  },
+  "excluded_exact": 353,
+  "via_exact_matches": 350,
+  "via_label_conflicts": 4,
+  "internal_duplicates": 3,
+  "scene_overlap_images": 0,
+  "scene_overlap_links": 0,
+  "groups": 1378,
+  "audit_images": 100,
+  "audit_completed": true,
+  "discordance_rate": 0.0,
+  "discordance_wilson": [
+    0.0,
+    0.03699349820698568
+  ],
+  "audit_reject_above": 0.05,
+  "scene_mosaics": [
+    "external-data/review/scene_overlap/scene_overlap_001.png",
+    "external-data/review/scene_overlap/scene_overlap_002.png"
+  ],
+  "audit_mosaics": [
+    "external-data/review/label_audit/label_audit_001.png",
+    "external-data/review/label_audit/label_audit_002.png",
+    "external-data/review/label_audit/label_audit_003.png",
+    "external-data/review/label_audit/label_audit_004.png",
+    "external-data/review/label_audit/label_audit_005.png"
+  ],
+  "external_config_sha256": "8b64190aef090eca20ae16139bbc6493e51bc3c486e6eaf6f2e9694a6257ca4b",
+  "manifest_sha256": "57248505b553857fa75c34154e3fef3850dc48c2aaed934d0eb5a55925985fb0",
+  "groups_sha256": "ab5f85c6f3a77e637408f2bf4ceb7aac2a5ee65dc459334ea368540e0b1c3ead",
+  "raw_manifest_sha256": "111f8910bfdba7c33355186015c76484ccbb47952cf751baac97f17f2a8253c1",
+  "overlap_sha256": "44a9188fd477b4b1cd533c7893de57d37d219982eb226e1a86f8246057fc5f7d",
+  "audit_sample_sha256": "5be6e5ee0efd76b4d529ccb3cb7f83729489a014545f9a1aae993571b595f45d",
+  "encoder": {
+    "id": "facebook/dinov2-small",
+    "revision": "ed25f3a31f01632728cabb09d1542f84ab7b0056",
+    "weights_file": "model.safetensors",
+    "weights_sha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+    "pooling": "CLS",
+    "actual_weights_sha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+    "weights_path": "/home/jeffersonpasserini/.cache/huggingface/hub/models--facebook--dinov2-small/snapshots/ed25f3a31f01632728cabb09d1542f84ab7b0056/model.safetensors",
+    "preprocessing": {
+      "_processor_class": null,
+      "image_processor_type": "BitImageProcessor",
+      "do_resize": true,
+      "size": {
+        "shortest_edge": 256
+      },
+      "resample": 3,
+      "do_center_crop": true,
+      "crop_size": {
+        "height": 224,
+        "width": 224
+      },
+      "do_rescale": true,
+      "rescale_factor": 0.00392156862745098,
+      "do_normalize": true,
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "do_convert_rgb": true
+    },
+    "embedding_dimension": 384,
+    "device": "cpu",
+    "torch_version": "2.7.1+cpu",
+    "cuda_version": null,
+    "cudnn_version": null,
+    "fallback_reason": null,
+    "loading_seconds": 0.19621757199638523,
+    "embedding_seconds": 201.44941205799114
+  },
+  "seconds": 327.8406772490125,
+  "smoke": false,
+  "runtime": {
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+    "packages": {
+      "numpy": "2.4.6",
+      "pandas": "3.0.3",
+      "scipy": "1.18.0",
+      "scikit-learn": "1.9.0",
+      "tensorflow": null,
+      "umap-learn": null,
+      "skrebate": null,
+      "torch": "2.7.1+cpu",
+      "transformers": "4.51.3",
+      "Pillow": "12.3.0"
+    },
+    "CUDA_VISIBLE_DEVICES": null,
+    "sources": {
+      "src/artifact.py": "ed11cda07eaee53a2684988b8342b8ed096a5d74139890ffa2eaca4bdb2f8c15",
+      "src/selection.py": "71128688649fda74fed3cacacafca0834fee43a8d973e36f2671250ff0da8bc4",
+      "src/fixed_refit.py": "5a0e3f2af29ac596eea1891fea62c52ec0ffe42cbad34b300660cf6133ac2e39",
+      "src/fine_tuning.py": "b7b572376491e1b681be2c6d8d3b15bbc40882cc85cc6ca5c91141f0211597a9",
+      "src/study_io.py": "7c37bbfbe900fc1c2249d4398e981de8c090af2e5599318b5b8ff0c01844f938",
+      "src/study_statistics.py": "26a8ea361ed7eccbf9d65a400dbddcb3148e49f28841992531414bdb35728cf6",
+      "src/study_features.py": "d814e85f9e8d82d1d883793e9e639aa365d883bdefc0034844568236c6a43e6e",
+      "src/study_estimates.py": "03adcb5b5932957269d1fc115a4577451474fef092d8f40f3b8a30d0d6ba78eb",
+      "src/nested_cv.py": "1a4ed79b2a72c54b8b4334df2265ee00ce44758c8fd20b9fa78e16124716535b",
+      "src/external_test.py": "634448ccb3099df8c7cb2bb735843645bb0688fd41052e990a654def5eb3ed94",
+      "scripts/clean_external_dataset.py": "56af6c00a31f3235dc26df29637cc44e39421a54a64060904e84df663f09aa23",
+      "scripts/analyze_nested_cv.py": "c5d1a3acc2d98481b0c350e75a2b9dbd811be65a787be54ad2052d260b3d0931",
+      "scripts/analyze_external_test.py": "02e087d22b9d396f346fded92947bc7f7867f0bcd06b33cb256c779fc9bddb30",
+      "scripts/build_scene_groups.py": "99ccd28d1e63ed9731a56387d4652d28bcdb5d4bfb165573a84c828f27e2e14c",
+      "scripts/scene_groups_geometry.py": "9b996883ad52924888968ff21813f38bc9c522a5c915f2b1bd7f441b04f58f68",
+      "scripts/scene_groups_graph.py": "bed9984521c0ee3cdb8c133154c5d6bfad9d8d87912e2229f8a42ba5468fa921"
+    }
+  },
+  "external_classification_predictions": 0,
+  "discordance_count": 0,
+  "label_corrections_sha256": "b120209771ebb0ec0cbf68a11ec6d4b98d5e2ca1ca217a31ffc66efb649fdac8",
+  "scene_rejections_sha256": "089580cd91e431bfc5a3884b227d09f91fe3b175ca16b2e01ceca1d048c93e93",
+  "accepted_scene_links": [],
+  "reviewed_scene_overlap_images": 0,
+  "reviewed_principal_images": 1576,
+  "automatic_scene_overlap_images": 8,
+  "automatic_scene_overlap_links": 9,
+  "main_external_images": 1576
+}

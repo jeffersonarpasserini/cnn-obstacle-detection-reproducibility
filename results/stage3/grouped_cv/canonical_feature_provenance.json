@@ -1,0 +1,286 @@
+{
+  "ResNet101V2": {
+    "metadata_path": "cache/fixed_canonical_features/3dbf5d0b452cf3031666daa0cc41d87c3f9aae1c140672e8e2308f47724850cd/metadata.json",
+    "identity": {
+      "policy": "globally_ordered_frozen_features_v1",
+      "dataset_sha256": "bef13299b60d06e994bf85498ea0ed2e02f5f6d73851745ce05a16fa5204f2d6",
+      "architecture": "ResNet101V2",
+      "weights_sha256": "36a978be8b2b0b870c786ee462503040b9b79b7fd613c60c03e408e5e08060b3",
+      "batch_size": 4,
+      "runtime": {
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+        "dependencies": {
+          "numpy": "2.4.6",
+          "pandas": "3.0.3",
+          "scipy": "1.18.0",
+          "scikit-learn": "1.9.0",
+          "tensorflow": "2.21.0",
+          "umap-learn": "0.5.12",
+          "skrebate": "0.62",
+          "Pillow": "12.3.0"
+        },
+        "hardware": {
+          "cpu": "x86_64",
+          "logical_cpus": 16,
+          "physical_memory_bytes": 67318796288,
+          "gpus": [
+            {
+              "logical_name": "/physical_device:GPU:0",
+              "device_name": "NVIDIA GeForce RTX 4070 Ti"
+            }
+          ],
+          "tensorflow_build": {
+            "cpu_compiler": "clang",
+            "cuda_compute_capabilities": [
+              "sm_60",
+              "sm_70",
+              "sm_80",
+              "sm_89",
+              "compute_90"
+            ],
+            "cuda_version": "12.5.1",
+            "cudnn_version": "9",
+            "is_cuda_build": true,
+            "is_rocm_build": false,
+            "is_tensorrt_build": false
+          }
+        },
+        "tensorflow_version": "2.21.0",
+        "cuda_version": "12.5.1",
+        "cudnn_version": "9",
+        "gpu_models": [
+          "NVIDIA GeForce RTX 4070 Ti"
+        ],
+        "training_device": "GPU:0",
+        "benchmark_devices": [
+          "cpu",
+          "gpu"
+        ],
+        "TF_DETERMINISTIC_OPS": "1",
+        "PYTHONHASHSEED": "1980"
+      },
+      "source_sha256": "5a0e3f2af29ac596eea1891fea62c52ec0ffe42cbad34b300660cf6133ac2e39"
+    },
+    "features_sha256": "8651b67ee2e1906fe3de7ab58f96cba08b3d5976057be85297329bc8bda424dd",
+    "extraction_seconds": 9.899546936998377,
+    "shape": [
+      342,
+      100352
+    ],
+    "reused": true
+  },
+  "EfficientNetB3": {
+    "metadata_path": "cache/fixed_canonical_features/c9ef3dc21a0d0a01d4319c1e8dfc4b070c0fabd1825a6d9cb59de585ec87b0e4/metadata.json",
+    "identity": {
+      "policy": "globally_ordered_frozen_features_v1",
+      "dataset_sha256": "bef13299b60d06e994bf85498ea0ed2e02f5f6d73851745ce05a16fa5204f2d6",
+      "architecture": "EfficientNetB3",
+      "weights_sha256": "cb923fd68d56606c597e50676240920dd7ad8d0f01f4a51d9e73ca2afdbd67f3",
+      "batch_size": 4,
+      "runtime": {
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+        "dependencies": {
+          "numpy": "2.4.6",
+          "pandas": "3.0.3",
+          "scipy": "1.18.0",
+          "scikit-learn": "1.9.0",
+          "tensorflow": "2.21.0",
+          "umap-learn": "0.5.12",
+          "skrebate": "0.62",
+          "Pillow": "12.3.0"
+        },
+        "hardware": {
+          "cpu": "x86_64",
+          "logical_cpus": 16,
+          "physical_memory_bytes": 67318796288,
+          "gpus": [
+            {
+              "logical_name": "/physical_device:GPU:0",
+              "device_name": "NVIDIA GeForce RTX 4070 Ti"
+            }
+          ],
+          "tensorflow_build": {
+            "cpu_compiler": "clang",
+            "cuda_compute_capabilities": [
+              "sm_60",
+              "sm_70",
+              "sm_80",
+              "sm_89",
+              "compute_90"
+            ],
+            "cuda_version": "12.5.1",
+            "cudnn_version": "9",
+            "is_cuda_build": true,
+            "is_rocm_build": false,
+            "is_tensorrt_build": false
+          }
+        },
+        "tensorflow_version": "2.21.0",
+        "cuda_version": "12.5.1",
+        "cudnn_version": "9",
+        "gpu_models": [
+          "NVIDIA GeForce RTX 4070 Ti"
+        ],
+        "training_device": "GPU:0",
+        "benchmark_devices": [
+          "cpu",
+          "gpu"
+        ],
+        "TF_DETERMINISTIC_OPS": "1",
+        "PYTHONHASHSEED": "1980"
+      },
+      "source_sha256": "5a0e3f2af29ac596eea1891fea62c52ec0ffe42cbad34b300660cf6133ac2e39"
+    },
+    "features_sha256": "7a40c79f3fa7da5b3fa805a260bd03fa6e604bd1200d46c6acf0069b068de2f2",
+    "extraction_seconds": 10.705105133994948,
+    "shape": [
+      342,
+      153600
+    ],
+    "reused": true
+  },
+  "MobileNet": {
+    "metadata_path": "cache/fixed_canonical_features/c1698a25ff8abb1861d192fe7582d5451a0f5afc4b86d4be106f09bc6fb5573e/metadata.json",
+    "identity": {
+      "policy": "globally_ordered_frozen_features_v1",
+      "dataset_sha256": "bef13299b60d06e994bf85498ea0ed2e02f5f6d73851745ce05a16fa5204f2d6",
+      "architecture": "MobileNet",
+      "weights_sha256": "9f9cfd8c925431c06ce96744e1d201575f6a681bf38ae2de38e2ae8f7d7829d3",
+      "batch_size": 4,
+      "runtime": {
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+        "dependencies": {
+          "numpy": "2.4.6",
+          "pandas": "3.0.3",
+          "scipy": "1.18.0",
+          "scikit-learn": "1.9.0",
+          "tensorflow": "2.21.0",
+          "umap-learn": "0.5.12",
+          "skrebate": "0.62",
+          "Pillow": "12.3.0"
+        },
+        "hardware": {
+          "cpu": "x86_64",
+          "logical_cpus": 16,
+          "physical_memory_bytes": 67318796288,
+          "gpus": [
+            {
+              "logical_name": "/physical_device:GPU:0",
+              "device_name": "NVIDIA GeForce RTX 4070 Ti"
+            }
+          ],
+          "tensorflow_build": {
+            "cpu_compiler": "clang",
+            "cuda_compute_capabilities": [
+              "sm_60",
+              "sm_70",
+              "sm_80",
+              "sm_89",
+              "compute_90"
+            ],
+            "cuda_version": "12.5.1",
+            "cudnn_version": "9",
+            "is_cuda_build": true,
+            "is_rocm_build": false,
+            "is_tensorrt_build": false
+          }
+        },
+        "tensorflow_version": "2.21.0",
+        "cuda_version": "12.5.1",
+        "cudnn_version": "9",
+        "gpu_models": [
+          "NVIDIA GeForce RTX 4070 Ti"
+        ],
+        "training_device": "GPU:0",
+        "benchmark_devices": [
+          "cpu",
+          "gpu"
+        ],
+        "TF_DETERMINISTIC_OPS": "1",
+        "PYTHONHASHSEED": "1980"
+      },
+      "source_sha256": "5a0e3f2af29ac596eea1891fea62c52ec0ffe42cbad34b300660cf6133ac2e39"
+    },
+    "features_sha256": "4d6e82faac813b291e8f2cb5a8f5ff1f349f76c86201d2d116f700502005429a",
+    "extraction_seconds": 6.450475142992218,
+    "shape": [
+      342,
+      50176
+    ],
+    "reused": true
+  },
+  "ResNet50": {
+    "metadata_path": "cache/fixed_canonical_features/f114a8cf578a8f1c7993afd66cbe02898c5b9395cef4caa2d063363ae832d1bc/metadata.json",
+    "identity": {
+      "policy": "globally_ordered_frozen_features_v1",
+      "dataset_sha256": "bef13299b60d06e994bf85498ea0ed2e02f5f6d73851745ce05a16fa5204f2d6",
+      "architecture": "ResNet50",
+      "weights_sha256": "66c8b43daff3fcc15bc4f30e3d2a167e21a14d9c9598a5394e5516471f4af504",
+      "batch_size": 4,
+      "runtime": {
+        "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+        "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+        "dependencies": {
+          "numpy": "2.4.6",
+          "pandas": "3.0.3",
+          "scipy": "1.18.0",
+          "scikit-learn": "1.9.0",
+          "tensorflow": "2.21.0",
+          "umap-learn": "0.5.12",
+          "skrebate": "0.62",
+          "Pillow": "12.3.0"
+        },
+        "hardware": {
+          "cpu": "x86_64",
+          "logical_cpus": 16,
+          "physical_memory_bytes": 67318796288,
+          "gpus": [
+            {
+              "logical_name": "/physical_device:GPU:0",
+              "device_name": "NVIDIA GeForce RTX 4070 Ti"
+            }
+          ],
+          "tensorflow_build": {
+            "cpu_compiler": "clang",
+            "cuda_compute_capabilities": [
+              "sm_60",
+              "sm_70",
+              "sm_80",
+              "sm_89",
+              "compute_90"
+            ],
+            "cuda_version": "12.5.1",
+            "cudnn_version": "9",
+            "is_cuda_build": true,
+            "is_rocm_build": false,
+            "is_tensorrt_build": false
+          }
+        },
+        "tensorflow_version": "2.21.0",
+        "cuda_version": "12.5.1",
+        "cudnn_version": "9",
+        "gpu_models": [
+          "NVIDIA GeForce RTX 4070 Ti"
+        ],
+        "training_device": "GPU:0",
+        "benchmark_devices": [
+          "cpu",
+          "gpu"
+        ],
+        "TF_DETERMINISTIC_OPS": "1",
+        "PYTHONHASHSEED": "1980"
+      },
+      "source_sha256": "5a0e3f2af29ac596eea1891fea62c52ec0ffe42cbad34b300660cf6133ac2e39"
+    },
+    "features_sha256": "a19054d615354a370fe43c87295c0b94aa043f7e3459a5ddb60df283ecc7d757",
+    "extraction_seconds": 7.982069777004654,
+    "shape": [
+      342,
+      100352
+    ],
+    "reused": true
+  }
+}

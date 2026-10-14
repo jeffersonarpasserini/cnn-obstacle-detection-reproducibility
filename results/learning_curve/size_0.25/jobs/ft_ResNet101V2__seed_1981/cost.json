@@ -1,0 +1,35 @@
+{
+  "model": "ft_ResNet101V2",
+  "seed": 1981,
+  "pool_fraction": 0.25,
+  "training_images": 540,
+  "elapsed_seconds": 575.3338557870011,
+  "training_seconds": 470.7803636630706,
+  "effective_epochs": 36,
+  "best_epoch": 26,
+  "batch_size": 16,
+  "peak_gpu_memory_bytes": 5645287680,
+  "peak_gpu_memory_status": "measured",
+  "peak_host_memory_bytes": 11208364032,
+  "total_parameters": 42889090,
+  "trainable_parameters": 42791426,
+  "model_size_mb": 172.894126,
+  "reload_check": {
+    "status": "passed",
+    "image_count": 8,
+    "filenames": [
+      "clear.003.jpg",
+      "clear.005.jpg",
+      "clear.013.jpg",
+      "clear.035.jpg",
+      "clear.038.jpg",
+      "clear.040.jpg",
+      "clear.041.jpg",
+      "clear.044.jpg"
+    ],
+    "max_abs_difference": 0.0,
+    "atol": 1e-05,
+    "kind": "probabilities",
+    "decisions_identical": true
+  }
+}

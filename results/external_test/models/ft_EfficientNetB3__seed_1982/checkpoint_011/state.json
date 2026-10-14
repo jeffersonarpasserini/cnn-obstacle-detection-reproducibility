@@ -1,0 +1,130 @@
+{
+  "epoch": 11,
+  "history": [
+    {
+      "epoch": 1,
+      "accuracy": 0.8065693378448486,
+      "loss": 0.49972471594810486,
+      "val_accuracy": 0.9411764740943909,
+      "val_loss": 0.2280830293893814,
+      "epoch_seconds": 34.61655210601748,
+      "learning_rate_before_schedule": 0.0010000000474974513,
+      "learning_rate": 0.0010000000474974513
+    },
+    {
+      "epoch": 2,
+      "accuracy": 0.9014598727226257,
+      "loss": 0.27084973454475403,
+      "val_accuracy": 0.8235294222831726,
+      "val_loss": 4.222525596618652,
+      "epoch_seconds": 11.667292158002965,
+      "learning_rate_before_schedule": 0.0010000000474974513,
+      "learning_rate": 0.0010000000474974513
+    },
+    {
+      "epoch": 3,
+      "accuracy": 0.8978102207183838,
+      "loss": 0.2656182050704956,
+      "val_accuracy": 0.8088235259056091,
+      "val_loss": 1.1399123668670654,
+      "epoch_seconds": 11.61576971100294,
+      "learning_rate_before_schedule": 0.0010000000474974513,
+      "learning_rate": 0.0005000000237487257
+    },
+    {
+      "epoch": 4,
+      "accuracy": 0.959854006767273,
+      "loss": 0.126764714717865,
+      "val_accuracy": 0.8823529481887817,
+      "val_loss": 1.005686640739441,
+      "epoch_seconds": 11.774256662989501,
+      "learning_rate_before_schedule": 0.0005000000237487257,
+      "learning_rate": 0.0005000000237487257
+    },
+    {
+      "epoch": 5,
+      "accuracy": 0.985401451587677,
+      "loss": 0.050512392073869705,
+      "val_accuracy": 0.9117646813392639,
+      "val_loss": 0.7465894818305969,
+      "epoch_seconds": 11.575357098015957,
+      "learning_rate_before_schedule": 0.0005000000237487257,
+      "learning_rate": 0.0002500000118743628
+    },
+    {
+      "epoch": 6,
+      "accuracy": 0.9927007555961609,
+      "loss": 0.03677047789096832,
+      "val_accuracy": 0.9264705777168274,
+      "val_loss": 0.6815422773361206,
+      "epoch_seconds": 11.56065932297497,
+      "learning_rate_before_schedule": 0.0002500000118743628,
+      "learning_rate": 0.0002500000118743628
+    },
+    {
+      "epoch": 7,
+      "accuracy": 0.9927007555961609,
+      "loss": 0.017124176025390625,
+      "val_accuracy": 0.9264705777168274,
+      "val_loss": 0.7797366380691528,
+      "epoch_seconds": 11.511621092999121,
+      "learning_rate_before_schedule": 0.0002500000118743628,
+      "learning_rate": 0.0001250000059371814
+    },
+    {
+      "epoch": 8,
+      "accuracy": 0.989051103591919,
+      "loss": 0.02888309955596924,
+      "val_accuracy": 0.9117646813392639,
+      "val_loss": 0.6668023467063904,
+      "epoch_seconds": 11.559540617017774,
+      "learning_rate_before_schedule": 0.0001250000059371814,
+      "learning_rate": 0.0001250000059371814
+    },
+    {
+      "epoch": 9,
+      "accuracy": 0.985401451587677,
+      "loss": 0.03275587037205696,
+      "val_accuracy": 0.9117646813392639,
+      "val_loss": 0.5827240347862244,
+      "epoch_seconds": 11.577644033997785,
+      "learning_rate_before_schedule": 0.0001250000059371814,
+      "learning_rate": 6.25000029685907e-05
+    },
+    {
+      "epoch": 10,
+      "accuracy": 0.9963503479957581,
+      "loss": 0.01084282249212265,
+      "val_accuracy": 0.9264705777168274,
+      "val_loss": 0.5736562609672546,
+      "epoch_seconds": 11.543283253005939,
+      "learning_rate_before_schedule": 6.25000029685907e-05,
+      "learning_rate": 6.25000029685907e-05
+    },
+    {
+      "epoch": 11,
+      "accuracy": 0.9817517995834351,
+      "loss": 0.03713364526629448,
+      "val_accuracy": 0.9264705777168274,
+      "val_loss": 0.5658168792724609,
+      "epoch_seconds": 11.708625772007508,
+      "learning_rate_before_schedule": 6.25000029685907e-05,
+      "learning_rate": 3.125000148429535e-05
+    }
+  ],
+  "training_seconds": 150.71060182803194,
+  "peak_gpu_memory_bytes": 8091841536,
+  "peak_host_memory_bytes": 5916663808,
+  "stopped": true,
+  "reduce_lr": {
+    "wait": 0.0,
+    "best": 0.9411764740943909,
+    "cooldown_counter": 0.0
+  },
+  "early_stopping": {
+    "wait": 10.0,
+    "best": 0.2280830293893814,
+    "best_epoch": 0.0,
+    "stopped_epoch": 10.0
+  }
+}

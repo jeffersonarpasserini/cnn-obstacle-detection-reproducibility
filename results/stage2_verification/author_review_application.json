@@ -1,0 +1,33 @@
+{
+  "excluded_scene_images": {
+    "expected": 0,
+    "obtained": 0
+  },
+  "principal_images": {
+    "expected": 1576,
+    "obtained": 1576
+  },
+  "clear": {
+    "expected": 844,
+    "obtained": 844
+  },
+  "nonclear": {
+    "expected": 732,
+    "obtained": 732
+  },
+  "groups": {
+    "expected": 1378,
+    "obtained": 1378
+  },
+  "rejections_bytes_unchanged": true,
+  "approved_by": "Jefferson Antonio Ribeiro Passerini (author)",
+  "approved_date": "2026-10-06",
+  "discordance_count": 0,
+  "discordance_wilson": [
+    0.0,
+    0.03699349820698568
+  ],
+  "manifest_sha256": "57248505b553857fa75c34154e3fef3850dc48c2aaed934d0eb5a55925985fb0",
+  "rejections_sha256": "089580cd91e431bfc5a3884b227d09f91fe3b175ca16b2e01ceca1d048c93e93",
+  "groups_sha256": "ab5f85c6f3a77e637408f2bf4ceb7aac2a5ee65dc459334ea368540e0b1c3ead"
+}

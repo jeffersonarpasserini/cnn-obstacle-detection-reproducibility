@@ -1,0 +1,7 @@
+{
+  "model": "a_resnet101v2_logistic",
+  "training_seconds": 0.060034895985154435,
+  "reduction_seconds": 0.00029605499003082514,
+  "reload_decisions_identical": true,
+  "smoke": true
+}

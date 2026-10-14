@@ -1,0 +1,58 @@
+{
+  "checked_utc": "2026-10-05T21:04:45.203070+00:00",
+  "read_only_verification": true,
+  "run_completed": false,
+  "identity": "7f68cd988b2a332807b916b189a946ff2b560e25f2de3b65624805174f6f48a2",
+  "source_config_fold_hashes_match_original_run": true,
+  "job_statuses": {
+    "fixed_features/completed": 2,
+    "fixed_features/failed": 1,
+    "fine_tuning/completed": 150
+  },
+  "completed_jobs_checksums_verified": 152,
+  "completed_artifacts_verified": 762,
+  "completed_artifact_bytes_verified": 12384288708,
+  "neural_metric_rows": 150,
+  "neural_prediction_rows": 5130,
+  "neural_metrics_recomputed_from_predictions": true,
+  "neural_jobs_and_original_manifests_unchanged": true,
+  "neural_mean_metrics": [
+    {
+      "architecture": "EfficientNetB3",
+      "accuracy": 0.927843137254902,
+      "obstructed_recall": 0.9181372549019607,
+      "roc_auc": 0.9745522555427399
+    },
+    {
+      "architecture": "EfficientNetB4",
+      "accuracy": 0.9249299719887956,
+      "obstructed_recall": 0.9104166666666667,
+      "roc_auc": 0.9767136838395488
+    },
+    {
+      "architecture": "MobileNet",
+      "accuracy": 0.9055462184873949,
+      "obstructed_recall": 0.8882352941176471,
+      "roc_auc": 0.9718798058439062
+    },
+    {
+      "architecture": "ResNet101V2",
+      "accuracy": 0.7174509803921568,
+      "obstructed_recall": 0.6291666666666667,
+      "roc_auc": 0.7562041442393952
+    },
+    {
+      "architecture": "ResNet50",
+      "accuracy": 0.8364425770308124,
+      "obstructed_recall": 0.8096813725490196,
+      "roc_auc": 0.8982362552864284
+    }
+  ],
+  "failed_jobs": [
+    {
+      "job": "a_resnet101v2_logistic__fold_03__seed_1980",
+      "failure": "Fixed refit differs from canonical full_search: a_resnet101v2_logistic/fold 3/roc_auc: 0.9861111111111112 != 0.9826388888888888"
+    }
+  ],
+  "pending_fixed_jobs_including_failed": 38
+}

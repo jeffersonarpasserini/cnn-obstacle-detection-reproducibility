@@ -1,0 +1,68 @@
+{
+  "identity": {
+    "dataset_sha256": "53a1857c7234ea771edda441e09bd0419fca1b2827a885c4d0785bcf881489a7",
+    "semantic_model": {
+      "id": "facebook/dinov2-small",
+      "revision": "ed25f3a31f01632728cabb09d1542f84ab7b0056",
+      "weights_file": "model.safetensors",
+      "weights_sha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+      "pooling": "CLS"
+    },
+    "fallback_model": {
+      "id": "openai/clip-vit-base-patch32",
+      "revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+      "weights_file": "pytorch_model.bin",
+      "weights_sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f",
+      "pooling": "projected CLS"
+    },
+    "device": "cpu",
+    "torch": "2.7.1",
+    "transformers": "4.51.3"
+  },
+  "model": {
+    "id": "facebook/dinov2-small",
+    "revision": "ed25f3a31f01632728cabb09d1542f84ab7b0056",
+    "weights_file": "model.safetensors",
+    "weights_sha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+    "pooling": "CLS",
+    "actual_weights_sha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+    "weights_path": "/Users/jeffersonpasserini/.cache/huggingface/hub/models--facebook--dinov2-small/snapshots/ed25f3a31f01632728cabb09d1542f84ab7b0056/model.safetensors",
+    "preprocessing": {
+      "_processor_class": null,
+      "image_processor_type": "BitImageProcessor",
+      "do_resize": true,
+      "size": {
+        "shortest_edge": 256
+      },
+      "resample": 3,
+      "do_center_crop": true,
+      "crop_size": {
+        "height": 224,
+        "width": 224
+      },
+      "do_rescale": true,
+      "rescale_factor": 0.00392156862745098,
+      "do_normalize": true,
+      "image_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "image_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "do_convert_rgb": true
+    },
+    "embedding_dimension": 384,
+    "device": "cpu",
+    "torch_version": "2.7.1",
+    "cuda_version": null,
+    "cudnn_version": null,
+    "fallback_reason": null,
+    "loading_seconds": 0.8902646666392684,
+    "embedding_seconds": 9.31397245824337
+  },
+  "cache_sha256": "4f46b7f7707a0111139ce2138ea3776b66b53a428c1fb5b6b19f8558d6c7579e"
+}

@@ -1,0 +1,5 @@
+filename,group_id,reason
+nonclear.104.jpg,scene_0278,"Author visual review: same rubble arrangement beside the same wall as nonclear.102.jpg (193 spatially distributed inliers, ratio 0.898); same scene, merged."
+nonclear.117.jpg,scene_0292,"Author visual review: same crack pattern beside the same curb as nonclear.116.jpg (39 inliers, ratio 0.929); same scene from a different framing, merged."
+nonclear.151.jpg,scene_0133,"Author visual review: same Portuguese-pavement wave pattern and planter as clear.132.jpg (37 coherent inliers, ratio 0.804); probable same sidewalk, merged conservatively."
+nonclear.109.jpg,scene_0229,"Author visual review: cracked paving with similar structure to nonclear.053.jpg (31 inliers, ratio 0.912); possible same location, merged conservatively to avoid cross-fold leakage."

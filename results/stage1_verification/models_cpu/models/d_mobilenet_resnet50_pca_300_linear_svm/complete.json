@@ -1,0 +1,31 @@
+{
+  "identity": {
+    "run": "203eeaf1e4fecbd1d9a7585988643177c6bae89e4d95b74bf5dceadc636f7fb0",
+    "experiment": {
+      "name": "d_mobilenet_resnet50_pca_300_linear_svm",
+      "approach": "D",
+      "extractors": [
+        "MobileNet",
+        "ResNet50"
+      ],
+      "reduction": "pca",
+      "components": 4,
+      "classifier": "linear_svm",
+      "scale": false
+    },
+    "indices": [
+      175,
+      176,
+      177,
+      178,
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "artifacts": {
+    "pipeline.joblib": "39656fc2e98057e2317984498c58efcb1a0677af64d5b54763266ec642874ce8",
+    "cost.json": "ebd92a751807d9af9624654496baac6c67ae981ef7fe590c773075470e096db7"
+  }
+}

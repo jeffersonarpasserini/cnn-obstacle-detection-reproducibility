@@ -1,0 +1,662 @@
+{
+  "image_count": 342,
+  "group_count": 338,
+  "size_distribution": {
+    "1": 334,
+    "2": 4
+  },
+  "singleton_count": 334,
+  "largest_group_size": 2,
+  "mixed_class_group_count": 1,
+  "protocol_version": 2,
+  "thresholds": {
+    "phash_threshold": 10,
+    "semantic_threshold": 0.795,
+    "ransac_threshold": 30
+  },
+  "versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "Pillow": "12.3.0",
+    "ImageHash": "4.3.2",
+    "PyWavelets": "1.8.0",
+    "torch": null,
+    "transformers": null,
+    "huggingface-hub": null,
+    "opencv-python-headless": "4.11.0.86",
+    "scikit-image": "0.25.2",
+    "scikit-learn": "1.9.0"
+  },
+  "seed": 1980,
+  "automatic": {
+    "image_count": 342,
+    "group_count": 342,
+    "size_distribution": {
+      "1": 342
+    },
+    "singleton_count": 342,
+    "largest_group_size": 1,
+    "mixed_class_group_count": 0
+  },
+  "size_alerts": [],
+  "size_alert_limit": 17,
+  "size_policy": "report_only_no_threshold_tuning_or_splitting",
+  "candidate_pair_count": 1054,
+  "pair_count": 58311,
+  "confirmed_edge_count": 1,
+  "accepted_edge_count": 0,
+  "geometry_qualified_pair_count": 1,
+  "semantic_geometry_pair_count": 0,
+  "geometric_review_pair_count": 5,
+  "rejection_count": 1,
+  "override_count": 4,
+  "accepted_edges_cross_groups": 0,
+  "bridge_count": 0,
+  "grouped_cv": {
+    "n_splits": 10,
+    "seed": 1980,
+    "feasible": true,
+    "group_count": 338,
+    "class_group_counts": {
+      "nonclear": 164,
+      "clear": 175
+    },
+    "folds": [
+      {
+        "fold": 1,
+        "train_image_count": 308,
+        "test_image_count": 34,
+        "class_counts": {
+          "train": {
+            "nonclear": 151,
+            "clear": 157
+          },
+          "test": {
+            "nonclear": 16,
+            "clear": 18
+          }
+        },
+        "train_group_count": 305,
+        "test_group_count": 33,
+        "groups_disjoint": true,
+        "both_classes_train": true,
+        "both_classes_test": true
+      },
+      {
+        "fold": 2,
+        "train_image_count": 308,
+        "test_image_count": 34,
+        "class_counts": {
+          "train": {
+            "nonclear": 150,
+            "clear": 158
+          },
+          "test": {
+            "nonclear": 17,
+            "clear": 17
+          }
+        },
+        "train_group_count": 305,
+        "test_group_count": 33,
+        "groups_disjoint": true,
+        "both_classes_train": true,
+        "both_classes_test": true
+      },
+      {
+        "fold": 3,
+        "train_image_count": 306,
+        "test_image_count": 36,
+        "class_counts": {
+          "train": {
+            "nonclear": 150,
+            "clear": 156
+          },
+          "test": {
+            "nonclear": 17,
+            "clear": 19
+          }
+        },
+        "train_group_count": 303,
+        "test_group_count": 35,
+        "groups_disjoint": true,
+        "both_classes_train": true,
+        "both_classes_test": true
+      },
+      {
+        "fold": 4,
+        "train_image_count": 308,
+        "test_image_count": 34,
+        "class_counts": {
+          "train": {
+            "nonclear": 151,
+            "clear": 157
+          },
+          "test": {
+            "nonclear": 16,
+            "clear": 18
+          }
+        },
+        "train_group_count": 304,
+        "test_group_count": 34,
+        "groups_disjoint": true,
+        "both_classes_train": true,
+        "both_classes_test": true
+      },
+      {
+        "fold": 5,
+        "train_image_count": 308,
+        "test_image_count": 34,
+        "class_counts": {
+          "train": {
+            "nonclear": 150,
+            "clear": 158
+          },
+          "test": {
+            "nonclear": 17,
+            "clear": 17
+          }
+        },
+        "train_group_count": 304,
+        "test_group_count": 34,
+        "groups_disjoint": true,
+        "both_classes_train": true,
+        "both_classes_test": true
+      },
+      {
+        "fold": 6,
+        "train_image_count": 308,
+        "test_image_count": 34,
+        "class_counts": {
+          "train": {
+            "nonclear": 150,
+            "clear": 158
+          },
+          "test": {
+            "nonclear": 17,
+            "clear": 17
+          }
+        },
+        "train_group_count": 305,
+        "test_group_count": 33,
+        "groups_disjoint": true,
+        "both_classes_train": true,
+        "both_classes_test": true
+      },
+      {
+        "fold": 7,
+        "train_image_count": 308,
+        "test_image_count": 34,
+        "class_counts": {
+          "train": {
+            "nonclear": 151,
+            "clear": 157
+          },
+          "test": {
+            "nonclear": 16,
+            "clear": 18
+          }
+        },
+        "train_group_count": 304,
+        "test_group_count": 34,
+        "groups_disjoint": true,
+        "both_classes_train": true,
+        "both_classes_test": true
+      },
+      {
+        "fold": 8,
+        "train_image_count": 308,
+        "test_image_count": 34,
+        "class_counts": {
+          "train": {
+            "nonclear": 150,
+            "clear": 158
+          },
+          "test": {
+            "nonclear": 17,
+            "clear": 17
+          }
+        },
+        "train_group_count": 304,
+        "test_group_count": 34,
+        "groups_disjoint": true,
+        "both_classes_train": true,
+        "both_classes_test": true
+      },
+      {
+        "fold": 9,
+        "train_image_count": 308,
+        "test_image_count": 34,
+        "class_counts": {
+          "train": {
+            "nonclear": 150,
+            "clear": 158
+          },
+          "test": {
+            "nonclear": 17,
+            "clear": 17
+          }
+        },
+        "train_group_count": 304,
+        "test_group_count": 34,
+        "groups_disjoint": true,
+        "both_classes_train": true,
+        "both_classes_test": true
+      },
+      {
+        "fold": 10,
+        "train_image_count": 308,
+        "test_image_count": 34,
+        "class_counts": {
+          "train": {
+            "nonclear": 150,
+            "clear": 158
+          },
+          "test": {
+            "nonclear": 17,
+            "clear": 17
+          }
+        },
+        "train_group_count": 304,
+        "test_group_count": 34,
+        "groups_disjoint": true,
+        "both_classes_train": true,
+        "both_classes_test": true
+      }
+    ],
+    "requested": {
+      "n_splits": 10,
+      "feasible": true,
+      "folds": [
+        {
+          "fold": 1,
+          "train_image_count": 308,
+          "test_image_count": 34,
+          "class_counts": {
+            "train": {
+              "nonclear": 151,
+              "clear": 157
+            },
+            "test": {
+              "nonclear": 16,
+              "clear": 18
+            }
+          },
+          "train_group_count": 305,
+          "test_group_count": 33,
+          "groups_disjoint": true,
+          "both_classes_train": true,
+          "both_classes_test": true
+        },
+        {
+          "fold": 2,
+          "train_image_count": 308,
+          "test_image_count": 34,
+          "class_counts": {
+            "train": {
+              "nonclear": 150,
+              "clear": 158
+            },
+            "test": {
+              "nonclear": 17,
+              "clear": 17
+            }
+          },
+          "train_group_count": 305,
+          "test_group_count": 33,
+          "groups_disjoint": true,
+          "both_classes_train": true,
+          "both_classes_test": true
+        },
+        {
+          "fold": 3,
+          "train_image_count": 306,
+          "test_image_count": 36,
+          "class_counts": {
+            "train": {
+              "nonclear": 150,
+              "clear": 156
+            },
+            "test": {
+              "nonclear": 17,
+              "clear": 19
+            }
+          },
+          "train_group_count": 303,
+          "test_group_count": 35,
+          "groups_disjoint": true,
+          "both_classes_train": true,
+          "both_classes_test": true
+        },
+        {
+          "fold": 4,
+          "train_image_count": 308,
+          "test_image_count": 34,
+          "class_counts": {
+            "train": {
+              "nonclear": 151,
+              "clear": 157
+            },
+            "test": {
+              "nonclear": 16,
+              "clear": 18
+            }
+          },
+          "train_group_count": 304,
+          "test_group_count": 34,
+          "groups_disjoint": true,
+          "both_classes_train": true,
+          "both_classes_test": true
+        },
+        {
+          "fold": 5,
+          "train_image_count": 308,
+          "test_image_count": 34,
+          "class_counts": {
+            "train": {
+              "nonclear": 150,
+              "clear": 158
+            },
+            "test": {
+              "nonclear": 17,
+              "clear": 17
+            }
+          },
+          "train_group_count": 304,
+          "test_group_count": 34,
+          "groups_disjoint": true,
+          "both_classes_train": true,
+          "both_classes_test": true
+        },
+        {
+          "fold": 6,
+          "train_image_count": 308,
+          "test_image_count": 34,
+          "class_counts": {
+            "train": {
+              "nonclear": 150,
+              "clear": 158
+            },
+            "test": {
+              "nonclear": 17,
+              "clear": 17
+            }
+          },
+          "train_group_count": 305,
+          "test_group_count": 33,
+          "groups_disjoint": true,
+          "both_classes_train": true,
+          "both_classes_test": true
+        },
+        {
+          "fold": 7,
+          "train_image_count": 308,
+          "test_image_count": 34,
+          "class_counts": {
+            "train": {
+              "nonclear": 151,
+              "clear": 157
+            },
+            "test": {
+              "nonclear": 16,
+              "clear": 18
+            }
+          },
+          "train_group_count": 304,
+          "test_group_count": 34,
+          "groups_disjoint": true,
+          "both_classes_train": true,
+          "both_classes_test": true
+        },
+        {
+          "fold": 8,
+          "train_image_count": 308,
+          "test_image_count": 34,
+          "class_counts": {
+            "train": {
+              "nonclear": 150,
+              "clear": 158
+            },
+            "test": {
+              "nonclear": 17,
+              "clear": 17
+            }
+          },
+          "train_group_count": 304,
+          "test_group_count": 34,
+          "groups_disjoint": true,
+          "both_classes_train": true,
+          "both_classes_test": true
+        },
+        {
+          "fold": 9,
+          "train_image_count": 308,
+          "test_image_count": 34,
+          "class_counts": {
+            "train": {
+              "nonclear": 150,
+              "clear": 158
+            },
+            "test": {
+              "nonclear": 17,
+              "clear": 17
+            }
+          },
+          "train_group_count": 304,
+          "test_group_count": 34,
+          "groups_disjoint": true,
+          "both_classes_train": true,
+          "both_classes_test": true
+        },
+        {
+          "fold": 10,
+          "train_image_count": 308,
+          "test_image_count": 34,
+          "class_counts": {
+            "train": {
+              "nonclear": 150,
+              "clear": 158
+            },
+            "test": {
+              "nonclear": 17,
+              "clear": 17
+            }
+          },
+          "train_group_count": 304,
+          "test_group_count": 34,
+          "groups_disjoint": true,
+          "both_classes_train": true,
+          "both_classes_test": true
+        }
+      ],
+      "reason": null,
+      "warnings": [],
+      "test_coverage_exactly_once": true
+    },
+    "suggested_n_splits": null,
+    "alternatives": [],
+    "diagnostic_only": true,
+    "global_clear_fraction": 0.5116959064327485,
+    "fold_size_range": [
+      34,
+      36
+    ],
+    "max_class_fraction_deviation_pp": 1.7715858273133822,
+    "feasibility_does_not_imply_balance": true
+  },
+  "review_status": "author_review_applied_frozen",
+  "elapsed_seconds": 37.23274541599676,
+  "author_review": {
+    "applied_utc": "2026-10-06T03:47:50.899517+00:00",
+    "reviewer": "Jefferson Antonio Ribeiro Passerini (author)",
+    "review_date": "2026-10-06",
+    "reviewer_date_source": "shared author review recorded in PROMPT_GROUPS_APPLY_REVIEW.md and edge_rejections.csv",
+    "author_prompt_sha256": "82ec521cd2191ef1cb3088c1b0cabb35a78889606533e7397c235c8c1f22c769",
+    "source_repository_commit": "b0954eab6de7ae91a8f379aeaaf08d19ee55827c",
+    "review_status": "author_review_applied_frozen",
+    "group_count": 338,
+    "rejection_audit": [
+      {
+        "filename_a": "clear.020.jpg",
+        "filename_b": "nonclear.141.jpg",
+        "reason": "Author visual review: outdoor concrete path versus indoor ceramic tiles with a threshold; different scenes, not a near-duplicate (zero RANSAC inliers). pHash link rejected.",
+        "reviewer": "Jefferson Antonio Ribeiro Passerini (author)",
+        "date": "2026-10-06"
+      }
+    ],
+    "override_audit": [
+      {
+        "filename": "nonclear.104.jpg",
+        "previous_group_id": "scene_0280",
+        "group_id": "scene_0278",
+        "reason": "Author visual review: same rubble arrangement beside the same wall as nonclear.102.jpg (193 spatially distributed inliers, ratio 0.898); same scene, merged.",
+        "affected_filenames": [
+          "nonclear.104.jpg"
+        ],
+        "operation": "merge_entire_component",
+        "reviewer": "Jefferson Antonio Ribeiro Passerini (author)",
+        "date": "2026-10-06",
+        "resulting_group_members": [
+          "nonclear.102.jpg",
+          "nonclear.104.jpg"
+        ]
+      },
+      {
+        "filename": "nonclear.117.jpg",
+        "previous_group_id": "scene_0293",
+        "group_id": "scene_0292",
+        "reason": "Author visual review: same crack pattern beside the same curb as nonclear.116.jpg (39 inliers, ratio 0.929); same scene from a different framing, merged.",
+        "affected_filenames": [
+          "nonclear.117.jpg"
+        ],
+        "operation": "merge_entire_component",
+        "reviewer": "Jefferson Antonio Ribeiro Passerini (author)",
+        "date": "2026-10-06",
+        "resulting_group_members": [
+          "nonclear.116.jpg",
+          "nonclear.117.jpg"
+        ]
+      },
+      {
+        "filename": "nonclear.151.jpg",
+        "previous_group_id": "scene_0327",
+        "group_id": "scene_0133",
+        "reason": "Author visual review: same Portuguese-pavement wave pattern and planter as clear.132.jpg (37 coherent inliers, ratio 0.804); probable same sidewalk, merged conservatively.",
+        "affected_filenames": [
+          "nonclear.151.jpg"
+        ],
+        "operation": "merge_entire_component",
+        "reviewer": "Jefferson Antonio Ribeiro Passerini (author)",
+        "date": "2026-10-06",
+        "resulting_group_members": [
+          "clear.132.jpg",
+          "nonclear.151.jpg"
+        ]
+      },
+      {
+        "filename": "nonclear.109.jpg",
+        "previous_group_id": "scene_0285",
+        "group_id": "scene_0229",
+        "reason": "Author visual review: cracked paving with similar structure to nonclear.053.jpg (31 inliers, ratio 0.912); possible same location, merged conservatively to avoid cross-fold leakage.",
+        "affected_filenames": [
+          "nonclear.109.jpg"
+        ],
+        "operation": "merge_entire_component",
+        "reviewer": "Jefferson Antonio Ribeiro Passerini (author)",
+        "date": "2026-10-06",
+        "resulting_group_members": [
+          "nonclear.053.jpg",
+          "nonclear.109.jpg"
+        ]
+      }
+    ],
+    "retained_separation": {
+      "filename_a": "clear.174.jpg",
+      "filename_b": "nonclear.166.jpg"
+    },
+    "groups_sha256": "30537852c34f3d94e9dfeac436a62991d69561f2c28a3d4a3cceb4fe56919c26",
+    "pairs_sha256": "0debeb865b63b0d9b093bc7be9117596c7930fec662125cd7ceccf63c5b61947",
+    "edge_rejections_sha256": "a90c7288a4ffbc8c6106d53b66e73d7a3e416354defbc1c26cf4558f61fe77aa",
+    "overrides_sha256": "9f6ab172ca947bae96bb607dbe64f780c9b9f769efcdb355d15216a2c111fbf7",
+    "scope": "author decisions for the six reviewed pairs; grouping frozen for planned grouped nested CV; capture independence of all other images is not proven",
+    "generator_initial_review_status": "pending_author_validation",
+    "approval_annotation_changes_grouping": false,
+    "freeze_precedes_fold_diagnostics": true,
+    "fold_diagnostics_written_utc": "2026-10-06T03:40:27.258667+00:00",
+    "nested_cv_executed": false
+  },
+  "rejection_audit": [
+    {
+      "filename_a": "clear.020.jpg",
+      "filename_b": "nonclear.141.jpg",
+      "reason": "Author visual review: outdoor concrete path versus indoor ceramic tiles with a threshold; different scenes, not a near-duplicate (zero RANSAC inliers). pHash link rejected.",
+      "reviewer": "Jefferson Antonio Ribeiro Passerini (author)",
+      "date": "2026-10-06"
+    }
+  ],
+  "override_audit": [
+    {
+      "filename": "nonclear.104.jpg",
+      "previous_group_id": "scene_0280",
+      "group_id": "scene_0278",
+      "reason": "Author visual review: same rubble arrangement beside the same wall as nonclear.102.jpg (193 spatially distributed inliers, ratio 0.898); same scene, merged.",
+      "affected_filenames": [
+        "nonclear.104.jpg"
+      ],
+      "operation": "merge_entire_component",
+      "reviewer": "Jefferson Antonio Ribeiro Passerini (author)",
+      "date": "2026-10-06",
+      "resulting_group_members": [
+        "nonclear.102.jpg",
+        "nonclear.104.jpg"
+      ]
+    },
+    {
+      "filename": "nonclear.117.jpg",
+      "previous_group_id": "scene_0293",
+      "group_id": "scene_0292",
+      "reason": "Author visual review: same crack pattern beside the same curb as nonclear.116.jpg (39 inliers, ratio 0.929); same scene from a different framing, merged.",
+      "affected_filenames": [
+        "nonclear.117.jpg"
+      ],
+      "operation": "merge_entire_component",
+      "reviewer": "Jefferson Antonio Ribeiro Passerini (author)",
+      "date": "2026-10-06",
+      "resulting_group_members": [
+        "nonclear.116.jpg",
+        "nonclear.117.jpg"
+      ]
+    },
+    {
+      "filename": "nonclear.151.jpg",
+      "previous_group_id": "scene_0327",
+      "group_id": "scene_0133",
+      "reason": "Author visual review: same Portuguese-pavement wave pattern and planter as clear.132.jpg (37 coherent inliers, ratio 0.804); probable same sidewalk, merged conservatively.",
+      "affected_filenames": [
+        "nonclear.151.jpg"
+      ],
+      "operation": "merge_entire_component",
+      "reviewer": "Jefferson Antonio Ribeiro Passerini (author)",
+      "date": "2026-10-06",
+      "resulting_group_members": [
+        "clear.132.jpg",
+        "nonclear.151.jpg"
+      ]
+    },
+    {
+      "filename": "nonclear.109.jpg",
+      "previous_group_id": "scene_0285",
+      "group_id": "scene_0229",
+      "reason": "Author visual review: cracked paving with similar structure to nonclear.053.jpg (31 inliers, ratio 0.912); possible same location, merged conservatively to avoid cross-fold leakage.",
+      "affected_filenames": [
+        "nonclear.109.jpg"
+      ],
+      "operation": "merge_entire_component",
+      "reviewer": "Jefferson Antonio Ribeiro Passerini (author)",
+      "date": "2026-10-06",
+      "resulting_group_members": [
+        "nonclear.053.jpg",
+        "nonclear.109.jpg"
+      ]
+    }
+  ]
+}

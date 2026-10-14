@@ -1,0 +1,26 @@
+{
+  "stage": "learning-curve",
+  "jobs": 57,
+  "external_images_upper_bound": 1568,
+  "serial_compute_hours": 9.035034490615462,
+  "time_hours_range": [
+    5.872772418900051,
+    16.263062083107833
+  ],
+  "additional_disk_gib_range": [
+    8.0,
+    35.0
+  ],
+  "basis": "Measured epochs/train cost, linear sample scale, three new sizes; 0% reuses final models. Early stopping uncertainty is material.",
+  "source_sha256": "2aac0cfe894e75c5d3beaf80a4fb9d4d0859a962e82febacaf66af96171d522a",
+  "does_not_fit_or_predict": true,
+  "ft_architectures": [
+    "ResNet101V2",
+    "EfficientNetB3",
+    "MobileNet",
+    "ResNet50",
+    "EfficientNetB4"
+  ],
+  "ft_reduced_by_48h_rule": false,
+  "unrestricted_ft_estimate_hours": 8.96804109909143
+}

@@ -1,0 +1,20 @@
+model,seed,converged,max_abs_gradient,design_rank,parameters,clusters,observations,separation_warning,status,analysis_scope
+a_resnet101v2_logistic,-1,True,2.2569929503113428e-07,13,13,1378,1576,False,Optimization terminated successfully.,exploratory/post hoc
+b_efficientnetb3_pca_300_linear_svm,-1,True,8.21915237203541e-07,13,13,1378,1576,False,Optimization terminated successfully.,exploratory/post hoc
+c_mobilenet_resnet50_pca_300_linear_svm,-1,True,4.836942260055821e-07,13,13,1378,1576,False,Optimization terminated successfully.,exploratory/post hoc
+d_mobilenet_resnet50_pca_300_linear_svm,-1,True,2.09474223300532e-07,13,13,1378,1576,False,Optimization terminated successfully.,exploratory/post hoc
+ft_EfficientNetB3,1980,True,4.80977503158897e-07,13,13,1378,1576,False,Optimization terminated successfully.,exploratory/post hoc
+ft_EfficientNetB3,1981,True,1.5241637107976658e-07,13,13,1378,1576,False,Optimization terminated successfully.,exploratory/post hoc
+ft_EfficientNetB3,1982,True,1.46644854037703e-07,13,13,1378,1576,False,Optimization terminated successfully.,exploratory/post hoc
+ft_EfficientNetB4,1980,True,3.864689768207086e-07,13,13,1378,1576,False,Optimization terminated successfully.,exploratory/post hoc
+ft_EfficientNetB4,1981,True,1.76369967519463e-07,13,13,1378,1576,False,Optimization terminated successfully.,exploratory/post hoc
+ft_EfficientNetB4,1982,True,7.629180380774869e-07,13,13,1378,1576,False,Optimization terminated successfully.,exploratory/post hoc
+ft_MobileNet,1980,True,3.146495552996953e-07,13,13,1378,1576,False,Optimization terminated successfully.,exploratory/post hoc
+ft_MobileNet,1981,True,1.311683966775945e-06,13,13,1378,1576,False,Desired error not necessarily achieved due to precision loss.,exploratory/post hoc
+ft_MobileNet,1982,True,8.413084069402998e-07,13,13,1378,1576,False,Optimization terminated successfully.,exploratory/post hoc
+ft_ResNet101V2,1980,True,2.713655282704508e-07,13,13,1378,1576,False,Optimization terminated successfully.,exploratory/post hoc
+ft_ResNet101V2,1981,True,9.349150045245835e-07,13,13,1378,1576,False,Optimization terminated successfully.,exploratory/post hoc
+ft_ResNet101V2,1982,True,4.2962447421857064e-07,13,13,1378,1576,False,Optimization terminated successfully.,exploratory/post hoc
+ft_ResNet50,1980,True,2.050618261861814e-07,13,13,1378,1576,False,Optimization terminated successfully.,exploratory/post hoc
+ft_ResNet50,1981,True,5.907468274557459e-07,13,13,1378,1576,False,Optimization terminated successfully.,exploratory/post hoc
+ft_ResNet50,1982,True,5.2997863875248186e-08,13,13,1378,1576,False,Optimization terminated successfully.,exploratory/post hoc

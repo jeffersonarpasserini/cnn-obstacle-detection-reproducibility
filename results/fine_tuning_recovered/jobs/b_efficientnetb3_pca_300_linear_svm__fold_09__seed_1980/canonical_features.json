@@ -1,0 +1,15 @@
+{
+  "policy": "globally_ordered_frozen_features_v1",
+  "batch_size": 4,
+  "setup_seconds": 0.13088154098659288,
+  "cache": [
+    {
+      "architecture": "EfficientNetB3",
+      "cache_key": "c9ef3dc21a0d0a01d4319c1e8dfc4b070c0fabd1825a6d9cb59de585ec87b0e4",
+      "features_sha256": "7a40c79f3fa7da5b3fa805a260bd03fa6e604bd1200d46c6acf0069b068de2f2",
+      "reused": true,
+      "original_extraction_seconds": 10.705105133994948
+    }
+  ],
+  "scope": "fixed ImageNet forwards only; no labels, PCA or classifier fitting"
+}

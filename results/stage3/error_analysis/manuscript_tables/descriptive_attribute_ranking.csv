@@ -1,0 +1,12 @@
+attribute,mean_accuracy_range,analysis_scope
+luminance_p10,0.1888419203309616,exploratory/post hoc
+distance_ResNet101V2,0.17725537472372915,exploratory/post hoc
+distance_ResNet50,0.1717251207405919,exploratory/post hoc
+contrast_rms,0.16638351230475001,exploratory/post hoc
+distance_dinov2,0.16453091628900351,exploratory/post hoc
+distance_EfficientNetB3,0.16080265517677614,exploratory/post hoc
+distance_MobileNet,0.14980502905960014,exploratory/post hoc
+luminance_mean,0.14215204756695618,exploratory/post hoc
+edge_density,0.13894991032825071,exploratory/post hoc
+sharpness_laplacian,0.13608450725187715,exploratory/post hoc
+saturation_mean,0.0973247307987111,exploratory/post hoc

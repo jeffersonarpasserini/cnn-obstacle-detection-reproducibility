@@ -1,0 +1,21 @@
+{
+  "identity": {
+    "run": "29e9376e7e6fe15abf0c04e93d7ca60fa6b8cb8294f2debde0ffddaeef3d8b5b",
+    "split": "92d8f3d11fad8f165c2933dbf09985ec77a3cdf5fedcab8ace0138d7cd083ad5",
+    "experiment": {
+      "name": "b_mobilenet_4_logistic",
+      "approach": "B",
+      "extractors": [
+        "MobileNet"
+      ],
+      "reduction": "pca",
+      "components": 4,
+      "classifier": "logistic",
+      "scale": false
+    }
+  },
+  "artifacts": {
+    "metrics.csv": "0fc6422392f6d1a195ff149fe1747f1336b2f43774e8877eb047dab7c3c3fad1",
+    "predictions.csv.gz": "6bd4a21ceeaf1504e55633d1129cf9682a4349c81dd8c7c6a27050c29eb8ee53"
+  }
+}

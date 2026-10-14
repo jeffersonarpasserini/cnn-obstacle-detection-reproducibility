@@ -1,0 +1,11 @@
+experiment,group,images,score_mean,score_q1,score_median,score_q3,aggregation
+ft_d_resnet101v2,obstructed predicted clear,35,0.6674101253451746,0.5922068506479263,0.6800186236699423,0.7055498212575912,mean-probability seed ensemble; P(clear)
+ft_d_resnet101v2,correct obstructed,132,0.2727627673129046,0.17680906795552193,0.2793743070214987,0.3617248001197974,mean-probability seed ensemble; P(clear)
+ft_d_efficientnetb3,obstructed predicted clear,8,0.7728149363101693,0.663084822697177,0.6780311533560356,0.9197971373796463,mean-probability seed ensemble; P(clear)
+ft_d_efficientnetb3,correct obstructed,159,0.054357406627387035,0.00015138672617184845,0.0020831326231321333,0.027254366548731902,mean-probability seed ensemble; P(clear)
+ft_d_mobilenet,obstructed predicted clear,16,0.7815393859054893,0.6886534783989191,0.80582890411218,0.9001828730106354,mean-probability seed ensemble; P(clear)
+ft_d_mobilenet,correct obstructed,151,0.04381721048235989,0.00010930214633947404,0.0019206077762040053,0.013510550936947124,mean-probability seed ensemble; P(clear)
+ft_d_resnet50,obstructed predicted clear,26,0.7243848108361047,0.6090021977821986,0.7180206229289372,0.8362091779708862,mean-probability seed ensemble; P(clear)
+ft_d_resnet50,correct obstructed,141,0.11996337322249638,0.006394890701358205,0.08253236139734778,0.1949090678244829,mean-probability seed ensemble; P(clear)
+ft_d_efficientnetb4,obstructed predicted clear,10,0.7879223293322564,0.6485998829205831,0.7794541195034981,0.934635693828265,mean-probability seed ensemble; P(clear)
+ft_d_efficientnetb4,correct obstructed,157,0.06038354697372203,0.0007463635949231056,0.0041903854580595664,0.02453353173890112,mean-probability seed ensemble; P(clear)

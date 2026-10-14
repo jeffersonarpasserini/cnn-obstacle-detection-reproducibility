@@ -1,0 +1,2 @@
+epoch,accuracy,loss,val_accuracy,val_loss,epoch_seconds,learning_rate_before_schedule,learning_rate
+1,0.75,0.5630085468292236,1.0,3.5762769812208717e-07,18.78632073799963,0.0010000000474974513,0.0010000000474974513

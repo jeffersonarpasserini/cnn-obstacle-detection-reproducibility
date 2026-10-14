@@ -1,0 +1,29 @@
+model,seed,partial_auc_mcclish,ci_low,ci_high,focus,oracle,analysis,analysis_scope
+a_resnet101v2_logistic,-1,0.777895568304648,0.7444610636594348,0.811175391278993,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",,exploratory/post hoc
+a_resnet101v2_logistic,mean,0.777895568304648,0.7444610636594348,0.811175391278993,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",individual-seed metric mean,exploratory/post hoc
+b_efficientnetb3_pca_300_linear_svm,-1,0.792884043688586,0.7632340746263389,0.8237528959196723,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",,exploratory/post hoc
+b_efficientnetb3_pca_300_linear_svm,mean,0.792884043688586,0.7632340746263389,0.8237528959196723,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",individual-seed metric mean,exploratory/post hoc
+c_mobilenet_resnet50_pca_300_linear_svm,-1,0.7971299548693037,0.7656539969146433,0.8282134956396564,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",,exploratory/post hoc
+c_mobilenet_resnet50_pca_300_linear_svm,mean,0.7971299548693037,0.7656539969146433,0.8282134956396564,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",individual-seed metric mean,exploratory/post hoc
+d_mobilenet_resnet50_pca_300_linear_svm,-1,0.7997998356157663,0.7694367482341717,0.8293453748967607,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",,exploratory/post hoc
+d_mobilenet_resnet50_pca_300_linear_svm,mean,0.7997998356157663,0.7694367482341717,0.8293453748967607,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",individual-seed metric mean,exploratory/post hoc
+ft_EfficientNetB3,1980,0.7336985634780759,0.702845444793301,0.7656030235814821,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",,exploratory/post hoc
+ft_EfficientNetB3,1981,0.7077545468052074,0.673433219261813,0.742317626587076,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",,exploratory/post hoc
+ft_EfficientNetB3,1982,0.7372774304263494,0.70035815881318,0.7743108657498643,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",,exploratory/post hoc
+ft_EfficientNetB3,mean,0.7262435135698776,0.6993223463194189,0.7546550615824864,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",individual-seed metric mean,exploratory/post hoc
+ft_EfficientNetB4,1980,0.6914626516567233,0.6615094423052597,0.7228978821742779,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",,exploratory/post hoc
+ft_EfficientNetB4,1981,0.6495027581384508,0.6204333440356072,0.6805128134972915,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",,exploratory/post hoc
+ft_EfficientNetB4,1982,0.6990156710243483,0.671042502846638,0.7302019268813181,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",,exploratory/post hoc
+ft_EfficientNetB4,mean,0.6799936936065074,0.6557224127145013,0.7065158303563349,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",individual-seed metric mean,exploratory/post hoc
+ft_MobileNet,1980,0.7392001875561407,0.7119399586755484,0.7686103657922116,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",,exploratory/post hoc
+ft_MobileNet,1981,0.7422508713318531,0.7111953268835771,0.7726486700452473,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",,exploratory/post hoc
+ft_MobileNet,1982,0.7149139845184401,0.6875061305737911,0.7434248431763255,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",,exploratory/post hoc
+ft_MobileNet,mean,0.732121681135478,0.7082844260825119,0.7571800764417738,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",individual-seed metric mean,exploratory/post hoc
+ft_ResNet101V2,1980,0.5726793675977684,0.553882962017126,0.5944767415259116,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",,exploratory/post hoc
+ft_ResNet101V2,1981,0.6135420031704621,0.5888727622658646,0.6416861199731824,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",,exploratory/post hoc
+ft_ResNet101V2,1982,0.5598768890215594,0.5372313109666895,0.5853135259734203,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",,exploratory/post hoc
+ft_ResNet101V2,mean,0.5820327532632633,0.5663190215931309,0.60085022259109,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",individual-seed metric mean,exploratory/post hoc
+ft_ResNet50,1980,0.5968463034674714,0.5723721053170822,0.6246939139406996,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",,exploratory/post hoc
+ft_ResNet50,1981,0.6466659033567914,0.6218352212596328,0.67379965313632,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",,exploratory/post hoc
+ft_ResNet50,1982,0.5764550253732381,0.5555285494899818,0.5994063253750685,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",,exploratory/post hoc
+ft_ResNet50,mean,0.6066557440658337,0.5883014061756019,0.6275833941060461,"obstructed sensitivity [0.90,1.00]","post-test descriptive, not deployable",individual-seed metric mean,exploratory/post hoc

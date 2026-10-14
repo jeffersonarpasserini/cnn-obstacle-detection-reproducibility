@@ -1,0 +1,20 @@
+External-data license notice
+
+Copyright (c) 2026 Jefferson Antonio Ribeiro Passerini and the study authors.
+
+The external images in external-data/via-dataset-extended/, together with
+their labels, scene groups and annotations, are licensed under the Creative
+Commons Attribution 4.0 International License (CC BY 4.0).
+
+Legal code: https://creativecommons.org/licenses/by/4.0/legalcode
+License summary: https://creativecommons.org/licenses/by/4.0/
+
+Provide appropriate attribution to the image collector and study authors,
+link to this license and identify your modifications. Citation metadata is
+in CITATION.cff. The supplied external release includes local Gaussian blur
+of 20 author-approved face/plate regions in 16 images; published article
+results use the original evaluated images before anonymization.
+
+The software is separately licensed under MIT in LICENSE. The VIA convenience
+copy retains its original authorship and provenance; this notice does not
+relicense the original VIA dataset.

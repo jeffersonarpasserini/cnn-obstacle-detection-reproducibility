@@ -1,0 +1,7 @@
+{
+  "model": "c_mobilenet_resnet50_pca_300_linear_svm",
+  "training_seconds": 0.0008053669880609959,
+  "reduction_seconds": 0.028589687979547307,
+  "reload_decisions_identical": true,
+  "smoke": true
+}

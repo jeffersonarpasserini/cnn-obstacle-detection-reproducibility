@@ -1,0 +1,60 @@
+{
+  "diagnostic_only": true,
+  "cause_confirmed": "Fixed refit extracts outer train and test in separate batches; canonical features use globally sorted dataset batches. Changing batch membership changes floating point activations and score ranking in fold 3.",
+  "canonical_auc": 0.9826388888888888,
+  "failed_auc": 0.9861111111111112,
+  "auc_delta": 0.003472222222222321,
+  "experiments": {
+    "failed_eager_fold_batches_16": {
+      "roc_auc": 0.9861111111111112,
+      "different_class_decisions": 0,
+      "tested_blas_threads": [
+        2,
+        16
+      ]
+    },
+    "canonical_predict_sorted_batches_4": {
+      "roc_auc": 0.9826388888888888,
+      "different_class_decisions": 0,
+      "tested_blas_threads": [
+        2,
+        16
+      ]
+    },
+    "predict_sorted_batches_16": {
+      "roc_auc": 0.9826388888888888,
+      "different_class_decisions": 0,
+      "tested_blas_threads": [
+        2,
+        16
+      ]
+    },
+    "predict_fold_batches_16": {
+      "roc_auc": 0.9861111111111112,
+      "different_class_decisions": 0,
+      "tested_blas_threads": [
+        2,
+        16
+      ]
+    },
+    "eager_sorted_batches_16": {
+      "roc_auc": 0.9826388888888888,
+      "different_class_decisions": 0,
+      "tested_blas_threads": [
+        2,
+        16
+      ]
+    }
+  },
+  "only_changing_model_predict_does_not_fix_fold_batching": true,
+  "blas_threads_2_vs_16_does_not_fix_fold_batching": true,
+  "neural_jobs_completed_and_verified": 150,
+  "fixed_jobs_completed": 2,
+  "fixed_jobs_remaining_including_failure": 38,
+  "source_files_changed": false,
+  "canonical_results_changed": false,
+  "job_manifests_changed": false,
+  "verification_report": "completed_jobs_verification.json",
+  "resumption_requirement": "Align fixed-feature extraction with canonical feature batching and use an audited resume migration if code hashes change; preserve completed neural artifacts. Do not mask the mismatch by relaxing the metric equality check.",
+  "chmod_unrelated_to_this_failure": true
+}

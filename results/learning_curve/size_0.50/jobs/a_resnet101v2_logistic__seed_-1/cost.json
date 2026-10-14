@@ -1,0 +1,10 @@
+{
+  "model": "a_resnet101v2_logistic",
+  "seed": -1,
+  "pool_fraction": 0.5,
+  "training_images": 740,
+  "elapsed_seconds": 0.7251657380256802,
+  "training_seconds": 0.5720945840002969,
+  "update_reduction_seconds": 0.031228912994265556,
+  "update_classifier_seconds": 0.5408656710060313
+}

@@ -1,0 +1,21 @@
+{
+  "identity": {
+    "run": "29e9376e7e6fe15abf0c04e93d7ca60fa6b8cb8294f2debde0ffddaeef3d8b5b",
+    "split": "92d8f3d11fad8f165c2933dbf09985ec77a3cdf5fedcab8ace0138d7cd083ad5",
+    "experiment": {
+      "name": "b_resnet50_2_logistic",
+      "approach": "B",
+      "extractors": [
+        "ResNet50"
+      ],
+      "reduction": "pca",
+      "components": 2,
+      "classifier": "logistic",
+      "scale": false
+    }
+  },
+  "artifacts": {
+    "metrics.csv": "88ae3d6841c4b4d2b68bcfaf3713134a23c250f4b2b89698253873a9944967ef",
+    "predictions.csv.gz": "ea2c40b41471dd9948c819618f0d559cdf3966d5fe0e3ab64625e88d3f8da8ed"
+  }
+}

@@ -536,6 +536,37 @@ def preprocessing_key(experiment: dict) -> tuple:
     )
 
 
+def prediction_metrics(truth, predicted, scores=None) -> dict:
+    """Compute binary metrics with obstructed=0 and clear=1."""
+    tn, fp, fn, tp = confusion_matrix(truth, predicted, labels=[0, 1]).ravel()
+
+    def safe_ratio(numerator, denominator):
+        return numerator / denominator if denominator else np.nan
+
+    return {
+        "accuracy": accuracy_score(truth, predicted),
+        "f1": f1_score(truth, predicted, zero_division=0),
+        "f1_clear": f1_score(truth, predicted, pos_label=1, zero_division=0),
+        "f1_obstructed": f1_score(truth, predicted, pos_label=0, zero_division=0),
+        "macro_f1": f1_score(truth, predicted, average="macro", zero_division=0),
+        "balanced_accuracy": balanced_accuracy_score(truth, predicted),
+        "mcc": matthews_corrcoef(truth, predicted),
+        "tn_obstructed": int(tn),
+        "fp_obstructed_as_clear": int(fp),
+        "fn_clear_as_obstructed": int(fn),
+        "tp_clear": int(tp),
+        "obstructed_recall": safe_ratio(tn, tn + fp),
+        "clear_recall": safe_ratio(tp, tp + fn),
+        "obstructed_precision": safe_ratio(tn, tn + fn),
+        "clear_precision": safe_ratio(tp, tp + fp),
+        "obstructed_false_negative_rate": safe_ratio(fp, tn + fp),
+        "roc_auc": (
+            roc_auc_score(truth, scores)
+            if scores is not None and len(np.unique(truth)) == 2 else np.nan
+        ),
+    }
+
+
 def evaluate_prepared_fold(
     experiment: dict,
     labels: np.ndarray,
@@ -562,10 +593,6 @@ def evaluate_prepared_fold(
     prediction_time = perf_counter() - prediction_started
 
     truth = labels[test]
-    tn, fp, fn, tp = confusion_matrix(truth, predicted, labels=[0, 1]).ravel()
-
-    def safe_ratio(numerator, denominator):
-        return numerator / denominator if denominator else np.nan
 
     record = {
         "experiment": experiment["name"],
@@ -576,24 +603,7 @@ def evaluate_prepared_fold(
         "test_size": len(test),
         "prepared_features": x_train.shape[1],
         "shared_preprocessing_size": shared_preprocessing_size,
-        "accuracy": accuracy_score(truth, predicted),
-        "f1": f1_score(truth, predicted, zero_division=0),
-        "f1_clear": f1_score(truth, predicted, pos_label=1, zero_division=0),
-        "f1_obstructed": f1_score(
-            truth, predicted, pos_label=0, zero_division=0
-        ),
-        "macro_f1": f1_score(truth, predicted, average="macro", zero_division=0),
-        "balanced_accuracy": balanced_accuracy_score(truth, predicted),
-        "mcc": matthews_corrcoef(truth, predicted),
-        "tn_obstructed": int(tn),
-        "fp_obstructed_as_clear": int(fp),
-        "fn_clear_as_obstructed": int(fn),
-        "tp_clear": int(tp),
-        "obstructed_recall": safe_ratio(tn, tn + fp),
-        "clear_recall": safe_ratio(tp, tp + fn),
-        "obstructed_precision": safe_ratio(tn, tn + fn),
-        "clear_precision": safe_ratio(tp, tp + fp),
-        "roc_auc": np.nan,
+        **prediction_metrics(truth, predicted, scores),
         # This is the wall time of the shared transformation. It is repeated
         # in all classifier rows that reused the transformation and therefore
         # must not be summed across those rows to estimate total wall time.
@@ -601,8 +611,6 @@ def evaluate_prepared_fold(
         "training_seconds": training_time,
         "prediction_seconds": prediction_time,
     }
-    if scores is not None and len(np.unique(truth)) == 2:
-        record["roc_auc"] = roc_auc_score(truth, scores)
 
     prediction_records = []
     if prediction_mode not in {"none", "errors", "all"}:

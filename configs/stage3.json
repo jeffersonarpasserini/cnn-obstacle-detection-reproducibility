@@ -1,0 +1,17 @@
+{
+  "scope": "exploratory/post hoc",
+  "seed": 1980,
+  "bootstrap_iterations": 10000,
+  "cpu_threads": 2,
+  "output": "results/stage3",
+  "section_order": [0, 4, 3, 2, 1, 5],
+  "canny": {"threshold1": 100, "threshold2": 200, "apertureSize": 3, "L2gradient": true},
+  "low_light_via_quantile": 0.1,
+  "kmeans": {"n_clusters": 12, "random_state": 1980, "n_init": 20},
+  "recall_targets": [0.90, 0.95, 0.97],
+  "partial_auc": {"focus": "obstructed sensitivity", "bounds": [0.90, 1.0], "correction": "McClish"},
+  "oracle_tie_break": "smallest clear-probability threshold; clear iff score >= threshold",
+  "logistic_regression": {"estimator": "unpenalized maximum likelihood", "covariance": "scene-cluster sandwich with finite-sample correction"},
+  "blind_sample_size": 100,
+  "error_categories": ["sombra", "mudança de piso/textura", "junta ou rachadura", "grama/vegetação", "faixa ou pintura", "baixa luz", "desfoque", "obstáculo pequeno/distante", "rótulo questionável", "outro"]
+}

@@ -1,0 +1,66 @@
+{
+  "completed": true,
+  "review": [
+    {
+      "Verificação": "Exclusões por cena",
+      "Esperado": 0,
+      "Obtido": 0
+    },
+    {
+      "Verificação": "Principal",
+      "Esperado": 1576,
+      "Obtido": 1576
+    },
+    {
+      "Verificação": "clear",
+      "Esperado": 844,
+      "Obtido": 844
+    },
+    {
+      "Verificação": "nonclear",
+      "Esperado": 732,
+      "Obtido": 732
+    },
+    {
+      "Verificação": "Grupos",
+      "Esperado": 1378,
+      "Obtido": 1378
+    },
+    {
+      "Verificação": "Auditoria concluída",
+      "Esperado": true,
+      "Obtido": true
+    },
+    {
+      "Verificação": "Discordância",
+      "Esperado": "0/100",
+      "Obtido": "0/100"
+    },
+    {
+      "Verificação": "Aprovação",
+      "Esperado": "Jefferson Antonio Ribeiro Passerini (author)",
+      "Obtido": "Jefferson Antonio Ribeiro Passerini (author)"
+    },
+    {
+      "Verificação": "Data",
+      "Esperado": "2026-10-06",
+      "Obtido": "2026-10-06"
+    }
+  ],
+  "model_panels": 19,
+  "external_images": 1576,
+  "prediction_rows": 29944,
+  "duplicate_image_model_seed": 0,
+  "protocol_commit": "cb7c510e2f649ead6284bb6b033fe8356f3f22b1",
+  "freeze_sha256": "d83b57f6b3b853653fe27e8acf88df1e2e725b0542f237ed4d4696d1cdd42f0e",
+  "thresholds_sha256": "4b77c86ca8eae15e03fc3332f2d8210c47471638b35170b5eb9fa06354b1e002",
+  "predictions_sha256": "53231b8355530ce518ff86581f6cbd6a1baaec25dcaf2b2cc4e2275f83b0bfe1",
+  "curve_completed": true,
+  "curve_new_jobs": 57,
+  "curve_prediction_rows": 59888,
+  "curve_test_B_images": 788,
+  "curve_pool_images": 788,
+  "curve_scene_leakage": false,
+  "curve_duplicate_predictions": 0,
+  "no_complete_nested_executed": true
+}

@@ -1,0 +1,25 @@
+model,endpoint,difference,ci_low,ci_high,analysis_scope
+a_resnet101v2_logistic,accuracy,-0.005847953216374324,-0.020467836257309968,0.00877192982456143,exploratory/post hoc
+a_resnet101v2_logistic,balanced_accuracy,-0.0059880239520957446,-0.020547476475620163,0.008434559452523471,exploratory/post hoc
+a_resnet101v2_logistic,mcc,-0.011222291560525788,-0.041033184162084096,0.018066704936344827,exploratory/post hoc
+a_resnet101v2_logistic,roc_auc,0.0020188195038494117,-0.002326775021385785,0.006877673224978675,exploratory/post hoc
+a_resnet101v2_logistic,obstructed_recall,-0.0119760479041916,-0.029940119760479056,0.0,exploratory/post hoc
+a_resnet101v2_logistic,obstructed_false_negative_rate,0.011976047904191628,0.0,0.029940119760479056,exploratory/post hoc
+b_efficientnetb3_pca_300_linear_svm,accuracy,-0.014619883040935755,-0.032163742690058506,0.0029239766081871066,exploratory/post hoc
+b_efficientnetb3_pca_300_linear_svm,balanced_accuracy,-0.01469632164242951,-0.03224978614200169,0.0025834046193327076,exploratory/post hoc
+b_efficientnetb3_pca_300_linear_svm,mcc,-0.029191351166256485,-0.06440202484738664,0.0057086028142579945,exploratory/post hoc
+b_efficientnetb3_pca_300_linear_svm,roc_auc,-0.0017450812660393389,-0.0054747647562019,0.0015055603079555668,exploratory/post hoc
+b_efficientnetb3_pca_300_linear_svm,obstructed_recall,-0.017964071856287456,-0.041916167664670656,0.0,exploratory/post hoc
+b_efficientnetb3_pca_300_linear_svm,obstructed_false_negative_rate,0.017964071856287428,0.0,0.041916167664670656,exploratory/post hoc
+c_mobilenet_resnet50_pca_300_linear_svm,accuracy,-0.00877192982456143,-0.023391812865497075,0.0029239766081871066,exploratory/post hoc
+c_mobilenet_resnet50_pca_300_linear_svm,balanced_accuracy,-0.008845166809238636,-0.023541488451668036,0.0029940119760479833,exploratory/post hoc
+c_mobilenet_resnet50_pca_300_linear_svm,mcc,-0.0172936180460026,-0.04510153265881257,0.005550277866080612,exploratory/post hoc
+c_mobilenet_resnet50_pca_300_linear_svm,roc_auc,0.0006843455945252375,-0.0022925577416594844,0.0037981180496150513,exploratory/post hoc
+c_mobilenet_resnet50_pca_300_linear_svm,obstructed_recall,-0.0119760479041916,-0.03592814371257491,0.0119760479041916,exploratory/post hoc
+c_mobilenet_resnet50_pca_300_linear_svm,obstructed_false_negative_rate,0.011976047904191614,-0.0119760479041916,0.03592814371257491,exploratory/post hoc
+d_mobilenet_resnet50_pca_300_linear_svm,accuracy,-0.00877192982456143,-0.023391812865497075,0.0029239766081871066,exploratory/post hoc
+d_mobilenet_resnet50_pca_300_linear_svm,balanced_accuracy,-0.008845166809238636,-0.023541488451668036,0.0029940119760479833,exploratory/post hoc
+d_mobilenet_resnet50_pca_300_linear_svm,mcc,-0.0172936180460026,-0.04510153265881257,0.005550277866080612,exploratory/post hoc
+d_mobilenet_resnet50_pca_300_linear_svm,roc_auc,0.0005816937553464463,-0.002497861420017067,0.0037639007698887506,exploratory/post hoc
+d_mobilenet_resnet50_pca_300_linear_svm,obstructed_recall,-0.0119760479041916,-0.03592814371257491,0.0119760479041916,exploratory/post hoc
+d_mobilenet_resnet50_pca_300_linear_svm,obstructed_false_negative_rate,0.011976047904191614,-0.0119760479041916,0.03592814371257491,exploratory/post hoc

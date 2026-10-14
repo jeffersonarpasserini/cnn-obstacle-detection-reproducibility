@@ -1,0 +1,10 @@
+{
+  "model": "c_mobilenet_resnet50_pca_300_linear_svm",
+  "fold": 8,
+  "reduction_seconds": 3.863246109976899,
+  "training_seconds": 0.0055191650171764195,
+  "elapsed_seconds": 4.05312271299772,
+  "analysis_scope": "exploratory/post hoc",
+  "native_reload_identical": true,
+  "new_backbone_forwards": 0
+}

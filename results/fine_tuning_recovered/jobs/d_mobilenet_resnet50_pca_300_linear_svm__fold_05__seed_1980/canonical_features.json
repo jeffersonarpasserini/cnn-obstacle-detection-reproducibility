@@ -1,0 +1,22 @@
+{
+  "policy": "globally_ordered_frozen_features_v1",
+  "batch_size": 4,
+  "setup_seconds": 0.1365475369966589,
+  "cache": [
+    {
+      "architecture": "MobileNet",
+      "cache_key": "c1698a25ff8abb1861d192fe7582d5451a0f5afc4b86d4be106f09bc6fb5573e",
+      "features_sha256": "4d6e82faac813b291e8f2cb5a8f5ff1f349f76c86201d2d116f700502005429a",
+      "reused": true,
+      "original_extraction_seconds": 6.450475142992218
+    },
+    {
+      "architecture": "ResNet50",
+      "cache_key": "f114a8cf578a8f1c7993afd66cbe02898c5b9395cef4caa2d063363ae832d1bc",
+      "features_sha256": "a19054d615354a370fe43c87295c0b94aa043f7e3459a5ddb60df283ecc7d757",
+      "reused": true,
+      "original_extraction_seconds": 7.982069777004654
+    }
+  ],
+  "scope": "fixed ImageNet forwards only; no labels, PCA or classifier fitting"
+}

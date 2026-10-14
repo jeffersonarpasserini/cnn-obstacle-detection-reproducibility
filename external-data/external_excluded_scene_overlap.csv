@@ -1,0 +1,10 @@
+filename,via_filename,reason,edge_reason,phash_distance,semantic_cosine
+clear.0825.jpg,clear.003.jpg,confirmed_scene_overlap,phash,8,0.42639683205922874
+clear.0442.jpg,nonclear.141.jpg,confirmed_scene_overlap,phash,10,0.52259797140901398
+clear.0442.jpg,nonclear.161.jpg,confirmed_scene_overlap,phash,8,0.44618770555335663
+clear.0527.jpg,clear.140.jpg,confirmed_scene_overlap,phash,10,0.40280880536259311
+clear.0649.jpg,clear.140.jpg,confirmed_scene_overlap,phash,10,0.46030959414204853
+clear.0731.jpg,clear.065.jpg,confirmed_scene_overlap,phash,10,0.32789411845706551
+clear.0733.jpg,clear.065.jpg,confirmed_scene_overlap,phash,10,0.35527142129835099
+clear.0692.jpg,clear.066.jpg,confirmed_scene_overlap,phash,10,0.51124274032202599
+clear.0689.jpg,clear.141.jpg,confirmed_scene_overlap,phash,10,0.31312619059174185

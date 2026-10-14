@@ -1,0 +1,12 @@
+{
+  "bootstrap_iterations": 10000,
+  "seed": 1980,
+  "smoke": false,
+  "source_predictions_sha256": "53231b8355530ce518ff86581f6cbd6a1baaec25dcaf2b2cc4e2275f83b0bfe1",
+  "cluster_strata": [
+    "obstructed-only",
+    "clear-only",
+    "mixed"
+  ],
+  "primary": "mean of individual seed metrics"
+}

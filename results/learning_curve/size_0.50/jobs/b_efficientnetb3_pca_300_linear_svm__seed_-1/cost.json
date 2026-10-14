@@ -1,0 +1,10 @@
+{
+  "model": "b_efficientnetb3_pca_300_linear_svm",
+  "seed": -1,
+  "pool_fraction": 0.5,
+  "training_images": 740,
+  "elapsed_seconds": 8.100325882027391,
+  "training_seconds": 7.558969613979571,
+  "update_reduction_seconds": 7.5471777800121345,
+  "update_classifier_seconds": 0.011791833967436105
+}

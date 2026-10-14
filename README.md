@@ -1,300 +1,200 @@
-# CNN Feature Extractors for Obstacle Detection
+# Cross-Analysis of Fixed CNN Feature Extractors for Path-Obstruction Classification to Assist Visually Impaired People
 
 [![DOI](https://zenodo.org/badge/1297033488.svg)](https://doi.org/10.5281/zenodo.21830689)
 
-Reproducibility repository for the manuscript:
+Reproducibility artifact for the study by **Jefferson Antonio Ribeiro Passerini
+and Fabricio Aparecido Breve**, São Paulo State University (UNESP), Rio Claro,
+Brazil. The v2.0.0 release tree contains the software, frozen predictions and
+analyses, the original VIA convenience copy, and the anonymized external set.
+For the version history and revised-article mapping, see
+[release traceability](docs/RELEASE_TRACEABILITY.md).
 
-> **Cross-Analysis of CNN Architectures as Feature Extractors for Obstacle Detection to Aid the Visually Impaired**  
-> Jefferson Antonio Ribeiro Passerini and Fabricio Aparecido Breve  
-> São Paulo State University (UNESP), Rio Claro, Brazil
+The experiment compares ImageNet-pretrained CNNs used as fixed feature
+extractors with matched fine-tuning for classifying pedestrian paths as clear
+(label 1) or obstructed (label 0). VIA has 342 images (175 clear, 167 obstructed);
+the geographically and temporally independent external test has 1,576 images
+(844 clear, 732 obstructed). CNNs, downstream classifiers, probability adapters
+and operating thresholds were selected or trained using VIA alone before the
+external evaluation.
 
-## Scope
+## Fixed-feature study
 
-This repository contains the dataset manifest, experiment definitions, Python
-programs, per-fold results, statistical analyses, and manuscript tables for a
-comparison of ImageNet-pretrained CNNs used as fixed feature extractors. The
-task classifies 342 path images as clear or obstructed without fine-tuning the
-CNN weights.
-
-The full experiment evaluates 12,656 configurations organized into four
-approaches:
+The complete search comprises 12,656 configurations, 1,582 preprocessing groups
+and ten stratified VIA folds with seed 1980. PCA/UMAP/Relief-F, scaling and
+classifier fitting use only each training partition. The four approaches are:
 
 | Approach | Feature construction |
-|---|---|
-| A | Complete feature vector from one CNN or a concatenated CNN pair |
-| B | Dimensionality reduction or feature selection applied to one CNN |
-| C | Concatenate a CNN pair, then reduce/select the joint vector |
-| D | Reduce/select each CNN independently, then concatenate the outputs |
+| --- | --- |
+| A | Full single-CNN or concatenated feature vector |
+| B | Reduce/select one CNN's feature vector |
+| C | Concatenate two CNNs, then reduce/select jointly |
+| D | Reduce/select each CNN, then concatenate |
 
-PCA, UMAP, Relief-F, scaling, and classifier fitting are performed using only
-the training partition of each fold. The test partition is used only for
-evaluation. CNN feature extraction is fixed and therefore does not fit the
-study images.
+The frozen search and finalists are under `results/full_search/` and
+`configs/article_selected_models_10fold.json`. Selected ten-fold and LOOCV
+predictions are under `results/article_selected_10fold/` and
+`results/article_selected_loocv/`; their stability comparison is under
+`results/article_followup/`. Selected-finalist VIA performance is an internal,
+exploratory benchmark that inherits selection optimism. The geographic external
+test is the main generalization analysis. Protocol: `docs/EXTERNAL_TEST_PROTOCOL.md`.
 
-## Repository layout
+## External test set
 
-```text
-.
-├── configs/
-│   ├── full_search.json
-│   ├── article_selected_models_10fold.json
-│   └── article_selected_models_loocv.json
-├── data/
-│   ├── README.md
-│   └── dataset_manifest.csv
-├── docs/
-│   ├── ARTICLE_COMPLETION.md
-│   └── PROVENANCE.md
-├── results/
-│   └── full_search/
-│       ├── per_fold_metrics.csv
-│       ├── summary_metrics.csv
-│       ├── fold_assignments.csv
-│       └── manuscript_tables/
-├── scripts/
-│   ├── article_followup_status.py
-│   ├── analyze_article_followup.py
-│   ├── analyze_results.py
-│   ├── build_decision_attribution.py
-│   ├── build_manuscript_tables.py
-│   ├── generate_full_search_config.py
-│   ├── run_article_followup_linux.sh
-│   ├── run_decision_attribution_linux.sh
-│   └── verify_dataset.py
-├── src/
-│   ├── artifact.py
-│   └── run_experiments.py
-├── tests/
-└── via-dataset/
-```
+`external-data/via-dataset-extended/` contains **only the 1,576 retained release
+images** collected by smartphone in Fernandópolis and Jales, SP, in 2024–2025,
+with 1,378 scene groups. Cleaning removed 353 of the 1,929 raw files, including
+350 exact matches to VIA and three internal duplicates. Historical manifests, exclusion audits, reviewed labels and scene metadata are under `external-data/`.
 
-## Completed result set
+Local automatic face/plate screening was reviewed manually by the author.
+Local Gaussian blur was applied to **20 approved regions (19 plates and one
+face) in 16 images**. The other 1,560 images are byte-identical to their originals
+and reproduced exactly identical frozen-model scores. The maximum absolute
+accuracy change per model and seed was **0.13 percentage points**.
+The published article results were obtained from the original evaluated images,
+before anonymization. Frozen predictions and tables remain unchanged.
+`external-data/external_release_manifest.csv` contains evaluated/released hashes
+and the anonymization record. Collection, definitions, privacy and citation
+details: `external-data/via-dataset-extended/README.md`.
 
-The canonical run is `results/full_search/`. It contains:
+`external-data/blind_relabel/` distributes the instructions, key and author
+responses after the closed analysis. Duplicate blind image files, private
+privacy-review galleries and the internal release-check directory are excluded.
 
-- 342 images: 175 clear and 167 obstructed;
-- 12,656 classifier configurations;
-- 1,582 preprocessing groups;
-- 10 stratified folds with seed 1980;
-- 126,560 unique experiment/fold records;
-- a completed run manifest and the exact fold assignment for every image.
+## Matched fine-tuning
 
-`results/full_search/manuscript_tables/` contains the CSV tables generated
-from this run. These files are intended to be the numerical source for the
-article; do not manually copy values from console output.
+Five architectures (ResNet101V2, EfficientNetB3, MobileNet, ResNet50 and
+EfficientNetB4), with initialization seeds 1980, 1981 and 1982, use the same
+recorded ten outer VIA folds as the fixed-feature study. Early stopping uses
+an internal training-only validation split. Configuration D is specified in
+`configs/fine_tuning.json`. Complete results and recovery provenance are under
+`results/fine_tuning_recovered/`; the earlier partial run is retained under
+`results/fine_tuning/`.
 
-The hierarchical selection procedure reproduces the structure described in
-the manuscript: all Approach A configurations are ranked together; Approach B
-first selects one configuration per CNN; Approaches C and D first select one
-configuration per CNN pair. Finalists are ranked by mean within-fold Friedman
-rank of accuracy. Ties are resolved by median accuracy, pooled out-of-fold
-accuracy, pooled obstructed-path recall, and experiment identifier.
+Primary fine-tuning performance is the mean of individual-seed metrics; the
+mean-probability ensemble is separately labeled as sensitivity. Published
+comparisons include paired bootstrap intervals, Wilcoxon/Pratt with Holm,
+McNemar and the prespecified 3-point substitution margin. Final VIA-only models,
+frozen thresholds and external predictions are documented under
+`results/external_test/`. Model binaries are distributed separately as GitHub release attachments;
+feature caches are omitted. Their hashes and measured results are retained. Historical numerical analyses
+can be regenerated from the supplied prediction CSVs. Exact rerunning of the
+original-image inference requires the evaluated inputs and frozen binaries;
+the released privacy copies intentionally have different hashes for 16 images.
 
-The selected configurations are:
+## Trained models
 
-| Approach | Configuration | Median fold accuracy | Pooled obstructed recall |
-|---|---|---:|---:|
-| A | ResNet101V2 + logistic regression | 0.9412 | 0.9162 |
-| B | EfficientNetB3 + PCA(300) + linear SVM | 0.9412 | 0.9281 |
-| C | MobileNet + ResNet50 + PCA(300) + linear SVM | 0.9412 | 0.9042 |
-| D | MobileNet + ResNet50 + PCA(300 per CNN) + linear SVM | 0.9412 | 0.9042 |
+The seven model-asset packages contain the exact final frozen pipelines,
+encoders, fine-tuned models and probability adapters used for external testing.
+See [MODELS.md](MODELS.md) for sizes, hashes, licenses, download URLs and
+`python scripts/fetch_models.py` verification/extraction instructions.
+These GitHub release attachments are outside Git and are not part of the
+Zenodo source-code archive.
 
-Because configuration selection and comparison use the same ten folds, the
-finalist-level inferential tests are reported as exploratory. LOOCV on the same
-dataset measures resampling stability and is not independent external
-validation.
+## Stage-3 analyses
 
-## Environment
+`results/stage3/` contains exploratory/post hoc analyses of the frozen results:
+grouped VIA validation, threshold/ROC analysis, domain shift, image attributes,
+12 descriptive clusters, author categories for 148 consensus errors, low-light
+subsets and the closed blind relabeling of 100 external images. Author labels,
+categories and cluster names are retained exactly. No post hoc correction
+changes a frozen prediction or label. Summary: `docs/STAGE3_REPORT.md`.
+`docs/PROVENANCE.md` records prespecification, execution and approved deviations.
+The final visual scene-group review was performed by the author
+(`results/scene_groups/author_review_application.json`). AI-assisted drafts of
+cluster names and error categories were reviewed, corrected and finalized by
+the author on 2026-10-13; only the final author records are distributed.
 
-For inspecting and regenerating result tables:
+## Learning curve
+
+`results/learning_curve/` holds the secondary experiment using 0%, 25%, 50% and
+100% external training subsets with recorded scene-disjoint test splits. These
+are adaptation experiments, separate from the main one-shot external test.
+Metrics and measured update costs are under
+`results/learning_curve/manuscript_tables/`. Protocol and execution summary:
+`docs/STAGE2_REPORT.md` and `configs/external_test.json`.
+
+## Reproducing each manuscript table
+
+The table numbering follows the revised manuscript. Supplied CSVs are the
+numerical sources; table generation does not require retraining models.
+
+| Article table | Script/source | Output file(s) |
+| --- | --- | --- |
+| 1: CNN architectures | `src/artifact.py` (`MODEL_SPECS`) | Architecture definitions and published parameter specifications |
+| 2: search space | `scripts/generate_full_search_config.py` | `configs/full_search.json` (frozen enumeration) |
+| 3: Approach A | `scripts/build_manuscript_tables.py` | `results/full_search/manuscript_tables/approach_a_ranking.csv`, `approach_a_rows.tex` |
+| 4: Approach B | Same script | `results/full_search/manuscript_tables/approach_b_ranking.csv`, `approach_b_rows.tex` |
+| 5: Approach C | Same script | `results/full_search/manuscript_tables/approach_c_ranking.csv`, `approach_c_rows.tex` |
+| 6: Approach D | Same script | `results/full_search/manuscript_tables/approach_d_ranking.csv`, `approach_d_rows.tex` |
+| 7: finalist comparison | Same script | `results/full_search/manuscript_tables/selected_approaches.csv`, `selected_approaches_per_fold.csv` |
+| 8: ten-fold/LOOCV stability | `scripts/analyze_article_followup.py` | `results/article_followup/validation_protocol_comparison.csv`, `validation_protocol_rows.tex` |
+| 9: matched fine-tuning on VIA | `scripts/analyze_fine_tuning.py` | `results/fine_tuning_recovered/manuscript_tables/fold_metric_summary.csv`, `initialization_seed_summary.csv` |
+| 10: external test | `scripts/analyze_external_test.py` | `results/external_test/manuscript_tables/seed_mean_metrics.csv`, `cluster_bootstrap_wilson.csv` |
+| 11: consensus-error categories | `scripts/stage3_error_analysis.py` | `results/stage3/error_analysis/manuscript_tables/error_category_counts.csv`, `consensus_errors.csv` |
+| 12: computational costs | `scripts/analyze_fine_tuning.py` | `results/fine_tuning_recovered/manuscript_tables/computational_cost_summary.csv`, `training_cost.csv` |
+
+For Table 9, the comparison with the previously published Breve result is
+literature data cited by the manuscript, not a newly generated experiment.
+Further ROC, grouped-validation, domain-shift and cluster analyses come from
+`scripts/analyze_stage3.py`; the stage-three report is generated by
+`scripts/build_stage3_report.py --mode final`. Spatial attribution figures use
+`scripts/build_decision_attribution.py` and `results/decision_attribution/`.
+
+Examples for regenerating the numerical table sources:
 
 ```bash
-python3.12 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements-results.txt
+python scripts/build_manuscript_tables.py --results results/full_search --config configs/full_search.json
+python scripts/analyze_article_followup.py --tenfold-results results/article_selected_10fold --loocv-results results/article_selected_loocv --output results/article_followup
+python scripts/analyze_fine_tuning.py --results results/fine_tuning_recovered --config configs/fine_tuning.json --bootstrap-repetitions 10000 --seed 1980
+python scripts/analyze_external_test.py --results results/external_test
 ```
 
-For CNN feature extraction and complete experiments on Linux:
+Reproduce numerical analyses with the commands above. Legacy workstation
+launchers and monitoring notes remain for v1.0.1 traceability; the later local
+stage-2 publishing helper is omitted.
 
-```bash
-conda env create -f environment.yml
-conda activate ieee-access-cnn-obstacle
-```
+The legacy default `configs/selected_models.json` in `src/run_experiments.py`
+is absent. Supply an existing config explicitly, such as
+`--config configs/full_search.json` for the full VIA search or
+`--config configs/article_selected_models_10fold.json` for the four finalists.
 
-Alternatively:
+## Verifying data integrity
 
-```bash
-python3.12 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements-experiments.txt
-```
-
-The maintained environment uses Python 3.12 and TensorFlow 2.21.0. On Linux,
-the requirements include TensorFlow's NVIDIA CUDA extra. Confirm GPU detection
-before extracting features:
-
-```bash
-python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
-```
-
-## Dataset
-
-The expected layout is:
-
-```text
-via-dataset/clear.000.jpg
-via-dataset/nonclear.000.jpg
-...
-```
-
-Verify the images against the committed manifest:
+Run from the repository root:
 
 ```bash
 python scripts/verify_dataset.py
+python scripts/verify_external_release.py
+python -m pytest -q
 ```
 
-The dataset source is <https://github.com/fbreve/via-dataset>. Dataset use and
-citation are governed by that repository.
+The original VIA verifier uses `data/dataset_manifest.csv`. The release verifier
+authenticates the release manifest and checks every released SHA-256, all
+1,576 filenames, the 844/732 classes, 1,378 groups, 16 anonymized images and
+the absence of the 353 excluded filenames. Historical raw/evaluated manifests
+refer to the evaluated inputs; `external_release_manifest.csv` is the integrity
+reference for the distributed external JPEG files. The historical cleaning
+test reads the raw manifest rather than expecting raw images in this tree.
+GPU integration tests are optional as declared in `tests/conftest.py`.
 
-## Regenerate manuscript tables
+Dependency snapshots: `requirements-results.txt`, `requirements-experiments.txt`,
+`requirements-scene-groups-core.txt`, `requirements-scene-groups.txt` and
+`environment.yml`. Requirements for macOS are recorded separately.
 
-```bash
-python scripts/build_manuscript_tables.py \
-  --results results/full_search \
-  --config configs/full_search.json
-```
+## Data, licenses and citation
 
-The command writes one ranking CSV and one LaTeX-row file for each approach,
-the selected finalist table, per-fold finalist values, Friedman statistics,
-pairwise Wilcoxon tests with Holm adjustment, and an analysis manifest with
-source hashes.
+Software is **MIT** (`LICENSE`). The released external images, labels, scene
+groups and annotations are **CC BY 4.0** (`LICENSE-DATA`), with the privacy
+modifications described above. Retain attribution and identify further changes
+when redistributing the external data.
 
-For a general descriptive summary of the complete search:
+The VIA copy under `via-dataset/` belongs to its original authors,
+**Breve & Fischer (IJCNN 2020)**, and is included for convenience. Its canonical
+source is <https://github.com/fbreve/via-dataset>; retain the original credit
+and provenance of that dataset. `LICENSE-DATA` covers the external collection,
+not the original VIA data.
 
-```bash
-python scripts/analyze_results.py \
-  --results results/full_search \
-  --top 20
-```
-
-## Run the full search
-
-```bash
-python src/run_experiments.py \
-  --dataset via-dataset \
-  --config configs/full_search.json \
-  --cache-dir cache/features \
-  --output-dir results/full_search \
-  --max-loaded-extractors 2 \
-  --relieff-n-jobs 2 \
-  --prediction-mode errors
-```
-
-The runner checkpoints each preprocessing group. Repeating the same command
-continues an interrupted run and skips complete groups. Feature caches are
-bound to the ordered dataset fingerprint. Relief-F rankings are computed once
-per training fold at the largest requested cutoff and reused for every nested
-feature count.
-
-Key outputs:
-
-| File | Contents |
-|---|---|
-| `per_fold_metrics.csv` | Accuracy, class metrics, F1, balanced accuracy, MCC, ROC-AUC, dimensions, and timings |
-| `summary_metrics.csv` | Q1, median, and Q3 for every configuration |
-| `fold_assignments.csv` | Exact held-out fold for each image |
-| `dataset_index.csv` | Sorted filenames, labels, and dataset identity |
-| `feature_dimensions.csv` | Feature-vector dimensions and memory sizes |
-| `run_metadata.json` | Completion state, command, hashes, hardware, platform, and package versions |
-| `relieff_rankings/` | Fold-specific reusable Relief-F rankings |
-
-Labels are explicit in every output: `nonclear`/obstructed is class 0 and
-`clear` is class 1.
-
-## Selected-model 10-fold and LOOCV runs
-
-The follow-up commands and expected output files are documented in
-[`docs/ARTICLE_COMPLETION.md`](docs/ARTICLE_COMPLETION.md). Both selected runs
-must use `--prediction-mode all` so the repository can generate per-image error
-tables and the article's focused subset analysis.
-
-On the validated Linux workstation, start the complete resumable workflow with:
-
-```bash
-mkdir -p logs
-nohup bash scripts/run_article_followup_linux.sh \
-  > logs/article_followup_master.log 2>&1 &
-echo $! > logs/article_followup.pid
-```
-
-Monitor it with `watch -n 30 python scripts/article_followup_status.py`.
-
-## Spatial decision attribution
-
-The repository can generate spatial maps that explain the predictions of the
-four finalists actually evaluated in the manuscript. This is not Grad-CAM on
-a separately trained end-to-end CNN. Each finalist uses a linear downstream
-classifier, so its decision score can be decomposed exactly over the flattened
-final-convolution activations. For PCA pipelines, the classifier coefficient
-is first projected back to the original feature space with the fitted PCA
-components.
-
-On the Linux workstation that contains the dataset and selected-model LOOCV
-outputs, run:
-
-```bash
-bash scripts/run_decision_attribution_linux.sh
-```
-
-By default, the analysis includes every image misclassified by all four
-finalists under LOOCV. This deterministic rule avoids selecting visually
-favorable examples after inspecting the maps. The generated article panel
-uses the lexicographically first clear and obstructed images in that set.
-
-Outputs are written to `results/decision_attribution/`:
-
-| File | Contents |
-|---|---|
-| `selected_samples.csv` | Deterministically selected LOOCV consensus errors |
-| `attribution_validation.csv` | Stored, regenerated, and reconstructed decision scores |
-| `representative_samples.csv` | Images used in the article panel |
-| `decision_attribution_representative.png` | Two-row article panel for the four finalists |
-| `decision_attribution_all_consensus_errors.png` | Complete seven-image comparison panel |
-| `overlays/` | One overlay per selected image and approach |
-| `records/` | Validated per-image checkpoints used for safe resumption |
-| `attribution_manifest.json` | Method, input hashes, selection rule, and limitations |
-
-The command is resumable: a repeated execution reuses each validated map whose
-input signature still matches the configuration, prediction shards, and
-dataset index.
-
-The maps indicate positive spatial evidence for the predicted class. Because
-the dataset contains image-level class labels but no obstacle masks or bounding
-boxes, they are qualitative explanations, not measurements of localization
-accuracy or causal attention.
-
-## Tests
-
-```bash
-python -m unittest discover -s tests -v
-```
-
-The tests cover deterministic folds, train-only transformation fitting,
-prediction output integrity, Relief-F cache reuse, ranking ties, multiple
-comparison adjustment, and exact reconstruction of linear decision scores
-after PCA back-projection.
-
-## Publication and citation
-
-Before article submission:
-
-1. run the selected 10-fold and LOOCV commands;
-2. generate `results/article_followup/*.csv`;
-3. update the corresponding article tables only from those CSV files;
-4. create a tagged GitHub release;
-5. archive that release in Zenodo and insert its DOI in `CITATION.cff` and the article.
-
-Software is released under the MIT License. See `CITATION.cff` for citation
-metadata.
+Use `CITATION.cff` for the software/artifact citation. The concept DOI is
+<https://doi.org/10.5281/zenodo.21830689>. The `date-released` field in
+`CITATION.cff` will be confirmed or updated on the publication date in Phase F.
+The new Zenodo version DOI is assigned after publication.

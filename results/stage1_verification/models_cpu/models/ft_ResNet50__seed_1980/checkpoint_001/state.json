@@ -1,0 +1,30 @@
+{
+  "epoch": 1,
+  "history": [
+    {
+      "epoch": 1,
+      "accuracy": 0.75,
+      "loss": 0.5630085468292236,
+      "val_accuracy": 1.0,
+      "val_loss": 3.5762769812208717e-07,
+      "epoch_seconds": 18.78632073799963,
+      "learning_rate_before_schedule": 0.0010000000474974513,
+      "learning_rate": 0.0010000000474974513
+    }
+  ],
+  "training_seconds": 18.78632073799963,
+  "peak_gpu_memory_bytes": null,
+  "peak_host_memory_bytes": 4303286272,
+  "stopped": false,
+  "reduce_lr": {
+    "wait": 0.0,
+    "best": 1.0,
+    "cooldown_counter": 0.0
+  },
+  "early_stopping": {
+    "wait": 0.0,
+    "best": 3.5762769812208717e-07,
+    "best_epoch": 0.0,
+    "stopped_epoch": 0.0
+  }
+}

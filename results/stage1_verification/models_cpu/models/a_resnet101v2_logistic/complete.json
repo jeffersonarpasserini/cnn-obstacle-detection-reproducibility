@@ -1,0 +1,30 @@
+{
+  "identity": {
+    "run": "203eeaf1e4fecbd1d9a7585988643177c6bae89e4d95b74bf5dceadc636f7fb0",
+    "experiment": {
+      "name": "a_resnet101v2_logistic",
+      "approach": "A",
+      "extractors": [
+        "ResNet101V2"
+      ],
+      "reduction": "full",
+      "components": null,
+      "classifier": "logistic",
+      "scale": false
+    },
+    "indices": [
+      175,
+      176,
+      177,
+      178,
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "artifacts": {
+    "pipeline.joblib": "b829ba4758e5ddeee97e6695950caaf88e58442bafd203f5e1f6ef157221ec69",
+    "cost.json": "bd3fabbbadc8568ba4333cfd6bd05113f788774838dd4e42e09c63bbfebb1924"
+  }
+}

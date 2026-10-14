@@ -1,0 +1,200 @@
+{
+  "epoch": 18,
+  "history": [
+    {
+      "epoch": 1,
+      "accuracy": 0.7601625919342041,
+      "loss": 0.5306258201599121,
+      "val_accuracy": 0.8870967626571655,
+      "val_loss": 0.303402304649353,
+      "epoch_seconds": 45.97438734599564,
+      "learning_rate_before_schedule": 0.0010000000474974513,
+      "learning_rate": 0.0010000000474974513
+    },
+    {
+      "epoch": 2,
+      "accuracy": 0.869918704032898,
+      "loss": 0.3923773467540741,
+      "val_accuracy": 0.7903226017951965,
+      "val_loss": 0.9198509454727173,
+      "epoch_seconds": 16.437496166006895,
+      "learning_rate_before_schedule": 0.0010000000474974513,
+      "learning_rate": 0.0010000000474974513
+    },
+    {
+      "epoch": 3,
+      "accuracy": 0.9146341681480408,
+      "loss": 0.25841423869132996,
+      "val_accuracy": 0.9032257795333862,
+      "val_loss": 1.140906810760498,
+      "epoch_seconds": 16.425889057005406,
+      "learning_rate_before_schedule": 0.0010000000474974513,
+      "learning_rate": 0.0010000000474974513
+    },
+    {
+      "epoch": 4,
+      "accuracy": 0.869918704032898,
+      "loss": 0.32909223437309265,
+      "val_accuracy": 0.7580645084381104,
+      "val_loss": 0.80350261926651,
+      "epoch_seconds": 16.34164185800182,
+      "learning_rate_before_schedule": 0.0010000000474974513,
+      "learning_rate": 0.0010000000474974513
+    },
+    {
+      "epoch": 5,
+      "accuracy": 0.9471544623374939,
+      "loss": 0.19088029861450195,
+      "val_accuracy": 0.8064516186714172,
+      "val_loss": 0.6645796298980713,
+      "epoch_seconds": 16.48134036299598,
+      "learning_rate_before_schedule": 0.0010000000474974513,
+      "learning_rate": 0.0005000000237487257
+    },
+    {
+      "epoch": 6,
+      "accuracy": 0.9634146094322205,
+      "loss": 0.107933908700943,
+      "val_accuracy": 0.9032257795333862,
+      "val_loss": 0.4459725320339203,
+      "epoch_seconds": 16.431503968997276,
+      "learning_rate_before_schedule": 0.0005000000237487257,
+      "learning_rate": 0.0005000000237487257
+    },
+    {
+      "epoch": 7,
+      "accuracy": 0.9471544623374939,
+      "loss": 0.1272595077753067,
+      "val_accuracy": 0.9354838728904724,
+      "val_loss": 0.22561177611351013,
+      "epoch_seconds": 16.435748645992135,
+      "learning_rate_before_schedule": 0.0005000000237487257,
+      "learning_rate": 0.0005000000237487257
+    },
+    {
+      "epoch": 8,
+      "accuracy": 0.9959349632263184,
+      "loss": 0.024063793942332268,
+      "val_accuracy": 0.9354838728904724,
+      "val_loss": 0.2119876742362976,
+      "epoch_seconds": 16.56558312100242,
+      "learning_rate_before_schedule": 0.0005000000237487257,
+      "learning_rate": 0.0005000000237487257
+    },
+    {
+      "epoch": 9,
+      "accuracy": 0.9959349632263184,
+      "loss": 0.01512148417532444,
+      "val_accuracy": 0.9354838728904724,
+      "val_loss": 0.26672986149787903,
+      "epoch_seconds": 16.418660053997883,
+      "learning_rate_before_schedule": 0.0005000000237487257,
+      "learning_rate": 0.0002500000118743628
+    },
+    {
+      "epoch": 10,
+      "accuracy": 0.9878048896789551,
+      "loss": 0.01962219923734665,
+      "val_accuracy": 0.9516128897666931,
+      "val_loss": 0.21581363677978516,
+      "epoch_seconds": 16.41148934100056,
+      "learning_rate_before_schedule": 0.0002500000118743628,
+      "learning_rate": 0.0002500000118743628
+    },
+    {
+      "epoch": 11,
+      "accuracy": 0.9878048896789551,
+      "loss": 0.03738625347614288,
+      "val_accuracy": 0.9354838728904724,
+      "val_loss": 0.22074264287948608,
+      "epoch_seconds": 16.420485971000744,
+      "learning_rate_before_schedule": 0.0002500000118743628,
+      "learning_rate": 0.0002500000118743628
+    },
+    {
+      "epoch": 12,
+      "accuracy": 0.9918699264526367,
+      "loss": 0.026685433462262154,
+      "val_accuracy": 0.8709677457809448,
+      "val_loss": 0.37385454773902893,
+      "epoch_seconds": 16.44118683000852,
+      "learning_rate_before_schedule": 0.0002500000118743628,
+      "learning_rate": 0.0001250000059371814
+    },
+    {
+      "epoch": 13,
+      "accuracy": 0.9959349632263184,
+      "loss": 0.010725718922913074,
+      "val_accuracy": 0.9193548560142517,
+      "val_loss": 0.28041794896125793,
+      "epoch_seconds": 16.455822973002796,
+      "learning_rate_before_schedule": 0.0001250000059371814,
+      "learning_rate": 0.0001250000059371814
+    },
+    {
+      "epoch": 14,
+      "accuracy": 0.9878048896789551,
+      "loss": 0.057752739638090134,
+      "val_accuracy": 0.9193548560142517,
+      "val_loss": 0.24861076474189758,
+      "epoch_seconds": 16.44572627999878,
+      "learning_rate_before_schedule": 0.0001250000059371814,
+      "learning_rate": 6.25000029685907e-05
+    },
+    {
+      "epoch": 15,
+      "accuracy": 0.9918699264526367,
+      "loss": 0.029286447912454605,
+      "val_accuracy": 0.9193548560142517,
+      "val_loss": 0.2763090133666992,
+      "epoch_seconds": 16.377140231998055,
+      "learning_rate_before_schedule": 6.25000029685907e-05,
+      "learning_rate": 6.25000029685907e-05
+    },
+    {
+      "epoch": 16,
+      "accuracy": 1.0,
+      "loss": 0.007671978324651718,
+      "val_accuracy": 0.9193548560142517,
+      "val_loss": 0.2604784667491913,
+      "epoch_seconds": 16.351747027001693,
+      "learning_rate_before_schedule": 6.25000029685907e-05,
+      "learning_rate": 3.125000148429535e-05
+    },
+    {
+      "epoch": 17,
+      "accuracy": 0.9918699264526367,
+      "loss": 0.03633495420217514,
+      "val_accuracy": 0.9193548560142517,
+      "val_loss": 0.2470206767320633,
+      "epoch_seconds": 16.42651672899956,
+      "learning_rate_before_schedule": 3.125000148429535e-05,
+      "learning_rate": 3.125000148429535e-05
+    },
+    {
+      "epoch": 18,
+      "accuracy": 1.0,
+      "loss": 0.01081269420683384,
+      "val_accuracy": 0.9193548560142517,
+      "val_loss": 0.23422186076641083,
+      "epoch_seconds": 16.426644202991156,
+      "learning_rate_before_schedule": 3.125000148429535e-05,
+      "learning_rate": 1.5625000742147677e-05
+    }
+  ],
+  "training_seconds": 325.2690101659973,
+  "peak_gpu_memory_bytes": 6456412672,
+  "peak_host_memory_bytes": 4690513920,
+  "stopped": true,
+  "reduce_lr": {
+    "wait": 0.0,
+    "best": 0.9516128897666931,
+    "cooldown_counter": 0.0
+  },
+  "early_stopping": {
+    "wait": 10.0,
+    "best": 0.2119876742362976,
+    "best_epoch": 7.0,
+    "stopped_epoch": 17.0
+  }
+}

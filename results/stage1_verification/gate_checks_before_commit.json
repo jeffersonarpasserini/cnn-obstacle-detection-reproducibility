@@ -1,0 +1,10 @@
+{
+  "uncommitted_protocol": {
+    "blocked": true,
+    "reason": "Protocol/config must be committed without local edits: cnn-obstacle-detection-reproducibility/configs/external_test.json"
+  },
+  "unapproved_cleaning": {
+    "blocked": true,
+    "reason": "Author-approved cleaning and completed label audit are required"
+  }
+}

@@ -1,0 +1,33 @@
+category,error_type,n,percent_within_type,analysis_scope
+bueiro/grelha,clear_to_nonclear,24,17.51824817518248,exploratory/post hoc
+mudança de piso/textura,clear_to_nonclear,24,17.51824817518248,exploratory/post hoc
+cena aberta/horizonte,clear_to_nonclear,21,15.328467153284672,exploratory/post hoc
+sem causa aparente,clear_to_nonclear,16,11.678832116788321,exploratory/post hoc
+grama/vegetação,clear_to_nonclear,13,9.489051094890511,exploratory/post hoc
+baixa luz,clear_to_nonclear,10,7.299270072992701,exploratory/post hoc
+junta ou rachadura,clear_to_nonclear,8,5.839416058394161,exploratory/post hoc
+rótulo questionável,clear_to_nonclear,8,5.839416058394161,exploratory/post hoc
+corredor estreito,clear_to_nonclear,4,2.9197080291970803,exploratory/post hoc
+piso tátil,clear_to_nonclear,4,2.9197080291970803,exploratory/post hoc
+faixa ou pintura,clear_to_nonclear,3,2.18978102189781,exploratory/post hoc
+sombra,clear_to_nonclear,2,1.4598540145985401,exploratory/post hoc
+borda de piscina,clear_to_nonclear,0,0.0,exploratory/post hoc
+desfoque,clear_to_nonclear,0,0.0,exploratory/post hoc
+obstáculo pequeno/distante,clear_to_nonclear,0,0.0,exploratory/post hoc
+outro,clear_to_nonclear,0,0.0,exploratory/post hoc
+borda de piscina,nonclear_to_clear,4,36.36363636363637,exploratory/post hoc
+rótulo questionável,nonclear_to_clear,3,27.272727272727273,exploratory/post hoc
+baixa luz,nonclear_to_clear,2,18.181818181818183,exploratory/post hoc
+desfoque,nonclear_to_clear,1,9.090909090909092,exploratory/post hoc
+obstáculo pequeno/distante,nonclear_to_clear,1,9.090909090909092,exploratory/post hoc
+bueiro/grelha,nonclear_to_clear,0,0.0,exploratory/post hoc
+cena aberta/horizonte,nonclear_to_clear,0,0.0,exploratory/post hoc
+corredor estreito,nonclear_to_clear,0,0.0,exploratory/post hoc
+faixa ou pintura,nonclear_to_clear,0,0.0,exploratory/post hoc
+grama/vegetação,nonclear_to_clear,0,0.0,exploratory/post hoc
+junta ou rachadura,nonclear_to_clear,0,0.0,exploratory/post hoc
+mudança de piso/textura,nonclear_to_clear,0,0.0,exploratory/post hoc
+outro,nonclear_to_clear,0,0.0,exploratory/post hoc
+piso tátil,nonclear_to_clear,0,0.0,exploratory/post hoc
+sem causa aparente,nonclear_to_clear,0,0.0,exploratory/post hoc
+sombra,nonclear_to_clear,0,0.0,exploratory/post hoc

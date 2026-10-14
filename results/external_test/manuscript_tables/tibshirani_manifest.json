@@ -1,0 +1,15 @@
+{
+  "per_fold_metrics_sha256": "3d5e2a8caf75e48cc665dd2ed97a838b4af4c422611d2cea4813034a115880cb",
+  "configurations": 12656,
+  "new_fits": 0,
+  "selection": {
+    "A": "a_resnet101v2_logistic",
+    "B": "b_efficientnetb3_pca_300_linear_svm",
+    "C": "c_mobilenet_resnet50_pca_300_linear_svm",
+    "D": "d_mobilenet_resnet50_pca_300_linear_svm"
+  },
+  "winner": "b_efficientnetb3_pca_300_linear_svm",
+  "definition": "Mean fold(maximum candidate endpoint minus selected-finalist endpoint); corrected=original-bias.",
+  "notice": "Conservative author-specified adaptation of Tibshirani & Tibshirani (2009); recall is a secondary extension, not an unbiased guarantee.",
+  "reference": "https://doi.org/10.1214/08-AOAS224"
+}

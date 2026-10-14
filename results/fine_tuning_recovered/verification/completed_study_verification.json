@@ -1,0 +1,43 @@
+{
+  "checked_utc": "2026-10-06T02:53:17.923856+00:00",
+  "run_completed": true,
+  "run_identity": "86d8b4cca988f3ec363bf94b344f01264aede7cc1c2d71ea2fca4953d5cf4a3d",
+  "source_hashes": {
+    "fine_tuning": "b7b572376491e1b681be2c6d8d3b15bbc40882cc85cc6ca5c91141f0211597a9",
+    "artifact": "ed11cda07eaee53a2684988b8342b8ed096a5d74139890ffa2eaca4bdb2f8c15",
+    "run_experiments": "3c4f0266f430c8bbbc8f9525c2b883a249edd214f5c969ecfed5b5dfcf2341bb",
+    "fine_config": "f160cba45ff3f3ab8f206a71721e3aa6ff16f75103ab157558f0ccfb694d1822",
+    "fixed_config": "601abccb19d1eaec1408ef9ece8a7195c170e1ff3d55a74d62544ca2da2c3467",
+    "fold_assignments": "cd2b875bfc1a4499b175ab4a4bfdf4a43b25a060d522418f53cce6b97ac25104",
+    "fixed_metrics": "3d5e2a8caf75e48cc665dd2ed97a838b4af4c422611d2cea4813034a115880cb",
+    "fixed_refit": "5a0e3f2af29ac596eea1891fea62c52ec0ffe42cbad34b300660cf6133ac2e39"
+  },
+  "jobs_completed": {
+    "fixed_features": 40,
+    "fine_tuning": 150
+  },
+  "artifact_checksums_verified": 1050,
+  "artifact_bytes_verified": 21866940503,
+  "native_reload_checks_passed": 190,
+  "canonical_fixed_jobs_verified": 40,
+  "canonical_metric_checks": 640,
+  "original_metadata_and_neural_manifests_unchanged": true,
+  "aggregate_row_counts": {
+    "per_fold_metrics.csv": 150,
+    "per_image_predictions.csv": 5130,
+    "fixed_per_fold_metrics.csv": 40,
+    "fixed_per_image_predictions.csv": 1368,
+    "computational_costs.csv": 190
+  },
+  "analysis_input_checksums_verified": 14,
+  "analysis_manifest_sha256": "ce03e8caa40c3c10d3810849c9f3ae5b5212df3730aab8faafae819e752c1ee5",
+  "analysis_tables": 16,
+  "analysis_latex_files": 16,
+  "historical_snapshot_sha256": {
+    "diagnosis.json": "04b81f18f8a8b07c763e69d00d5f34857c986322921eb17a64ad277e20ca0995",
+    "completed_jobs_verification.json": "36e16a573cbc9982642b718cc3560bb3bdc85e447ee003df907ada56426371af",
+    "repair_verification.json": "ecf4a99210d2ee0adf16aebb6c0d205c295539354be5dd2d3781286069f82b51",
+    "recovery_preparation_verification.json": "6b0206b498825ec43c8aa55ae968ed3942f49816d91c6550974fdbb38581e78f"
+  },
+  "binaries_archived_in_git": false
+}
